@@ -2272,7 +2272,7 @@ button {
 }
 
 .product__zoom:active {
-  background: rgba(204, 211, 224, 0.8);
+  background: rgba(204, 211, 224, 0.9);
 }
 
 .product__zoom:active .product__zoom-icon {
