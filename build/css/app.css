@@ -4948,6 +4948,9 @@ button {
   .login__btn{
     font-size: 18px;
   }
+  .login_header{
+    margin-right: 0;
+  }
   .footer__address{
     font-size: 18px;
   }
@@ -5356,6 +5359,9 @@ button {
   }
   .header__top{
     padding: 7px 0 5px;
+  }
+  .header__top-container{
+    max-width: 1270px;
   }
   .header__mid-col:nth-child(1){
     width: 200px;
