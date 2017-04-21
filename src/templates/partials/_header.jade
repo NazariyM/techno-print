@@ -1,0 +1,91 @@
+// begin header
++b.HEADER.header
+  +e.top
+    +e.top-container.container
+      +b.NAV.nav
+        +e.UL.list
+          +e.item.is-active
+            +e.A.link(href="#!") Главная
+          +e.item
+            +e.A.link(href="#!") Услуги
+          +e.item
+            +e.A.link(href="#!") Сувениры по тематике
+          +e.item
+            +e.A.link(href="#!") О нас
+          +e.item
+            +e.A.link(href="#!") Новости
+          +e.item
+            +e.A.link(href="#!") Доставка
+          +e.item
+            +e.A.link(href="#!") Оплата
+          +e.item
+            +e.A.link(href="#!") Оптовые цены
+          +e.item
+            +e.A.link(href="#!") Контакты
+
+      +b.login._header
+        +e.BUTTON(type='button').btn.js-login-btn
+          +icon('icon-user', 'login__icon')
+          +e.SPAN Войти
+        +e.A.btn(href="#!")
+          +icon('icon-pencil', 'login__icon')
+          +e.SPAN Регистрация
+        +e.popup
+          +icon('icon-user','login__popup-icon')
+          +e.popup-text Вход:
+          +e.FORM(action='#!')
+            +e.popup-field
+              +e.INPUT.popup-input(type='name' placeholder='Имя / Организация')
+            +e.popup-field
+              +e.INPUT.popup-input(type='password' placeholder='Пароль')
+            +e.BUTTON(type='submit').popup-btn Войти
+
+  +e.mid
+    +e.container.container
+      +e.mid-col
+        +b.logo
+          +e.A(href="#!").link
+            +e.IMG.img(src="img/logo.svg" alt="Техно-принт")
+      +e.mid-col
+        +e.ADDRESS.address
+          +e.A.address-link(href="tel:88462671022")
+            +icon('icon-geo', 'header__address-icon')
+            +e.SPAN 8 (846) 267-10-22
+          =' '
+          +e.SPAN.address-str ул. Первомайская, 25
+        +b.search
+          +e.field
+            +e.INPUT.input.js-search-input(type="text" name="" placeholder='Изготовление сувениров и подарков' required)
+            +e.BUTTON.btn(type="submit")
+        +b.top-links._header
+          +e.A(href="#!").link Услуги фирмы
+          +e.A(href="#!").link Подарки
+          +e.A(href="#!").link Корпоративные
+          +e.A(href="#!").link Лучшие
+      +e.mid-col
+        -var homeSldClass = '_default';
+          include ../components/_home-slider
+      +e.mid-col
+        +b.cart
+          +e.A(href="#!").in
+          +e.label
+            +e.text Корзина
+            +e.total 0
+              +icon('icon-ruble','cart__val')
+  +e.bot
+    +b.menu
+      +e.UL.list
+        +e.item
+          +e.A(href="#!").link Футболки / Одежда
+        +e.item
+          +e.A(href="#!").link Вышивка
+        +e.item.is-active
+          +e.A(href="#!").link Значки / Брелки
+        +e.item
+          +e.A(href="#!").link Кружки / Сувениры
+        +e.item
+          +e.new Новое!
+          +e.A(href="#!").link Фотокниги
+        +e.item
+          +e.A(href="#!").link Печать картин
+// end header

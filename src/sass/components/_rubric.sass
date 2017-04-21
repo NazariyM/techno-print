@@ -1,0 +1,229 @@
+.rubric
+	&__container
+		+clr
+	&__col
+		float: left
+		width: (310/1680 * 100%)
+		margin-right: 30px
+		+md
+			margin-right: 15px
+		+sm
+			width: calc(20% - 4px)
+			margin-right: 4px
+		&:last-child
+			margin-right: 0
+	&__item + &__item
+		margin-top: 6px
+	&__list
+		position: relative
+	&__list-item
+		position: relative
+		&:hover
+			background: darken(#F5F5F5, 10)
+		&:hover .rubric__list-link
+			color: #0051FF
+		&:hover .rubric__list-icon
+			fill: #56708A
+		&:hover span
+			border-bottom-color:  rgba(#00306b, .5)
+		&:hover .rubric__sub-list
+			display: block
+		&_color
+			color: #000
+			.rubric__sub-link
+				color: #00306B
+	&__list-icon
+		position: absolute
+		right: 13px
+		top: calc(50% - 7px)
+		font-size: 13px
+		fill: #BCBFC2
+		+md
+			top: 20px
+			font-size: 10px
+		+sm
+			top: 13px
+			right: 7px
+			font-size: 8px
+		+xs
+			font-size: 6px
+			right: 3px
+	&__list-link
+		position: relative
+		display: block
+		padding: 21px 40px 21px 30px
+		font-size: 21px
+		color: #00306b
+		background: #F5F5F5
+		-webkit-tap-highlight-color: transparent
+		+lg
+			padding: 16px 37px 16px 17px
+			font-size: 19px
+		+md
+			font-size: 14px
+		+sm
+			padding: 9px 22px 9px 7px
+			font-size: 12px
+		+xs
+			padding: 9px 13px 9px 10px
+			font-size: 11px
+		&:hover
+			background-color: darken(#F5F5F5, 7)
+		span
+			border-bottom: 4px solid #E6E9ED
+			text-transform: uppercase
+			+md
+				border-bottom: 2px solid #E6E9ED
+		&_more-text
+			padding-left: 10px
+			+xs
+				padding: 9px 13px 9px 3px
+		&_color
+			background-color: #f5f8fd
+			color: #000
+			&:hover
+				background-color: darken(#f5f8fd, 10)
+				
+	&__sub-list
+		display: none
+		position: absolute
+		top: 69px
+		left: 0
+		right: 0
+		z-index: 10
+		+lg
+			top: 57px
+		+md
+			top: 50px
+		+sm
+			top: 33px
+	&__sub-item
+		position: relative
+		line-height: 1.2
+	&__sub-link
+		padding: 10px 20px
+		text-transform: none
+		display: block
+		background: #f5f8fd
+		color: #333333
+		border-bottom: 1px solid darken(#f5f8fd, 10)
+		+md
+			font-size: 15px
+		+sm
+			padding: 7px 10px
+			font-size: 14px
+		+xs
+			padding: 5px
+			font-size: 13px
+		&:hover
+			background: darken(#f5f8fd, 10)
+	&__mini
+		margin: 5px 3px 5px -12px
+		color: #00306B
+	&__mini.is-active &__mini-icon
+			fill: #56708A
+	&__mini-title
+		position: relative
+		display: block
+		padding: 2px 28px 2px 12px
+		background: #F5F5F5
+		cursor: pointer
+		&:hover
+			background: #F5F7FF
+		&:active
+			background: #E8E8E8
+	&__mini-title:hover &__mini-icon
+		fill: #4E91FF
+	&__mini-list
+		display: none
+		padding: 10px 0
+	&__mini-item
+		position: relative
+		padding: 0 0 0 30px
+		margin: 2px 0
+		line-height: 1.05
+	&__mini-link
+		color: #00306b
+		display: inline-block
+		border-bottom: 2px solid transparent
+		&:hover
+			border-bottom-color: #B2CCFF
+	&__mini-icon
+		position: absolute
+		top: 11px
+		right: 10px
+		font-size: 9px
+		fill: #C2C2C2
+	&__mini-icon-sm
+		position: absolute
+		left: 15px
+		top: 6px
+		font-size: 7px
+		fill: #00306B
+		+rotate(-90)
+		
+	&__hit
+		position: absolute
+		margin-left: 3px
+		color: #4CB02E
+		+f('psb', 18, 18)
+	&_home
+		padding: 80px 0 95px
+		+lg
+			padding: 60px 0
+		+md
+			padding: 40px 0
+		+sm
+			padding: 20px 0
+			
+			
+	&_side
+		.rubric__list-item.is-active .rubric__list-icon
+			display: block
+		.rubric__list-link
+			padding: 21px 5px 21px 30px
+		.rubric__sub-list
+			position: static
+			display: block
+			padding: 15px 5px 15px 20px
+			border: 8px solid #F4F8FD
+			border-top: none
+			background: #fff
+		.rubric__sub-item
+			line-height: 1.1
+			margin: 0 0 5px
+		.rubric__sub-item_best
+			margin: 10px 0 15px
+		.rubric__sub-item_examples
+			margin: 20px 0
+		.rubric__sub-item_examples + .rubric__sub-item_examples
+			margin-top: -18px
+		.rubric__sub-link
+			display: inline-block
+			padding: 0
+			background: #fff
+			border-bottom: 2px solid transparent
+		.rubric__sub-link:hover
+			color: #0051FF
+			border-bottom-color: #B2CCFF
+		.rubric__sub-link:active
+			color: #A8AFBD
+			border-bottom-color: #DEDEDE
+		.rubric__sub-link_decor
+			margin: 0 -3px
+			padding: 3px
+			background-image: linear-gradient(to right, #B3B3B3 33%, rgba(255, 255, 255, 0) 0%), linear-gradient(to left, #B3B3B3 16%, rgba(255, 255, 255, 0) 0%)
+			background-size: 22px 2px, 6px 2px
+			background-repeat: repeat-x
+			background-position: bottom
+		.rubric__sub-link_decor:hover
+			background-image: linear-gradient(to right, #0051FF 33%, rgba(255, 255, 255, 0) 0%), linear-gradient(to left, #0051FF 16%, rgba(255, 255, 255, 0) 0%)
+			border-bottom-color: transparent
+		.rubric__list-icon
+			display: none
+			left: 9px
+			top: calc(50% - 6px)
+			font-size: 9px
+			+rotate(-90)
+		.rubric__item + .rubric__item
+			margin-top: 30px

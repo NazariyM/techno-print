@@ -1,0 +1,241 @@
+/* about text
+	----------------------------------- */
+.about-text
+	+md
+		margin-bottom: 10px
+	&__container
+		max-width: 1620px
+		+md
+			max-width: 1200px
+	&__title
+		text-align: center
+		margin-bottom: 20px
+		font-size: 25px
+		+lg
+			font-size: 21px
+		+md
+			font-size: 18px
+			margin-bottom: 10px
+		+sm
+			font-size: 16px
+	&__descr
+		font-size: 22px
+		line-height: (30/22)
+		text-indent: 45px
+		+lg
+			font-size: 19px
+		+md
+			font-size: 16px
+		+sm
+			font-size: 14px
+			
+// pic decor
+.decor
+	position: relative
+	background-color: #F4F8FD
+	&::after
+		position: absolute
+		z-index: 1
+		right: -8px
+		bottom: 0
+		content: ''
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 0 0 26px 27px
+		border-color: transparent transparent #fff transparent
+	&__line
+		position: absolute
+		left: 0
+		bottom: -1px
+		width: 88%
+		height: 1px
+		background-color: rgba(#DAE5EC, .65)
+		align-self: flex-end
+		&::before, &::after
+			position: absolute
+			z-index: 1
+			bottom: 0
+			content: ''
+			transition: border-color .3s
+		&::before
+			right: -16px
+			+arr(16,22, rgba(#000, .25),br)
+		&::after
+			right: -39px
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 22px 23px 0 0
+			border-color: rgba(238, 244, 251, 0.9) transparent transparent transparent
+			+sm
+				right: -39px
+		&_suggest
+			width: 95%
+	&_sm
+		background-color: #D7DCE0
+		&::after
+			display: none
+		.decor__line
+			width: 76%
+		.decor__line:after
+			background-color: #ececec
+		.decor__line:before
+			right: -15px
+	
+	&_xs
+		&::after
+			border-width: 0 0 20px 19px
+			right: -2px
+		.decor__line
+			width: 80%
+			bottom: 0
+		.decor__line::after
+			right: -26px
+			border-width: 18px 18px 0 0
+		.decor__line::before
+			right: -8px
+			border-width: 0 0 18px 13px
+		
+
+/* breadcrumbs
+	----------------------------------- */
+.breadcrumbs
+	font-size: 0
+	&__link
+		display: inline-block
+		vertical-align: middle
+		font-size: 23px
+		span
+			display: inline-block
+			vertical-align: middle
+		&::after
+			display: inline-block
+			vertical-align: middle
+			margin: 0 3px
+			content: '/'
+		&:last-child::after
+			display: none
+		&:hover
+			color: $hover
+	&__link:hover::after
+		color: #000
+	&__icon
+		display: inline-block
+		vertical-align: middle
+		margin-right: 5px
+		fill: #D0CFCF
+		
+/* page
+	----------------------------------- */
+.page
+	&_default
+		padding: 35px 0 0
+	&__bar
+		position: relative
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-left: 15px
+		background: #EBECEC
+		&-title
+			padding: 10px 30px
+			margin-left: auto
+			background: #F3F3F3
+			border-radius: 50px 0 0 50px
+			min-width: 250px
+			font-size: 23px
+			text-align: center
+			color: #333333
+	&__in
+		display: flex
+		justify-content: space-between
+		margin: 30px 0 0
+	&__side
+		width: percentage(310 / 1680)
+	&__main
+		display: flex
+		flex-direction: column
+		width: percentage(1340 / 1680)
+	
+/* pagination
+	----------------------------------- */
+.pagination
+	padding: 7px 0
+	background: #F7F9FC
+	font-size: 0
+	&__list
+		font-size: 0
+		text-align: center
+	&__list-item
+		display: inline-block
+		vertical-align: middle
+		margin: 0 5px
+		&_prev
+			margin-right: 15px
+			text-align: center
+			.pagination__list-link
+				padding: 0
+				line-height: 39px
+		&_dots
+			margin: 0 10px
+	&__list-item.is-active &__list-link
+			background: #FFEBAB
+	&__list-link
+		display: inline-block
+		font-size: 21px
+		font-family: Arial, sans-serif
+		color: #667FA6
+		padding: 6px 12px
+		border-radius: 5px
+		height: 39px
+		min-width: 38px
+		&:hover
+			background: #EDEDED
+		&:active
+			background: #C8D6E6
+		.icon
+			display: inline-block
+			vertical-align: middle
+			fill: #EDEDED
+			font-size: 29px
+			
+	&_product
+		margin: 60px 0 70px
+		
+	&_watched
+		margin: 40px 0
+		background: none
+		
+/* bordered decor
+	----------------------------------- */
+.bordered
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		bottom: -1px
+		left: 5px
+		right: 5px
+		height: 1px
+		background: #D1D1D1
+		z-index: 1
+
+/* sub-menu
+	----------------------------------- */
+.category-menu
+	display: flex
+	&__item
+		flex: 1 0 auto
+	&__link
+		display: block
+		padding: 18px 5px
+		font-size: 20px
+		background: #F7FAFF
+		text-align: center
+		+trs
+		&:hover
+			background: #E5F0FC
+			
+	&_default
+		margin-top: auto

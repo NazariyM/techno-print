@@ -1,0 +1,862 @@
+.product
+	&__container
+		margin: 0 auto 55px
+		+lg
+			max-width: 1500px
+			margin: 0 auto 35px
+		+md
+			max-width: 1200px
+		+sm
+			margin: 0 auto 25px
+	&__sect
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 1px 30px 0 25px
+		margin-bottom: 40px
+		background-color: #EBECEC
+		&::after
+			content: ''
+			position: absolute
+			bottom: -1px
+			left: 5px
+			right: 5px
+			height: 1px
+			background: #D1D1D1
+			z-index: 1
+		+md
+			margin-bottom: 20px
+			padding: 1px 5px 0 10px
+		+sm
+			padding: 1px 5px 0 5px
+		&_color
+			background: #DFE6EB
+			.product__sect-link
+				background: #F8F9F8
+			.product__sect-link::after,
+			.product__sect-link::before
+				background: #DFE6EB
+			.product__sect-count
+				background: #DFE6EB
+		&_has-filter
+			margin-bottom: 35px
+			padding: 4px 0 4px 15px
+			clear: both
+		&_watched
+			margin-bottom: 0
+			background: #BBCADF
+		&-title
+			display: flex
+			align-items: center
+			color: #000
+			+f("oss",19,22)
+			+lg
+				font-size: 17px
+			+md
+				font-size: 14px
+				max-width: 620px
+			+sm
+				font-size: 13px
+			+xs
+				font-size: 14px
+		&-icon
+			display: inline-block
+			vertical-align: middle
+			margin-right: 20px
+			fill: #C7CBCF
+			+md
+				margin-right: 8px
+			&.icon-machine
+				font-size: 30px
+				+md
+					font-size: 20px
+			&.icon-shirts
+				font-size: 25px
+				+md
+					font-size: 18px
+			&.icon-cups
+				font-size: 27px
+				+md
+					font-size: 20px
+			&.icon-books
+				font-size: 25px
+				+md
+					font-size: 18px
+			&.icon-souvenirs
+				font-size: 26px
+				+md
+					font-size: 20px
+			&.icon-pictures
+				font-size: 28px
+				+md
+					font-size: 21px
+			&.icon-balloons
+				font-size: 29px
+				+md
+					font-size: 23px
+			&.icon-lovers
+				font-size: 28px
+			&.icon-watched
+				font-size: 27px
+				fill: #7C8B99
+		&-links
+			font-size: 0
+			text-align: right
+			&_watched
+				position: relative
+				padding: 0 40px 0 60px
+				background: #BBCADF url(../img/bg/sect-bg.svg) no-repeat 0 0/cover
+				.product__sect-link
+					padding: 6px 0
+					background: none
+					font-size: 16px
+					&::after,&::before
+						display: none
+				.product__sect-link + .product__sect-link
+					margin-left: 20px
+				.product__sect-count
+					margin-left: 10px
+					min-width: 25px
+					line-height: 22px
+					height: 25px
+					padding: 1px 5px
+					background: #BBCADF
+					color: #fff
+		&-link
+			position: relative
+			display: inline-block
+			vertical-align: middle
+			overflow: hidden
+			padding: 6px 40px 6px 35px
+			height: 42px
+			font-size: 19px
+			line-height: 32px
+			color: #2d4777
+			background-color: #FCFCFC
+			border-radius: 50px 0 0 50px
+			text-transform: uppercase
+			+lg
+				font-size: 16px
+			+md
+				height: 30px
+				line-height: 30px
+				padding: 0 30px 0 10px
+				+f('oss', 14)
+			+sm
+				padding: 0 18px 0 8px
+				font-size: 11px
+			+xs
+				margin: 1px
+			&::after, &::before
+				position: absolute
+				top: 0
+				right: 0
+				z-index: 1
+				content: ''
+				background-color: #EBECEC
+			&::before
+				height: 55%
+				width: 19px
+				+sm
+					right: -4px
+					width: 13px
+					height: 50%
+					transform: skew(30deg)
+			&::after
+				height: 100%
+				width: 20px
+				transform: skew(40deg)
+				+sm
+					width: 12px
+			& + &
+				margin-left: 5px
+				+sm
+					margin-left: 0
+			a:hover
+				color: #008CFF
+			a:hover span
+				color: inherit
+			a:active
+				color: #00152E
+		&-count
+			display: inline-block
+			min-width: 33px
+			line-height: 30px
+			height: 32px
+			margin-left: 20px
+			padding: 1px 8px
+			border-radius: 50%
+			background-color: #EBECEC
+			text-align: center
+			+md
+				margin-left: 10px
+				min-width: 24px
+				height: 24px
+				padding: 1px 5px
+				line-height: 22px
+	&__inn
+		display: flex
+		justify-content: space-between
+		+xs
+			flex-wrap: wrap
+		&_float
+			margin-bottom: 45px
+			display: block
+			+clr
+	&__examples
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+		flex-basis: (990/1680 * 100%)
+		+lg
+			flex-basis: 60%
+		+md
+			flex-basis: 59%
+		+sm
+			flex-basis: 62.5%
+		+xs
+			flex-basis: 100%
+	&__examples_x4
+		flex-basis: 100%
+		flex-wrap: wrap
+		.product__item
+			flex-basis: 23%
+			width: 23%
+			margin-bottom: 35px
+	&__examples_watched
+		flex-basis: 100%
+		.product__item
+			min-height: 386px
+			flex-basis: 20%
+			width: 20%
+			padding: 12px
+			border: 12px solid #DFDFDF
+			border-right: none
+			&:last-child
+				border-right: 12px solid #DFDFDF
+			img
+				width: 100%
+		.product__item-info
+			margin-top: 10px
+			font-size: 15px
+		.product__item-title
+			+f('psr')
+			color: #000
+		.product__item-descr
+			+f('psr')
+			color: #4D4D4D
+		.product__price-current
+			font-size: 17px
+		.product__val-icon
+			font-size: 13px!important
+		.product__buy-opt
+			font-size: 17px
+		.product__item-buy
+			bottom: 12px
+			left: 12px
+			right: 12px
+		.product__cart-add
+			min-width: 108px
+			height: 30px
+		.product__cart-add::after
+			transform: scale(.78)
+			right: -4px
+			top: -5px
+		.product__item-pic
+			height: 227px
+		.decor__line
+			width: 85%
+			
+	&__zoom
+		opacity: 0
+		transform: scale(.5)
+		position: absolute
+		left: 10px
+		bottom: 10px
+		z-index: 5
+		display: block
+		width: 67px
+		height: 67px
+		text-align: center
+		background: rgba(#E6EEFF, .8)
+		transition: transform .45s .2s, opacity .45s .2s, background 0s
+		+vertical
+		+md
+			width: 40px
+			height: 40px
+		+r(1024)
+			opacity: 1
+			transform: scale(1)
+			background: rgba(#E6EEFF, .95)
+	&__zoom:hover
+		background: rgba(#E6EEFF, .9)
+		opacity: 1
+		transform: scale(1)
+	&__zoom:hover &__zoom-icon
+		fill: #45484F
+	&__zoom:active
+		background: rgba(#CCD3E0, .8)
+	&__zoom:active &__zoom-icon
+		fill: #B9BDC7
+	&__zoom-icon
+		display: inline-block
+		vertical-align: middle
+		fill: #7B7F8A
+		font-size: 40px
+		+md
+			font-size: 25px
+
+	// <==================== item starts here ====================================>
+	&__item
+		position: relative
+		padding-bottom: 40px
+		min-height: 470px
+		flex-basis: (305/990 * 100%)
+		+lg
+			min-height: 400px
+		+md
+			min-height: 341px
+			flex-basis: 31%
+			padding-bottom: 28px
+		+sm
+			flex-basis: 32.5%
+		.decor__line
+			+lg
+				width: 87%
+			+xs
+				width: 93%
+		&-pic-wrap
+			position: relative
+			transition: transform .3s
+			-webkit-tap-highlight-color: transparent
+			&.is-active
+				transform: translateY(-3px)
+			&.is-active .decor__line
+				height: 2px
+			&.is-active .decor__line::before
+				border-bottom-color: rgba(0, 0, 0, .3)
+			&.is-active .decor__line::after
+				border-top-color: rgba(238, 244, 251, 1)
+			&.is-active .product__zoom
+				opacity: 1
+				transform: scale(1)
+		&-pic
+			height: 305px
+			position: relative
+			z-index: 1
+			display: flex
+			align-items: center
+			justify-content: center
+			+lg
+				height: 240px
+			+md
+				height: 214px
+			img
+				+lg
+					width: 100%
+					max-height: 100%
+					object-fit: contain
+			&_xs
+				height: 122px
+				width: 122px
+		&-info
+			margin-top: 20px
+			color: #2f2e2d
+			line-height: (26/18)
+			font-size: 18px
+			+md
+				margin-top: 15px
+		&-title
+			+f("oss")
+			+lg
+				font-size: 17px
+			+md
+				font-size: 13px
+		&-descr
+			+lg
+				font-size: 17px
+			+md
+				color: #666666
+				+f('oss',13)
+			+sm
+				font-size: 12px
+		
+		&-buy
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			display: flex
+			align-items: center
+	&__buy-opt
+		font-size: 21px
+		line-height: 12px
+		+f("psb")
+		color: #FCBD7E
+		+lg
+			font-size: 18px
+		+md
+			font-size: 15px
+		.product__val-icon
+			font-size: 16px
+			fill: #FCBD7E
+			+lg
+				font-size: 14px
+			+md
+				font-size: 12px
+	&__buy-opt:hover
+		color: #EF7C1B
+	&__buy-opt:hover .product__val-icon
+		fill: #EF7C1B
+	&__buy-opt:active
+		color: #FCBD7E
+	&__buy-opt:active .product__val-icon
+		fill: #FCBD7E
+	&__cart-add
+		position: relative
+		padding: 0 40px 0 5px
+		height: 40px
+		min-width: 150px
+		margin-left: auto
+		background-color: $blue-light
+		white-space: nowrap
+		+md
+			padding: 0 31px 0 5px
+			height: 28px
+			min-width: 102px
+		.product__val-icon
+			font-size: 16px
+			fill:	 #bd1711
+			+lg
+				font-size: 14px
+			+md
+				font-size: 12px
+		&::after
+			position: absolute
+			right: 0
+			top: 0
+			z-index: 1
+			content: ''
+			+s('btn_cart')
+			+md
+				top: -6px
+				right: -6px
+				transform: scale(0.7)
+		&:hover::after
+			+s('btn_cart-hvr')
+		&:active::after
+			+s('btn_cart-act')
+	&__price-current
+		display: inline-block
+		vertical-align: middle
+		color: #bd1711
+		+f("psb",21)
+		line-height: 12px
+		+lg
+			font-size: 19px
+		+md
+			font-size: 15px
+	&__suggest
+		display: flex
+		flex-direction: column
+		align-items: center
+		flex-basis: (650/1680 * 100%)
+		padding: 30px 30px 35px 30px
+		+md
+			padding: 25px 15px 20px 15px
+			flex-basis: 38.8%
+		+sm
+			padding: 15px 10px 15px 10px
+			flex-basis: 36.8%
+		+xs
+			flex-basis: 100%
+			margin-top: 15px
+		.decor__line
+			width: 92%
+			+sm
+				width: 90%
+			+xs
+				width: 95%
+		&_more-text
+			padding: 15px 30px 25px 30px
+			+md
+				padding: 10px 15px 20px 15px
+		&_border
+			border-radius: 35px
+			border: 2px dashed #274F7F
+		&-title
+			padding-left: 35px
+			align-self: flex-start
+			width: 100%
+			font-family: Arial, sans-serif
+			font-size: 20px
+			+md
+				font-size: 17px
+			+sm
+				font-size: 15px
+			+xs
+				font-size: 16px
+		&-descr
+			margin: 30px 0
+			text-indent: 35px
+			line-height: 1.3
+			+lg
+				margin: 15px 0
+				font-size: 18px
+			+md
+				font-size: 16px
+			+sm
+				font-size: 14px
+			
+			&_topm
+				margin-top: 15px
+		&-descr + &-descr
+			margin: -15px 0 15px
+			+md
+				margin: 0 0 5px
+		&-links
+			align-self: stretch
+			+clr
+			+md
+				margin-bottom: 10px
+			+sm
+				margin: 20px 0 10px 18px
+			+xs
+				margin: 15px 0 15px 8px
+			&_more-text
+				.product__suggest-col
+					width: 50%
+					margin-left: 0
+					padding: 0 5px 0 8px
+					+md
+						padding: 0 5px 0 5px
+					+sm
+						padding: 0 5px 0 10px
+						width: 100%
+					+xs
+						padding: 0 5px 0 22px
+		&-links_col
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			padding: 0 0 0 25px
+			margin: 0 9px 10px
+			border-left: 1px solid #D8DFE6
+			+md
+				margin: 0 21px 10px
+				padding: 0 0 0 15px
+		&-col
+			float: left
+			width: calc(50% - 5px)
+			padding: 0 5px 0 20px
+			margin-left: 5px
+			border-left: 1px solid #EBEBEB
+			+md
+				padding: 0 5px 0 10px
+			+sm
+				display: flex
+				flex-direction: column
+				width: 100%
+				margin-bottom: 5px
+			+xs
+				width: 49%
+				align-items: flex-start
+				padding: 0 5px 0 20px
+		&-link
+			display: inline-block
+			line-height: 1
+			color: #003D82
+			font-size: 21px
+			+lg
+				font-size: 18px
+			+md
+				font-size: 16px
+			+sm
+				font-size: 14px
+			&:hover
+				color: #4E91FF
+			&:active
+				color: #001E57
+			& + &
+				margin-top: 12px
+				+md
+					margin-top: 5px
+		&-btn
+			margin-top: auto
+	&__admin-change
+		position: absolute
+		z-index: 2
+		width: 75px
+		height: 75px
+		background-color: #fff
+		border: 1px solid $black-light
+		+md
+			width: 60px
+			height: 60px
+		.icon-pencil
+			font-size: 27px
+		&:hover
+			background-color: #00BBFF
+	
+	&__item-pic
+		@media only screen and (max-width: 1599px)
+			&.decor::after
+				border-width: 0 0 16px 16px
+				right: 0
+			.decor__line
+				width: 92%
+			.decor__line::before
+				right: -1px
+				border-width: 0 0 16px 11px
+			.decor__line::after
+				right: -17px
+				border-width: 16px 16px 0 0
+	&__rating
+		display: inline-block
+		vertical-align: middle
+		margin-right: 20px
+		&-text
+			margin-bottom: 3px
+			font-size: 18px
+			color: #1C487A
+		&-in
+			display: flex
+			flex-direction: row-reverse
+			justify-content: center
+		&-input
+			display: none
+		&-input ~ &-icon .product__rating-star
+			fill: #DBDBDB
+			stroke: #DBDBDB
+		&-input:checked ~ &-icon .product__rating-star,
+		&-input:checked &-icon .product__rating-star
+			fill: #FFED00
+			stroke: #FFED00
+		&-icon:hover .product__rating-star,
+		&-icon:hover ~ &-icon .product__rating-star
+			fill: #C7CBCF
+			stroke: #DBDBDB
+		&-input:checked &-icon:hover .product__rating-star,
+		&-input:checked ~ &-icon .product__rating-star
+			fill: #FFED00
+			stroke: #FFED00
+		&-icon
+			display: inline-block
+			cursor: pointer
+		&-star
+			font-size: 23px
+			
+	&__col
+		float: left
+		&:nth-child(1)
+			width: percentage(655 / 1340)
+		&:nth-child(2)
+			width: percentage(685 / 1340)
+			padding-left: 17px
+	&__descr-title
+		padding: 2px 15px
+		margin-bottom: 15px
+		font-size: 25px
+		text-transform: uppercase
+		color: #00306B
+		background-color: #F4F8FD
+	&__descr-item
+		padding: 0 20px 0 15px
+		margin-bottom: 20px
+		&:last-child
+			margin-bottom: 0
+	&__buy
+		margin: 5px 0 0
+	&__buy-in
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+	&__amount
+		padding: 0 0 0 25px
+		background: #EEF5FC
+	&__amount-text
+		display: inline-block
+		vertical-align: middle
+		font-size: 24px
+		color: #00306B
+	&__amount-count
+		display: inline-block
+		vertical-align: middle
+		margin-left: 16px
+		padding: 8px 15px 8px 30px
+		border-radius: 30px 0 0 30px
+		background-color: #EEF5FC
+	&__amount-input
+		margin-right: 15px
+		padding-right: 5px
+		font-size: 21px
+		color: #000
+		+f('oss')
+		width: 52px
+		height: 29px
+		line-height: 29px
+		text-align: right
+	&__price
+		min-width: 152px
+		padding: 0 10px
+		height: 85px
+		line-height: 85px
+		+f('psb',30)
+		color: #00306B
+		text-align: center
+		border-top-left-radius: 10px
+		background: #F4F8FD url(../img/bg/price-bg.svg) no-repeat 0 0
+		background-size: 100% 195%
+		.icon-ruble
+			display: inline-block
+			margin-left: 5px
+			fill: #00306B
+			font-size: 21px
+	&__sale-link
+		display: inline-block
+		margin: 5px 0 0 25px
+		color: #FCBD7E
+		border-bottom: 3px dashed #FCBD7E
+		+f('psb',25)
+		+trs
+		&:hover
+			color: darken(#FCBD7E, 15)
+			border-bottom: 3px dashed darken(#FCBD7E, 15)
+	&__cart-btn
+		padding: 20px 70px 20px 5px
+		margin: 30px auto 0
+		display: block
+		font-size: 21px
+		min-width: 362px
+		background: #27B0E2
+		&:hover
+			background: #02B5F7
+		&:active
+			background: #23568A
+		
+	&__look
+		margin-top: 20px
+	&__look-pic img
+		width: 100%
+	&__look-pictures
+		margin: 25px 0 40px
+		display: flex
+		justify-content: space-between
+	
+	&__props-row
+		font-size: 0
+		+clr
+	&__actions
+		float: left
+		width: percentage(410 / 655)
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__hashtags
+		float: left
+		margin-left: 7px
+		width: percentage(234 / 655)
+	&__hashtags-link
+		display: block
+		padding: 0 15px
+		font-size: 19px
+		color: #00306B
+		background: #F5F5F5
+		&:hover
+			background: darken(#F5F5F5, 5)
+	&__hashtags-link + &__hashtags-link
+		margin-top: 5px
+	&__calc-btn
+		position: relative
+		max-width: 350px
+		min-height: 56px
+		font-size: 19px
+		padding: 6px 65px 5px 40px
+		background: #EEF5FC
+		border-bottom: 1px solid #E1EFF6
+		&:hover
+			background: #61CDFF
+			border-bottom-color: #FFC486
+			color: #fff
+		&:active
+			background: #1E4D80
+			border-bottom-color: #FF0000
+			color: #000
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			right: 0
+			top: 0
+			+sr('edit')
+		&:hover::after
+			+sr('edit-hvr')
+		&:active::after
+			+sr('edit-act')
+	&__calc-btn:hover &__calc-icon
+		fill: #2ABAFC
+	&__calc-btn:active &__calc-icon
+		fill: #193463
+	&__calc-icon
+		position: absolute
+		left: 10px
+		top: 10px
+		fill: #DFE9F5
+		font-size: 13px
+	&__wish-btn
+		padding: 1px 0
+		margin-right: 7px
+		background: #EEF5FC
+		&::after
+			content: ''
+			display: block
+			+sr('heart')
+		&:hover::after
+			+sr('heart-hvr')
+		&:active::after
+			+sr('heart-act')
+			
+	&__filter
+		font-size: 0
+	&__filter-btn
+		display: inline-block
+		vertical-align: middle
+		margin-right: 5px
+		height: 34px
+		width: 102px
+		border: 1px solid #CAD4DE
+		background: none
+		+f('oss', 18,18)
+		color: #B3BEC9
+		+trs
+		span
+			display: inline-block
+			vertical-align: middle
+		&:hover
+			color: darken(#B3BEC9, 20)
+	&__filter-btn:hover &__filter-icon
+		fill: darken(#B3BEC9, 20)
+	&__filter-icon
+		display: inline-block
+		vertical-align: middle
+		fill: #B3BEC9
+		font-size: 21px
+		+trs
+	&__filter-btn.is-active
+		color: #5F7899
+	&__filter-btn.is-active .product__filter-icon
+		fill: #5F7899
+		
+	.icon-filter-squares
+		font-size: 10px
+	.icon-filter-list
+		font-size: 16px
+		vertical-align: bottom
+	
+	&_home
+		padding-top: 50px
+		+lg
+			padding-top: 30px
+		+sm
+			padding-top: 5px

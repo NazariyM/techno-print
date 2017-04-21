@@ -1,0 +1,45 @@
++b.SECTION.request
+	+e.container.container
+		+e.title.title-sm Отправка запроса на расчёт
+		+e.P.descr Отправить запрос на расчёт заказа можно в этой форме или на почту:
+			=' '
+			+e.A.link(href="mailto:tp-smr@yandex.ru") tp-smr@yandex.ru
+		+e.wrap
+			+e.FORM(action="#!")
+				+e.row
+					+e.field._name
+						+e.INPUT.input(type="text" name="" required placeholder="Имя / Организация")
+					+e.field._tel
+						+e.INPUT.input(type="tel" name="" required placeholder="Телефон")
+					+e.field._email
+						+e.INPUT.input(type="email" name="" required placeholder="Почта для ответа")
+				+e.message-wrap
+					+e.TEXTAREA(placeholder="Комментарий").message
+					+e.BUTTON(type="button").message-extend.js-message-extend
+						+icon('icon-arr-double', 'request__message-icon')
+				+e.send
+					+e.send-row
+						+e.BUTTON(type="submit").send-btn Отправить
+					+b.load._home
+						+e.add
+							+e.text Прикрепленные файлы:
+							+e.BUTTON(type="button").btn-add Добавить файл
+						+e.files
+							+e.message Письмо отправлено!
+							+e.item.decor._sm
+								+e.IMG(src="img/content/file-1.jpg")
+								+e.BUTTON(type="button").btn-close
+									+icon('icon-close','load__icon-close')
+								.decor__line
+							+e.item.decor._sm
+								+e.IMG(src="img/content/file-2.jpg")
+								+e.BUTTON(type="button").btn-close
+									+icon('icon-close','load__icon-close')
+								.decor__line
+							+e.item.decor._sm
+								+e.IMG(src="img/content/file-2.jpg")
+								+e.BUTTON(type="button").btn-close
+									+icon('icon-close','load__icon-close')
+								.decor__line
+
+

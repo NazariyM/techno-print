@@ -1,0 +1,56 @@
+.benefits
+	padding: 35px 0
+	background-color: #d8e7f9
+	+lg
+		padding: 25px 0
+	+md
+		padding: 5px 0
+	+sm
+		padding: 5px 0 15px
+	+xs
+		padding: 0 0 10px
+	&__container
+		display: flex
+		justify-content: space-between
+		max-width: 1500px
+		+md
+			max-width: 1200px
+	&__item
+		display: flex
+		flex-basis: 33.33333%
+		align-items: center
+		&-pic
+			+sm
+				width: 100px
+				height: 100px
+			&::after
+				content: ''
+				display: block
+				+md
+					transform: scale(.67)
+			&_pic-1::after
+				+s('benefit_1')
+			&_pic-2::after
+				+s('benefit_2')
+			&_pic-3::after
+				+s('benefit_3')
+		&-text
+			padding-left: 25px
+			padding-right: 10px
+			font-size: 22px
+			line-height: (30/22)
+			color: #595858
+			+lg
+				font-size: 20px
+			+md
+				font-size: 15px
+			+sm
+				font-size: 14px
+				padding-left: 10px
+				line-height: 1.2
+			+xs
+				padding-left: 5px
+				padding-right: 0
+				font-size: 13px
+	&_default
+		margin-top: 50px

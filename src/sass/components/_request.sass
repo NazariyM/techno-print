@@ -1,0 +1,303 @@
+.request
+	padding: 95px 0
+	background-color: #ececec
+	+lg
+		padding: 50px 0
+	+md
+		padding: 35px 0 25px
+	+xs
+		padding: 20px 0 10px
+	&__container
+		max-width: 1114px
+	&__title
+		margin-bottom: 40px
+		text-align: center
+		+lg
+			margin-bottom: 30px
+		+md
+			font-size: 19px
+		+xs
+			font-size: 17px
+	&__descr
+		text-align: center
+		font-size: 22px
+		+lg
+			font-size: 19px
+		+md
+			font-size: 16px
+		+xs
+			font-size: 15px
+	&__link
+		color: #1166ab
+	&__wrap
+		margin: 40px 0 0
+		+lg
+			margin: 30px 0 0
+		+md
+			margin: 20px 0 0
+	&__row
+		display: flex
+		justify-content: space-between
+		margin: 0 0 40px
+		+xs
+			margin: 0 0 20px
+	&__field
+		position: relative
+		flex-basis: 31.26143%
+		border: 1px solid #5d8dcd
+		&::after
+			position: absolute
+			left: 0
+			top: 0
+			z-index: 1
+			content: ''
+			+md
+				left: -6px
+				top: -4px
+				transform: scale(.8)
+		&_name::after
+			+s('user_form')
+		&_tel::after
+			+s('phone_form')
+		&_email::after
+			+s('mail_form')
+	&__input
+		display: inline-block
+		vertical-align: middle
+		width: 100%
+		padding: 0 5px 0 68px
+		height: 38px
+		line-height: 38px
+		background-color: #fff
+		+f("ver",16)
+		+placeholder-color(#999999)
+		+md
+			padding: 0 5px 0 50px
+			line-height: 30px
+			height: 30px
+			font-size: 13px
+	&__message-wrap
+		position: relative
+		padding-left: 52px
+		border: 1px solid #5d8dcd
+		background-color: #f3f4f4
+		+md
+			padding-left: 40px
+		&::after
+			content: ''
+			position: absolute
+			z-index: 1
+			top: 0
+			left: 0
+			+s('dots_form')
+			+md
+				top: -6px
+				left: -7px
+				transform: scale(.75)
+	&__message
+		display: block
+		padding: 13px 15px 15px 17px
+		min-height: 180px
+		width: 100%
+		background-color: #fff
+		resize: none
+		border: none
+		+f("ver",16)
+		+placeholder-color(#999999)
+		+tr(min-height .3s)
+		+md
+			min-height: 140px
+			padding: 6px 12px 12px 8px
+			font-size: 13px
+		&.extended
+			min-height: 280px
+			+md
+				min-height: 220px
+		&-extend
+			position: absolute
+			width: 70px
+			height: 30px
+			background-color: #f7f7f7
+			bottom: 9px
+			right: 7px
+			line-height: 43px
+		&-extend:hover &-icon
+				fill: #56708A
+		&-extend:active &-icon
+				fill: #103559
+		&-icon
+			font-size: 21px
+			fill: #C4C4C4
+	&__send
+		margin-top: 15px
+		&-row
+			display: flex
+		&-btn
+			position: relative
+			margin-left: auto
+			margin-right: 23px
+			padding: 0 70px 0 5px
+			min-width: 255px
+			line-height: 52px
+			height: 52px
+			color: #fff
+			background: #6ca5db
+			text-align: right
+			border-bottom: 2px solid #a7b8c9
+			+f("ver",21)
+			+md
+				padding: 0 61px 0 5px
+				min-width: 196px
+				font-size: 15px
+				line-height: 38px
+				height: 38px
+			&::after
+				position: absolute
+				top: 0
+				right: 0
+				+s('send')
+				content: ''
+				+md
+					top: -7px
+					right: -8px
+					transform: scale(.73)
+			&:hover
+				background-color: #63afed
+				border-bottom-color: #ffff74
+			&:hover::after
+				+s('send-hvr')
+			&:active
+				background-color: #415c89
+				border-bottom-color: #a95a63
+			&:active::after
+				+s('send-act')
+	
+// load images
+.load
+	&__add
+		display: inline-block
+		margin-bottom: 20px
+	&__text
+		margin-bottom: 30px
+		max-width: 165px
+		padding-left: 3px
+		+f("ver",19)
+		color: #040404
+		+lg
+			font-size: 18px
+		+md
+			font-size: 16px
+			margin-bottom: 10px
+		+sm
+			font-size: 13px
+	&__btn-add
+		padding: 0 5px
+		max-width: 140px
+		min-height: 126px
+		color: #fff
+		background-color: #80C9E8
+		+f("ver",18)
+		text-transform: uppercase
+		border-bottom: 1px solid #A8B3BF
+		+lg
+			font-size: 13px
+			max-width: 108px
+			min-height: 96px
+		&::after
+			content: ''
+			display: block
+			+sr('file')
+			margin: 3px auto 0
+			+md
+			    transform: scale(.8)
+		&:hover::after
+			+sr('file-hvr')
+		&:active::after
+			+sr('file-act')
+		&:hover
+			background: #5EAFDA
+			border-bottom-color: #FFFF00
+		&:active
+			background: #2A578A
+			border-bottom-color: #E63E2D
+	&__files
+		display: inline-block
+		vertical-align: bottom
+		font-size: 0
+		margin-left: -30px
+		max-width: 510px
+	&__item
+		position: relative
+		display: inline-block
+		margin-left: 20px
+		margin-bottom: 20px
+		width: 142px
+		height: 130px
+		+vertical
+		+md
+			width: 110px
+			height: 98px
+			margin-left: 15px
+			margin-bottom: 15px
+		&:last-child
+			margin-right: 0
+		img
+			display: inline-block
+			vertical-align: middle
+			+md
+				height: 100%
+				object-fit: contain
+				width: 100%
+		.decor__line
+			+md
+				width: 65%
+		.decor__line::before
+			+md
+				border-width: 0 0 16px 15px
+				right: -23px
+		.decor__line::after
+			+md
+				border-width: 15px 16px 0 0
+	&__btn-close
+		position: absolute
+		right: -15px
+		top: -15px
+		width: 33px
+		height: 33px
+		border-radius: 50%
+		background: #E63833
+		border: 3px solid #fff
+		+tr(background .2s)
+		+md
+			width: 24px
+			height: 24px
+			border-width: 2px
+		&:hover
+			background: #3e5b8a
+	&__icon-close
+		fill: #fff
+		+vcenter
+		font-size: 13px
+		+md
+			font-size: 10px
+	&__message
+		margin: 0 0 20px 20px
+		+f("ver",26)
+		+lg
+			font-size: 22px
+		+md
+			font-size: 16px
+		+sm
+			font-size: 14px
+		&::before
+			content: ''
+			display: inline-block
+			vertical-align: -30px
+			+sr('mark')
+			+lg
+				transform: scale(.7)
+			+md
+				transform: scale(.4)
+				margin-right: -10px
+	&_home
+		margin-top: -40px
