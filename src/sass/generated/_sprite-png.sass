@@ -47,8 +47,6 @@ $icons: map-merge($icons,('user_form': (X: -491px, Y:-486px, W: 52px, H: 38px, T
   width: icon-attr($iconName, W)
   height: icon-attr($iconName, H)
   background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
-@mixin sprite-position($iconName)
-  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
 @mixin sprite-retina($iconName)
   background-image: url(icon-attr($iconName, IMG))
   $width: icon-attr($iconName, W)
@@ -61,14 +59,26 @@ $icons: map-merge($icons,('user_form': (X: -491px, Y:-486px, W: 52px, H: 38px, T
   $tw: icon-attr($iconName, TW)   
   $th: icon-attr($iconName, TH)
   background-size: $tw/2 $th/2
+@mixin sprite-triple($iconName)
+   background-image: url(icon-attr($iconName, IMG))
+   $width: icon-attr($iconName, W)
+   $height: icon-attr($iconName, H)
+   width: $width/3
+   height: $height/3
+   $x: icon-attr($iconName, X)
+   $y: icon-attr($iconName, Y)
+   background-position: $x/3 $y/3
+   $tw: icon-attr($iconName, TW)
+   $th: icon-attr($iconName, TH)
+   background-size: $tw/3 $th/3
 
 
 @mixin s($i)
   +sprite($i)
-@mixin sp($i)
-  +sprite-position($i)
+@mixin st($i)
+  +sprite-triple($i)
 @mixin sr($i)
-  +sprite-retina($i)  
+  +sprite-retina($i)
 
 //
 //.icon-benefit_1

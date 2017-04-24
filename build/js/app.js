@@ -3543,6 +3543,7 @@ $(document).ready(function () {
 
 		stepperArrowDown.append('<svg class="stepper-icon icon-minus"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-minus"></use></svg>');
 	}
+
 	initStepper();
 
 	// rubric list toggling

@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6
 	color: $black
 
 .title-sm
-	+f("psb",22)
+	+f("psb",20)
 
 .title-md
 	font-family: Arial, sans-serif
@@ -70,8 +70,8 @@ button
 	position: relative
 	display: inline-block
 	min-width: 340px
-	padding: 17px 70px 17px 5px
-	+f("psr",24)
+	padding: 16px 70px 16px 5px
+	+f("psr",22)
 	color: $white
 	outline: none
 	text-decoration: none
@@ -97,6 +97,7 @@ button
 		right: 32px
 		z-index: 1
 		+s('btn_arr')
+		transform: scale(.9)
 		+lg
 			right: 13px
 		+md
@@ -105,8 +106,6 @@ button
 		+sm
 			right: 6px
 			transform: scale(.6)
-		 
-			
 	&:hover
 		background-color: #128FCD
 		border-bottom-color: #F9BF84
@@ -130,3 +129,37 @@ button
 		&:active
 			background-color: #24568D
 			border-bottom-color: #E63833
+
+.send-btn
+	position: relative
+	padding: 0 70px 0 5px
+	min-width: 232px
+	line-height: 45px
+	height: 45px
+	color: #fff
+	background: #6ca5db
+	text-align: right
+	border-bottom: 2px solid #a7b8c9
+	+f("ver",19)
+	overflow: hidden
+	&::after
+		position: absolute
+		top: -4px
+		right: -4px
+		+s('send')
+		content: ''
+		transform: scale(.87)
+	+md
+		top: -7px
+		right: -8px
+		transform: scale(.73)
+	&:hover
+		background-color: #63afed
+		border-bottom-color: #ffff74
+	&:hover::after
+		+s('send-hvr')
+	&:active
+		background-color: #415c89
+		border-bottom-color: #a95a63
+	&:active::after
+		+s('send-act')

@@ -17,7 +17,7 @@ $(document).ready(function () {
 				$loginPopup.fadeOut(200);
 			});
 
-			$(window).keyup(function(e) {
+			$(window).keyup(function (e) {
 				if (e.keyCode == 27) {
 					$loginPopup.removeClass('is-open');
 					$loginPopup.fadeOut(200);
@@ -70,7 +70,7 @@ $(document).ready(function () {
 	})();
 
 	// stepper plugin
-	function initStepper () {
+	function initStepper() {
 		$('.js-product-amount').stepper();
 
 		let stepperArrowUp = $('.stepper-arrow.up');
@@ -81,6 +81,7 @@ $(document).ready(function () {
 		stepperArrowDown.append('<svg class="stepper-icon icon-minus"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-minus"></use></svg>');
 
 	}
+
 	initStepper();
 
 	// rubric list toggling

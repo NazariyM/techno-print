@@ -18,28 +18,22 @@
 					+e.BUTTON(type="button").message-extend.js-message-extend
 						+icon('icon-arr-double', 'request__message-icon')
 				+e.send
-					+e.send-row
-						+e.BUTTON(type="submit").send-btn Отправить
-					+b.load._home
-						+e.add
-							+e.text Прикрепленные файлы:
-							+e.BUTTON(type="button").btn-add Добавить файл
-						+e.files
-							+e.message Письмо отправлено!
-							+e.item.decor._sm
+					+e.send-col
+						+e.send-add
+							+e.BUTTON(type="button").send-btn-add Добавить файл
+							+e.send-text Прикрепленные файлы:
+						+e.send-files
+							+e.send-item.decor._sm
 								+e.IMG(src="img/content/file-1.jpg")
-								+e.BUTTON(type="button").btn-close
-									+icon('icon-close','load__icon-close')
+								+e.BUTTON(type='button').send-btn-close
+									+icon('icon-close','request__send-icon-close')
 								.decor__line
-							+e.item.decor._sm
+							+e.send-item.decor._sm
 								+e.IMG(src="img/content/file-2.jpg")
-								+e.BUTTON(type="button").btn-close
-									+icon('icon-close','load__icon-close')
+								+e.BUTTON(type="button").send-btn-close
+									+icon('icon-close','request__send-icon-close')
 								.decor__line
-							+e.item.decor._sm
-								+e.IMG(src="img/content/file-2.jpg")
-								+e.BUTTON(type="button").btn-close
-									+icon('icon-close','load__icon-close')
-								.decor__line
-
-
+						+e.send-message Письмо отправлено!
+					+e.send-col
+						+b.BUTTON(type='submit').send-btn.request__send-btn Отправить
+						+e.DIV(style='margin: 15px auto 0; width: 260px; height: 47px; border: 2px dashed #000; font-size: 22px; text-align: center;') Место под каптчу

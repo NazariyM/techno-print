@@ -1,14 +1,14 @@
 // header
 .header
-	padding-bottom: 50px
+	padding-bottom: 45px
 	+lg
 		padding-bottom: 30px
 	+sm
 		padding-bottom: 10px
 	&__container
 		position: relative
-		max-width: 1815px
-		padding: 25px 15px 50px
+		max-width: 1650px
+		padding: 22px 15px 47px
 		display: flex
 		justify-content: space-between
 		align-items: center
@@ -34,7 +34,7 @@
 				top: -15px
 				bottom: -50px
 	&__top
-		padding: 12px 0
+		padding: 10px 0
 		background-color: #fbfbfb
 		+md
 			padding: 7px 0 5px
@@ -51,7 +51,7 @@
 		&-col
 			&:nth-child(1)
 				align-self: flex-start
-				width: 270px
+				width: 245px
 				margin-top: 25px
 				+md
 					width: 200px
@@ -65,7 +65,7 @@
 					margin-top: 28px
 			&:nth-child(2)
 				position: relative
-				width: percentage(385 / 1785)
+				width: percentage(350 / 1620)
 				z-index: 3
 				+r(1835)
 					width: 24%
@@ -87,7 +87,7 @@
 					width: 80%
 					display: none
 			&:nth-child(4)
-				width: 105px
+				width: 100px
 				margin-top: 10px
 				margin-left: 10px
 				+md
@@ -103,12 +103,10 @@
 	
 	&__address
 		margin-bottom: 15px
-		font-size: 20px
+		font-size: 18px
 		color: $dark-blue
 		text-align: center
 		font-style: normal
-		+lg
-			font-size: 18px
 		+md
 			margin-bottom: 10px
 			font-size: 15px
@@ -201,7 +199,7 @@
 .logo
 	position: relative
 	display: block
-	max-width: 275px
+	max-width: 245px
 	&::after, &::before
 		position: absolute
 		background-color: #09A1D9
@@ -218,9 +216,9 @@
 	&::before
 		transform: skew(-25deg) rotate(-4deg)
 		width: 95%
-		height: 173%
-		left: -47px
-		top: 41px
+		height: 220px
+		left: -42px
+		top: 36px
 		+md
 			height: 315%
 			left: -64px
@@ -275,10 +273,10 @@
 		position: relative
 	&__input
 		width: 100%
-		line-height: 45px
-		height: 45px
+		line-height: 41px
+		height: 41px
 		padding: 0 50px 0 11px
-		+f("psr",20)
+		+f("psr",17)
 		background-color: #fff
 		border: 1px solid transparent
 		color: #000
@@ -306,8 +304,8 @@
 		top: 0
 		right: 0
 		bottom: 0
-		width: 45px
-		height: 45px
+		width: 41px
+		height: 41px
 		background-color: #F5F5F5
 		border: 2px solid #fff
 		transition: .3s
@@ -318,9 +316,8 @@
 			display: block
 			margin: 0 auto
 			content: ''
-			+sr('search')
-			+md
-			    transform: scale(.75)
+			+st('search')
+			transform: scale(1.1)
 		&:active
 			background-color: #D6D6D6
 			
@@ -333,14 +330,12 @@
 		margin-bottom: 5px
 		width: calc(50% - 3px)
 		padding: 0 5px
-		height: 44px
-		line-height: 37px
+		height: 38px
+		line-height: 33px
 		color: #fff
 		border: 2px solid #fff
-		font-size: 20px
+		font-size: 18px
 		+trs
-		+lg
-			font-size: 18px
 		+md
 			line-height: 25px
 			height: 30px
@@ -361,8 +356,6 @@
 // cart
 .cart
 	position: relative
-	font-size: 18px
-	color: #000
 	text-align: center
 	+md
 		+f('oss')
@@ -404,7 +397,7 @@
 		position: relative
 		z-index: 3
 		display: block
-		height: 80px
+		height: 75px
 		background-color: #E6E6E6
 		+vertical
 		+md
@@ -440,15 +433,17 @@
 		padding: 5px 0
 		background-color: #fff
 		color: #00306B
+		+f('oss')
+	&__text
+		font-size: 17px
+		color: #000
 	&__total
-		font-size: 18px
 		font-family: Arial, sans-serif
-		+md
-			+f('oss',14)
+		font-size: 16px
 	&__val
 		display: inline-block
 		margin-left: 3px
-		font-size: 14px
+		font-size: 12px
 		fill: #00306B
 		+md
 			font-size: 10px
@@ -457,7 +452,7 @@
 .menu
 	position: relative
 	z-index: 2
-	max-width: 1516px
+	max-width: 1380px
 	padding: 0 10px
 	margin: -45px auto 0
 	+md
@@ -491,11 +486,10 @@
 		display: inline-block
 		margin-right: 6px
 		vertical-align: top
-		width: (244/1496 * 100%)
+		width: 16.2%
 		text-align: center
 		+md
 			margin-right: 3px
-			width: 16.2%
 		+sm
 			width: calc(16.4% - 2px)
 			margin: 2px
@@ -507,11 +501,11 @@
 		background-color: #F2FCFF
 	&__link
 		display: block
-		padding: 16px 5px
+		padding: 13px 5px
 		background-color: #EDFAFF
 		border-bottom: 2px solid #48A6DD
-		font-size: 21px
-		color: #2B2A29
+		font-size: 20px
+		color: #000
 		+lg
 			font-size: 19px
 		+md

@@ -10,7 +10,7 @@
 	&__title
 		text-align: center
 		margin-bottom: 20px
-		font-size: 25px
+		font-size: 23px
 		+lg
 			font-size: 21px
 		+md
@@ -19,7 +19,6 @@
 		+sm
 			font-size: 16px
 	&__descr
-		font-size: 22px
 		line-height: (30/22)
 		text-indent: 45px
 		+lg
@@ -36,19 +35,19 @@
 	&::after
 		position: absolute
 		z-index: 1
-		right: -8px
+		right: 0
 		bottom: 0
 		content: ''
 		width: 0
 		height: 0
 		border-style: solid
-		border-width: 0 0 26px 27px
+		border-width: 0 0 20px 20px
 		border-color: transparent transparent #fff transparent
 	&__line
 		position: absolute
 		left: 0
 		bottom: -1px
-		width: 88%
+		width: 87%
 		height: 1px
 		background-color: rgba(#DAE5EC, .65)
 		align-self: flex-end
@@ -60,7 +59,7 @@
 			transition: border-color .3s
 		&::before
 			right: -16px
-			+arr(16,22, rgba(#000, .25),br)
+			+arr(15,20, rgba(#000, .25),br)
 		&::after
 			right: -39px
 			width: 0
@@ -77,11 +76,13 @@
 		&::after
 			display: none
 		.decor__line
-			width: 76%
+			width: 85%
 		.decor__line:after
+			right: -20px
+			border-width: 19px 19px 0 0
 			background-color: #ececec
 		.decor__line:before
-			right: -15px
+			right: -1px
 	
 	&_xs
 		&::after

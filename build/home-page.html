@@ -552,25 +552,27 @@
               <div class="request__message-wrap"><textarea placeholder="Комментарий" class="request__message"></textarea><button type="button" class="request__message-extend js-message-extend"><svg class="icon-arr-double request__message-icon"><use xlink:href="img/sprite.svg#icon-arr-double"></use></svg></button></div>
               <div
                 class="request__send">
-                <div class="request__send-row"><button type="submit" class="request__send-btn">Отправить</button></div>
-                <div class="load load_home">
-                  <div class="load__add">
-                    <div class="load__text">Прикрепленные файлы:</div><button type="button" class="load__btn-add">Добавить файл</button></div>
-                  <div class="load__files">
-                    <div class="load__message">Письмо отправлено!</div>
-                    <div class="load__item decor decor_sm"><img src="img/content/file-1.jpg" alt="" role="presentation" /><button type="button" class="load__btn-close"><svg class="icon-close load__icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg></button>
-                      <div class="decor__line"></div>
-                    </div>
-                    <div class="load__item decor decor_sm"><img src="img/content/file-2.jpg" alt="" role="presentation" /><button type="button" class="load__btn-close"><svg class="icon-close load__icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg></button>
-                      <div class="decor__line"></div>
-                    </div>
-                    <div class="load__item decor decor_sm"><img src="img/content/file-2.jpg" alt="" role="presentation" /><button type="button" class="load__btn-close"><svg class="icon-close load__icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg></button>
-                      <div class="decor__line"></div>
-                    </div>
+                <div class="request__send-col">
+                  <div class="request__send-add"><button type="button" class="request__send-btn-add">Добавить файл</button>
+                    <div class="request__send-text">Прикрепленные файлы:</div>
                   </div>
+                  <div class="request__send-files">
+                    <div class="request__send-item decor decor_sm"><img src="img/content/file-1.jpg" alt="" role="presentation" /><button type="button" class="request__send-btn-close"><svg class="icon-close request__send-icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg></button>
+                      <div
+                        class="decor__line"></div>
+                  </div>
+                  <div class="request__send-item decor decor_sm"><img src="img/content/file-2.jpg" alt="" role="presentation" /><button type="button" class="request__send-btn-close"><svg class="icon-close request__send-icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg></button>
+                    <div
+                      class="decor__line"></div>
                 </div>
           </div>
-          </form>
+          <div class="request__send-message">Письмо отправлено!</div>
+        </div>
+        <div class="request__send-col"><button type="submit" class="send-btn request__send-btn">Отправить</button>
+          <div style="margin: 15px auto 0; width: 260px; height: 47px; border: 2px dashed #000; font-size: 22px; text-align: center;">Место под каптчу</div>
+        </div>
+        </div>
+        </form>
         </div>
         </div>
       </section>
