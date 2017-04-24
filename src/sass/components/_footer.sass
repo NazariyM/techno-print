@@ -1,5 +1,5 @@
 .footer
-	padding: 45px 0
+	padding: 40px 0
 	background-color: #002757
 	background-image: radial-gradient(ellipse farthest-corner at center top, #002757 25%, rgba(0, 62, 138, 0.2) 100%)
 	color: #fff
@@ -7,12 +7,13 @@
 	+md
 		padding: 25px 0
 	&__container
+		max-width: 1470px
 		+clr
 	&__col
 		position: relative
 		float: left
 		&:nth-child(1)
-			width: percentage(270 / 1680)
+			width: percentage(235 / 1440)
 			+md
 				margin-left: 50px
 			+sm
@@ -36,8 +37,7 @@
 	&__address
 		display: flex
 		font-style: normal
-		+lg
-			font-size: 18px
+		font-size: 19px
 		+md
 			font-size: 15px
 		+sm
@@ -65,20 +65,18 @@
 			left: -30px
 			z-index: 1
 			fill: #CFE7F9
-			font-size: 33px
+			font-size: 31px
 			+md
 				font-size: 24px
 	&__copy
 		margin-top: 55px
 		text-align: center
 		color: #CFE7F9
+		font-size: 18px
 		+sm
 			margin-top: 25px
 		&-text
-			font-size: 22px
 			margin-bottom: 5px
-			+lg
-				font-size: 19px
 			+md
 				font-size: 15px
 			+xs
@@ -87,9 +85,6 @@
 			color: #CFE7F9
 			text-decoration: underline
 			text-decoration-color: #CFE7F9
-			font-size: 20px
-			+lg
-				font-size: 18px
 			+md
 				font-size: 14px
 			&:hover

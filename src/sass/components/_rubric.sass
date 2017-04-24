@@ -1,9 +1,10 @@
 .rubric
 	&__container
+		max-width: 1580px
 		+clr
 	&__col
 		float: left
-		width: (310/1680 * 100%)
+		width: (280/1550 * 100%)
 		margin-right: 30px
 		+md
 			margin-right: 15px
@@ -35,8 +36,8 @@
 	&__list-icon
 		position: absolute
 		right: 13px
-		top: calc(50% - 7px)
-		font-size: 13px
+		top: calc(50% - 8px)
+		font-size: 12px
 		fill: #BCBFC2
 		+md
 			top: 20px
@@ -51,8 +52,8 @@
 	&__list-link
 		position: relative
 		display: block
-		padding: 21px 40px 21px 30px
-		font-size: 21px
+		padding: 21px 40px 21px 20px
+		font-size: 19px
 		color: #00306b
 		background: #F5F5F5
 		-webkit-tap-highlight-color: transparent
@@ -74,10 +75,6 @@
 			text-transform: uppercase
 			+md
 				border-bottom: 2px solid #E6E9ED
-		&_more-text
-			padding-left: 10px
-			+xs
-				padding: 9px 13px 9px 3px
 		&_color
 			background-color: #f5f8fd
 			color: #000
@@ -87,7 +84,7 @@
 	&__sub-list
 		display: none
 		position: absolute
-		top: 69px
+		top: 66px
 		left: 0
 		right: 0
 		z-index: 10
@@ -168,7 +165,7 @@
 		color: #4CB02E
 		+f('psb', 18, 18)
 	&_home
-		padding: 80px 0 95px
+		padding: 60px 0 85px
 		+lg
 			padding: 60px 0
 		+md

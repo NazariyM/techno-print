@@ -1,5 +1,5 @@
 .benefits
-	padding: 35px 0
+	padding: 30px 0
 	background-color: #d8e7f9
 	+lg
 		padding: 25px 0
@@ -12,7 +12,7 @@
 	&__container
 		display: flex
 		justify-content: space-between
-		max-width: 1500px
+		max-width: 1360px
 		+md
 			max-width: 1200px
 	&__item
@@ -26,6 +26,7 @@
 			&::after
 				content: ''
 				display: block
+				transform: scale(.9)
 				+md
 					transform: scale(.67)
 			&_pic-1::after
@@ -35,10 +36,10 @@
 			&_pic-3::after
 				+s('benefit_3')
 		&-text
-			padding-left: 25px
+			padding-left: 15px
 			padding-right: 10px
-			font-size: 22px
-			line-height: (30/22)
+			font-size: 20px
+			line-height: (26/20)
 			color: #595858
 			+lg
 				font-size: 20px
