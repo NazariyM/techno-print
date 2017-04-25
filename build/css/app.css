@@ -27,7 +27,7 @@ html { box-sizing: border-box; }
 
 *, *:before, *:after { box-sizing: inherit; }
 
-@font-face { font-family: "Verdana"; src: url("../fonts/verdana.woff2") format("woff2"), url("../fonts/verdana.woff") format("woff"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "Verdana"; src: url("../fonts/Verdana.woff2") format("woff2"), url("../fonts/Verdana.woff") format("woff"); font-weight: normal; font-style: normal; }
 
 @font-face { font-family: "TruthCYRMedium"; src: url("../fonts/TruthCYRMedium.woff2") format("woff2"), url("../fonts/TruthCYRMedium.woff") format("woff"); font-weight: normal; font-style: normal; }
 
