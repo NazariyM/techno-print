@@ -2569,7 +2569,7 @@ button {
 }
 
 .product__suggest-links_more-text {
-  margin: 0 -17px;
+  margin: 0 -15px;
 }
 
 .product__suggest-links_more-text .product__suggest-col {
@@ -4903,20 +4903,16 @@ button {
     margin-top: 30px;
   }
   .extra__item-list{
-    padding-left: 90px;
-  }
-  .extra__item-list{
-    padding-left: 50px;
+    padding-left: 80px;
   }
   .extra__item-title{
-    padding-left: 90px;
     font-size: 17px;
   }
   .extra__link{
     font-size: 18px;
   }
   .extra__links{
-    padding-left: 50px;
+    padding-left: 80px;
   }
   .request{
     padding: 50px 0;
@@ -4926,9 +4922,6 @@ button {
   }
   .request__wrap{
     margin: 30px 0 0;
-  }
-  .request__send-text{
-    font-size: 18px;
   }
   .request__send-btn-add{
     font-size: 13px;
@@ -4951,29 +4944,8 @@ button {
   .rubric_home{
     padding: 60px 0;
   }
-  .header{
-    padding-bottom: 30px;
-  }
   .header__mid-col:nth-child(2){
     width: 24%;
-  }
-  .nav__link{
-    font-size: 18px;
-  }
-  .nav_footer .nav__link{
-    font-size: 19px;
-  }
-  .search__input{
-    font-size: 18px;
-  }
-  .menu__link{
-    font-size: 19px;
-  }
-  .login__btn{
-    font-size: 18px;
-  }
-  .login_header{
-    margin-right: 0;
   }
 }
 
@@ -4988,7 +4960,7 @@ button {
     -ms-transform: scale(0.7);
     transform: scale(0.7);
   }
-  .send-btn{
+  .send-btn::after{
     top: -7px;
     right: -8px;
     -ms-transform: scale(0.73);
@@ -5150,6 +5122,9 @@ button {
     padding: 25px 15px 20px 15px;
     width: 38.8%;
   }
+  .product__suggest .decor__line{
+    width: 91.9%;
+  }
   .product__suggest_more-text{
     padding: 10px 15px 20px 15px;
   }
@@ -5168,8 +5143,11 @@ button {
   .product__suggest-links_more-text .product__suggest-col{
     padding: 0 5px 0 5px;
   }
+  .product__suggest-links_more-text .product__suggest-col:nth-child(1){
+    border-left: none;
+  }
   .product__suggest-links_col{
-    margin: 0 21px 10px;
+    margin: 0 10px 10px;
     padding: 0 0 0 15px;
   }
   .product__suggest-col{
@@ -5180,6 +5158,9 @@ button {
   }
   .product__suggest-link + .product__suggest-link{
     margin-top: 5px;
+  }
+  .product__suggest-btn{
+    bottom: 20px;
   }
   .product__admin-change{
     width: 60px;
@@ -5216,7 +5197,7 @@ button {
   }
   .extra__item-title{
     font-size: 15px;
-    padding-left: 50px;
+    padding-left: 80px;
   }
   .extra__item-product{
     font-size: 15px;
@@ -5226,6 +5207,7 @@ button {
   }
   .extra__pic{
     vertical-align: middle;
+    margin-left: -5.5%;
   }
   .request{
     padding: 35px 0 25px;
@@ -5276,8 +5258,7 @@ button {
     height: 38px;
   }
   .request__send-text{
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: 15px;
   }
   .request__send-btn-add::after{
     -ms-transform: scale(0.8);
@@ -5286,18 +5267,17 @@ button {
   .request__send-item{
     width: 110px;
     height: 98px;
-    margin-left: 15px;
-    margin-bottom: 15px;
+    margin-right: 15px;
   }
   .request__send-item .decor__line{
-    width: 65%;
+    width: 82%;
   }
   .request__send-item .decor__line::before{
     border-width: 0 0 16px 15px;
-    right: -23px;
+    right: -5px;
   }
   .request__send-item .decor__line::after{
-    border-width: 15px 16px 0 0;
+    border-width: 15px 15px 0 0;
   }
   .request__send-btn-close{
     width: 24px;
@@ -5308,7 +5288,7 @@ button {
     font-size: 10px;
   }
   .request__send-message{
-    font-size: 16px;
+    font-size: 15px;
   }
   .request__send-message::before{
     -ms-transform: scale(0.4);
@@ -5350,8 +5330,23 @@ button {
     padding: 40px 0;
   }
   .socials_footer .socials__item{
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
+  }
+  .socials_footer .socials__item .icon-gp{
+    font-size: 11px;
+  }
+  .socials_footer .socials__item .icon-tw{
+    font-size: 10px;
+  }
+  .socials_footer .socials__item .icon-vk{
+    font-size: 9px;
+  }
+  .socials_footer .socials__item .icon-od{
+    font-size: 15px;
+  }
+  .socials_footer .socials__item .icon-fb{
+    font-size: 13px;
   }
   .header__container{
     max-width: 1270px;
@@ -5424,11 +5419,6 @@ button {
     font-family: "PT Sans", Arial, sans-serif;
     font-weight: 700;
   }
-  .cart{
-    font-family: "Open Sans", Arial, sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-  }
   .cart::after{
     height: 200px;
     width: 138px;
@@ -5442,8 +5432,11 @@ button {
     -ms-transform: scale(0.8);
     transform: scale(0.8);
   }
+  .cart__text{
+    font-size: 14px;
+  }
   .cart__val{
-    font-size: 10px;
+    font-size: 12px;
   }
   .menu{
     margin: -30px auto 0;
@@ -5615,7 +5608,7 @@ button {
     font-size: 14px;
   }
   .product__suggest-links{
-    margin: 20px 0 10px 18px;
+    margin: 7px 0 10px 18px;
   }
   .product__suggest-links_more-text .product__suggest-col{
     padding: 0 5px 0 10px;
@@ -5632,20 +5625,23 @@ button {
   .product__suggest-link{
     font-size: 14px;
   }
+  .product__suggest-btn{
+    bottom: 15px;
+  }
   .product_home{
     padding-top: 5px;
   }
   .extra__text{
-    width: 50%;
+    width: 45%;
   }
   .extra__link{
     font-size: 14px;
   }
   .extra__pic{
-    width: 50%;
+    width: 55%;
   }
   .request__send-text{
-    font-size: 13px;
+    font-size: 14px;
   }
   .request__send-message{
     font-size: 14px;
@@ -5691,14 +5687,8 @@ button {
   .socials_footer .socials__item .icon-gp{
     font-size: 10px;
   }
-  .socials_footer .socials__item .icon-tw{
-    font-size: 10px;
-  }
   .socials_footer .socials__item .icon-vk{
     font-size: 9px;
-  }
-  .socials_footer .socials__item .icon-od{
-    font-size: 15px;
   }
   .socials_footer .socials__item .icon-fb{
     font-size: 12px;
@@ -5741,8 +5731,8 @@ button {
   .logo_footer::before{
     left: -85px;
   }
-  .cart{
-    font-size: 13px;
+  .search__input{
+    font-size: 14px;
   }
   .cart::before{
     left: -52px;
@@ -5755,6 +5745,15 @@ button {
   .cart__in::after{
     -ms-transform: scale(0.7);
     transform: scale(0.7);
+  }
+  .cart__text{
+    font-size: 13px;
+  }
+  .cart__total{
+    font-size: 15px;
+  }
+  .cart__val{
+    font-size: 11px;
   }
   .menu{
     max-width: none;
@@ -5823,6 +5822,7 @@ button {
     width: 93%;
   }
   .product__suggest{
+    padding: 15px 10px 25px 10px;
     width: 100%;
     margin-top: 15px;
   }
@@ -5831,9 +5831,6 @@ button {
   }
   .product__suggest-title{
     font-size: 16px;
-  }
-  .product__suggest-links{
-    margin: 15px 0 15px 8px;
   }
   .product__suggest-links_more-text .product__suggest-col{
     padding: 0 5px 0 22px;
@@ -5875,11 +5872,38 @@ button {
   .request__row{
     margin: 0 0 20px;
   }
+  .request__send-col:nth-child(1){
+    width: 100%;
+  }
+  .request__send-col:nth-child(2){
+    width: 100%;
+    margin-top: 20px;
+    padding-right: 0;
+    text-align: center;
+  }
+  .request__send-files{
+    width: 59%;
+  }
+  .request__send-item:nth-child(2n){
+    margin-right: 20px;
+  }
+  .request__send-item:nth-child(2) ~ .request__send-item{
+    margin-top: 0;
+  }
+  .request__send-item:nth-child(3) ~ .request__send-item{
+    margin-top: 20px;
+  }
   .benefits{
     padding: 0 0 10px;
   }
+  .benefits__item-pic::after{
+    -ms-transform: scale(0.55);
+    transform: scale(0.55);
+    position: relative;
+    top: -7px;
+  }
   .benefits__item-text{
-    padding-left: 5px;
+    padding-left: 0;
     padding-right: 0;
     font-size: 13px;
   }
@@ -5890,6 +5914,9 @@ button {
   .rubric__list-link{
     padding: 9px 13px 9px 10px;
     font-size: 11px;
+  }
+  .rubric__list-link_tablet{
+    padding: 9px 12px 9px 2px;
   }
   .rubric__sub-link{
     padding: 5px;
@@ -5936,9 +5963,6 @@ button {
   .nav__link{
     font-size: 14px;
     padding: 0;
-  }
-  .search__input{
-    font-size: 14px;
   }
   .top-links__link{
     font-size: 14px;
