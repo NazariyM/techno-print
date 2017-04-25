@@ -1,22 +1,30 @@
 .rubric
 	&__container
-		max-width: 1580px
-		+clr
+		max-width: 1560px
+		font-size: 0
+		text-align: center
 	&__col
-		float: left
-		width: (280/1550 * 100%)
-		margin-right: 30px
+		display: inline-block
+		width: 18.3%
+		margin: 0 15px
 		+md
-			margin-right: 15px
+			margin: 0 13px
+			width: 16.4%
 		+sm
-			width: calc(20% - 4px)
-			margin-right: 4px
+			width: 17.5%
+			margin: 0 10px
+		+xs
+			width: 19.3%
+			margin: 0 3px
+		&:first-child
+			margin-left: 0
 		&:last-child
 			margin-right: 0
 	&__item + &__item
 		margin-top: 6px
 	&__list
 		position: relative
+		text-align: left
 	&__list-item
 		position: relative
 		&:hover
@@ -107,6 +115,7 @@
 		background: #f5f8fd
 		color: #333333
 		border-bottom: 1px solid darken(#f5f8fd, 10)
+		font-size: 18px
 		+md
 			font-size: 15px
 		+sm
