@@ -1,21 +1,20 @@
 body
 	min-width: 768px
-	background: #FFF
-	+f("psr",20,26)
+	+f("psr", 18, 26)
 	color: $black
 	-webkit-font-smoothing: subpixel-antialiased
 	
 // layout
+.out
+	overflow: hidden
+	
 .container
-	max-width: 1710px
+	max-width: 1560px
 	margin: 0 auto
 	padding: 0 15px
 	+sm
 		padding: 0 10px
 
-.out
-	overflow: hidden
-	
 // titles
 h1, h2, h3, h4, h5, h6
 	font-weight: normal
@@ -43,27 +42,33 @@ h1, h2, h3, h4, h5, h6
 
 // links
 .link-decor
-	padding: 3px
 	color: #008CFF
-	background-image: linear-gradient(to right, #008CFF 33%, rgba(255, 255, 255, 0) 0%), linear-gradient(to left, #008CFF 16%, rgba(255, 255, 255, 0) 0%)
-	background-size: 22px 2px, 6px 2px
-	background-repeat: repeat-x
-	background-position: bottom
-	&:hover
+	span
+		padding-bottom: 3px
+		background-image: linear-gradient(to right, #008CFF 33%, rgba(255, 255, 255, 0) 0%), linear-gradient(to left, #008CFF 16%, rgba(255, 255, 255, 0) 0%)
+		background-size: 22px 2px, 6px 2px
+		background-repeat: repeat-x
+		background-position: bottom
+	&:hover span
 		color: darken(#008CFF, 10)
 		background-image: linear-gradient(to right, darken(#008CFF, 10) 33%, rgba(255, 255, 255, 0) 0%), linear-gradient(to left, darken(#008CFF, 10) 16%, rgba(255, 255, 255, 0) 0%)
-
-// mini reset
-a
-	text-decoration: none
-	color: inherit
-	
-img
-	display: block
-	
-button
-	background: none
-	+f('psr')
+	&_rubric
+		span
+			background-image: linear-gradient(to right, #B3B3B3 33%, rgba(255, 255, 255, 0) 0%), linear-gradient(to left, #B3B3B3 16%, rgba(255, 255, 255, 0) 0%)
+		&:hover
+			border-bottom-color: transparent!important
+		&:hover span
+			background-image: linear-gradient(to right, #0051FF 33%, rgba(255, 255, 255, 0) 0%), linear-gradient(to left, #0051FF 16%, rgba(255, 255, 255, 0) 0%)
+			
+.link-sale
+	color: #FCBD7E
+	font-size: 20px
+	+trs
+	span
+		border-bottom: 2px dashed #FCBD7E
+	&:hover span
+		color: darken(#FCBD7E, 15)
+		border-bottom-color: darken(#FCBD7E, 15)
 
 // buttons
 .btn
@@ -163,3 +168,40 @@ button
 		border-bottom-color: #a95a63
 	&:active::after
 		+s('send-act')
+		
+.btn-cart
+	position: relative
+	padding: 19px 70px 19px 5px
+	min-width: 362px
+	font-size: 21px
+	color: #fff
+	background: #2AB1E2
+	border-bottom: 2px solid #E3E3E3
+	&::after
+		position: absolute
+		top: -4px
+		right: -4px
+		+sr('cart_add')
+		transform: scale(.9)
+		content: ''
+	&:hover
+		background: #01B6F8
+		border-bottom-color: #FFBE77
+	&:hover::after
+		+sr('cart_add-hvr')
+	&:active
+		background: #23568A
+		border-bottom-color: #E63E2D
+	&:active::after
+		+sr('cart_add-act')
+// mini reset
+a
+	text-decoration: none
+	color: inherit
+
+img
+	display: block
+
+button
+	background: none
+	+f('psr')

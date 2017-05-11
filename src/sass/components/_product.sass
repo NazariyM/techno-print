@@ -13,6 +13,7 @@
 		display: flex
 		align-items: center
 		justify-content: space-between
+		min-height: 40px
 		padding: 1px 30px 0 25px
 		margin-bottom: 30px
 		background-color: #EBECEC
@@ -200,10 +201,6 @@
 		justify-content: space-between
 		+xs
 			flex-wrap: wrap
-		&_float
-			margin-bottom: 45px
-			display: block
-			+clr
 	&__examples
 		display: flex
 		align-items: flex-start
@@ -218,6 +215,7 @@
 		+xs
 			flex-basis: 100%
 	&__examples_x4
+		width: 100%
 		flex-basis: 100%
 		flex-wrap: wrap
 		.product__item
@@ -225,6 +223,7 @@
 			width: 23%
 			margin-bottom: 35px
 	&__examples_watched
+		width: 100%
 		flex-basis: 100%
 		.product__item
 			min-height: 386px
@@ -651,17 +650,20 @@
 		&-star
 			font-size: 23px
 			
-	&__col
-		float: left
-		&:nth-child(1)
-			width: percentage(655 / 1340)
-		&:nth-child(2)
-			width: percentage(685 / 1340)
-			padding-left: 17px
+	&__card
+		margin-bottom: 45px
+		display: block
+		+clr
+		&-col
+			float: left
+			width: 50%
+			&:nth-child(2)
+				padding-left: percentage(19 / 1224)
 	&__descr-title
 		padding: 2px 15px
 		margin-bottom: 15px
-		font-size: 25px
+		font-size: 22px
+		line-height: 1.3
 		text-transform: uppercase
 		color: #00306B
 		background-color: #F4F8FD
@@ -704,9 +706,9 @@
 	&__price
 		min-width: 152px
 		padding: 0 10px
-		height: 85px
-		line-height: 85px
-		+f('psb',30)
+		height: 80px
+		line-height: 80px
+		+f('psb', 30)
 		color: #00306B
 		text-align: center
 		border-top-left-radius: 10px
@@ -717,27 +719,15 @@
 			margin-left: 5px
 			fill: #00306B
 			font-size: 21px
-	&__sale-link
+	&__link-sale
 		display: inline-block
 		margin: 5px 0 0 25px
-		color: #FCBD7E
-		border-bottom: 3px dashed #FCBD7E
-		+f('psb',25)
-		+trs
-		&:hover
-			color: darken(#FCBD7E, 15)
-			border-bottom: 3px dashed darken(#FCBD7E, 15)
-	&__cart-btn
-		padding: 20px 70px 20px 5px
+		+f('psb', 24)
+		span
+			border-bottom: 3px dashed #FCBD7E
+	&__btn-cart
 		margin: 30px auto 0
 		display: block
-		font-size: 21px
-		min-width: 362px
-		background: #27B0E2
-		&:hover
-			background: #02B5F7
-		&:active
-			background: #23568A
 		
 	&__look
 		margin-top: 20px
@@ -859,7 +849,7 @@
 		vertical-align: bottom
 	
 	&_home
-		padding-top: 50px
+		padding-top: 40px
 		+lg
 			padding-top: 30px
 		+sm

@@ -4,7 +4,7 @@
 	+md
 		margin-bottom: 10px
 	&__container
-		max-width: 1620px
+		max-width: 1500px
 		+md
 			max-width: 1200px
 	&__title
@@ -21,6 +21,7 @@
 	&__descr
 		line-height: (30/22)
 		text-indent: 45px
+		font-size: 20px
 		+lg
 			font-size: 19px
 		+md
@@ -106,7 +107,7 @@
 	&__link
 		display: inline-block
 		vertical-align: middle
-		font-size: 23px
+		font-size: 20px
 		span
 			display: inline-block
 			vertical-align: middle
@@ -131,21 +132,31 @@
 	----------------------------------- */
 .page
 	&_default
-		padding: 35px 0 0
+		//padding: 35px 0 0
 	&__bar
 		position: relative
 		display: flex
 		justify-content: space-between
 		align-items: center
 		padding-left: 15px
+		min-height: 46px
 		background: #EBECEC
+		&::after
+			content: ''
+			position: absolute
+			bottom: -1px
+			left: 5px
+			right: 5px
+			height: 1px
+			background: #D1D1D1
+			z-index: 1
 		&-title
-			padding: 10px 30px
+			padding: 8px 30px
 			margin-left: auto
 			background: #F3F3F3
 			border-radius: 50px 0 0 50px
 			min-width: 250px
-			font-size: 23px
+			font-size: 21px
 			text-align: center
 			color: #333333
 	&__in
@@ -153,11 +164,11 @@
 		justify-content: space-between
 		margin: 30px 0 0
 	&__side
-		width: percentage(310 / 1680)
+		width: 18.5%
 	&__main
 		display: flex
 		flex-direction: column
-		width: percentage(1340 / 1680)
+		width: 80%
 	
 /* pagination
 	----------------------------------- */
@@ -208,20 +219,6 @@
 		margin: 40px 0
 		background: none
 		
-/* bordered decor
-	----------------------------------- */
-.bordered
-	position: relative
-	&::after
-		content: ''
-		position: absolute
-		bottom: -1px
-		left: 5px
-		right: 5px
-		height: 1px
-		background: #D1D1D1
-		z-index: 1
-
 /* sub-menu
 	----------------------------------- */
 .category-menu
