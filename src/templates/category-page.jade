@@ -277,71 +277,71 @@ block content
 												+e.IMG(src='img/content/look-5.jpg')
 												.decor__line
 									+e.props
-										+e.props-row
+										+e.props-col
 											+e.actions
 												+e.BUTTON(type='button').wish-btn
 												+e.BUTTON(type='button').calc-btn
 													+icon('icon-arr-def', 'product__calc-icon')
 													+e.SPAN Рассчитать свой - заказной дизайн
-											+e.hashtags
-													+e.A.hashtags-link(href='#!') #полотенце в подарок
-													+e.A.hashtags-link(href='#!') #вышивки на полотенце
-													+e.A.hashtags-link(href='#!') #сувениры с вышивкой
-										+e.props-row
-											+e.rating
-												+e.rating-text Оцените данный товар:
-												+e.rating-in
-													+e.INPUT.rating-input(id='product-rating-6' value='6' type='radio' name='product-rating')
-													+e.LABEL.rating-icon(for='product-rating-6')
-														+icon('icon-star', 'product__rating-star')
-													+e.INPUT.rating-input.js-product-rating(id='product-rating-5' value='5' type='radio' name='product-rating')
-													+e.LABEL.rating-icon(for='product-rating-5')
-														+icon('icon-star', 'product__rating-star')
-													+e.INPUT.rating-input(id='product-rating-4' value='4' type='radio' name='product-rating')
-													+e.LABEL.rating-icon(for='product-rating-4')
-														+icon('icon-star', 'product__rating-star')
-													+e.INPUT.rating-input(id='product-rating-3' value='3' type='radio' name='product-rating')
-													+e.LABEL.rating-icon(for='product-rating-3')
-														+icon('icon-star', 'product__rating-star')
-													+e.INPUT.rating-input(id='product-rating-2' value='2' type='radio' name='product-rating')
-													+e.LABEL.rating-icon(for='product-rating-2')
-														+icon('icon-star', 'product__rating-star')
-													+e.INPUT.rating-input(id='product-rating-1' value='1' type='radio' name='product-rating')
-													+e.LABEL.rating-icon(for='product-rating-1')
-														+icon('icon-star', 'product__rating-star')
+											+b.rating._product-card
+												+e.text Оцените данный товар:
+												+e.in
+													+e.INPUT.input(id='product-rating-6' value='6' type='radio' name='product-rating')
+													+e.LABEL.icon(for='product-rating-6')
+														+icon('icon-star', 'rating__star')
+													+e.INPUT.input(id='product-rating-5' value='5' type='radio' name='product-rating')
+													+e.LABEL.icon(for='product-rating-5')
+														+icon('icon-star', 'rating__star')
+													+e.INPUT.input(id='product-rating-4' value='4' type='radio' name='product-rating')
+													+e.LABEL.icon(for='product-rating-4')
+														+icon('icon-star', 'rating__star')
+													+e.INPUT.input(id='product-rating-3' value='3' type='radio' name='product-rating')
+													+e.LABEL.icon(for='product-rating-3')
+														+icon('icon-star', 'rating__star')
+													+e.INPUT.input(id='product-rating-2' value='2' type='radio' name='product-rating')
+													+e.LABEL.icon(for='product-rating-2')
+														+icon('icon-star', 'rating__star')
+													+e.INPUT.input(id='product-rating-1' value='1' type='radio' name='product-rating')
+													+e.LABEL.icon(for='product-rating-1')
+														+icon('icon-star', 'rating__star')
 
-											- var socialsClass = '_product'
-												include components/_socials
+											- var socialsClass = '_product-card'
+											include components/_socials
+										+e.props-col
+											+e.hashtags
+												+e.A.hashtags-link(href='#!') #полотенце в подарок
+												+e.A.hashtags-link(href='#!') #вышивки на полотенце
+												+e.A.hashtags-link(href='#!') #сувениры с вышивкой
 
 								+e.card-col.product__descr
 									+e.descr-title ВЫШИВКА ИМЕНИ НА ПОЛОТЕНЦЕ,
 										br
 										| БУДЕТ НУЖНОЕ ВАМ ИМЯ И ШРИФТЫ
 									+e.descr-item
-										+e.P.descr-text
+										+e.P
 											+e.STRONG Подарочные полотенца
 											=	' '
 											| - это наша новинка! Приятный, душевный сувенир. Вам стоит обозначить лишь имя будущего владельца. Шрифты подберём какие нужно, макет на утверждение отправим по почте или куда скажете.
 									+e.descr-item
-										+e.P.descr-text
+										+e.P
 											+e.STRONG Дизайн:
 											=  ' '
 											| дизайн  шрифтов предлагается из наработанных нами  ранее, если необходимо что-то эксклюзивное, то можно будет и разработать, за дополнительную оплату.
 									+e.descr-item
-										+e.P.descr-text
+										+e.P
 											+e.STRONG Размер надписи:
 											=  ' '
 											| 200 мм или около того (с мужскую ладонь).
-										+e.P.descr-text
+										+e.P
 											+e.STRONG Макет:
 											=  ' '
 											| макет вышлем вам на утверждение по электронной  почте.
-										+e.P.descr-text
+										+e.P
 											+e.STRONG Срок исполнения:
 											=  ' '
 											| от 30 минут.
 									+e.descr-item
-										+e.P.descr-text
+										+e.P
 											+e.STRONG Стоимость:
 											=  ' '
 											| не учитывает саму заготовку полотенца.  Вы приносите своё или добавляете в корзину дополнительно «чистое» полотенце.
@@ -388,9 +388,12 @@ block content
 
 						+e.examples._x4
 							+e.item
-								+e.item-pic.decor
-									+e.IMG.img(src="img/content/prod-11.jpg")
-									.decor__line
+								+e.item-pic-wrap.js-product-item-pic
+									+e.A(href='#!').item-pic.decor
+										+e.IMG.img(src="img/content/prod-11.jpg")
+										.decor__line
+									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+										+icon('icon-loupe','product__zoom-icon')
 								+e.item-info
 									+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
 										= ' '
@@ -404,9 +407,12 @@ block content
 										+e.SPAN.price-current 400&nbsp;
 											+icon('icon-ruble','product__val-icon')
 							+e.item
-								+e.item-pic.decor
-									+e.IMG.img(src="img/content/prod-12.jpg")
-									.decor__line
+								+e.item-pic-wrap.js-product-item-pic
+									+e.A(href='#!').item-pic.decor
+										+e.IMG.img(src="img/content/prod-12.jpg")
+										.decor__line
+									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+										+icon('icon-loupe','product__zoom-icon')
 								+e.item-info
 									+e.item-title Любая вышивка на  полотенце, под  «Золото».
 									+e.item-descr Размер: 250х100 мм
@@ -419,9 +425,12 @@ block content
 										+e.SPAN.price-current 400&nbsp;
 											+icon('icon-ruble','product__val-icon')
 							+e.item
-								+e.item-pic.decor
-									+e.IMG.img(src="img/content/prod-10.jpg")
-									.decor__line
+								+e.item-pic-wrap.js-product-item-pic
+									+e.A(href='#!').item-pic.decor
+										+e.IMG.img(src="img/content/prod-10.jpg")
+										.decor__line
+									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+										+icon('icon-loupe','product__zoom-icon')
 								+e.item-info
 									+e.item-title Полотенце -зайчик!
 										= ' '
@@ -431,9 +440,12 @@ block content
 										+e.SPAN.price-current 150&nbsp;
 											+icon('icon-ruble','product__val-icon')
 							+e.item
-								+e.item-pic.decor
-									+e.IMG.img(src="img/content/prod-11.jpg")
-									.decor__line
+								+e.item-pic-wrap.js-product-item-pic
+									+e.A(href='#!').item-pic.decor
+										+e.IMG.img(src="img/content/prod-11.jpg")
+										.decor__line
+									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+										+icon('icon-loupe','product__zoom-icon')
 								+e.item-info
 									+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
 										= ' '
@@ -447,9 +459,12 @@ block content
 										+e.SPAN.price-current 400&nbsp;
 											+icon('icon-ruble','product__val-icon')
 							+e.item
-								+e.item-pic.decor
-									+e.IMG.img(src="img/content/prod-11.jpg")
-									.decor__line
+								+e.item-pic-wrap.js-product-item-pic
+									+e.A(href='#!').item-pic.decor
+										+e.IMG.img(src="img/content/prod-11.jpg")
+										.decor__line
+									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+										+icon('icon-loupe','product__zoom-icon')
 								+e.item-info
 									+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
 										= ' '
@@ -463,9 +478,12 @@ block content
 										+e.SPAN.price-current 400&nbsp;
 											+icon('icon-ruble','product__val-icon')
 							+e.item
-								+e.item-pic.decor
-									+e.IMG.img(src="img/content/prod-12.jpg")
-									.decor__line
+								+e.item-pic-wrap.js-product-item-pic
+									+e.A(href='#!').item-pic.decor
+										+e.IMG.img(src="img/content/prod-12.jpg")
+										.decor__line
+									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+										+icon('icon-loupe','product__zoom-icon')
 								+e.item-info
 									+e.item-title Любая вышивка на  полотенце, под  «Золото».
 									+e.item-descr Размер: 250х100 мм
@@ -478,9 +496,12 @@ block content
 										+e.SPAN.price-current 400&nbsp;
 											+icon('icon-ruble','product__val-icon')
 							+e.item
-								+e.item-pic.decor
-									+e.IMG.img(src="img/content/prod-10.jpg")
-									.decor__line
+								+e.item-pic-wrap.js-product-item-pic
+									+e.A(href='#!').item-pic.decor
+										+e.IMG.img(src="img/content/prod-10.jpg")
+										.decor__line
+									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+										+icon('icon-loupe','product__zoom-icon')
 								+e.item-info
 									+e.item-title Полотенце -зайчик!
 										= ' '
@@ -490,9 +511,12 @@ block content
 										+e.SPAN.price-current 150&nbsp;
 											+icon('icon-ruble','product__val-icon')
 							+e.item
-								+e.item-pic.decor
-									+e.IMG.img(src="img/content/prod-11.jpg")
-									.decor__line
+								+e.item-pic-wrap.js-product-item-pic
+									+e.A(href='#!').item-pic.decor
+										+e.IMG.img(src="img/content/prod-11.jpg")
+										.decor__line
+									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+										+icon('icon-loupe','product__zoom-icon')
 								+e.item-info
 									+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
 										= ' '
@@ -506,9 +530,12 @@ block content
 										+e.SPAN.price-current 400&nbsp;
 											+icon('icon-ruble','product__val-icon')
 							+e.item
-								+e.item-pic.decor
-									+e.IMG.img(src="img/content/prod-11.jpg")
-									.decor__line
+								+e.item-pic-wrap.js-product-item-pic
+									+e.A(href='#!').item-pic.decor
+										+e.IMG.img(src="img/content/prod-11.jpg")
+										.decor__line
+									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+										+icon('icon-loupe','product__zoom-icon')
 								+e.item-info
 									+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
 										= ' '
@@ -522,9 +549,12 @@ block content
 										+e.SPAN.price-current 400&nbsp;
 											+icon('icon-ruble','product__val-icon')
 							+e.item
-								+e.item-pic.decor
-									+e.IMG.img(src="img/content/prod-12.jpg")
-									.decor__line
+								+e.item-pic-wrap.js-product-item-pic
+									+e.A(href='#!').item-pic.decor
+										+e.IMG.img(src="img/content/prod-11.jpg")
+										.decor__line
+									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+										+icon('icon-loupe','product__zoom-icon')
 								+e.item-info
 									+e.item-title Любая вышивка на  полотенце, под  «Золото».
 									+e.item-descr Размер: 250х100 мм
@@ -537,9 +567,12 @@ block content
 										+e.SPAN.price-current 400&nbsp;
 											+icon('icon-ruble','product__val-icon')
 							+e.item
-								+e.item-pic.decor
-									+e.IMG.img(src="img/content/prod-10.jpg")
-									.decor__line
+								+e.item-pic-wrap.js-product-item-pic
+									+e.A(href='#!').item-pic.decor
+										+e.IMG.img(src="img/content/prod-11.jpg")
+										.decor__line
+									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+										+icon('icon-loupe','product__zoom-icon')
 								+e.item-info
 									+e.item-title Полотенце -зайчик!
 										= ' '
@@ -549,9 +582,12 @@ block content
 										+e.SPAN.price-current 150&nbsp;
 											+icon('icon-ruble','product__val-icon')
 							+e.item
-								+e.item-pic.decor
-									+e.IMG.img(src="img/content/prod-11.jpg")
-									.decor__line
+								+e.item-pic-wrap.js-product-item-pic
+									+e.A(href='#!').item-pic.decor
+										+e.IMG.img(src="img/content/prod-11.jpg")
+										.decor__line
+									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+										+icon('icon-loupe','product__zoom-icon')
 								+e.item-info
 									+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
 										= ' '
@@ -564,6 +600,7 @@ block content
 									+e.BUTTON(type="button").cart-add
 										+e.SPAN.price-current 400&nbsp;
 											+icon('icon-ruble','product__val-icon')
+
 
 						+b.pagination._product
 							+e.UL.list
