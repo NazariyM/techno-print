@@ -5,6 +5,7 @@
 		text-align: center
 	&__col
 		display: inline-block
+		vertical-align: top
 		width: 18.3%
 		margin: 0 15px
 		+md
@@ -20,11 +21,11 @@
 			margin-left: 0
 		&:last-child
 			margin-right: 0
-	&__item + &__item
-		margin-top: 6px
 	&__list
 		position: relative
 		text-align: left
+		& + &
+			margin-top: 6px
 	&__list-item
 		position: relative
 		&:hover
@@ -213,7 +214,7 @@
 			line-height: 1.1
 			margin: 0 0 5px
 		.rubric__sub-item_best
-			margin: 10px 0 15px
+			margin: 10px 0
 		.rubric__sub-item_examples
 			margin: 20px 0 0
 		.rubric__sub-item_examples + .rubric__sub-item_examples

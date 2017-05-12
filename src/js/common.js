@@ -1,4 +1,7 @@
-$(document).ready(() => {
+$(() => {
+  // object fit images
+  objectFitImages();
+
 // init login popup
   (function() {
     const $loginBtn = $('.js-login-btn');

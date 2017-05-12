@@ -1,6 +1,9 @@
 'use strict';
 
-$(document).ready(function () {
+$(function () {
+  // object fit images
+  objectFitImages();
+
   // init login popup
   (function () {
     var $loginBtn = $('.js-login-btn');
