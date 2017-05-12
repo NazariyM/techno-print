@@ -1,123 +1,127 @@
 'use strict';
 
 $(document).ready(function () {
+  // init login popup
+  (function () {
+    var $loginBtn = $('.js-login-btn');
+    var $loginPopup = $loginBtn.siblings('.login__popup');
 
-	// init login popup
-	(function () {
-		var $loginBtn = $('.js-login-btn');
-		var $loginPopup = $loginBtn.siblings('.login__popup');
+    $loginBtn.on('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
 
-		$loginBtn.on('click', function (e) {
-			e.preventDefault();
-			e.stopPropagation();
+      $loginPopup.toggleClass('is-open');
+      $loginPopup.fadeToggle(200);
 
-			$loginPopup.toggleClass('is-open');
-			$loginPopup.fadeToggle(200);
+      $(window).on('click', function () {
+        $loginPopup.removeClass('is-open');
+        $loginPopup.fadeOut(200);
+      });
 
-			$(window).on('click', function () {
-				$loginPopup.removeClass('is-open');
-				$loginPopup.fadeOut(200);
-			});
+      $(window).keyup(function (e) {
+        if (e.keyCode == 27) {
+          $loginPopup.removeClass('is-open');
+          $loginPopup.fadeOut(200);
+        }
+      });
 
-			$(window).keyup(function (e) {
-				if (e.keyCode == 27) {
-					$loginPopup.removeClass('is-open');
-					$loginPopup.fadeOut(200);
-				}
-			});
+      $loginPopup.on('click', function (e) {
+        e.stopPropagation();
+      });
+    });
+  })();
 
-			$loginPopup.on('click', function (e) {
-				e.stopPropagation();
-			});
-		});
-	})();
+  // message extend
+  (function () {
+    var $extendBtn = $('.js-message-extend');
 
-	// home slider
-	$('.home-slider').slick({
-		dots: true,
-		infinite: false,
-		speed: 400,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		prevArrow: '<button type="button" class="home-slider__btn home-slider__btn_prev"><svg class="home-slider__icon icon-arr-sld-l"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr-sld-l"></use></svg></button>',
-		nextArrow: '<button type="button" class="home-slider__btn home-slider__btn_next"><svg class="home-slider__icon icon-arr-sld-r"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr-sld-r"></use></svg></button>'
-	});
+    $extendBtn.on('click', function (e) {
+      e.preventDefault();
+      $(this).prev('textarea').addClass('extended');
+      $(this).fadeOut(800);
+    });
+  })();
 
-	// message extend
-	(function () {
-		var $extendBtn = $('.js-message-extend');
+  // search, detect user typing
+  (function () {
+    var $searchField = $('.js-search-input');
 
-		$extendBtn.on('click', function (e) {
-			e.preventDefault();
-			$(this).prev('textarea').addClass('extended');
-			$(this).fadeOut(800);
-		});
-	})();
+    $searchField.on('keyup', function () {
+      if ($(this).val().length) {
+        $(this).addClass('is-active');
+      } else {
+        $(this).removeClass('is-active');
+      }
+    });
+  })();
 
-	// search, detect user typing
-	(function () {
-		var $searchField = $('.js-search-input');
+  // stepper plugin
+  function initStepper() {
+    $('.js-product-amount').stepper();
 
-		$searchField.on('keyup', function () {
-			if ($(this).val().length) {
-				$(this).addClass('is-active');
-			} else {
-				$(this).removeClass('is-active');
-			}
-		});
-	})();
+    var stepperArrowUp = $('.stepper-arrow.up');
+    var stepperArrowDown = $('.stepper-arrow.down');
 
-	// stepper plugin
-	function initStepper() {
-		$('.js-product-amount').stepper();
+    stepperArrowUp.append('<svg class="stepper-icon icon-plus"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-plus"></use></svg>');
 
-		var stepperArrowUp = $('.stepper-arrow.up');
-		var stepperArrowDown = $('.stepper-arrow.down');
+    stepperArrowDown.append('<svg class="stepper-icon icon-minus"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-minus"></use></svg>');
+  }
 
-		stepperArrowUp.append('<svg class="stepper-icon icon-plus"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-plus"></use></svg>');
+  initStepper();
 
-		stepperArrowDown.append('<svg class="stepper-icon icon-minus"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-minus"></use></svg>');
-	}
+  // rubric list toggling
+  (function () {
+    var $rubricList = $('.js-rubric-list');
 
-	initStepper();
+    $rubricList.on('click', function () {
+      $(this).toggleClass('is-active');
+      $(this).find('.rubric__mini-list').slideToggle(150);
+    });
 
-	// rubric list toggling
-	(function () {
-		var $rubricList = $('.js-rubric-list');
+    $rubricList.each(function () {
+      if ($(this).hasClass('is-active')) {
+        $(this).find('.rubric__mini-list').slideDown();
+      }
+    });
 
-		$rubricList.on('click', function () {
+    $('.rubric__mini-list').on('click', function (e) {
+      e.stopPropagation();
+    });
+  })();
 
-			$(this).toggleClass('is-active');
-			$(this).find('.rubric__mini-list').slideToggle(150);
-		});
+  // init img zoom
+  $('[data-fancybox]').fancybox();
 
-		$rubricList.each(function () {
-			if ($(this).hasClass('is-active')) {
-				$(this).find('.rubric__mini-list').slideDown();
-			}
-		});
+  (function () {
+    var $productPic = $('.js-product-item-pic');
 
-		$('.rubric__mini-list').on('click', function (e) {
-			e.stopPropagation();
-		});
-	})();
+    $productPic.on('mouseover', function () {
+      $(this).addClass('is-active');
+    });
 
-	// init img zoom
-	$('[data-fancybox]').fancybox();
+    $productPic.on('mouseleave', function () {
+      $(this).removeClass('is-active');
+    });
 
-	(function () {
-		var $productPic = $('.js-product-item-pic');
+    $productPic.on('click', function () {
+      $(this).removeClass('is-active');
+    });
+  })();
 
-		$productPic.on('mouseover', function () {
-			$(this).addClass('is-active');
-		});
-
-		$productPic.on('mouseleave', function () {
-			$(this).removeClass('is-active');
-		});
-
-		$productPic.on('click', function () {
-			$(this).removeClass('is-active');
-		});
-	})();
+  // // rating
+  //   (function() {
+  //     const $ratingInput = $('.js-rating').find('.rating__input');
+  //
+  //     $ratingInput.on('click', function() {
+  //       if ($(this).prop('checked', true)) {
+  //         $(this).prop('checked', true);
+  //       } else {
+  //         $(this).prop('checked', false);
+  //       }
+  //     });
+  //     $ratingInput.on('click', function() {
+  //       $(this).prop('checked', false);
+  //     });
+  //
+  //   })();
 });

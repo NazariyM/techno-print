@@ -45,10 +45,12 @@
 		&_has-filter
 			margin-bottom: 30px
 			padding: 4px 0 4px 15px
-			clear: both
 		&_watched
 			margin-bottom: 0
+			padding: 0 15px 0 15px
 			background: #BBCADF
+			.product__sect-icon
+				margin-right: 15px
 		&-title
 			display: flex
 			align-items: center
@@ -99,25 +101,26 @@
 				+md
 					font-size: 23px
 			&.icon-lovers
-				font-size: 28px
+				font-size: 26px
 			&.icon-watched
-				font-size: 27px
+				font-size: 24px
 				fill: #7C8B99
+				
 		&-links
 			font-size: 0
 			text-align: right
 			&_watched
 				position: relative
-				padding: 0 40px 0 60px
+				padding: 0 30px 0 45px
 				background: #BBCADF url(../img/bg/sect-bg.svg) no-repeat 0 0/cover
 				.product__sect-link
-					padding: 6px 0
+					padding: 5px 0
 					background: none
 					font-size: 16px
 					&::after,&::before
 						display: none
 				.product__sect-link + .product__sect-link
-					margin-left: 20px
+					margin-left: 15px
 				.product__sect-count
 					margin-left: 10px
 					min-width: 25px
@@ -267,7 +270,12 @@
 		.product__item-pic
 			height: 227px
 		.decor__line
-			width: 85%
+			width: 82%
+		.product__zoom
+			width: 45px
+			height: 45px
+		.product__zoom-icon
+			font-size: 29px
 			
 	&__zoom
 		opacity: 0
@@ -357,9 +365,12 @@
 				width: 100%
 				height: 100%
 				object-fit: contain
-			&_xs
+			&_thumb
 				height: 118px
 				width: 118px
+				cursor: pointer
+				&:not(:last-child)
+					margin-right: 12px
 		&-info
 			margin-top: 20px
 			color: #2f2e2d
@@ -701,13 +712,19 @@
 		
 	&__look
 		margin-top: 15px
+	&__look-view
+		display: none
+		&.slick-initialized
+			display: block
 	&__look-pic img
 		width: 100%
-	&__look-pictures
+		object-fit: contain
+	&__look-thumbs
+		display: none
 		margin: 25px 0 35px
-		display: flex
-		justify-content: space-between
-	
+		&.slick-initialized
+			display: block
+		
 	&__props
 		+clr
 	&__props-col
@@ -717,11 +734,12 @@
 		&:nth-child(2)
 			width: 36%
 			padding-left: 1%
-	&__actions
+	&__props-row
 		display: flex
 		justify-content: space-between
-		align-items: center
-		margin-bottom: 8px
+		align-items: flex-end
+		& + &
+			margin-top: 8px
 	&__hashtags
 	&__hashtags-link
 		display: block

@@ -3,4 +3,5 @@
 //=include lib/svgxuse.min.js
 //=include lib/stepper.min.js
 //=include lib/fancybox.min.js
+//=include components/sliders.js
 //=include common.js

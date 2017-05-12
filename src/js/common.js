@@ -1,130 +1,125 @@
-$(document).ready(function () {
-
+$(document).ready(() => {
 	// init login popup
-	(function () {
-		let $loginBtn = $('.js-login-btn');
-		let $loginPopup = $loginBtn.siblings('.login__popup');
+  (function() {
+    const $loginBtn = $('.js-login-btn');
+    const $loginPopup = $loginBtn.siblings('.login__popup');
 
-		$loginBtn.on('click', function (e) {
-			e.preventDefault();
-			e.stopPropagation();
+    $loginBtn.on('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
 
-			$loginPopup.toggleClass('is-open');
-			$loginPopup.fadeToggle(200);
+      $loginPopup.toggleClass('is-open');
+      $loginPopup.fadeToggle(200);
 
-			$(window).on('click', function () {
-				$loginPopup.removeClass('is-open');
-				$loginPopup.fadeOut(200);
-			});
+      $(window).on('click', () => {
+        $loginPopup.removeClass('is-open');
+        $loginPopup.fadeOut(200);
+      });
 
-			$(window).keyup(function (e) {
-				if (e.keyCode == 27) {
-					$loginPopup.removeClass('is-open');
-					$loginPopup.fadeOut(200);
-				}
-			});
+      $(window).keyup((e) => {
+        if (e.keyCode == 27) {
+          $loginPopup.removeClass('is-open');
+          $loginPopup.fadeOut(200);
+        }
+      });
 
-			$loginPopup.on('click', function (e) {
-				e.stopPropagation();
-			});
-
-		});
-	})();
-
-	// home slider
-	$('.home-slider').slick({
-		dots: true,
-		infinite: false,
-		speed: 400,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		prevArrow: '<button type="button" class="home-slider__btn home-slider__btn_prev"><svg class="home-slider__icon icon-arr-sld-l"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr-sld-l"></use></svg></button>',
-		nextArrow: '<button type="button" class="home-slider__btn home-slider__btn_next"><svg class="home-slider__icon icon-arr-sld-r"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr-sld-r"></use></svg></button>'
-	});
+      $loginPopup.on('click', (e) => {
+        e.stopPropagation();
+      });
+    });
+  }());
 
 	// message extend
-	(function () {
-		let $extendBtn = $('.js-message-extend');
+  (function() {
+    const $extendBtn = $('.js-message-extend');
 
-		$extendBtn.on('click', function (e) {
-			e.preventDefault();
-			$(this).prev('textarea').addClass('extended');
-			$(this).fadeOut(800);
-		});
-
-	})();
+    $extendBtn.on('click', function(e) {
+      e.preventDefault();
+      $(this).prev('textarea').addClass('extended');
+      $(this).fadeOut(800);
+    });
+  }());
 
 	// search, detect user typing
-	(function () {
-		let $searchField = $('.js-search-input');
+  (function() {
+    const $searchField = $('.js-search-input');
 
-		$searchField.on('keyup', function () {
-			if ($(this).val().length) {
-				$(this).addClass('is-active');
-			}
-			else {
-				$(this).removeClass('is-active');
-			}
-		});
-
-	})();
+    $searchField.on('keyup', function() {
+      if ($(this).val().length) {
+        $(this).addClass('is-active');
+      }			else {
+        $(this).removeClass('is-active');
+      }
+    });
+  }());
 
 	// stepper plugin
-	function initStepper() {
-		$('.js-product-amount').stepper();
+  function initStepper() {
+    $('.js-product-amount').stepper();
 
-		let stepperArrowUp = $('.stepper-arrow.up');
-		let stepperArrowDown = $('.stepper-arrow.down');
+    const stepperArrowUp = $('.stepper-arrow.up');
+    const stepperArrowDown = $('.stepper-arrow.down');
 
-		stepperArrowUp.append('<svg class="stepper-icon icon-plus"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-plus"></use></svg>');
+    stepperArrowUp.append('<svg class="stepper-icon icon-plus"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-plus"></use></svg>');
 
-		stepperArrowDown.append('<svg class="stepper-icon icon-minus"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-minus"></use></svg>');
+    stepperArrowDown.append('<svg class="stepper-icon icon-minus"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-minus"></use></svg>');
+  }
 
-	}
-
-	initStepper();
+  initStepper();
 
 	// rubric list toggling
-	(function () {
-		let $rubricList = $('.js-rubric-list');
+  (function() {
+    const $rubricList = $('.js-rubric-list');
 
-		$rubricList.on('click', function () {
+    $rubricList.on('click', function() {
+      $(this).toggleClass('is-active');
+      $(this).find('.rubric__mini-list').slideToggle(150);
+    });
 
-			$(this).toggleClass('is-active');
-			$(this).find('.rubric__mini-list').slideToggle(150);
+    $rubricList.each(function() {
+      if ($(this).hasClass('is-active')) {
+        $(this).find('.rubric__mini-list').slideDown();
+      }
+    });
 
-		});
-
-		$rubricList.each(function () {
-			if ($(this).hasClass('is-active')) {
-				$(this).find('.rubric__mini-list').slideDown();
-			}
-		});
-
-		$('.rubric__mini-list').on('click', function (e) {
-			e.stopPropagation();
-		});
-
-	})();
+    $('.rubric__mini-list').on('click', (e) => {
+      e.stopPropagation();
+    });
+  }());
 
 	// init img zoom
-	$('[data-fancybox]').fancybox();
+  $('[data-fancybox]').fancybox();
 
-	(function () {
-		let $productPic = $('.js-product-item-pic');
+  (function() {
+    const $productPic = $('.js-product-item-pic');
 
-		$productPic.on('mouseover', function () {
-			$(this).addClass('is-active');
-		});
+    $productPic.on('mouseover', function() {
+      $(this).addClass('is-active');
+    });
 
-		$productPic.on('mouseleave', function () {
-			$(this).removeClass('is-active');
-		});
+    $productPic.on('mouseleave', function() {
+      $(this).removeClass('is-active');
+    });
 
-		$productPic.on('click', function () {
-			$(this).removeClass('is-active');
-		});
+    $productPic.on('click', function() {
+      $(this).removeClass('is-active');
+    });
+  }());
 
-	})();
-
+// // rating
+//   (function() {
+//     const $ratingInput = $('.js-rating').find('.rating__input');
+//
+//     $ratingInput.on('click', function() {
+//       if ($(this).prop('checked', true)) {
+//         $(this).prop('checked', true);
+//       } else {
+//         $(this).prop('checked', false);
+//       }
+//     });
+//     $ratingInput.on('click', function() {
+//       $(this).prop('checked', false);
+//     });
+//
+//   })();
 });
