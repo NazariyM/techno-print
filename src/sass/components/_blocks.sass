@@ -123,6 +123,38 @@
 	&:active::after
 		+sr('cart_add-act')
 
+/* links
+	----------------------------------- */
+.link-decor
+	color: #008CFF
+	span
+		padding-bottom: 3px
+		background-image: linear-gradient(to right, #008CFF 33%, rgba(255, 255, 255, 0) 0%), linear-gradient(to left, #008CFF 16%, rgba(255, 255, 255, 0) 0%)
+		background-size: 22px 2px, 6px 2px
+		background-repeat: repeat-x
+		background-position: bottom
+	&:hover span
+		color: darken(#008CFF, 10)
+		background-image: linear-gradient(to right, darken(#008CFF, 10) 33%, rgba(255, 255, 255, 0) 0%), linear-gradient(to left, darken(#008CFF, 10) 16%, rgba(255, 255, 255, 0) 0%)
+	&_rubric
+		line-height: 1.35
+		span
+			background-image: linear-gradient(to right, #B3B3B3 33%, rgba(255, 255, 255, 0) 0%), linear-gradient(to left, #B3B3B3 16%, rgba(255, 255, 255, 0) 0%)
+		&:hover
+			border-bottom-color: transparent!important
+		&:hover span
+			background-image: linear-gradient(to right, #0051FF 33%, rgba(255, 255, 255, 0) 0%), linear-gradient(to left, #0051FF 16%, rgba(255, 255, 255, 0) 0%)
+
+.link-sale
+	color: #FCBD7E
+	font-size: 20px
+	+trs
+	span
+		border-bottom: 2px dashed #FCBD7E
+	&:hover span
+		color: darken(#FCBD7E, 15)
+		border-bottom-color: darken(#FCBD7E, 15)
+
 /* about text
 	----------------------------------- */
 .about-text
@@ -309,7 +341,7 @@
 		vertical-align: middle
 		margin: 0 5px
 		&_prev
-			margin-right: 15px
+			margin-right: 10px
 			text-align: center
 			.pagination__list-link
 				padding: 0
@@ -320,7 +352,7 @@
 			background: #FFEBAB
 	&__list-link
 		display: inline-block
-		font-size: 21px
+		font-size: 19px
 		font-family: Arial, sans-serif
 		color: #667FA6
 		padding: 6px 12px
@@ -331,14 +363,16 @@
 			background: #EDEDED
 		&:active
 			background: #C8D6E6
-		.icon
-			display: inline-block
-			vertical-align: middle
-			fill: #EDEDED
-			font-size: 29px
+	&__list-link:hover &__icon-arr
+		fill: lighten(#667FA6, 20)
+	&__icon-arr
+		display: inline-block
+		vertical-align: middle
+		fill: #EDEDED
+		font-size: 27px
 			
 	&_product
-		margin: 20px 0 60px
+		margin: 20px 0 45px
 		
 	&_watched
 		margin: 30px 0
@@ -352,8 +386,8 @@
 		flex: 1 0 auto
 	&__link
 		display: block
-		padding: 18px 5px
-		font-size: 20px
+		padding: 15px 5px
+		font-size: 19px
 		background: #F7FAFF
 		text-align: center
 		+trs

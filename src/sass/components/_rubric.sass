@@ -60,7 +60,7 @@
 	&__list-link
 		position: relative
 		display: block
-		padding: 21px 40px 21px 20px
+		padding: 19px 40px 19px 20px
 		font-size: 19px
 		color: #00306b
 		background: #F5F5F5
@@ -95,7 +95,7 @@
 	&__sub-list
 		display: none
 		position: absolute
-		top: 66px
+		top: 64px
 		left: 0
 		right: 0
 		z-index: 10
@@ -143,13 +143,15 @@
 			background: #E8E8E8
 	&__mini-title:hover &__mini-icon
 		fill: #4E91FF
+	&__mini-title:active &__mini-icon
+		fill: #ABABAB
 	&__mini-list
 		display: none
-		padding: 10px 0
+		padding: 10px 0 1px
 	&__mini-item
 		position: relative
-		padding: 0 0 0 30px
-		margin: 2px 0
+		padding: 0 0 0 25px
+		margin: 3px 0
 		line-height: 1.05
 	&__mini-link
 		color: #00306b
@@ -165,17 +167,19 @@
 		fill: #C2C2C2
 	&__mini-icon-sm
 		position: absolute
-		left: 15px
-		top: 6px
+		left: 9px
+		top: 4px
 		font-size: 7px
 		fill: #00306B
 		+rotate(-90)
-		
 	&__hit
 		position: absolute
-		margin-left: 3px
+		top: -3px
+		right: -40px
 		color: #4CB02E
 		+f('psb', 18, 18)
+		&_color
+			color: #4E9CE5
 	&_home
 		padding: 60px 0 85px
 		+lg
@@ -187,14 +191,21 @@
 			
 			
 	&_side
+		.rubric__list:not(:last-child)
+			margin-bottom: 20px
 		.rubric__list-item.is-active .rubric__list-icon
 			display: block
 		.rubric__list-link
-			padding: 21px 5px 21px 30px
+			padding: 16px 5px 16px 30px
+			&:hover
+				background: #F5F5F5
+		.rubric__list-link_color
+			&:hover
+				background: #f5f8fd
 		.rubric__sub-list
 			position: static
 			display: block
-			padding: 15px 5px 15px 20px
+			padding: 13px 5px 13px 20px
 			border: 8px solid #F4F8FD
 			border-top: none
 			background: #fff
@@ -204,18 +215,23 @@
 		.rubric__sub-item_best
 			margin: 10px 0 15px
 		.rubric__sub-item_examples
-			margin: 20px 0
+			margin: 20px 0 0
 		.rubric__sub-item_examples + .rubric__sub-item_examples
-			margin-top: -18px
+			margin-top: 5px
 		.rubric__sub-link
 			display: inline-block
 			padding: 0
 			background: #fff
 			border-bottom: 2px solid transparent
-		.rubric__sub-link:hover
+			&_has-hit
+				position: relative
+				margin-right: 40px
+		.rubric__sub-link:hover,
+		.rubric__mini-link:hover
 			color: #0051FF
 			border-bottom-color: #B2CCFF
-		.rubric__sub-link:active
+		.rubric__sub-link:active,
+		.rubric__mini-link:active
 			color: #A8AFBD
 			border-bottom-color: #DEDEDE
 		.rubric__list-icon
@@ -224,5 +240,3 @@
 			top: calc(50% - 6px)
 			font-size: 9px
 			+rotate(-90)
-		.rubric__item + .rubric__item
-			margin-top: 30px

@@ -1,5 +1,5 @@
 $(document).ready(() => {
-	// init login popup
+// init login popup
   (function() {
     const $loginBtn = $('.js-login-btn');
     const $loginPopup = $loginBtn.siblings('.login__popup');
@@ -17,7 +17,7 @@ $(document).ready(() => {
       });
 
       $(window).keyup((e) => {
-        if (e.keyCode == 27) {
+        if (e.keyCode === 27) {
           $loginPopup.removeClass('is-open');
           $loginPopup.fadeOut(200);
         }
@@ -29,7 +29,7 @@ $(document).ready(() => {
     });
   }());
 
-	// message extend
+// message extend
   (function() {
     const $extendBtn = $('.js-message-extend');
 
@@ -40,20 +40,20 @@ $(document).ready(() => {
     });
   }());
 
-	// search, detect user typing
+// search, detect user typing
   (function() {
     const $searchField = $('.js-search-input');
 
     $searchField.on('keyup', function() {
       if ($(this).val().length) {
         $(this).addClass('is-active');
-      }			else {
+      } else {
         $(this).removeClass('is-active');
       }
     });
   }());
 
-	// stepper plugin
+// stepper plugin
   function initStepper() {
     $('.js-product-amount').stepper();
 
@@ -67,7 +67,7 @@ $(document).ready(() => {
 
   initStepper();
 
-	// rubric list toggling
+// rubric list toggling
   (function() {
     const $rubricList = $('.js-rubric-list');
 
@@ -87,7 +87,7 @@ $(document).ready(() => {
     });
   }());
 
-	// init img zoom
+// init img zoom
   $('[data-fancybox]').fancybox();
 
   (function() {

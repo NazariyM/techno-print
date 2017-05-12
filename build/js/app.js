@@ -3522,7 +3522,7 @@ $(document).ready(function () {
       });
 
       $(window).keyup(function (e) {
-        if (e.keyCode == 27) {
+        if (e.keyCode === 27) {
           $loginPopup.removeClass('is-open');
           $loginPopup.fadeOut(200);
         }

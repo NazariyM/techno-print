@@ -40,36 +40,6 @@ h1, h2, h3, h4, h5, h6
 =trs
 	transition: .2s cubic-bezier(0.55, 0.09, 0.68, 0.53)
 
-// links
-.link-decor
-	color: #008CFF
-	span
-		padding-bottom: 3px
-		background-image: linear-gradient(to right, #008CFF 33%, rgba(255, 255, 255, 0) 0%), linear-gradient(to left, #008CFF 16%, rgba(255, 255, 255, 0) 0%)
-		background-size: 22px 2px, 6px 2px
-		background-repeat: repeat-x
-		background-position: bottom
-	&:hover span
-		color: darken(#008CFF, 10)
-		background-image: linear-gradient(to right, darken(#008CFF, 10) 33%, rgba(255, 255, 255, 0) 0%), linear-gradient(to left, darken(#008CFF, 10) 16%, rgba(255, 255, 255, 0) 0%)
-	&_rubric
-		span
-			background-image: linear-gradient(to right, #B3B3B3 33%, rgba(255, 255, 255, 0) 0%), linear-gradient(to left, #B3B3B3 16%, rgba(255, 255, 255, 0) 0%)
-		&:hover
-			border-bottom-color: transparent!important
-		&:hover span
-			background-image: linear-gradient(to right, #0051FF 33%, rgba(255, 255, 255, 0) 0%), linear-gradient(to left, #0051FF 16%, rgba(255, 255, 255, 0) 0%)
-			
-.link-sale
-	color: #FCBD7E
-	font-size: 20px
-	+trs
-	span
-		border-bottom: 2px dashed #FCBD7E
-	&:hover span
-		color: darken(#FCBD7E, 15)
-		border-bottom-color: darken(#FCBD7E, 15)
-
 // mini reset
 a
 	text-decoration: none
