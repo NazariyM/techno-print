@@ -381,7 +381,22 @@
 /* sub-menu
 	----------------------------------- */
 .category-menu
-	display: flex
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		bottom: -1px
+		left: 5px
+		right: 5px
+		height: 1px
+		background: #D1D1D1
+		z-index: 1
+	&__title
+		text-align: center
+		color: #274F7F
+	&__list
+		display: flex
+		margin-top: 40px
 	&__item
 		flex: 1 0 auto
 	&__link

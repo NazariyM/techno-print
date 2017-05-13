@@ -49,6 +49,8 @@
 			margin-bottom: 0
 			padding: 0 15px 0 15px
 			background: #BBCADF
+			&::after
+				display: none
 			.product__sect-icon
 				margin-right: 15px
 		&-title
@@ -375,6 +377,12 @@
 				cursor: pointer
 				&:not(:last-child)
 					margin-right: 12px
+				img
+					width: 100%
+					height: 100%
+					object-fit: contain
+					font-family: 'object-fit: contain;'
+					
 		&-img
 			width: 100%
 			height: 100%
@@ -507,14 +515,6 @@
 			padding-left: 35px
 			align-self: flex-start
 			width: 100%
-			font-family: Arial, sans-serif
-			font-size: 20px
-			+md
-				font-size: 17px
-			+sm
-				font-size: 15px
-			+xs
-				font-size: 16px
 		&-descr
 			margin: 15px 0
 			text-indent: 26px

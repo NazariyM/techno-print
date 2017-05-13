@@ -738,8 +738,11 @@ block content
 									+e.list-item._next
 										+e.list-link(href='#!') Все
 
-					-var catMenuClass = '_default'
-						include components/_category-menu
+					-
+						var catMenu = {
+						classMod: '_default'};
+					include components/_category-menu
+
 
 		- var benefitsClass = '_default'
 			include components/_benefits

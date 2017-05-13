@@ -1,0 +1,43 @@
+.payment
+	margin: 0 0 50px
+	&__in
+		padding: 20px 0 5px
+		background: #FAFEFF
+		+clr
+	&__col
+		padding: 0 4%
+		&:nth-child(1)
+			float: left
+			width: 48%
+		&:nth-child(2)
+			float: right
+			width: 37%
+	&__title
+		margin-bottom: 20px
+		color: #000
+	&__descr
+		font-size: 19px
+		color: #1A2F4A
+	&__list
+		+f('oss', 21)
+		li
+			position: relative
+			padding-left: 40px
+			&:not(:last-child)
+				margin-bottom: 5px
+		&-icon
+			position: absolute
+			top: -3px
+			left: 0
+			z-index: 1
+			fill: #AEC94D
+			font-size: 32px
+	&__bg
+		position: relative
+		min-height: 520px
+		background: #FAFEFF
+		&-img
+			+coverdiv
+			+cover
+			z-index: 1
+			

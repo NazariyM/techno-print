@@ -92,11 +92,11 @@ block content
 							+e.descr-title Придя к нам, вы увидите много интересного!
 							+e.descr-text Посмотрите как изготавливается ваша печать и сувениры, оцените качество и скорость выполнения заказов. Рассмотрите предложения по различным услугам на будущее, узнаете место, где всё производится по ценам оптового предприятия, где всрочном порядке можно заказывать продукцию для праздников и подарков близким.
 
-						+e.wait-text
-							+b.title-lg Ждём ваших заказов!
-
-					-var catMenuClass = '_default bordered'
-						include components/_category-menu
+					-
+						var catMenu = {
+						title: 'ЖДЁМ ВАШИХ ЗАКАЗОВ!',
+						classMod: '_default'};
+					include components/_category-menu
 
 		- var benefitsClass = '_default'
 			include components/_benefits

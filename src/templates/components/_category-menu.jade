@@ -1,17 +1,20 @@
-if catMenuClass ? catMenuClass : catMenuClass = []
+if catMenu ? catMenu : catMenu = []
 
-+b.UL.category-menu(class= catMenuClass ? catMenuClass : '')
-	+e.item
-		+e.A.link(href='#!') Сувениры по тематике
-	+e.item
-		+e.A.link(href='#!') Вышивка
-	+e.item
-		+e.A.link(href='#!') Футболки с принтами
-	+e.item
-		+e.A.link(href='#!') Значки
-	+e.item
-		+e.A.link(href='#!') Кружки
-	+e.item
-		+e.A.link(href='#!') Фотокниги
-	+e.item
-		+e.A.link(href='#!') Картины для интерьера
++b.category-menu(class= catMenu.classMod ? catMenu.classMod : '')
+	if catMenu.title
+		+e.title.title-lg= catMenu.title
+	+e.UL.list
+		+e.item
+			+e.A.link(href='#!') Сувениры по тематике
+		+e.item
+			+e.A.link(href='#!') Вышивка
+		+e.item
+			+e.A.link(href='#!') Футболки с принтами
+		+e.item
+			+e.A.link(href='#!') Значки
+		+e.item
+			+e.A.link(href='#!') Кружки
+		+e.item
+			+e.A.link(href='#!') Фотокниги
+		+e.item
+			+e.A.link(href='#!') Картины для интерьера
