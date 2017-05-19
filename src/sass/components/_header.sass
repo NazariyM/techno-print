@@ -165,11 +165,11 @@
 		color: #333
 		font-size: 20px
 		+md
-			+f('psb',15)
+			+f('psb', 15)
 			color: #666666
 		+xs
-			font-size: 14px
 			padding: 0
+			+f('psr', 14)
 		&:hover
 			color: #053B76
 			
@@ -334,6 +334,7 @@
 			font-size: 15px
 			+f('psb')
 		+xs
+			border: 2px solid rgba(255, 255, 255, .5)
 			font-size: 14px
 		&:nth-child(2n)
 			margin-left: 5px
@@ -544,10 +545,10 @@
 			+xs
 				margin-left: 8px
 		+md
-			+f('psb',15)
+			+f('psb', 15)
 			color: #666666
 		+xs
-			font-size: 14px
+			+f('psr', 14)
 		&:hover
 			color: #053B76
 		&:last-child
