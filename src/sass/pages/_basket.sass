@@ -1,0 +1,67 @@
+.basket
+	&__container
+	&__orders
+		border: 9px solid #DFDFDF
+		border-top-width: 5px
+		&-row
+			padding: 7px 0
+			border-bottom: 5px solid #DFDFDF
+			font-size: 0
+			color: #4D4D4D
+		&-label
+			display: inline-block
+			vertical-align: top
+			padding: 0 15px
+			font-size: 19px
+			text-align: center
+			&:nth-child(1)
+				width: 18%
+			&:nth-child(2)
+				width: 15%
+			&:nth-child(3)
+				width: 45%
+			&:nth-child(4)
+				width: 18%
+		&-status
+			padding: 0 15px
+			font-size: 22px
+			text-align: center
+			&-count
+				display: inline-block
+				+f('oss', 22)
+			
+	&__summ
+		padding: 30px 30px 40px
+		font-size: 23px
+		text-align: center
+		&-text
+			color: #00306B
+			text-transform: uppercase
+		&-price, &-words, &-delivery
+			display: inline-block
+		&-price
+			margin: 0 15px
+			+f('psb')
+			.icon-ruble
+				fill: #00306B
+				font-size: 17px
+				
+		&-words, &-delivery
+			text-transform: none
+		&-delivery
+			color: #808080
+			
+	&__promo
+		margin: 20px 0 30px
+		&-text
+			color: #B3B3B3
+		&-input-wrap
+			max-width: 270px
+			margin: 3px auto 0
+			border: 1px solid #99AFCF
+			input
+				width: 100%
+				height: 45px
+				line-height: 45px
+				padding: 0 10px
+				+f('ver', 22)

@@ -123,6 +123,100 @@
 	&:active::after
 		+sr('cart_add-act')
 
+.wish-btn
+	position: relative
+	min-width: 230px
+	height: 37px
+	line-height: 37px
+	padding: 0 40px 0 10px
+	text-align: center
+	font-size: 19px
+	color: #fff
+	background: #EEF5FC
+	border-bottom: 1px solid #E1EFF6
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		+st('heart')
+	&:hover
+		background: #61CDFF
+		border-bottom-color: #FFC486
+	&:active
+		background: #1E4D80
+		border-bottom-color: #FF0000
+	&:hover::after
+		+st('heart-hvr')
+	&:active::after
+		+st('heart-act')
+
+.order-btn
+	position: relative
+	min-width: 380px
+	height: 75px
+	line-height: 75px
+	padding: 0 76px 0 10px
+	text-align: center
+	font-size: 25px
+	color: #fff
+	background: #28B0E2
+	border-bottom: 2px solid #E0E0E1
+	overflow: hidden
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		right: -1px
+		+sr('like')
+	&:hover
+		background: #06B2F0
+		border-bottom-color: #FFBE77
+	&:active
+		background: #23568B
+		border-bottom-color: #FF0000
+	&:hover::after
+		+sr('like-hvr')
+	&:active::after
+		+sr('like-act')
+
+.submit-btn
+	position: relative
+	min-width: 380px
+	height: 75px
+	line-height: 75px
+	padding: 0 76px 0 10px
+	text-align: center
+	font-size: 25px
+	color: #fff
+	background: #28B0E2
+	border-bottom: 2px solid #E0E0E1
+	overflow: hidden
+	text-transform: uppercase
+	span
+		border-radius: 2px
+		border-bottom: 2px solid #2B99CC
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		right: -1px
+		+sr('subm')
+	&:hover
+		background: #06B2F0
+		border-bottom-color: #FFBE77
+		span
+			border-bottom-color: #079DE3
+	&:active
+		background: #23568B
+		border-bottom-color: #FF0000
+		span
+			border-bottom-color: #254478
+	&:hover::after
+		+sr('subm-hvr')
+	&:active::after
+		+sr('subm-act')
+
 /* links
 	----------------------------------- */
 .link-decor
@@ -134,7 +228,7 @@
 		background-repeat: repeat-x
 		background-position: bottom
 	&:hover span
-		color: darken(#008CFF, 10)
+		color: #0051FF
 		background-image: linear-gradient(to right, darken(#008CFF, 10) 33%, rgba(255, 255, 255, 0) 0%), linear-gradient(to left, darken(#008CFF, 10) 16%, rgba(255, 255, 255, 0) 0%)
 	&_rubric
 		line-height: 1.35
@@ -277,6 +371,8 @@
 			display: none
 		&:hover
 			color: $hover
+		&.is-active
+			pointer-events: none
 	&__link:hover::after
 		color: #000
 	&__icon
@@ -378,6 +474,9 @@
 		margin: 30px 0
 		background: none
 		
+	&_news
+		margin-top: 25px
+
 /* sub-menu
 	----------------------------------- */
 .category-menu
@@ -392,11 +491,11 @@
 		background: #D1D1D1
 		z-index: 1
 	&__title
+		margin-bottom: 40px
 		text-align: center
 		color: #274F7F
 	&__list
 		display: flex
-		margin-top: 40px
 	&__item
 		flex: 1 0 auto
 	&__link
@@ -411,7 +510,10 @@
 			
 	&_default
 		margin-top: auto
-		
+	&_basket, &_order
+		max-width: 1400px
+		margin: 50px auto 0
+
 /* rating
 	----------------------------------- */
 .rating
@@ -445,4 +547,34 @@
 	&__star
 		font-size: 23px
 		
-	&_product-card
+/* check
+	----------------------------------- */
+.check
+	&__circle
+		display: inline-block
+		margin-left: 4px
+		width: 24px
+		height: 24px
+		border: 2px solid #99AFCF
+		border-radius: 50%
+		text-align: center
+		line-height: 20px
+		&::after
+			display: inline-block
+			width: 14px
+			height: 14px
+			border-radius: 50%
+			background: #768FAE
+			content: ''
+			transform: scale(.4)
+			opacity: 0
+			transition: .15s
+	label
+		font-size: 19px
+		color: #000
+		cursor: pointer
+	input
+		display: none
+	input:checked + label .check__circle::after
+		transform: scale(1)
+		opacity: 1

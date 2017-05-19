@@ -12,15 +12,14 @@ block content
 						+icon('icon-house', 'breadcrumbs__icon')
 						= ' '
 						+e.SPAN Главная
-					+e.A.link(href='#!')
+					+e.A.link.is-active(href='#!')
 						+e.SPAN Контакты
 
 				+e.bar-title
 					+e.SPAN Доверьтесь профессионалам, они всё сделают!
 
 			+e.in
-				+e.ASIDE.side
-					+e.P menu here
+				include components/_rubric-side
 				+e.main
 					+b.contacts._default
 						+e.in

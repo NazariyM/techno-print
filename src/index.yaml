@@ -7,6 +7,12 @@ PageList:
 - file: category-page.html
   ready: 100%
 
+- file: basket-page.html
+  ready: 100%
+
+- file: order-page.html
+  ready: 100%
+
 - file: contacts-page.html
   ready: 100%
 
@@ -14,4 +20,7 @@ PageList:
   ready: 100%
 
 - file: payment-page.html
+  ready: 100%
+
+- file: news-page.html
   ready: 100%

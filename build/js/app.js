@@ -3613,8 +3613,8 @@ $(function () {
 
     $extendBtn.on('click', function (e) {
       e.preventDefault();
-      $(this).prev('textarea').addClass('extended');
-      $(this).fadeOut(800);
+      $(this).toggleClass('is-active');
+      $(this).prev('textarea').toggleClass('extended');
     });
   })();
 
@@ -3648,19 +3648,25 @@ $(function () {
   // rubric list toggling
   (function () {
     var $rubricList = $('.js-rubric-list');
+    var $rubricMiniList = $('.js-rubric-mini-list');
 
     $rubricList.on('click', function () {
+      $(this).toggleClass('is-open');
+      $(this).find('.rubric__sub-list').slideToggle(150);
+    });
+
+    $rubricMiniList.on('click', function () {
       $(this).toggleClass('is-active');
       $(this).find('.rubric__mini-list').slideToggle(150);
     });
 
-    $rubricList.each(function () {
+    $rubricMiniList.each(function () {
       if ($(this).hasClass('is-active')) {
         $(this).find('.rubric__mini-list').slideDown();
       }
     });
 
-    $('.rubric__mini-list').on('click', function (e) {
+    $rubricMiniList.on('click', function (e) {
       e.stopPropagation();
     });
   })();
@@ -3681,6 +3687,18 @@ $(function () {
 
     $productPic.on('click', function () {
       $(this).removeClass('is-active');
+    });
+  })();
+
+  (function () {
+    var $moreBtn = $('.js-more-text');
+
+    $moreBtn.on('click', function (e) {
+      e.preventDefault();
+      $(this).parent().toggleClass('is-open');
+      $(this).prev().toggle();
+      $(this).find('span').text(!$(this).hasClass('is-active') ? 'Скрыть' : 'Показать полностью');
+      $(this).toggleClass('is-active');
     });
   })();
 

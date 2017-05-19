@@ -1,0 +1,249 @@
+---
+title: Техно-принт
+---
+extends layouts/_layout
+
+block content
+	+b.MAIN
+		+b.basket
+			+e.container.container
+				+b.product
+					+e.sect._basket
+						+b.breadcrumbs
+							+e.A.link(href='#!')
+								+icon('icon-house', 'breadcrumbs__icon')
+								= ' '
+								+e.SPAN Главная
+							+e.A.link.is-active(href='#!')
+								+e.SPAN Корзина товаров
+						+e.sect-links
+							+e.sect-link
+								+e.A(href="#!") ТОВАРОВ  В КОРЗИНЕ
+									+e.SPAN.sect-count 4
+							+e.sect-link
+								+e.A(href="#!") МОИ ОФОРМЛЕННЫЕ ЗАКАЗЫ
+									+e.SPAN.sect-count 0
+				+e.orders
+					+e.orders-row
+						+e.orders-label Товар / Услуга
+						+e.orders-label Цена
+						+e.orders-label Комментарий для оператора
+						+e.orders-label Количество / Всего за товар
+					+e.FORM(action='#!')
+						+b.product.basket__product
+							+e.item._basket
+								+e.item-col
+									+e.item-pic-wrap.js-product-item-pic
+										+e.A(href='#!').item-pic.decor
+											+e.IMG.item-img(src="img/content/prod-3.jpg")
+											.decor__line
+										+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+											+icon('icon-loupe','product__zoom-icon')
+									+e.item-info
+										+e.item-title Полотенце -зайчик!
+											= ' '
+										+e.item-descr Услуга - сворачивание полотенец в виде  зайчиков, для подарка
+										+e.item-art Артикул
+											= ' '
+											+e.SPAN 22
+										+e.item-price Цена за товар:
+											+e.item-price-count
+												+e.SPAN 150
+													= ' '
+													+icon('icon-ruble','product__val-icon')
+
+								+e.comment.product__item-col
+									+e.comment-message-wrap
+										+e.TEXTAREA.comment-message
+										+e.BUTTON.comment-extend.js-message-extend(type='button')
+											+icon('icon-arr-double', 'product__comment-extend-icon')
+									+e.comment-row
+										+e.file-add
+											+e.INPUT(type='file' id='file-add-input')
+											+e.LABEL.file-add-btn(for='file-add-input') Добавить файл
+										+e.BUTTON.comment-btn(type='button')
+											+e.SPAN Сохранить
+
+								+e.item-col
+									+e.BUTTON.close-btn(type='button')
+										+icon('icon-close', 'product__close-btn-icon')
+									+e.amount
+										+e.amount-text Количество:
+										+e.amount-count
+											+e.INPUT.amount-input.js-product-amount(type='number' min='1' max='999' value='1' name='')
+									+e.BUTTON.wish-btn.wish-btn(type='button')
+										+e.SPAN В избранное
+									+e.item-price Всего за товар:
+										+e.item-price-count
+											+e.SPAN 150
+												= ' '
+												+icon('icon-ruble','product__val-icon')
+
+							+e.item._basket
+								+e.item-col
+									+e.item-pic-wrap.js-product-item-pic
+										+e.A(href='#!').item-pic.decor
+											+e.IMG.item-img(src="img/content/prod-1.jpg")
+											.decor__line
+										+e.A.zoom(href='img/content/prod-1_lg.jpg' data-fancybox='product-1')
+											+icon('icon-loupe','product__zoom-icon')
+									+e.item-info
+										+e.item-title Любая вышивка на шевронной ткани, 7 цветов.
+											= ' '
+										+e.item-descr Размер:  120х180мм
+										+e.item-art Артикул
+											= ' '
+											+e.SPAN 22
+										+e.item-price Цена за товар:
+											+e.item-price-count
+												+e.SPAN 150
+													= ' '
+													+icon('icon-ruble','product__val-icon')
+
+								+e.comment.product__item-col
+									+e.comment-message-wrap
+										+e.TEXTAREA.comment-message
+										+e.BUTTON.comment-extend.js-message-extend(type='button')
+											+icon('icon-arr-double', 'product__comment-extend-icon')
+									+e.comment-row
+										+e.file-add
+											+e.INPUT(type='file' id='file-add-input')
+											+e.LABEL.file-add-btn(for='file-add-input') Добавить файл
+										+e.BUTTON.comment-btn(type='button')
+											+e.SPAN Сохранить
+
+								+e.item-col
+									+e.BUTTON.close-btn(type='button')
+										+icon('icon-close', 'product__close-btn-icon')
+									+e.amount
+										+e.amount-text Количество:
+										+e.amount-count
+											+e.INPUT.amount-input.js-product-amount(type='number' min='1' max='999' value='1' name='')
+									+e.BUTTON.wish-btn.wish-btn(type='button')
+										+e.SPAN В избранное
+									+e.item-price Всего за товар:
+										+e.item-price-count
+											+e.SPAN 150
+												= ' '
+												+icon('icon-ruble','product__val-icon')
+
+							+e.item._basket
+								+e.item-col
+									+e.item-pic-wrap.js-product-item-pic
+										+e.A(href='#!').item-pic.decor
+											+e.IMG.item-img(src="img/content/prod-2.jpg")
+											.decor__line
+										+e.A.zoom(href='img/content/prod-2_lg.jpg' data-fancybox='product-1')
+											+icon('icon-loupe','product__zoom-icon')
+									+e.item-info
+										+e.item-title Полотенце -зайчик!
+											= ' '
+										+e.item-descr Услуга - сворачивание полотенец в виде  зайчиков, для подарка
+										+e.item-art Артикул
+											= ' '
+											+e.SPAN 22
+										+e.item-price Цена за товар:
+											+e.item-price-count
+												+e.SPAN 150
+													= ' '
+													+icon('icon-ruble','product__val-icon')
+
+								+e.comment.product__item-col
+									+e.comment-message-wrap
+										+e.TEXTAREA.comment-message
+										+e.BUTTON.comment-extend.js-message-extend(type='button')
+											+icon('icon-arr-double', 'product__comment-extend-icon')
+									+e.comment-row
+										+e.file-add
+											+e.INPUT(type='file' id='file-add-input')
+											+e.LABEL.file-add-btn(for='file-add-input') Добавить файл
+										+e.BUTTON.comment-btn(type='button')
+											+e.SPAN Сохранить
+
+								+e.item-col
+									+e.BUTTON.close-btn(type='button')
+										+icon('icon-close', 'product__close-btn-icon')
+									+e.amount
+										+e.amount-text Количество:
+										+e.amount-count
+											+e.INPUT.amount-input.js-product-amount(type='number' min='1' max='999' value='1' name='')
+									+e.BUTTON.wish-btn.wish-btn(type='button')
+										+e.SPAN В избранное
+									+e.item-price Всего за товар:
+										+e.item-price-count
+											+e.SPAN 150
+												= ' '
+												+icon('icon-ruble','product__val-icon')
+
+							+e.item._basket
+								+e.item-col
+									+e.item-pic-wrap.js-product-item-pic
+										+e.A(href='#!').item-pic.decor
+											+e.IMG.item-img(src="img/content/prod-3.jpg")
+											.decor__line
+										+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+											+icon('icon-loupe','product__zoom-icon')
+									+e.item-info
+										+e.item-title Полотенце -зайчик!
+											= ' '
+										+e.item-descr Услуга - сворачивание полотенец в виде  зайчиков, для подарка
+										+e.item-art Артикул
+											= ' '
+											+e.SPAN 22
+										+e.item-price Цена за товар:
+											+e.item-price-count
+												+e.SPAN 150
+													= ' '
+													+icon('icon-ruble','product__val-icon')
+
+								+e.comment.product__item-col
+									+e.comment-message-wrap
+										+e.TEXTAREA.comment-message
+										+e.BUTTON.comment-extend.js-message-extend(type='button')
+											+icon('icon-arr-double', 'product__comment-extend-icon')
+									+e.comment-row
+										+e.file-add
+											+e.INPUT(type='file' id='file-add-input')
+											+e.LABEL.file-add-btn(for='file-add-input') Добавить файл
+										+e.BUTTON.comment-btn(type='button')
+											+e.SPAN Сохранить
+
+								+e.item-col
+									+e.BUTTON.close-btn(type='button')
+										+icon('icon-close', 'product__close-btn-icon')
+									+e.amount
+										+e.amount-text Количество:
+										+e.amount-count
+											+e.INPUT.amount-input.js-product-amount(type='number' min='1' max='999' value='1' name='')
+									+e.BUTTON.wish-btn.wish-btn(type='button')
+										+e.SPAN В избранное
+									+e.item-price Всего за товар:
+										+e.item-price-count
+											+e.SPAN 150
+												= ' '
+												+icon('icon-ruble','product__val-icon')
+
+						+e.summ
+							+e.summ-text ИТОГО ВСЕХ ТОВАРОВ:
+								+e.summ-price
+									+e.SPAN 2150
+									= ' '
+									+icon('icon-ruble')
+								+e.summ-words
+									+e.SPAN (Две тысячи сто пятьдесят рублей, ноль копеек).
+								+e.summ-delivery
+									+e.SPAN Без учёта доставки.
+
+							+e.promo
+								+e.promo-text Промо - код (если имеется)
+								+e.promo-input-wrap
+									+e.INPUT(type='text' name='')
+
+							+e.BUTTON.order-btn.order-btn(type='submit') Оформить заказ
+
+				-
+					var catMenu = {
+					classMod: '_basket'};
+				include components/_category-menu
+		- var benefitsClass = '_default'
+		include components/_benefits

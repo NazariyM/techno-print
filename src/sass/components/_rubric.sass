@@ -87,12 +87,20 @@
 			text-transform: uppercase
 			+md
 				border-bottom: 2px solid #E6E9ED
+		+ .rubric__sub-list
+			.link-decor_rubric
+				color: #333
 		&_color
 			background-color: #f5f8fd
 			color: #000
 			&:hover
 				background-color: darken(#f5f8fd, 10)
-				
+			+ .rubric__sub-list
+					.link-decor_rubric
+						color: #00306B
+			+ .rubric__sub-list .rubric__mini
+				color: #00306B
+						
 	&__sub-list
 		display: none
 		position: absolute
@@ -129,7 +137,9 @@
 			background: darken(#f5f8fd, 10)
 	&__mini
 		margin: 5px 3px 5px -12px
-		color: #00306B
+		color: #333
+		&_margin
+			margin-top: 20px
 	&__mini.is-active &__mini-icon
 			fill: #56708A
 	&__mini-title
@@ -152,12 +162,16 @@
 	&__mini-item
 		position: relative
 		padding: 0 0 0 25px
-		margin: 3px 0
+		margin: 4px 0
 		line-height: 1.05
+		&_margin
+			margin-top: 20px
 	&__mini-link
-		color: #00306b
 		display: inline-block
 		border-bottom: 2px solid transparent
+		&_has-hit
+			position: relative
+			margin-right: 40px
 		&:hover
 			border-bottom-color: #B2CCFF
 	&__mini-icon
@@ -192,12 +206,23 @@
 			
 			
 	&_side
+		.rubric__list.is-open .rubric__list-icon
+			fill: #56708A
 		.rubric__list:not(:last-child)
-			margin-bottom: 20px
+			margin-bottom: 5px
 		.rubric__list-item.is-active .rubric__list-icon
+			left: 6px
+			top: calc(50% - 6px)
+			font-size: 9px
+			+rotate(-90)
+		.rubric__list-item.is-active .rubric__sub-list
+			display: block
+		.rubric__list-item:hover .rubric__sub-list
+			display: none
+		.rubric__list-item.is-active:hover .rubric__sub-list
 			display: block
 		.rubric__list-link
-			padding: 16px 5px 16px 30px
+			padding: 16px 30px 16px 25px
 			&:hover
 				background: #F5F5F5
 		.rubric__list-link_color
@@ -205,20 +230,23 @@
 				background: #f5f8fd
 		.rubric__sub-list
 			position: static
-			display: block
+			display: none
 			padding: 13px 5px 13px 20px
-			border: 8px solid #F4F8FD
+			border: 7px solid #F4F8FD
 			border-top: none
 			background: #fff
 		.rubric__sub-item
 			line-height: 1.1
 			margin: 0 0 5px
 		.rubric__sub-item_best
-			margin: 10px 0
+			margin: 15px 0 20px
 		.rubric__sub-item_examples
 			margin: 20px 0 0
 		.rubric__sub-item_examples + .rubric__sub-item_examples
 			margin-top: 5px
+		.rubric__sub-item_margin
+			margin-top: 16px!important
+			
 		.rubric__sub-link
 			display: inline-block
 			padding: 0
@@ -236,8 +264,6 @@
 			color: #A8AFBD
 			border-bottom-color: #DEDEDE
 		.rubric__list-icon
-			display: none
-			left: 9px
-			top: calc(50% - 6px)
-			font-size: 9px
-			+rotate(-90)
+			font-size: 11px
+			top: calc(50% - 7px)
+			right: 10px

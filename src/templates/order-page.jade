@@ -1,0 +1,116 @@
+---
+title: Техно-принт
+---
+extends layouts/_layout
+
+block content
+	+b.MAIN
+		+b.basket
+			+e.container.container
+				+b.product
+					+e.sect._basket
+						+b.breadcrumbs
+							+e.A.link(href='#!')
+								+icon('icon-house', 'breadcrumbs__icon')
+								= ' '
+								+e.SPAN Главная
+							+e.A.link(href='#!')
+								+e.SPAN Корзина заказов
+							+e.A.link.is-active(href='#!')
+								+e.SPAN Оформление заказа
+
+						+e.sect-links
+							+e.sect-link
+								+e.A(href="#!") ТОВАРОВ  В КОРЗИНЕ
+									+e.SPAN.sect-count 4
+							+e.sect-link
+								+e.A(href="#!") МОИ ОФОРМЛЕННЫЕ ЗАКАЗЫ
+									+e.SPAN.sect-count 0
+				+e.orders
+					+e.orders-row
+						+e.orders-status Номер вашего заказа:
+							+e.orders-status-count
+								+e.SPAN 44
+
+					+b.order
+						+e.FORM(action='#!')
+							+e.in
+								+e.col
+									+e.title Оформление
+									+e.order__form
+										+e.form-group
+											+e.form-field._name._required
+												+e.INPUT.input(type='text' name='' placeholder='Имя / Организация' required)
+											+e.form-field._email._required
+												+e.INPUT.input(type='email' name='' placeholder='Почта' required)
+
+										+e.form-group
+											+e.form-field._pass
+												+e.INPUT.input(type='text' name='' placeholder='Пароль для регистрации')
+											+e.form-field._pass
+												+e.INPUT.input(type='text' name='' placeholder='Повторите пароль')
+											+e.form-field._text
+												+b.check.order__check
+													+e.INPUT(type='checkbox' name='' id='no-reg')
+													+e.LABEL(for='no-reg') Купить без регистрации -
+														+e.SPAN.circle
+
+										+e.form-group
+											+e.form-field._tel._required
+												+e.INPUT.input(type='tel' name='' placeholder='Телефон' required)
+
+										+e.form-ask
+											+e.SPAN Нужна ли Вам доставка товара?
+											+e.form-ask-in
+												+b.check.order__check
+													+e.INPUT(type='radio' name='delivery-ask' id='delivery-ask-1')
+													+e.LABEL(for='delivery-ask-1') Да
+														+e.SPAN.circle
+
+												+b.check.order__check
+													+e.INPUT(type='radio' name='delivery-ask' id='delivery-ask-2' checked)
+													+e.LABEL(for='delivery-ask-2') Нет
+														+e.SPAN.circle
+										+e.form-group
+											+e.form-group-label Город
+												+e.form-field._address
+													+e.INPUT.input(type='text')
+											+e.form-group-label Адрес доставки
+												+e.form-field._address
+													+e.TEXTAREA
+
+								+e.col
+									+e.title Комментарий
+									+e.comment
+										+e.comment-descr Оставьте комментарий к заказу, наш менеджер свяжется с вами для уточнения оплаты и доставки.
+										+e.comment-in
+											+e.comment-message-wrap
+												+e.TEXTAREA.comment-message
+												+e.BUTTON.comment-extend.js-message-extend(type='button')
+													+icon('icon-arr-double', 'order__comment-extend-icon')
+											+e.file
+												+e.file-add
+													+e.INPUT(type='file' id='file-add-input')
+													+e.LABEL.file-add-btn(for='file-add-input') Добавить файл
+												+e.file-row
+													+e.file-item.decor._sm
+														+e.IMG(src="img/content/file-1.jpg")
+														+e.BUTTON(type='button').file-btn-close
+															+icon('icon-close','order__file-icon-close')
+														.decor__line
+													+e.file-item.decor._sm
+														+e.IMG(src="img/content/file-2.jpg")
+														+e.BUTTON(type="button").file-btn-close
+															+icon('icon-close','order__file-icon-close')
+														.decor__line
+
+								+e.row
+									+e.BUTTON.order__submit-btn.submit-btn(type='submit')
+										+e.SPAN Подтвердить
+
+				-
+					var catMenu = {
+					classMod: '_order'};
+				include components/_category-menu
+		- var benefitsClass = '_default'
+		include components/_benefits

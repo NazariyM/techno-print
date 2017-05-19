@@ -53,6 +53,15 @@
 				display: none
 			.product__sect-icon
 				margin-right: 15px
+		&_basket
+			margin-bottom: 0
+			background: #EBECEC
+			.product__sect-link
+				background: #F8F9F8
+			.product__sect-count
+				background: #DFE6EB
+			
+				
 		&-title
 			display: flex
 			align-items: center
@@ -326,6 +335,7 @@
 		font-size: 33px
 		+md
 			font-size: 25px
+			// item here ============>
 	&__item
 		position: relative
 		padding-bottom: 36px
@@ -344,6 +354,71 @@
 				width: 87%
 			+xs
 				width: 93%
+		&_basket
+			padding: 15px 15px 15px 22px
+			flex-basis: auto
+			min-height: 0
+			border-bottom: 5px solid #DFDFDF
+			+clr
+			.product__item-pic-wrap
+				float: left
+				width: 40%
+			.product__item-pic
+				height: 230px
+			.product__item-info
+				display: flex
+				flex-direction: column
+				float: left
+				min-height: 200px
+				width: 60%
+				margin: 15px 0 0
+				padding: 0 20px
+				font-size: 18px
+				line-height: 1.2
+			.product__item-title
+				margin-bottom: 10px
+			.product__item-descr
+				margin-bottom: 25px
+			.product__zoom
+				width: 45px
+				height: 45px
+				&-icon
+					font-size: 27px
+			.product__amount
+				clear: both
+				margin: 50px auto 15px
+				padding: 0 10px
+				max-width: 340px
+				&-text
+					font-size: 23px
+			.decor__line
+				width: 82.5%
+			
+		&-col
+			float: left
+			+clr
+			&:nth-child(1)
+				width: 37%
+				font-size: 0
+			&:nth-child(2)
+				width: 37%
+			&:nth-child(3)
+				width: 26%
+				text-align: center
+		&-price
+			margin-top: auto
+			padding-right: 40px
+			color: #001E57
+			+f('psr', 22)
+			&-count
+				float: right
+				+f('psb')
+			.product__val-icon
+				font-size: 17px
+				fill: #001E57
+		&-art
+			font-size: 16px
+			color: #333333
 		&-pic-wrap
 			position: relative
 			transition: transform .3s
@@ -541,7 +616,7 @@
 				margin: 7px 0 10px 18px
 			&_more-text
 				margin: 0 -15px
-				.product__suggest-col
+				.product__suggest
 					width: 50%
 					margin-left: 0
 					padding: 0 5px 0 8px
@@ -638,6 +713,124 @@
 				right: -17px
 				border-width: 16px 16px 0 0
 				
+	&__comment
+		padding: 15px
+		background: #E0E0E0
+		&-message-wrap
+			position: relative
+			padding-left: 39px
+			border: 1px solid #99AFCF
+			background: #F7F7F7
+			overflow: hidden
+			&::before
+				content: ''
+				position: absolute
+				top: -7px
+				left: -10px
+				+sr('dots_black')
+				transform: scale(.75)
+		&-message
+			display: block
+			width: 100%
+			padding: 2px 10px 25px
+			resize: none
+			min-height: 120px
+			border: none
+			+f('psr', 18)
+			transition: min-height 0.3s
+			&.extended
+				min-height: 160px
+		&-extend
+			position: absolute
+			right: 17px
+			bottom: 3px
+			width: 50px
+			height: 20px
+			padding-top: 3px
+			background: #F7F7F7
+			&:hover
+				background: #E0E0E0
+			&:hover &-icon
+				fill: darken(#C4C4C4, 20)
+			&-icon
+				fill: #C4C4C4
+				font-size: 14px
+			&.is-active &-icon
+				transform: scaleY(-1)
+		&-btn
+			float: right
+			margin-top: 10px
+			min-width: 216px
+			height: 40px
+			padding: 0 10px
+			line-height: 40px
+			color: #fff
+			text-transform: uppercase
+			background: #B9C0C9
+			border: 1px solid #99AFCF
+			+f('oss', 15, 15)
+			&:hover
+				background: darken(#B9C0C9, 8)
+			&:active
+				background: darken(#B9C0C9, 15)
+			&:hover span
+				border-bottom-color: #B9C0C9
+			span
+				border-bottom: 2px solid #A0AABA
+		&-row
+			margin-top: 15px
+			+clr
+			
+	&__file-add
+		float: left
+		&-btn
+			position: relative
+			display: block
+			width: 75px
+			height: 70px
+			padding: 3px 0 0
+			color: #fff
+			text-transform: uppercase
+			text-align: center
+			background: #B9C0C9
+			cursor: pointer
+			+f('ver', 11)
+			&::after
+				position: absolute
+				left: calc(50% - 18px)
+				bottom: 3px
+				+st('file')
+				transform: scale(.8)
+				content: ''
+			&:hover
+				background: darken(#B9C0C9, 10)
+			&:hover::after
+				+st('file-hvr')
+			&:active::after
+				+st('file-act')
+		input[type='file']
+			display: none
+	&__close-btn
+		float: right
+		width: 32px
+		height: 32px
+		line-height: 30px
+		border-radius: 50%
+		border: 3px solid #DFDFDF
+		background: #FFBE77
+		transition: .15s
+		&:hover
+			background: #E63E2D
+		&:active
+			background: #BD2F00
+			border-color: #DFDFDF
+		&-icon
+			fill: #fff
+			font-size: 14px
+			transition: .15s
+	&__close-btn:active &__close-btn-icon
+		fill: #8C1212
+		
 	&__card
 		margin-bottom: 40px
 		display: block
@@ -729,7 +922,6 @@
 		margin: 25px 0 35px
 		&.slick-initialized
 			display: block
-		
 	&__props
 		+clr
 	&__props-col
@@ -745,7 +937,6 @@
 		align-items: flex-end
 		& + &
 			margin-top: 8px
-	&__hashtags
 	&__hashtags-link
 		display: block
 		padding: 0 10px
@@ -794,6 +985,8 @@
 		fill: #DFE9F5
 		font-size: 13px
 	&__wish-btn
+		margin-bottom: 20px
+	&__wish-add-btn
 		padding: 1px 0
 		margin-right: 7px
 		background: #EEF5FC
@@ -823,9 +1016,9 @@
 			display: inline-block
 			vertical-align: middle
 		&:hover
-			color: darken(#B3BEC9, 20)
+			color: #0084FF
 	&__filter-btn:hover &__filter-icon
-		fill: darken(#B3BEC9, 20)
+		fill: #74BAF8
 	&__filter-icon
 		display: inline-block
 		vertical-align: middle
@@ -842,10 +1035,11 @@
 	.icon-filter-list
 		font-size: 16px
 		vertical-align: bottom
-	
+		
 	&_home
 		padding-top: 40px
 		+lg
 			padding-top: 30px
 		+sm
 			padding-top: 5px
+			
