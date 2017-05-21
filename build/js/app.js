@@ -3656,17 +3656,23 @@ $(function () {
     });
 
     $rubricMiniList.on('click', function () {
-      $(this).toggleClass('is-active');
-      $(this).find('.rubric__mini-list').slideToggle(150);
-    });
+      var $_this = $(this);
 
-    $rubricMiniList.each(function () {
-      if ($(this).hasClass('is-active')) {
-        $(this).find('.rubric__mini-list').slideDown();
+      if ($_this.hasClass('is-active')) {
+        $_this.find('.rubric__mini-list').slideUp(150);
+        setTimeout(function () {
+          $_this.removeClass('is-active');
+        }, 150);
+      } else {
+        $_this.find('.rubric__mini-list').slideDown(150);
+        $_this.addClass('is-active');
       }
     });
 
-    $rubricMiniList.on('click', function (e) {
+    $('.rubric__mini-list').on('click', function (e) {
+      e.stopPropagation();
+    });
+    $('.rubric__sub-list').on('click', function (e) {
       e.stopPropagation();
     });
   })();

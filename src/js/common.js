@@ -81,17 +81,23 @@ $(() => {
     });
 
     $rubricMiniList.on('click', function() {
-      $(this).toggleClass('is-active');
-      $(this).find('.rubric__mini-list').slideToggle(150);
-    });
+      const $_this = $(this);
 
-    $rubricMiniList.each(function() {
-      if ($(this).hasClass('is-active')) {
-        $(this).find('.rubric__mini-list').slideDown();
+      if ($_this.hasClass('is-active')) {
+        $_this.find('.rubric__mini-list').slideUp(150);
+        setTimeout(() => {
+          $_this.removeClass('is-active');
+        }, 150);
+      } else {
+        $_this.find('.rubric__mini-list').slideDown(150);
+        $_this.addClass('is-active');
       }
     });
 
-    $rubricMiniList.on('click', (e) => {
+    $('.rubric__mini-list').on('click', (e) => {
+      e.stopPropagation();
+    });
+    $('.rubric__sub-list').on('click', (e) => {
       e.stopPropagation();
     });
   }());

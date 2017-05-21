@@ -3860,6 +3860,10 @@ button {
   fill: #56708A;
 }
 
+.rubric__mini.is-active .rubric__mini-list {
+  display: block;
+}
+
 .rubric__mini-title {
   position: relative;
   display: block;
@@ -3896,7 +3900,11 @@ button {
   line-height: 1.05;
 }
 
-.rubric__mini-item_margin {
+.rubric__mini-item.is-active .rubric__mini-icon-sm {
+  display: block;
+}
+
+.rubric__mini-item.is-active .rubric__mini-icon-sm_margin {
   margin-top: 20px;
 }
 
@@ -3923,6 +3931,7 @@ button {
 }
 
 .rubric__mini-icon-sm {
+  display: none;
   position: absolute;
   left: 9px;
   top: 4px;
