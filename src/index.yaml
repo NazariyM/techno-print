@@ -33,3 +33,6 @@ PageList:
 
 - file: clothes-page.html
   ready: 100%
+
+- file: balloons-page.html
+  ready: 100%

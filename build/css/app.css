@@ -132,6 +132,12 @@ html {
   fill: initial;
 }
 
+.icon-balloons_sm {
+  width: 1.32em;
+  height: 1em;
+  fill: initial;
+}
+
 .icon-books {
   width: 2.34em;
   height: 1em;
@@ -5340,6 +5346,14 @@ button {
   font-size: 26px;
 }
 
+.page__bar-title .icon-balloons_sm {
+  right: 20px;
+  fill: #F3F3F3;
+  stroke: #000;
+  font-size: 30px;
+  stroke-width: 1px;
+}
+
 .page__in {
   display: -ms-flexbox;
   display: flex;
@@ -5604,8 +5618,8 @@ button {
   z-index: 1;
   padding: 10px;
   font-family: "TruthCYRMedium", Arial, sans-serif;
-  font-size: 18px;
-  line-height: 1;
+  font-size: 16px;
+  line-height: 1.125;
   color: #004D8C;
   background: rgba(222, 241, 255, 0.6);
   text-transform: uppercase;
@@ -5701,6 +5715,31 @@ button {
 .label-block__logo-img {
   width: 86%;
   margin: 0 auto;
+}
+
+/* benefits-list
+	----------------------------------- */
+.benefits-list__title {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.benefits-list__descr {
+  margin-top: 35px;
+  text-indent: 30px;
+}
+
+.benefits-list ul {
+  margin-top: 20px;
+}
+
+.benefits-list ul li {
+  text-indent: 30px;
+}
+
+.benefits-list ul li:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .contacts__in {
@@ -5888,88 +5927,6 @@ button {
 
 .delivery__city-text p + p {
   margin-top: 10px;
-}
-
-.payment {
-  margin: 0 0 50px;
-}
-
-.payment__in {
-  padding: 20px 0 5px;
-  background: #FAFEFF;
-  *zoom: 1;
-}
-
-.payment__in:after {
-  content: " ";
-  display: table;
-  clear: both;
-}
-
-.payment__col {
-  padding: 0 4%;
-}
-
-.payment__col:nth-child(1) {
-  float: left;
-  width: 48%;
-}
-
-.payment__col:nth-child(2) {
-  float: right;
-  width: 37%;
-}
-
-.payment__title {
-  margin-bottom: 20px;
-  color: #000;
-}
-
-.payment__descr {
-  font-size: 19px;
-  color: #1A2F4A;
-}
-
-.payment__list {
-  font-family: "Open Sans", Arial, sans-serif;
-  font-size: 21px;
-  font-weight: 600;
-}
-
-.payment__list li {
-  position: relative;
-  padding-left: 40px;
-}
-
-.payment__list li:not(:last-child) {
-  margin-bottom: 5px;
-}
-
-.payment__list-icon {
-  position: absolute;
-  top: -3px;
-  left: 0;
-  z-index: 1;
-  fill: #AEC94D;
-  font-size: 32px;
-}
-
-.payment__bg {
-  position: relative;
-  min-height: 520px;
-  background: #FAFEFF;
-}
-
-.payment__bg-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-  z-index: 1;
 }
 
 .basket__orders {
@@ -6486,6 +6443,131 @@ button {
   display: none;
 }
 
+/* pictures
+	----------------------------------- */
+.pictures {
+  padding: 0 0 30px;
+}
+
+.pictures__title {
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.pictures__descr {
+  margin: 20px 0;
+  text-indent: 40px;
+}
+
+.pictures__pics {
+  *zoom: 1;
+}
+
+.pictures__pics:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.pictures__pics-item {
+  position: relative;
+  float: left;
+  padding-top: 28.10458%;
+}
+
+.pictures__pics-item:not(:first-child) {
+  margin-left: 0.5%;
+}
+
+.pictures__pics-item:nth-child(1) {
+  width: 22.1%;
+}
+
+.pictures__pics-item:nth-child(2) {
+  width: 38.3%;
+}
+
+.pictures__pics-item:nth-child(3) {
+  width: 38.4%;
+}
+
+.pictures__pics-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  z-index: 1;
+}
+
+.pictures__pics-label {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+}
+
+.pictures__pics-label_right {
+  right: 0;
+  left: auto;
+}
+
+.pictures__benefits-list {
+  margin: 15px 0 0;
+}
+
+/* clothes
+	----------------------------------- */
+.clothes {
+  padding: 0 0 40px;
+}
+
+.clothes__in {
+  padding: 20px 0 0;
+  *zoom: 1;
+}
+
+.clothes__in:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.clothes__col {
+  float: left;
+}
+
+.clothes__col:nth-child(1) {
+  width: 55%;
+  padding-right: 20px;
+}
+
+.clothes__col:nth-child(2) {
+  width: 45%;
+}
+
+.clothes__descr {
+  text-indent: 30px;
+}
+
+.clothes__descr:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.clothes__label-block {
+  width: 45%;
+}
+
+/* news
+	----------------------------------- */
 .news__post {
   padding-bottom: 9px;
   border-bottom: 1px solid #D6D9DC;
@@ -6602,6 +6684,8 @@ button {
   fill: #004D87;
 }
 
+/* machine
+	----------------------------------- */
 .machine__in {
   padding: 20px 0;
   *zoom: 1;
@@ -6680,53 +6764,79 @@ button {
   bottom: -20px;
 }
 
-.pictures {
-  padding: 0 0 30px;
+/*  payment
+	----------------------------------- */
+.payment {
+  margin: 0 0 50px;
 }
 
-.pictures__title {
-  padding-bottom: 10px;
-  text-align: center;
-}
-
-.pictures__descr {
-  margin: 20px 0;
-  text-indent: 40px;
-}
-
-.pictures__pics {
+.payment__in {
+  padding: 20px 0 5px;
+  background: #FAFEFF;
   *zoom: 1;
 }
 
-.pictures__pics:after {
+.payment__in:after {
   content: " ";
   display: table;
   clear: both;
 }
 
-.pictures__pics-item {
-  position: relative;
+.payment__col {
+  padding: 0 4%;
+}
+
+.payment__col:nth-child(1) {
   float: left;
-  padding-top: 28.10458%;
+  width: 48%;
 }
 
-.pictures__pics-item:not(:first-child) {
-  margin-left: 0.5%;
+.payment__col:nth-child(2) {
+  float: right;
+  width: 37%;
 }
 
-.pictures__pics-item:nth-child(1) {
-  width: 22.1%;
+.payment__title {
+  margin-bottom: 20px;
+  color: #000;
 }
 
-.pictures__pics-item:nth-child(2) {
-  width: 38.3%;
+.payment__descr {
+  font-size: 19px;
+  color: #1A2F4A;
 }
 
-.pictures__pics-item:nth-child(3) {
-  width: 38.4%;
+.payment__list {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 21px;
+  font-weight: 600;
 }
 
-.pictures__pics-item img {
+.payment__list li {
+  position: relative;
+  padding-left: 40px;
+}
+
+.payment__list li:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.payment__list-icon {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  z-index: 1;
+  fill: #AEC94D;
+  font-size: 32px;
+}
+
+.payment__bg {
+  position: relative;
+  min-height: 520px;
+  background: #FAFEFF;
+}
+
+.payment__bg-img {
   position: absolute;
   top: 0;
   left: 0;
@@ -6738,79 +6848,19 @@ button {
   z-index: 1;
 }
 
-.pictures__pics-label {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: 1;
-  padding: 10px 15px;
-  color: #fff;
-  font-size: 20px;
-  background: rgba(0, 0, 0, 0.3);
-  text-transform: uppercase;
+/* balloons
+	----------------------------------- */
+.balloons {
+  padding-bottom: 40px;
 }
 
-.pictures__pics-label_right {
-  right: 0;
-  left: auto;
-}
-
-.pictures__benefits {
-  margin: 15px 0 0;
-}
-
-.pictures__benefits-title {
-  font-size: 20px;
-  text-align: center;
-  font-weight: 700;
-}
-
-.pictures__benefits-list {
+.balloons__descr {
   margin-top: 20px;
-}
-
-.pictures__benefits-list li {
   text-indent: 30px;
 }
 
-.pictures__benefits-list li:not(:last-child) {
-  margin-top: 20px;
-}
-
-.clothes__in {
-  padding: 20px 0 40px;
-  *zoom: 1;
-}
-
-.clothes__in:after {
-  content: " ";
-  display: table;
-  clear: both;
-}
-
-.clothes__col {
-  float: left;
-}
-
-.clothes__col:nth-child(1) {
-  width: 55%;
-  padding-right: 20px;
-}
-
-.clothes__col:nth-child(2) {
-  width: 45%;
-}
-
-.clothes__descr {
-  text-indent: 30px;
-}
-
-.clothes__descr:not(:last-child) {
-  margin-bottom: 20px;
-}
-
-.clothes__label-block {
-  width: 45%;
+.balloons__benefits-list {
+  padding: 30px 0 0;
 }
 
 @media only screen and (max-width: 1835px){
@@ -7525,9 +7575,6 @@ button {
   .product__sect{
     padding: 1px 5px 0 5px;
   }
-  .product__sect-title{
-    font-size: 13px;
-  }
   .product__sect-link{
     padding: 0 18px 0 8px;
     font-size: 11px;
@@ -7794,9 +7841,6 @@ button {
 @media only screen and (max-width: 1023px){
   .title-md{
     font-size: 16px;
-  }
-  .product__sect-title{
-    font-size: 14px;
   }
   .product__sect-link{
     margin: 1px;

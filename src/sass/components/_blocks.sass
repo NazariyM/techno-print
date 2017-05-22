@@ -453,6 +453,12 @@
 			.icon-pictures
 				top: 48%
 				font-size: 26px
+			.icon-balloons_sm
+				right: 20px
+				fill: #F3F3F3
+				stroke: #000
+				font-size: 30px
+				stroke-width: 1px
 	&__in
 		display: flex
 		justify-content: space-between
@@ -631,7 +637,7 @@
 		transform: translateX(-50%)
 		z-index: 1
 		padding: 10px
-		+f('tcm', 18, 18)
+		+f('tcm', 16, 18)
 		color: #004D8C
 		background: rgba(#DEF1FF, .6)
 		text-transform: uppercase
@@ -684,3 +690,19 @@
 			width: 86%
 			margin: 0 auto
 		
+/* benefits-list
+	----------------------------------- */
+.benefits-list
+	&__title
+		font-size: 20px
+		text-align: center
+		font-weight: 700
+	&__descr
+		margin-top: 35px
+		text-indent: 30px
+	ul
+		margin-top: 20px
+		li
+			text-indent: 30px
+		li:not(:last-child)
+			margin-bottom: 20px

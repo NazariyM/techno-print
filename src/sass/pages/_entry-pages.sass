@@ -1,0 +1,238 @@
+/* pictures
+	----------------------------------- */
+.pictures
+	padding: 0 0 30px
+	&__title
+		padding-bottom: 10px
+		text-align: center
+	&__descr
+		margin: 20px 0
+		text-indent: 40px
+	&__pics
+		+clr
+		&-item
+			position: relative
+			float: left
+			padding-top: percentage(344 / 1224)
+			&:not(:first-child)
+				margin-left: 0.5%
+			&:nth-child(1)
+				width: 22.1%
+			&:nth-child(2)
+				width: 38.3%
+			&:nth-child(3)
+				width: 38.4%
+			img
+				+coverdiv
+				+cover
+				z-index: 1
+		&-label
+			position: absolute
+			left: 0
+			bottom: 0
+			z-index: 1
+			padding: 10px 15px
+			color: #fff
+			font-size: 20px
+			background: rgba(#000, .3)
+			text-transform: uppercase
+			&_right
+				right: 0
+				left: auto
+	&__benefits-list
+		margin: 15px 0 0
+		
+/* clothes
+	----------------------------------- */
+.clothes
+	padding: 0 0 40px
+	&__in
+		padding: 20px 0 0
+		+clr
+	&__col
+		float: left
+		&:nth-child(1)
+			width: 55%
+			padding-right: 20px
+		&:nth-child(2)
+			width: 45%
+	&__descr
+		text-indent: 30px
+		&:not(:last-child)
+			margin-bottom: 20px
+	&__label-block
+		width: 45%
+		
+/* news
+	----------------------------------- */
+.news
+	&__post
+		padding-bottom: 9px
+		border-bottom: 1px solid #D6D9DC
+		+clr
+		& + &
+			margin-top: 30px
+		&-pic
+			float: left
+			width: 51%
+			padding-right: 2%
+			margin-bottom: -5px
+		&-img-wrap
+			height: 340px
+			img
+				width: 100%
+				height: 100%
+		&-date
+			padding: 7px 2px
+			+f('oss', 16)
+			color: #BCBFC2
+			span + span
+				margin-left: 5px
+		&-title
+			float: right
+			width: 49%
+			padding: 2px 15px
+			margin-bottom: 15px
+			+f('oss', 20)
+			background: #F4F8FD
+		&-descr
+			position: relative
+			float: left
+			padding: 0 0 30px
+			width: 49%
+			min-height: 265px
+			&.is-open
+				float: none
+				width: auto
+			p:first-child
+				text-indent: 30px
+			p:nth-child(2)
+				display: none
+			&_important
+				font-weight: bold
+		&-descr.is-open.news__post-descr_important
+			border-color: transparent
+		&-more-btn
+			position: absolute
+			left: 50%
+			transform: translateX(-50%)
+			bottom: 4px
+			z-index: 1
+			font-size: 18px
+			color: #004D87
+			span
+				display: inline-block
+				vertical-align: middle
+			&.is-active
+				left: 75%
+			&.is-active .news__post-more-icon
+				+rotate(180)
+		&-more-icon
+			display: inline-block
+			vertical-align: middle
+			font-size: 10px
+			fill: #004D87
+			
+/* machine
+	----------------------------------- */
+.machine
+	&__in
+		padding: 20px 0
+		+clr
+	&__text
+		p
+			text-indent: 30px
+		p + p
+			margin-top: 20px
+	&__pic
+		float: right
+		width: percentage(490 / 1224)
+		margin-left: 20px
+	&__content
+		position: relative
+		clear: both
+		padding: 30px 0
+		&::after
+			content: ''
+			display: block
+			height: 114px
+			width: 100%
+			background: url(../img/bg/scissors-decor.svg) no-repeat 50% 50%/cover
+		&.is-open
+			margin-bottom: 20px
+		&-in
+			display: none
+			max-width: 860px
+			margin: 0 auto 30px
+		&-title
+			text-indent: 50px
+		&-list
+			margin-top: 30px
+			li
+				text-indent: 20px
+			li:not(:last-child)
+				margin-bottom: 20px
+	&__more-content-open
+		display: inline
+		vertical-align: top
+		margin-left: 4px
+	&__more-content-close
+		position: absolute
+		left: 50%
+		margin-left: -108px
+		bottom: -20px
+		
+/*  payment
+	----------------------------------- */
+.payment
+	margin: 0 0 50px
+	&__in
+		padding: 20px 0 5px
+		background: #FAFEFF
+		+clr
+	&__col
+		padding: 0 4%
+		&:nth-child(1)
+			float: left
+			width: 48%
+		&:nth-child(2)
+			float: right
+			width: 37%
+	&__title
+		margin-bottom: 20px
+		color: #000
+	&__descr
+		font-size: 19px
+		color: #1A2F4A
+	&__list
+		+f('oss', 21)
+		li
+			position: relative
+			padding-left: 40px
+			&:not(:last-child)
+				margin-bottom: 5px
+		&-icon
+			position: absolute
+			top: -3px
+			left: 0
+			z-index: 1
+			fill: #AEC94D
+			font-size: 32px
+	&__bg
+		position: relative
+		min-height: 520px
+		background: #FAFEFF
+		&-img
+			+coverdiv
+			+cover
+			z-index: 1
+			
+/* balloons
+	----------------------------------- */
+.balloons
+	padding-bottom: 40px
+	&__descr
+		margin-top: 20px
+		text-indent: 30px
+	&__benefits-list
+		padding: 30px 0 0
