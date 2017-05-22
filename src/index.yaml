@@ -24,3 +24,12 @@ PageList:
 
 - file: news-page.html
   ready: 100%
+
+- file: machine-page.html
+  ready: 100%
+
+- file: pictures-page.html
+  ready: 100%
+
+- file: clothes-page.html
+  ready: 100%

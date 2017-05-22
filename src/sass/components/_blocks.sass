@@ -29,7 +29,250 @@
 	&:hover span
 		color: darken(#FCBD7E, 15)
 		border-bottom-color: darken(#FCBD7E, 15)
+		
+/* buttons
+	----------------------------------- */
+.btn
+	position: relative
+	display: inline-block
+	min-width: 340px
+	padding: 16px 70px 16px 5px
+	+f("psr",22)
+	color: $white
+	outline: none
+	text-decoration: none
+	text-align: center
+	background-color: #52C0E9
+	border-bottom: 1px solid #E7E7E7
+	+lg
+		min-width: 280px
+		font-size: 20px
+		padding: 13px 55px 13px 5px
+	+md
+		min-width: 238px
+		padding: 11px 41px 11px 5px
+		font-size: 17px
+	+sm
+		min-width: 210px
+		padding: 6px 34px 6px 5px
+		font-size: 15px
+	&::after
+		content: ''
+		position: absolute
+		top: calc(50% - 18px)
+		right: 32px
+		z-index: 1
+		+s('btn_arr')
+		transform: scale(.9)
+		+lg
+			right: 13px
+		+md
+			right: 10px
+			transform: scale(.7)
+		+sm
+			right: 6px
+			transform: scale(.6)
+	&:hover
+		background-color: #128FCD
+		border-bottom-color: #F9BF84
+	&:hover::after
+		+s('btn_arr-hvr')
+	&:active
+		background-color: #24568D
+		border-bottom-color: #E63833
+	&:active::after
+		+s('btn_arr-act')
+	&_dark
+		background-color: #1768BF
+		border-bottom-color: #F9BF84
+		&::after
+			+s('btn_dark')
+		&:hover
+			background-color: #00BBFF
+			border-bottom-color: #F9BF84
+		&:hover::after
+			+s('btn_dark-hvr')
+		&:active
+			background-color: #24568D
+			border-bottom-color: #E63833
 
+.send-btn
+	position: relative
+	padding: 0 70px 0 5px
+	min-width: 232px
+	line-height: 45px
+	height: 45px
+	color: #fff
+	background: #6ca5db
+	text-align: right
+	border-bottom: 2px solid #a7b8c9
+	+f("ver",19)
+	overflow: hidden
+	&::after
+		position: absolute
+		top: -4px
+		right: -4px
+		+s('send')
+		content: ''
+		transform: scale(.87)
+		+md
+			top: -7px
+			right: -8px
+			transform: scale(.73)
+	&:hover
+		background-color: #63afed
+		border-bottom-color: #ffff74
+	&:hover::after
+		+s('send-hvr')
+	&:active
+		background-color: #415c89
+		border-bottom-color: #a95a63
+	&:active::after
+		+s('send-act')
+
+.btn-cart
+	position: relative
+	padding: 17px 90px 17px 50px
+	font-size: 21px
+	color: #fff
+	background: #2AB1E2
+	border-bottom: 2px solid #E3E3E3
+	overflow: hidden
+	&::after
+		position: absolute
+		top: -5px
+		right: -7px
+		+sr('cart_add')
+		transform: scale(.85)
+		content: ''
+	&:hover
+		background: #01B6F8
+		border-bottom-color: #FFBE77
+	&:hover::after
+		+sr('cart_add-hvr')
+	&:active
+		background: #23568A
+		border-bottom-color: #E63E2D
+	&:active::after
+		+sr('cart_add-act')
+
+.wish-btn
+	position: relative
+	min-width: 230px
+	height: 37px
+	line-height: 37px
+	padding: 0 40px 0 10px
+	text-align: center
+	font-size: 19px
+	color: #fff
+	background: #EEF5FC
+	border-bottom: 1px solid #E1EFF6
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		+st('heart')
+	&:hover
+		background: #61CDFF
+		border-bottom-color: #FFC486
+	&:active
+		background: #1E4D80
+		border-bottom-color: #FF0000
+	&:hover::after
+		+st('heart-hvr')
+	&:active::after
+		+st('heart-act')
+
+.order-btn
+	position: relative
+	min-width: 380px
+	height: 75px
+	line-height: 75px
+	padding: 0 76px 0 10px
+	text-align: center
+	font-size: 25px
+	color: #fff
+	background: #28B0E2
+	border-bottom: 2px solid #E0E0E1
+	overflow: hidden
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		right: -1px
+		+sr('like')
+	&:hover
+		background: #06B2F0
+		border-bottom-color: #FFBE77
+	&:active
+		background: #23568B
+		border-bottom-color: #FF0000
+	&:hover::after
+		+sr('like-hvr')
+	&:active::after
+		+sr('like-act')
+
+.submit-btn
+	position: relative
+	min-width: 380px
+	height: 75px
+	line-height: 75px
+	padding: 0 76px 0 10px
+	text-align: center
+	font-size: 25px
+	color: #fff
+	background: #28B0E2
+	border-bottom: 2px solid #E0E0E1
+	overflow: hidden
+	text-transform: uppercase
+	span
+		border-radius: 2px
+		border-bottom: 2px solid #2B99CC
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		right: -1px
+		+sr('subm')
+	&:hover
+		background: #06B2F0
+		border-bottom-color: #FFBE77
+		span
+			border-bottom-color: #079DE3
+	&:active
+		background: #23568B
+		border-bottom-color: #FF0000
+		span
+			border-bottom-color: #254478
+	&:hover::after
+		+sr('subm-hvr')
+	&:active::after
+		+sr('subm-act')
+
+		
+.more-content-open
+	font-size: 18px
+	color: #004D87
+	span
+		display: inline-block
+		vertical-align: middle
+	&__icon
+		display: inline-block
+		vertical-align: -1px
+		margin-left: 4px
+		font-size: 8px
+		fill: #004D87
+.more-content-close
+	display: none
+	padding-top: 9px
+	border-top: 1px solid #DFDFE0
+	width: 216px
+	&__icon
+		font-size: 16px
+		fill: #C2C2C2
+		+rotate(180)
+		
 /* about text
 	----------------------------------- */
 .about-text
@@ -193,6 +436,23 @@
 			font-size: 21px
 			text-align: center
 			color: #333333
+			&_has-icon
+				position: relative
+				padding: 8px 75px 8px 30px
+			&_shirts
+				padding: 8px 85px 8px 30px
+			&-icon
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				right: 10px
+				fill: #C7CBCF
+			.icon-machine
+				top: 47%
+				font-size: 27px
+			.icon-pictures
+				top: 48%
+				font-size: 26px
 	&__in
 		display: flex
 		justify-content: space-between
@@ -359,3 +619,68 @@
 	input:checked + label .check__circle::after
 		transform: scale(1)
 		opacity: 1
+
+/* label-block
+	----------------------------------- */
+.label-block
+	position: relative
+	&__title
+		position: absolute
+		top: 4px
+		left: 50%
+		transform: translateX(-50%)
+		z-index: 1
+		padding: 10px
+		+f('tcm', 18, 18)
+		color: #004D8C
+		background: rgba(#DEF1FF, .6)
+		text-transform: uppercase
+	&__in
+		padding: 4px
+		border: 2px solid #47C1F0
+		+clr
+	&__item
+		position: relative
+		float: left
+		width: calc(50% - 5px)
+		padding-top: 36%
+		margin-right: 5px
+		margin-bottom: 5px
+		+clr
+		&:nth-child(4)
+			padding-top: 0
+		&:nth-child(even)
+			width: 50%
+			margin-right: 0
+		&-img
+			+coverdiv
+			+cover
+		&_half
+			padding-top: 72%
+			margin-bottom: 0
+		&_double
+			width: 50%
+			padding-top: 35%
+			margin-right: 0
+			&:nth-child(3)
+				margin-bottom: 0
+		&-label
+			position: absolute
+			left: 0
+			bottom: 0
+			padding: 10px
+			z-index: 1
+			+f('oss', 16, 16)
+			color: #fff
+			background: rgba(#000, .45)
+			&_top
+				top: 0
+				bottom: auto
+	
+	&__logo
+		padding: 7px 0
+		background: #47C1F0
+		&-img
+			width: 86%
+			margin: 0 auto
+		

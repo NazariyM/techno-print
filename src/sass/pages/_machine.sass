@@ -1,0 +1,46 @@
+.machine
+	&__in
+		padding: 20px 0
+		+clr
+	&__text
+		p
+			text-indent: 30px
+		p + p
+			margin-top: 20px
+	&__pic
+		float: right
+		width: percentage(490 / 1224)
+		margin-left: 20px
+	&__content
+		position: relative
+		clear: both
+		padding: 30px 0
+		&::after
+			content: ''
+			display: block
+			height: 114px
+			width: 100%
+			background: url(../img/bg/scissors-decor.svg) no-repeat 50% 50%/cover
+		&.is-open
+			margin-bottom: 20px
+		&-in
+			display: none
+			max-width: 860px
+			margin: 0 auto 30px
+		&-title
+			text-indent: 50px
+		&-list
+			margin-top: 30px
+			li
+				text-indent: 20px
+			li:not(:last-child)
+				margin-bottom: 20px
+	&__more-content-open
+		display: inline
+		vertical-align: top
+		margin-left: 4px
+	&__more-content-close
+		position: absolute
+		left: 50%
+		margin-left: -108px
+		bottom: -20px

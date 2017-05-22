@@ -123,15 +123,38 @@ $(function () {
     });
   })();
 
+  // more text btns
   (function () {
-    var $moreBtn = $('.js-more-text');
+    var $moreNewsBtn = $('.js-more-text-news');
+    var $moreContentOpen = $('.js-more-content-open');
+    var $moreContentClose = $('.js-more-content-close');
+    var $moreContent = $('.js-more-content');
 
-    $moreBtn.on('click', function (e) {
+    $moreContent.hide();
+
+    $moreNewsBtn.on('click', function (e) {
       e.preventDefault();
       $(this).parent().toggleClass('is-open');
       $(this).prev().toggle();
       $(this).find('span').text(!$(this).hasClass('is-active') ? 'Скрыть' : 'Показать полностью');
       $(this).toggleClass('is-active');
+    });
+
+    $moreContentOpen.on('click', function (e) {
+      e.preventDefault();
+      $(this).fadeOut();
+      $moreContent.parent().addClass('is-open');
+      $moreContent.fadeIn();
+      $moreContentClose.fadeIn();
+
+      $moreContentClose.on('click', function () {
+        $(this).fadeOut();
+        setTimeout(function () {
+          $moreContent.parent().removeClass('is-open');
+        }, 400);
+        $moreContent.fadeOut();
+        $moreContentOpen.fadeIn();
+      });
     });
   })();
 
