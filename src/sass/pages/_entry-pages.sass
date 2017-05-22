@@ -3,7 +3,6 @@
 .pictures
 	padding: 0 0 30px
 	&__title
-		padding-bottom: 10px
 		text-align: center
 	&__descr
 		margin: 20px 0
@@ -39,8 +38,6 @@
 			&_right
 				right: 0
 				left: auto
-	&__benefits-list
-		margin: 15px 0 0
 		
 /* clothes
 	----------------------------------- */
@@ -56,10 +53,9 @@
 			padding-right: 20px
 		&:nth-child(2)
 			width: 45%
-	&__descr
-		text-indent: 30px
-		&:not(:last-child)
-			margin-bottom: 20px
+	&__sect-descr
+		&:first-child
+			margin-top: 0
 	&__label-block
 		width: 45%
 		
@@ -226,13 +222,3 @@
 			+coverdiv
 			+cover
 			z-index: 1
-			
-/* balloons
-	----------------------------------- */
-.balloons
-	padding-bottom: 40px
-	&__descr
-		margin-top: 20px
-		text-indent: 30px
-	&__benefits-list
-		padding: 30px 0 0

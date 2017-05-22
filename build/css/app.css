@@ -300,6 +300,12 @@ html {
   fill: initial;
 }
 
+.icon-souvenirs_page {
+  width: 2.38em;
+  height: 1em;
+  fill: initial;
+}
+
 .icon-star {
   width: 1.16em;
   height: 1em;
@@ -1248,6 +1254,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.25;
   color: #00306B;
   text-transform: uppercase;
+}
+
+.title-md__color {
+  color: #E63833;
 }
 
 a {
@@ -5323,7 +5333,7 @@ button {
   padding: 8px 75px 8px 30px;
 }
 
-.page__bar-title_shirts {
+.page__bar-title_big-icon {
   padding: 8px 85px 8px 30px;
 }
 
@@ -5344,6 +5354,10 @@ button {
 .page__bar-title .icon-pictures {
   top: 48%;
   font-size: 26px;
+}
+
+.page__bar-title .icon-souvenirs_page {
+  font-size: 25px;
 }
 
 .page__bar-title .icon-balloons_sm {
@@ -5740,6 +5754,21 @@ button {
 
 .benefits-list ul li:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.benefits-list_default {
+  margin: 30px 0 0;
+}
+
+/* sect-descr
+	----------------------------------- */
+.sect-descr {
+  margin: 20px 0;
+  text-indent: 30px;
+}
+
+.sect {
+  padding-bottom: 40px;
 }
 
 .contacts__in {
@@ -6450,7 +6479,6 @@ button {
 }
 
 .pictures__title {
-  padding-bottom: 10px;
   text-align: center;
 }
 
@@ -6520,10 +6548,6 @@ button {
   left: auto;
 }
 
-.pictures__benefits-list {
-  margin: 15px 0 0;
-}
-
 /* clothes
 	----------------------------------- */
 .clothes {
@@ -6554,12 +6578,8 @@ button {
   width: 45%;
 }
 
-.clothes__descr {
-  text-indent: 30px;
-}
-
-.clothes__descr:not(:last-child) {
-  margin-bottom: 20px;
+.clothes__sect-descr:first-child {
+  margin-top: 0;
 }
 
 .clothes__label-block {
@@ -6846,21 +6866,6 @@ button {
   background-size: cover;
   background-position: 50% 50%;
   z-index: 1;
-}
-
-/* balloons
-	----------------------------------- */
-.balloons {
-  padding-bottom: 40px;
-}
-
-.balloons__descr {
-  margin-top: 20px;
-  text-indent: 30px;
-}
-
-.balloons__benefits-list {
-  padding: 30px 0 0;
 }
 
 @media only screen and (max-width: 1835px){
