@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Техно-принт</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
+
+  <body>
+    <div class="out">
+      <!-- begin header-->
+      <header class="header">
+        <div class="header__top">
+          <div class="header__top-container container">
+            <nav class="nav">
+              <ul class="nav__list">
+                <li class="nav__item is-active"><a href="#!" class="nav__link">Главная</a></li>
+                <li class="nav__item"><a href="#!" class="nav__link">Услуги</a></li>
+                <li class="nav__item"><a href="#!" class="nav__link">Сувениры по тематике</a></li>
+                <li class="nav__item"><a href="#!" class="nav__link">О нас</a></li>
+                <li class="nav__item"><a href="#!" class="nav__link">Новости</a></li>
+                <li class="nav__item"><a href="#!" class="nav__link">Доставка</a></li>
+                <li class="nav__item"><a href="#!" class="nav__link">Оплата</a></li>
+                <li class="nav__item"><a href="#!" class="nav__link">Оптовые цены</a></li>
+                <li class="nav__item"><a href="#!" class="nav__link">Контакты</a></li>
+              </ul>
+            </nav>
+            <div class="login login_header"><button type="button" class="login__btn js-login-btn"><svg class="icon-user login__icon"><use xlink:href="img/sprite.svg#icon-user"></use></svg><span>Войти</span></button><a href="#!" class="login__btn"><svg class="icon-pencil login__icon"><use xlink:href="img/sprite.svg#icon-pencil"></use></svg><span>Регистрация</span></a>
+              <div
+                class="login__popup"><svg class="icon-user login__popup-icon"><use xlink:href="img/sprite.svg#icon-user"></use></svg>
+                <div class="login__popup-text">Вход:</div>
+                <form action="#!">
+                  <div class="login__popup-field"><input type="name" placeholder="Имя / Организация" class="login__popup-input" /></div>
+                  <div class="login__popup-field"><input type="password" placeholder="Пароль" class="login__popup-input" /></div><button type="submit" class="login__popup-btn">Войти</button></form>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="header__mid">
+      <div class="header__container container">
+        <div class="header__mid-col">
+          <div class="logo">
+            <a href="#!" class="logo__link"><img src="img/logo.svg" alt="Техно-принт" class="logo__img" title="" /></a>
+          </div>
+        </div>
+        <div class="header__mid-col"><address class="header__address"><a href="tel:88462671022" class="header__address-link"><svg class="icon-geo header__address-icon"><use xlink:href="img/sprite.svg#icon-geo"></use></svg><span>8 (846) 267-10-22</span></a> <span class="header__address-str">ул. Первомайская, 25</span></address>
+          <div
+            class="search">
+            <div class="search__field"><input type="text" name="" placeholder="Изготовление сувениров и подарков" required="required" class="search__input js-search-input" /><button type="submit" class="search__btn"></button></div>
+        </div>
+        <div class="top-links top-links_header"><a href="#!" class="top-links__link">Услуги фирмы</a><a href="#!" class="top-links__link">Подарки</a><a href="#!" class="top-links__link">Корпоративные</a><a href="#!" class="top-links__link">Лучшие</a></div>
+      </div>
+      <div class="header__mid-col">
+        <div class="home-slider home-slider_default js-home-slider">
+          <div class="home-slider__item"><img src="img/content/sld-1.jpg" alt="" role="presentation" /><a href="#!" class="home-slider__label">Машинная вышивка</a></div>
+          <div class="home-slider__item"><img src="img/content/sld-2.jpg" alt="" role="presentation" /><a href="#!" class="home-slider__label">Значки и сувениры</a></div>
+          <div class="home-slider__item"><img src="img/content/sld-3.jpg" alt="" role="presentation" /><a href="#!" class="home-slider__label">Печать на одежде</a></div>
+          <div class="home-slider__item"><img src="img/content/sld-2.jpg" alt="" role="presentation" /><a href="#!" class="home-slider__label">Печать на одежде</a></div>
+          <div class="home-slider__item"><img src="img/content/sld-3.jpg" alt="" role="presentation" /><a href="#!" class="home-slider__label">Печать на одежде</a></div>
+          <div class="home-slider__item"><img src="img/content/sld-2.jpg" alt="" role="presentation" /><a href="#!" class="home-slider__label">Печать на одежде</a></div>
+          <div class="home-slider__item"><img src="img/content/sld-1.jpg" alt="" role="presentation" /><a href="#!" class="home-slider__label">Печать на одежде</a></div>
+        </div>
+      </div>
+      <div class="header__mid-col">
+        <div class="cart">
+          <a href="#!" class="cart__in"></a>
+          <div class="cart__label">
+            <div class="cart__text">Корзина</div>
+            <div class="cart__total">0<svg class="icon-ruble cart__val"><use xlink:href="img/sprite.svg#icon-ruble"></use></svg></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="header__bot">
+      <div class="menu">
+        <ul class="menu__list">
+          <li class="menu__item"><a href="#!" class="menu__link">Футболки / Одежда</a></li>
+          <li class="menu__item"><a href="#!" class="menu__link">Вышивка</a></li>
+          <li class="menu__item is-active"><a href="#!" class="menu__link">Значки / Брелки</a></li>
+          <li class="menu__item"><a href="#!" class="menu__link">Кружки / Сувениры</a></li>
+          <li class="menu__item">
+            <div class="menu__new">Новое!</div><a href="#!" class="menu__link">Фотокниги</a></li>
+          <li class="menu__item"><a href="#!" class="menu__link">Печать картин</a></li>
+        </ul>
+      </div>
+    </div>
+    </header>
+    <!-- end header-->
+    <main class="page page_default" role="main">
+      <div class="page__container container">
+        <div class="page__bar">
+          <div class="breadcrumbs"><a href="#!" class="breadcrumbs__link"><svg class="icon-house breadcrumbs__icon"><use xlink:href="img/sprite.svg#icon-house"></use></svg> <span>Главная</span></a><a href="#!" class="breadcrumbs__link is-active"><span>Печать на кружках и посуде</span></a></div>
+          <div
+            class="page__bar-title page__bar-title_has-icon page__bar-title_big-icon"><span>Кружки, бокалы, чашки</span><svg class="icon-cups page__bar-title-icon"><use xlink:href="img/sprite.svg#icon-cups"></use></svg></div>
+      </div>
+      <div class="page__in">
+        <aside class="rubric rubric_side page__side">
+          <ul class="rubric__list js-rubric-list">
+            <li class="rubric__list-item rubric__list-item_color is-active"><a href="#!" class="rubric__list-link rubric__list-link_color"><span>СУВЕНИРЫ ПО ТЕМАТИКЕ</span><svg class="icon-arr-def rubric__list-icon"><use xlink:href="img/sprite.svg#icon-arr-def"></use></svg></a>
+              <ul class="rubric__sub-list">
+                <li class="rubric__sub-item"><a href="#!" class="rubric__sub-link">Подарки мужчине</a></li>
+                <li class="rubric__sub-item"><a href="#!" class="rubric__sub-link">Подарки женщине</a></li>
+                <li class="rubric__mini js-rubric-mini-list">
+                  <div class="rubric__mini-title">Корпоративные<svg class="icon-arr-def rubric__mini-icon"><use xlink:href="img/sprite.svg#icon-arr-def"></use></svg></div>
+                  <ul class="rubric__mini-list">
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Корпоративные 1</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Корпоративные 2</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Корпоративные 3</a></li>
+                  </ul>
+                </li>
+                <li class="rubric__sub-item"><a href="#!" class="rubric__sub-link">Популярные</a></li>
+                <li class="rubric__sub-item"><a href="#!" class="rubric__sub-link">В День Рождения</a></li>
+                <li class="rubric__sub-item"><a href="#!" class="rubric__sub-link">Оригинальные идеи</a></li>
+                <li class="rubric__sub-item"><a href="#!" class="rubric__sub-link">Для детей</a></li>
+                <li class="rubric__sub-item"><a href="#!" class="rubric__sub-link">Учителю</a></li>
+                <li class="rubric__sub-item"><a href="#!" class="rubric__sub-link">Маме</a></li>
+                <li class="rubric__sub-item"><a href="#!" class="rubric__sub-link">Папе</a></li>
+                <li class="rubric__sub-item"><a href="#!" class="rubric__sub-link">Для бабушки</a></li>
+                <li class="rubric__sub-item rubric__sub-item_best"><a href="#!" class="rubric__sub-link link-decor link-decor_rubric"><span>Лучшие подарки (наш выбор)</span></a></li>
+                <li class="rubric__mini js-rubric-mini-list is-active">
+                  <div class="rubric__mini-title">Надписи имён<svg class="icon-arr-def rubric__mini-icon"><use xlink:href="img/sprite.svg#icon-arr-def"></use></svg></div>
+                  <ul class="rubric__mini-list">
+                    <li class="rubric__mini-item is-active"><a href="#!" class="rubric__mini-link">Вышивки имён<svg class="icon-arr-def rubric__mini-icon-sm"><use xlink:href="img/sprite.svg#icon-arr-def"></use></svg></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Имена на кружках</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Имена на майках</a></li>
+                  </ul>
+                </li>
+                <li class="rubric__mini js-rubric-mini-list">
+                  <div class="rubric__mini-title">Сезонные 23/8/9/31<svg class="icon-arr-def rubric__mini-icon"><use xlink:href="img/sprite.svg#icon-arr-def"></use></svg></div>
+                  <ul class="rubric__mini-list">
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">8 марта</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">23 февраля</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">9 мая</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">1 сентября</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">День Валентина</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Новый Год</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="rubric__list js-rubric-list">
+            <li class="rubric__list-item"><a href="#!" class="rubric__list-link"><span>МАШИННАЯ ВЫШИВКА</span><svg class="icon-arr-def rubric__list-icon"><use xlink:href="img/sprite.svg#icon-arr-def"></use></svg></a>
+              <ul class="rubric__sub-list">
+                <li class="rubric__mini js-rubric-mini-list">
+                  <div class="rubric__mini-title">Продукция и услуги<svg class="icon-arr-def rubric__mini-icon"><use xlink:href="img/sprite.svg#icon-arr-def"></use></svg></div>
+                  <ul class="rubric__mini-list">
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Полотенца с вышивкой</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Халаты с вышивкой</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Вышивка шевронов</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Вышивание на крое</a></li>
+                  </ul>
+                </li>
+                <li class="rubric__sub-item rubric__sub-item_best"><a href="#!" class="rubric__sub-link link-decor link-decor_rubric"><span>Лучшие предложения по вышивке (наш выбор)</span></a></li>
+                <li class="rubric__sub-item"><a href="#!" class="rubric__sub-link">Новинки дизайнов вышивок</a></li>
+                <li class="rubric__sub-item"><a href="#!" class="rubric__sub-link">Образцы наших работ</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="rubric__list js-rubric-list">
+            <li class="rubric__list-item rubric__list-item_color"><a href="#!" class="rubric__list-link rubric__list-link_color"><span>ПЕЧАТЬ НА ОДЕЖДЕ</span><svg class="icon-arr-def rubric__list-icon"><use xlink:href="img/sprite.svg#icon-arr-def"></use></svg></a>
+              <ul class="rubric__sub-list">
+                <li class="rubric__sub-item"><a href="#!" class="rubric__sub-link link-decor link-decor_rubric"><span>Майки - все дизайны</span></a></li>
+                <li class="rubric__sub-item"><a href="#!" class="rubric__sub-link">Новинки дизайнов</a></li>
+                <li class="rubric__sub-item rubric__sub-item_best"><a href="#!" class="rubric__sub-link link-decor link-decor_rubric"><span>Лучшие предложения - одежда (наш выбор)</span></a></li>
+                <li class="rubric__mini js-rubric-mini-list">
+                  <div class="rubric__mini-title">Заготовки под нанесение<svg class="icon-arr-def rubric__mini-icon"><use xlink:href="img/sprite.svg#icon-arr-def"></use></svg></div>
+                  <ul class="rubric__mini-list">
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Белые майки</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Цветные майки</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Майки поло</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Майки женские</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Детские майки</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Кепки</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Все заготовки</a></li>
+                  </ul>
+                </li>
+                <li class="rubric__sub-item rubric__sub-item_margin"><a href="#!" class="rubric__sub-link">Печать на кепках</a></li>
+                <li class="rubric__sub-item"><a href="#!" class="rubric__sub-link">На «Вашей» одежде</a></li>
+                <li class="rubric__sub-item"><a href="#!" class="rubric__sub-link">Спортивная одежда</a></li>
+                <li class="rubric__sub-item"><a href="#!" class="rubric__sub-link">Логотипы на одежде</a></li>
+                <li class="rubric__sub-item rubric__sub-item_examples"><a href="#!" class="rubric__sub-link">Образцы наших работ</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="rubric__list js-rubric-list">
+            <li class="rubric__list-item rubric__list-item_color"><a href="#!" class="rubric__list-link rubric__list-link_color"><span>ФОТОКНИГИ</span><svg class="icon-arr-def rubric__list-icon"><use xlink:href="img/sprite.svg#icon-arr-def"></use></svg></a>
+              <ul class="rubric__sub-list">
+                <li class="rubric__sub-item"><a href="#!" class="rubric__sub-link">Печать фотокниг</a></li>
+                <li class="rubric__sub-item"><a href="#!" class="rubric__sub-link">Обложки эксклюзивные</a></li>
+                <li class="rubric__sub-item"><a href="#!" class="rubric__sub-link">Оригинальные форзацы</a></li>
+                <li class="rubric__sub-item"><a href="#!" class="rubric__sub-link">Дизайн на фотокнигу</a></li>
+                <li class="rubric__sub-item rubric__sub-item_best"><a href="#!" class="rubric__sub-link link-decor link-decor_rubric"><span>Лучшие предложения по фотокнигам (наш выбор)</span></a></li>
+                <li class="rubric__sub-item"><a href="#!" class="rubric__sub-link">Образцы наших работ</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="rubric__list js-rubric-list">
+            <li class="rubric__list-item"><a href="#!" class="rubric__list-link"><span>ЗНАЧКИ / БРЕЛКИ</span><svg class="icon-arr-def rubric__list-icon"><use xlink:href="img/sprite.svg#icon-arr-def"></use></svg></a>
+              <ul class="rubric__sub-list">
+                <li class="rubric__sub-item"><a href="#!" class="rubric__sub-link rubric__sub-link_has-hit"><span>Значки - сувениры</span><span class="rubric__hit">Хит!</span></a></li>
+                <li class="rubric__sub-item"><a href="#!" class="rubric__sub-link">Новинки дизайна значков</a></li>
+                <li class="rubric__mini js-rubric-mini-list">
+                  <div class="rubric__mini-title">Возможные заготовки<svg class="icon-arr-def rubric__mini-icon"><use xlink:href="img/sprite.svg#icon-arr-def"></use></svg></div>
+                  <ul class="rubric__mini-list">
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Значки на иголочке</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Значки на магнитах</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Брелки</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Брелки ГосНомер</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Ручки</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Скрепки с логотипами</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Зеркальца закатные</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Открывашки</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Бейджи</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Медальоны</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">На холодильник</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Магниты из винила</a></li>
+                  </ul>
+                </li>
+                <li class="rubric__sub-item rubric__sub-item_examples"><a href="#!" class="rubric__sub-link">Образцы наших работ</a></li>
+                <li class="rubric__sub-item rubric__sub-item_examples"><a href="#!" class="rubric__sub-link">Логотипы на значках</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="rubric__list js-rubric-list">
+            <li class="rubric__list-item"><a href="#!" class="rubric__list-link"><span>ПЕЧАТЬ КАРТИН И БАГЕТ</span><svg class="icon-arr-def rubric__list-icon"><use xlink:href="img/sprite.svg#icon-arr-def"></use></svg></a>
+              <ul class="rubric__sub-list">
+                <li class="rubric__mini js-rubric-mini-list">
+                  <div class="rubric__mini-title">Каталог картин<svg class="icon-arr-def rubric__mini-icon"><use xlink:href="img/sprite.svg#icon-arr-def"></use></svg></div>
+                  <ul class="rubric__mini-list">
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Картины для дома (выбор)</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Картины для офиса</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Постеры</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Современные фото</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link rubric__mini-link_has-hit"><span>Репродукции картин</span><span class="rubric__hit">Хит!</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Все картины художников</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link link-decor link-decor_rubric"><span>Наш выбор (рекомендуем)</span></a></li>
+                  </ul>
+                </li>
+                <li class="rubric__sub-item"><a href="#!" class="rubric__sub-link">Модульные картины</a></li>
+                <li class="rubric__sub-item"><a href="#!" class="rubric__sub-link">Мозаика из фотографий</a></li>
+                <li class="rubric__sub-item"><a href="#!" class="rubric__sub-link">Портрет по фото на холсте</a></li>
+                <li class="rubric__sub-item"><a href="#!" class="rubric__sub-link">Багетное оформление</a></li>
+                <li class="rubric__sub-item rubric__sub-item_examples"><a href="#!" class="rubric__sub-link">Готовые картины и рамки!</a></li>
+                <li class="rubric__sub-item rubric__sub-item_examples"><a href="#!" class="rubric__sub-link">Образцы наших работ</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="rubric__list js-rubric-list">
+            <li class="rubric__list-item rubric__list-item_color"><a href="#!" class="rubric__list-link rubric__list-link_color"><span>Воздушные шары</span><svg class="icon-arr-def rubric__list-icon"><use xlink:href="img/sprite.svg#icon-arr-def"></use></svg></a>
+              <ul class="rubric__sub-list">
+                <li class="rubric__sub-item"><a href="#!" class="rubric__sub-link rubric__sub-link_has-hit"><span>Лучшие предложения</span><span class="rubric__hit">Хит!</span></a></li>
+                <li class="rubric__mini js-rubric-mini-list">
+                  <div class="rubric__mini-title">Воздушные шары с гелием<svg class="icon-arr-def rubric__mini-icon"><use xlink:href="img/sprite.svg#icon-arr-def"></use></svg></div>
+                  <ul class="rubric__mini-list">
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link rubric__mini-link_has-hit"><span>Шары «Пастель»</span><span class="rubric__hit rubric__hit_color">Хит!</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Шары «Перламутр»</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Шары «Кристалл»</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link rubric__mini-link_has-hit"><span>Шары «Металлик»</span><span class="rubric__hit rubric__hit_color">Хит!</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Шары «Неон»</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Шары «С Днём Рождения»</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Большие воздушные шары</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Прозрачные шары</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Светящиеся шары</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Шары - «Сердца»</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Ленты для шаров</a></li>
+                  </ul>
+                </li>
+                <li class="rubric__mini js-rubric-mini-list">
+                  <div class="rubric__mini-title">Шары на День Рождения<svg class="icon-arr-def rubric__mini-icon"><use xlink:href="img/sprite.svg#icon-arr-def"></use></svg></div>
+                  <ul class="rubric__mini-list">
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Шары «С Днём Рождения»</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Шары «Цифры» и «Буквы»</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link rubric__mini-link_has-hit"><span>Шары «Звёзды»</span><span class="rubric__hit rubric__hit_color">Хит!</span></a></li>
+                  </ul>
+                </li>
+                <li class="rubric__mini js-rubric-mini-list">
+                  <div class="rubric__mini-title">Шары с рисунком<svg class="icon-arr-def rubric__mini-icon"><use xlink:href="img/sprite.svg#icon-arr-def"></use></svg></div>
+                  <ul class="rubric__mini-list">
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">На День Рождения</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Детские</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Для любимых</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">На выписку из роддома</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Сезонные</a></li>
+                  </ul>
+                </li>
+                <li class="rubric__sub-item rubric__sub-item_examples"><a href="#!" class="rubric__sub-link">Букеты из воздушных шаров</a></li>
+                <li class="rubric__sub-item rubric__sub-item_examples"><a href="#!" class="rubric__sub-link">Фольгированные шары</a></li>
+                <li class="rubric__sub-item rubric__sub-item_examples"><a href="#!" class="rubric__sub-link">Ходячие шары - фигурки</a></li>
+                <li class="rubric__sub-item rubric__sub-item_examples"><a href="#!" class="rubric__sub-link">Оригинальные шары</a></li>
+                <li class="rubric__sub-item rubric__sub-item_examples rubric__sub-item_margin"><a href="#!" class="rubric__sub-link">Идеи для оформления</a></li>
+                <li class="rubric__sub-item rubric__sub-item_examples"><a href="#!" class="rubric__sub-link">Идеи для подарков с шарами</a></li>
+                <li class="rubric__sub-item rubric__sub-item_examples"><a href="#!" class="rubric__sub-link">Фото различных работ</a></li>
+                <li class="rubric__sub-item rubric__sub-item_examples"><a href="#!" class="rubric__sub-link">Доставка шаров по Самаре</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="rubric__list js-rubric-list">
+            <li class="rubric__list-item"><a href="#!" class="rubric__list-link"><span>СУВЕНИРЫ НА ПОСУДЕ</span><svg class="icon-arr-def rubric__list-icon"><use xlink:href="img/sprite.svg#icon-arr-def"></use></svg></a>
+              <ul class="rubric__sub-list">
+                <li class="rubric__mini js-rubric-mini-list">
+                  <div class="rubric__mini-title">Кружки / Дизайн подарка<svg class="icon-arr-def rubric__mini-icon"><use xlink:href="img/sprite.svg#icon-arr-def"></use></svg></div>
+                  <ul class="rubric__mini-list">
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link rubric__mini-link_has-hit"><span>На День Рождения</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Для любимых</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Кружку мужчине</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Кружку женщине</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Кружечки детям</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Учителю</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Маме</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Папе</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Для бабушки</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Популярные</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Кружки с именем</a></li>
+                  </ul>
+                </li>
+                <li class="rubric__sub-item rubric__sub-item_examples"><a href="#!" class="rubric__sub-link rubric__sub-link_has-hit"><span>Оригинальные кружки</span><span class="rubric__hit">Хит!</span></a></li>
+                <li class="rubric__sub-item rubric__sub-item_examples"><a href="#!" class="rubric__sub-link link-decor link-decor_rubric"><span>Лучшие дизайны кружек</span></a></li>
+                <li class="rubric__mini rubric__mini_margin js-rubric-mini-list">
+                  <div class="rubric__mini-title">Сезонные «Кружки»<svg class="icon-arr-def rubric__mini-icon"><use xlink:href="img/sprite.svg#icon-arr-def"></use></svg></div>
+                  <ul class="rubric__mini-list">
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Дизайн на 23 февраля</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Дизайн для 8 марта</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Дизайн на 1 сентября</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Новогодние кружки</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Дизайн кружек на 9 МАЯ</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>На День Св. Валенитна</span></a></li>
+                  </ul>
+                </li>
+                <li class="rubric__mini js-rubric-mini-list">
+                  <div class="rubric__mini-title">Заготовки под нанесение<svg class="icon-arr-def rubric__mini-icon"><use xlink:href="img/sprite.svg#icon-arr-def"></use></svg></div>
+                  <ul class="rubric__mini-list">
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Белые кружки</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Цветные кружки</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Кружки хамелеоны</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Упаковка для кружек</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Пивные кружки</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Кружки с сердечками</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Прозрачные кружки</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Золотые и серябряные</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Кружки с сердечками</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Кофейные чашки</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Чашки с ложками</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Тарелки</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Пазлы</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Все заготовки</span></a></li>
+                  </ul>
+                </li>
+                <li class="rubric__sub-item rubric__sub-item_examples"><a href="#!" class="rubric__sub-link">Образцы наших работ</a></li>
+                <li class="rubric__sub-item rubric__sub-item_examples"><a href="#!" class="rubric__sub-link">Логотипы на кружках</a></li>
+                <li class="rubric__sub-item rubric__sub-item_examples"><a href="#!" class="rubric__sub-link">Новинки дизайна кружек</a></li>
+                <li class="rubric__sub-item rubric__sub-item_examples"><a href="#!" class="rubric__sub-link link-decor link-decor_rubric"><span>Визуализация 3D!</span></a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="rubric__list js-rubric-list">
+            <li class="rubric__list-item"><a href="#!" class="rubric__list-link"><span>УCЛУГИ ФИРМЫ</span><svg class="icon-arr-def rubric__list-icon"><use xlink:href="img/sprite.svg#icon-arr-def"></use></svg></a>
+              <ul class="rubric__sub-list">
+                <li class="rubric__mini js-rubric-mini-list">
+                  <div class="rubric__mini-title">Копировальный центр<svg class="icon-arr-def rubric__mini-icon"><use xlink:href="img/sprite.svg#icon-arr-def"></use></svg></div>
+                  <ul class="rubric__mini-list">
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Печать чертежей</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Копирование чертежей</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Сканирование А4 - А0</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Переплётные работы</a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link">Ламинирование</a></li>
+                  </ul>
+                </li>
+                <li class="rubric__mini js-rubric-mini-list">
+                  <div class="rubric__mini-title">Широкофрматная печать<svg class="icon-arr-def rubric__mini-icon"><use xlink:href="img/sprite.svg#icon-arr-def"></use></svg></div>
+                  <ul class="rubric__mini-list">
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Печать на холсте</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Постеры, плакаты афиши</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Печать на баннере</span></a></li>
+                  </ul>
+                </li>
+                <li class="rubric__mini js-rubric-mini-list">
+                  <div class="rubric__mini-title">Полиграфические услуги<svg class="icon-arr-def rubric__mini-icon"><use xlink:href="img/sprite.svg#icon-arr-def"></use></svg></div>
+                  <ul class="rubric__mini-list">
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Визитки</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Цифровая печать</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Тиражирование</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Наклейки, резка плёнки</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Дисконтные карты</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Дизайн продукции</span></a></li>
+                  </ul>
+                </li>
+                <li class="rubric__mini js-rubric-mini-list">
+                  <div class="rubric__mini-title">Багетная мастерская<svg class="icon-arr-def rubric__mini-icon"><use xlink:href="img/sprite.svg#icon-arr-def"></use></svg></div>
+                  <ul class="rubric__mini-list">
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Натяжка на подрамники</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Изготовление рам - «Багет»</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Зеркала в багете</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Оформление вышивок</span></a></li>
+                    <li class="rubric__mini-item rubric__mini-item_margin"><a href="#!" class="rubric__mini-link"><span>Картины для дома (выбор)</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Картины для офиса</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Постеры</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Репродукции картин</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link"><span>Современные фото</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link rubric__mini-link_has-hit"><span>Все картины</span><span class="rubric__hit">Хит!</span></a></li>
+                    <li class="rubric__mini-item"><a href="#!" class="rubric__mini-link link-decor link-decor_rubric"><span>Наш выбор (рекомендуем)</span></a></li>
+                  </ul>
+                </li>
+                <li class="rubric__sub-item rubric__sub-item_examples"><a href="#!" class="rubric__sub-link">Изготовление подарков</a></li>
+                <li class="rubric__sub-item rubric__sub-item_examples"><a href="#!" class="rubric__sub-link">Образцы наших работ</a></li>
+              </ul>
+            </li>
+          </ul>
+        </aside>
+        <div class="page__main">
+          <section class="cups">
+            <div class="title-md">КРУЖКИ ЛЮБОЙ ТЕМАТИКИ! ПЕЧАТЬ ПРИ ВАС ЗА 15 МИНУТ, ОПТОВОЕ И ШТУЧНОЕ ПРОИЗВОДСТВО. ТАКЖЕ МЫ СОБРАЛИ ЛУЧШИЕ ДИЗАЙНЫ КРУЖЕК - САМЫЕ ВОСТРЕБОВАННЫЕ И СОВРЕМЕННЫЕ.</div>
+            <p class="sect-descr">Хорошо что Вы вышли на эту страничку! Мы с большим удовольствием проинформируем Вас по всем видам кружек и их упаковке, разным методам изготовления, 3Д визуализации перед печатью. В части производства сувениров на посуде у нас большие наработки
+              и опыт. Сейчас технологии производства заготовок для печати на посуде вышли на высокий уровень, наше предприятие полностью удовлетворит даже самый изысканный спрос на подобные виды услуг, рассмотрите предложения!</p>
+            <div class="product-types product-types_cups">
+              <div class="product-types__row">
+                <figure class="product-types__item product-types__item_border-blue"><img src="img/content/cups-types-1.jpg" class="product-types__item-img" alt="" role="presentation" /><span class="product-types__item-label product-types__item-label_1">Кружки "Цветные"</span><span class="product-types__item-label product-types__item-label_2">"Пивные"</span>
+                  <a
+                    href="#!" class="product-types__item-in">
+                    <figcaption class="product-types__item-text">
+                      <h4 class="product-types__item-title"><span>ВОЗМОЖНЫЕ ЗАГОТОВКИ</span></h4>
+                      <div class="product-types__item-descr">Всегда в наличии более сорока видов заготовок кружек, бокалов, тарелочек.</div>
+                    </figcaption>
+                    </a>
+                </figure>
+                <figure class="product-types__item product-types__item_border-red"><img src="img/content/cups-types-2.jpg" class="product-types__item-img" alt="" role="presentation" /><span class="product-types__item-label product-types__item-label_3">Просмотрите предварительное 3Д вашей кружки!</span>
+                  <a href="#!" class="product-types__item-in">
+                    <figcaption class="product-types__item-text">
+                      <h4 class="product-types__item-title"><span>3D ВИЗУАЛИЗАЦИЯ</span></h4>
+                      <div class="product-types__item-descr">Удобный просмотр предварительного макета печати<br/>на кружки</div>
+                    </figcaption>
+                  </a>
+                </figure>
+                <figure class="product-types__item product-types__item_border-yellow"><img src="img/content/cups-types-3.jpg" class="product-types__item-img" alt="" role="presentation" />
+                  <a href="#!" class="product-types__item-in">
+                    <figcaption class="product-types__item-text">
+                      <h4 class="product-types__item-title"><span>КАТАЛОГ МАКЕТОВ</span></h4>
+                      <div class="product-types__item-descr">Собраны лучшие<br/>наши наработки, фирменный дизайн. Коллекция постоянно пополняется!</div>
+                    </figcaption>
+                  </a>
+                </figure>
+                <figure class="product-types__item product-types__item_border-green"><img src="img/content/cups-types-4.jpg" class="product-types__item-img" alt="" role="presentation" />
+                  <a href="#!" class="product-types__item-in">
+                    <figcaption class="product-types__item-text">
+                      <h4 class="product-types__item-title"><span>ОБРАЗЦЫ РАБОТ</span></h4>
+                      <div class="product-types__item-descr">Предлагаем фотографирование некрупных товаров для интернет-магазинов.</div>
+                    </figcaption>
+                  </a>
+                </figure>
+              </div>
+            </div>
+            <p class="sect-descr"><strong>Отправьте нам макет вашей будущей кружки и получите уже готовую через 20 минут!</strong> Размеры для макета указаны ниже (наилучшая область запекания 205х90 мм), не обязательно следовать точности, подходит любая фотография. Простое
+              размещение фото на кружки и несложные надписи у нас окажется бесплатным! Можно заказать индивидуальный интересный дизайн, коллажи, поздравительные тематики и нашу новую рубрику услуг - портреты по фото. Это работа художника иллюстратора-портретиста.
+              Предварительно посмотреть как будет выглядеть кружка можно с помощью 3Д редактора, загрузив в него макет.</p>
+            <div class="look look_cups">
+              <div class="look__row">
+                <div class="look__item"><img src="img/content/look-cup.jpg" class="look__img" alt="" role="presentation" /><a href="img/content/look-cup_lg.jpg" data-fancybox="look-img" class="look__zoom"><svg class="icon-loupe look__zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a>
+                  <span
+                    class="look__label">3D Кружки предоставим!</span>
+                </div>
+                <div class="look__item look__item_border"><img src="img/content/look-scheme.jpg" class="look__img" alt="" role="presentation" />
+                  <a href="img/content/look-scheme_lg.jpg" data-fancybox="look-img"></a>
+                </div>
+              </div>
+            </div>
+            <div class="send send_cups">
+              <div class="send__text">
+                <p><strong>Онлайн ящик для макетов:</strong> <a href="mailto:Tp-smr@yandex.ru" class="send__text-mail">Tp-smr@yandex.ru</a> <strong>Наш дизайнер - Анастасия.</strong></p>
+                <p><i>Отправьте макеты Онлайн и приходите за уже готовыми изделиями!</i></p>
+                <p><i>Тел: <a href="tel:89613808095">8-961-380-80-95</a> (Viber, WatsApp) и <a href="tel:88462671022">8 (846) 267-10-22</a></i></p>
+              </div>
+              <div class="send__actions"><a href="#!" class="send__actions-btn send__actions-btn_top"><span>Отправить свой макет</span></a><a href="#!" class="send__actions-btn send__actions-btn_bottom"><span>Заказать дизайн</span></a></div>
+            </div>
+            <div class="benefits-list benefits-list_default">
+              <div class="benefits-list__title">Какие преимущества вы сможете получить заказав сувениры у нас?</div>
+              <ul>
+                <li><strong>- Высокую скорость изготовления:</strong> 10-15 минут, единичные заказы мы выполним при Вас!</li>
+                <li><strong>- Самый полный каталог заготовок в наличии</strong> - более 40 видов сувенирных кружек. Вам не придётся ждать предзаказа по поставке тех или иных вариантов из возможных.</li>
+                <li><strong>- Макеты на кружки для Вас сделают дизайнеры</strong> с многолетним опытом работы в области сувенирной продукции. Заказав макет у нас - Вы бесплатно получите предварительное 3D вида кружек, включая цветовые варианты ручек, увидите
+                  внутренние цветные части кружек, сможете оценить дизайн и общий вид до подтверждения отправки на печать! (Пока единственно предоставляемая услуга на территории Самарской области, делайте запросы на почту присылая заготовки макетов).</li>
+                <li><strong>- Вы можете выбрать лучшие наши работы по дизайн-макетам из удобного каталога</strong> на этом сайте, он наполняется исключительно востребованным и современным контентом, любой макет можно доработать «под Вас».</li>
+                <li><strong>- У нас действительно детально проработанное ценообразование!</strong> Цены на оптовое производство кружек разработаны с максимально лояльными алгоритмами. В розничных вариантах предусмотрены скидки и на штучные заказы.</li>
+                <li><strong>- Еще наше нововведение в области производства кружек - это дизайн их упаковки.</strong> Есть оригинальные коробочки упаковки, привезённые из других регионов. Проведена разработка бюджетных вариантов упаковок для оптовых и корпоративных
+                  заказов. Пока у нас сохраняется единственное место (в Самарской области) где можно рассмотреть <mark>услуги оригинальной проработанной упаковки</mark> и печать кружек одновременно.</li>
+                <li><strong>- Качество фотопечати</strong> гарантируется нашей высокой ответственностью и серьёзным подходом к делу. Если будете заказывать у нас, то получите действительно фотографические изображения с максимальными совпадениями по цветам,
+                  без каких либо неожиданностей!</li>
+              </ul>
+            </div>
+            <div class="cups__promo">
+              <div class="cups__promo-img"><img src="img/content/promo.jpg" alt="" role="presentation" /></div>
+              <p>Мы разработали полный комплекс по приёму, обработке и выполнению заказов печати на кружках. От дизайна, с 3Д визуализацией, производительных печей для изготовления, до оригинальной упаковки. Оцените наш сервис и подход к поставленным задачам,
+                ждём ваших заказов!</p>
+            </div>
+            <div class="price-table price-table_cups">
+              <h3 class="price-table__title"><span>Прайс на печать кружек, опт и розница:</span></h3>
+              <table class="price-table__table">
+                <thead class="price-table__head">
+                  <tr>
+                    <td colspan="7"><mark>АКЦИЯ НА ПЕЧАТЬ КРУЖЕК!</mark> ОПТОВАЯ ЦЕНА НАЧИНАЕТСЯ ПРИ ЗАКАЗЕ ОТ ДВУХ ШТУК!</td>
+                  </tr>
+                  <tr>
+                    <td>Цена / Количество</td>
+                    <td>1шт.</td>
+                    <td>2-3 шт.</td>
+                    <td>4-8 шт.</td>
+                    <td>9-20 шт.</td>
+                    <td>21-60 шт.</td>
+                    <td>61-180 шт.</td>
+                  </tr>
+                </thead>
+                <tbody class="price-table__body">
+                  <tr>
+                    <td><mark class="price-table__label"><strong>Печать на класических<br/>белых кружках</strong></mark>
+                      <div class="price-table__view">
+                        <div class="price-table__view-item"><img src="img/content/white-cups.jpg" class="price-table__view-img" alt="" role="presentation" /><a href="img/content/white-cup-1.jpg" data-fancybox="white-cups" class="price-table__zoom"><svg class="icon-loupe price-table__zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a>
+                          <a
+                            href="img/content/white-cup-2.jpg" data-fancybox="white-cups"></a>
+                            <a href="img/content/white-cup-3.jpg" data-fancybox="white-cups"></a>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="price-table__text">360 руб.</span><span class="price-table__text">(320 руб. с коробочкой упаковки, класс «А»)</span></td>
+                    <td><span class="price-table__text">280 руб.</span><span class="price-table__text price-table__text_highlight">Выгодная<br/>цена!</span><span class="price-table__text">(320 руб. с коробочкой упаковки, класс «А»)</span></td>
+                    <td><span class="price-table__text">280 руб.</span><span class="price-table__text">(290 руб. с коробочкой упаковки, класс «А») ленточек!</span></td>
+                    <td><span class="price-table__text">187 руб.</span><span class="price-table__text">(220 руб. с коробочкой упаковки, класс «А») ленточек!</span></td>
+                    <td><span class="price-table__text">165 руб.</span><span class="price-table__text">(185 руб. с коробочкой упаковки, класс «А») ленточек!</span></td>
+                    <td><span class="price-table__text">140 руб.</span><span class="price-table__text">(158 руб. с коробочкой упаковки, класс «А») ленточек!</span></td>
+                  </tr>
+                  <tr>
+                    <td><mark class="price-table__label price-table__label_color"><strong>Цветные кружки с печатью</strong> Много вариантов, тридцать<br/>разновидностей!</mark>
+                      <div class="price-table__view">
+                        <div class="price-table__view-item"><img src="img/content/color-cups.jpg" class="price-table__view-img" alt="" role="presentation" /><a href="img/content/color-cups_lg.jpg" data-fancybox="color-cups" class="price-table__zoom price-table__zoom_top"><svg class="icon-loupe price-table__zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a></div>
+                      </div><a href="#!" class="price-table__link">Цветные заготовки подробнее</a></td>
+                    <td><span class="price-table__text">380 руб.</span><span class="price-table__text">(с упаковкой, класс «А»)</span></td>
+                    <td><span class="price-table__text">330 руб.</span><span class="price-table__text">(с упаковкой, класс «А»)</span></td>
+                    <td><span class="price-table__text">280 руб.</span><span class="price-table__text">(290 руб. с упаковкой, класс «А»)</span></td>
+                    <td><span class="price-table__text">225 руб.</span><span class="price-table__text">(245 руб. с упаковкой, класс «А»)</span></td>
+                    <td><span class="price-table__text">175 руб.</span><span class="price-table__text">(195 руб. с упаковкой, класс «А»)</span></td>
+                    <td><span class="price-table__text">175 руб.</span><span class="price-table__text">(190 руб. с упаковкой, класс «А»)</span></td>
+                  </tr>
+                  <tr>
+                    <td><mark class="price-table__label"><strong>Печать на кружках «Хамелеон»</strong> Изображение появляется при<br/>нагревании чашки</mark>
+                      <div class="price-table__view">
+                        <div class="price-table__view-item"><img src="img/content/chameleon-cups.jpg" class="price-table__img" alt="" role="presentation" /><a href="img/content/chameleon-cups_lg.jpg" data-fancybox="chameleon-cups" class="price-table__zoom"><svg class="icon-loupe price-table__zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a></div>
+                      </div><a href="#!" class="price-table__link">Кружки хамелеоны подробнее</a></td>
+                    <td><span class="price-table__text">450 руб.</span><span class="price-table__text">(кружка идёт с коробочкой упаковки)</span></td>
+                    <td><span class="price-table__text">370 руб.</span><span class="price-table__text">(кружка идёт с коробочкой упаковки)</span></td>
+                    <td><span class="price-table__text">360 руб.</span><span class="price-table__text">(кружка идёт с коробочкой упаковки)</span></td>
+                    <td><span class="price-table__text">340 руб.</span><span class="price-table__text">(кружка идёт с коробочкой упаковки)</span></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><mark class="price-table__label price-table__label_color"><strong>Золотые и серебряные кружки</strong></mark>
+                      <div class="price-table__view">
+                        <div class="price-table__view-item price-table__view-item_half"><img src="img/content/gold-silver-cups-1.jpg" class="price-table__view-img" alt="" role="presentation" />
+                          <a href="img/content/gold-silver-cups-1_lg.jpg" data-fancybox="gold-silver-cups" class="price-table__zoom price-table__zoom_bottom"><svg class="icon-loupe price-table__zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a>
+                        </div>
+                        <div class="price-table__view-item price-table__view-item_half"><img src="img/content/gold-silver-cups-2.jpg" class="price-table__view-img" alt="" role="presentation" /><a href="img/content/gold-silver-cups-2_lg.jpg" data-fancybox="gold-silver-cups" class="price-table__zoom"><svg class="icon-loupe price-table__zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a></div>
+                      </div><a href="#!" class="price-table__link">Кружки хамелеоны подробнее</a></td>
+                    <td><span class="price-table__text">485 руб.</span></td>
+                    <td><span class="price-table__text">430 руб.</span></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td colspan="7"><mark class="price-table__label price-table__label_width"><strong>В наличии  разнообразные  интересные кружки.</strong> Выбор из десятков разновидностей, в каталоге.</mark>
+                      <div class="price-table__view">
+                        <div class="price-table__view-item price-table__view-item_interest"><img src="img/content/transparent-cups.jpg" class="price-table__view-img price-table__view-img_width" alt="" role="presentation" />
+                          <a href="img/content/transparent-cups_lg.jpg" data-fancybox="interesting-cups" class="price-table__zoom price-table__zoom_top"><svg class="icon-loupe price-table__zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a>
+                          <div class="price-table__view-text">Прозрачные кружки. Матовые и глянцевые</div>
+                        </div>
+                        <div class="price-table__view-item price-table__view-item_interest"><img src="img/content/shining-cups.jpg" class="price-table__view-img price-table__view-img_width" alt="" role="presentation" />
+                          <a href="img/content/shining-cups_lg.jpg" data-fancybox="interesting-cups" class="price-table__zoom price-table__zoom_top"><svg class="icon-loupe price-table__zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a>
+                          <div class="price-table__view-text price-table__view-text_color">Светящиеся в темноте</div>
+                        </div>
+                        <div class="price-table__view-item price-table__view-item_interest"><img src="img/content/beer-cups.jpg" class="price-table__view-img price-table__view-img_width" alt="" role="presentation" />
+                          <a href="img/content/beer-cups_lg.jpg" data-fancybox="interesting-cups" class="price-table__zoom price-table__zoom_top"><svg class="icon-loupe price-table__zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a>
+                          <div class="price-table__view-text">Пивные</div>
+                        </div>
+                        <div class="price-table__view-item price-table__view-item_interest"><img src="img/content/sets-cups.jpg" class="price-table__view-img price-table__view-img_width" alt="" role="presentation" />
+                          <a href="img/content/sets-cups_lg.jpg" data-fancybox="interesting-cups" class="price-table__zoom price-table__zoom_top"><svg class="icon-loupe price-table__zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a>
+                          <div class="price-table__view-text">Наборы</div>
+                        </div>
+                        <div class="price-table__view-item price-table__view-item_interest"><img src="img/content/spoon-cups.jpg" class="price-table__view-img price-table__view-img_width" alt="" role="presentation" />
+                          <a href="img/content/spoon-cups_lg.jpg" data-fancybox="interesting-cups" class="price-table__zoom price-table__zoom_top"><svg class="icon-loupe price-table__zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a>
+                          <div class="price-table__view-text">Кружки с ложечкой</div>
+                        </div>
+                        <div class="price-table__view-item price-table__view-item_interest"><img src="img/content/custom-grip-cups.jpg" class="price-table__view-img price-table__view-img_width" alt="" role="presentation" />
+                          <a href="img/content/custom-grip-cups_lg.jpg" data-fancybox="interesting-cups" class="price-table__zoom price-table__zoom_top"><svg class="icon-loupe price-table__zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a>
+                          <div class="price-table__view-text">С оригинальной ручкой</div>
+                        </div>
+                      </div><a href="#!" class="price-table__link">Выбор вариантов заготовок кружек для печати (каталог)</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="cups__package">
+              <div class="cups__package-col">
+                <div class="cups__package-title">По желанию, кружки можно красиво упаковать!</div>
+                <p class="cups__package-descr">Праздничная или скромная, но красивая упаковка со вкусом.</p>
+                <p class="cups__package-descr">Предложим выбор нарядных лент. Белая коробочка упаковки уже идет с некоторыми видами кружек в комплекте.</p><a href="#!" class="cups__package-link-decor link-decor"><span>Выбрать дизайн упаковки</span></a></div>
+              <div class="cups__package-col">
+                <div class="cups__package-row">
+                  <div class="cups__package-item"><img src="img/content/package-1.jpg" class="cups__package-img" alt="" role="presentation" /><a href="img/content/package-1_lg.jpg" data-fancybox="cups-package" class="cups__package-zoom"><svg class="icon-loupe cups__package-zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a></div>
+                  <div
+                    class="cups__package-item"><img src="img/content/package-2.jpg" class="cups__package-img" alt="" role="presentation" /><a href="img/content/package-2_lg.jpg" data-fancybox="cups-package" class="cups__package-zoom"><svg class="icon-loupe cups__package-zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a>
+                    <div
+                      class="cups__package-label cups__package-label_right">«Почтовая» упаковка</div>
+              </div>
+            </div>
+            <div class="cups__package-row">
+              <div class="cups__package-item"><img src="img/content/package-3.jpg" class="cups__package-img" alt="" role="presentation" /><a href="img/content/package-3_lg.jpg" data-fancybox="cups-package" class="cups__package-zoom"><svg class="icon-loupe cups__package-zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a></div>
+              <div
+                class="cups__package-item"><img src="img/content/package-4.jpg" class="cups__package-img" alt="" role="presentation" /><a href="img/content/package-4_lg.jpg" data-fancybox="cups-package" class="cups__package-zoom"><svg class="icon-loupe cups__package-zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a>
+                <div
+                  class="cups__package-label cups__package-label_font">Промежуточная упаковка - калька</div>
+        </div>
+        <div class="cups__package-item"><img src="img/content/package-5.jpg" class="cups__package-img" alt="" role="presentation" /><a href="img/content/package-5_lg.jpg" data-fancybox="cups-package" class="cups__package-zoom"><svg class="icon-loupe cups__package-zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a>
+          <div
+            class="cups__package-label cups__package-label_left">Представляем выбор нарядных лент</div>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="price-table price-table_package">
+        <table class="price-table__table">
+          <thead class="price-table__head">
+            <tr>
+              <td colspan="7">ЦЕНЫ НА УПАКОВКУ КРУЖЕК ОПТОВЫЙ И РОЗНИЧНЫЙ ПРАЙС</td>
+            </tr>
+            <tr>
+              <td>Цена / Количество</td>
+              <td>1шт.</td>
+              <td>2-3 шт.</td>
+              <td>4-8 шт.</td>
+              <td>9-20 шт.</td>
+              <td>21-60 шт.</td>
+              <td>61-200 шт.</td>
+            </tr>
+          </thead>
+          <tbody class="price-table__body">
+            <tr>
+              <td><mark class="price-table__label"><strong>Упаковка в обёрточную бумагу<br/>+ ленточка или шнурок.</strong></mark>
+                <div class="price-table__view">
+                  <div class="price-table__view-item"><img src="img/content/paper-package-cups.jpg" class="price-table__view-img" alt="" role="presentation" />
+                    <a href="img/content/white-cup-1.jpg" data-fancybox="paper-package-cups" class="price-table__zoom price-table__zoom_color"><svg class="icon-loupe price-table__zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a>
+                  </div>
+                </div>
+              </td>
+              <td><span class="price-table__text">70 руб.</span></td>
+              <td><span class="price-table__text">55 руб.</span></td>
+              <td><span class="price-table__text">50 руб.</span></td>
+              <td><span class="price-table__text">48 руб.</span></td>
+              <td><span class="price-table__text">45 руб.</span></td>
+              <td><span class="price-table__text">43 руб.</span></td>
+            </tr>
+            <tr>
+              <td><mark class="price-table__label price-table__label_color"><strong>Подарочные упаковки,</strong> есть еще различные варианты...</mark>
+                <div class="price-table__view">
+                  <div class="price-table__view-item"><img src="img/content/love-package-cups.jpg" class="price-table__view-img" alt="" role="presentation" />
+                    <a href="img/content/love-package-cups_lg.jpg" data-fancybox="love-package-cups" class="price-table__zoom price-table__zoom_color"><svg class="icon-loupe price-table__zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a>
+                  </div>
+                </div><a href="#!" class="price-table__link">Упаковка кружек (показать варианты)</a></td>
+              <td><span class="price-table__text">60 руб.</span></td>
+              <td><span class="price-table__text">50 руб.</span></td>
+              <td><span class="price-table__text">45 руб.</span></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="cups__text">
+        <div class="cups__text-title title-md">РАССМОТРИТЕ НАШЕ НОВОЕ ИНТЕРЕСНОЕ ПРЕДЛОЖЕНИЕ ПО СУВЕНИРНЫМ КРУЖКАМ!</div>
+        <p class="sect-descr"><strong>Изготовление портретов на кружку по фотографии.</strong> Наши художники-портретисты профессионально нарисуют ваш портрет, который можно будет разместить его не только на кружке. В качестве стиля портрета предложим самые современные компьютерные
+          направления искусства. Выбрать направление стиля можно из каталога образцов работ... Возможен портрет карандашом с последующей современной обработкой на компьютере. Стоимость разработки портрета 2880 руб. Сама кружка по завершении работы будет
+          напечатана в подарок!</p>
+      </div>
+      <div class="teaser">
+        <div class="teaser__slider js-teaser-slider">
+          <div class="teaser__slider-item">
+            <div class="teaser__slider-item-in">
+              <div style="background-image: url(img/content/teaser-1.jpg)" class="teaser__slider-img"></div><a href="img/content/teaser-1_lg.jpg" data-fancybox="teaser-slider" class="teaser__slider-zoom"><svg class="icon-loupe teaser__slider-zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a>
+              <div class="teaser__slider-label teaser__slider-label_right">Обычное фото<br/>на кружку</div>
+            </div>
+          </div>
+          <div class="teaser__slider-item">
+            <div class="teaser__slider-item-in">
+              <div style="background-image: url(img/content/teaser-2.jpg)" class="teaser__slider-img"></div><a href="img/content/teaser-2_lg.jpg" data-fancybox="teaser-slider" class="teaser__slider-zoom"><svg class="icon-loupe teaser__slider-zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a>
+              <div class="teaser__slider-label">Портрет по фото.<br/>Стиль «Фэнтезийная акварель»</div>
+            </div>
+          </div>
+          <div class="teaser__slider-item">
+            <div class="teaser__slider-item-in">
+              <div style="background-image: url(img/content/teaser-3.jpg)" class="teaser__slider-img"></div><a href="img/content/teaser-3_lg.jpg" data-fancybox="teaser-slider" class="teaser__slider-zoom"><svg class="icon-loupe teaser__slider-zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a>
+              <div class="teaser__slider-label">Стиль портрета<br/>«Двойная экспозиция»</div>
+            </div>
+          </div>
+          <div class="teaser__slider-item">
+            <div class="teaser__slider-item-in">
+              <div style="background-image: url(img/content/teaser-4.jpg)" class="teaser__slider-img"></div><a href="img/content/teaser-4_lg.jpg" data-fancybox="teaser-slider" class="teaser__slider-zoom"><svg class="icon-loupe teaser__slider-zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a>
+              <div class="teaser__slider-label">Обычное фото<br/>на кружке</div>
+            </div>
+          </div>
+          <div class="teaser__slider-item">
+            <div class="teaser__slider-item-in">
+              <div style="background-image: url(img/content/teaser-5.jpg)" class="teaser__slider-img"></div><a href="img/content/teaser-5_lg.jpg" data-fancybox="teaser-slider" class="teaser__slider-zoom"><svg class="icon-loupe teaser__slider-zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a>
+              <div class="teaser__slider-label">Портрет по фото в стиле<br/>«Молодёжный Поп-Арт»</div>
+            </div>
+          </div>
+          <div class="teaser__slider-item">
+            <div class="teaser__slider-item-in">
+              <div style="background-image: url(img/content/teaser-6.jpg)" class="teaser__slider-img"></div><a href="img/content/teaser-6_lg.jpg" data-fancybox="teaser-slider" class="teaser__slider-zoom"><svg class="icon-loupe teaser__slider-zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a>
+              <div class="teaser__slider-label">Стиль портрета «Поп-Арт»</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="our-address our-address_cups">
+        <div class="our-address__title">Мы ждем ваших заказов и находимся по адресу:</div>
+        <div class="our-address__in">
+          <div class="our-address__col">
+            <div class="our-address__text">
+              <p><strong>г. Самара, улица Первомайская, 25. С 9-00 до 18-00, без перерыва. Онлайн ящик для макетов:</strong> <a href="mailto:tp-smr@yandex.ru">Tp-smr@yandex.ru</a></p>
+              <p><i>Тел: <a href="tel:89613808095">8-961-380-80-95</a> (Viber, WatsApp) и <a href="tel:88462671022">8 (846) 267-10-22,</a> наш дизайнер - Анастасия.</i></p>
+            </div><img src="img/content/our-address.jpg" class="our-address__img" alt="" role="presentation" /></div>
+          <div class="our-address__col">
+            <div class="our-address__block"></div>
+            <p>Доставим продукцию по городу и в регионы России.</p>
+          </div>
+        </div>
+      </div>
+      <div class="product-types">
+        <div class="product-types__text">
+          <div class="product-types__title">Придя к нам, вы увидите много всего интересного!</div>
+          <p class="product-types__descr"><i>Рассмотрите предложения по сувенирам на будущее, увидите образцы продукций, дизайны упаковки. Узнаете место где всё производится по ценам оптового предприятия. Где в срочном порядке можно заказывать продукцию для праздников и подарков близким.</i></p>
+        </div>
+        <div class="product-types__row product-types__row_lg">
+          <figure class="product-types__item product-types__item_lg product-types__item_border-yellow"><img src="img/content/cups-types-5.jpg" class="product-types__item-img" alt="" role="presentation" />
+            <a href="#!" class="product-types__item-in">
+              <figcaption class="product-types__item-text">
+                <h4 class="product-types__item-title"><span>МАШИННАЯ ВЫШИВКА</span></h4>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="product-types__item product-types__item_lg product-types__item_border-blue"><img src="img/content/cups-types-6.jpg" class="product-types__item-img" alt="" role="presentation" /><span class="product-types__item-label product-types__item-label_4">Любые логотипы<br/>и рисунки на<br/>закатных значках!</span><span class="product-types__item-label product-types__item-label_5">Брелки для ключей</span>
+            <span
+              class="product-types__item-label product-types__item-label_6">Заколки. Новинка</span><span class="product-types__item-label product-types__item-label_7">Ручки с лого</span>
+              <a href="#!" class="product-types__item-in">
+                <figcaption class="product-types__item-text">
+                  <h4 class="product-types__item-title"><span>НАЧКИ И РУЧНЫЕ СУВЕНИРЫ</span></h4>
+                </figcaption>
+              </a>
+          </figure>
+          <figure class="product-types__item product-types__item_lg product-types__item_border-red"><img src="img/content/cups-types-7.jpg" class="product-types__item-img" alt="" role="presentation" />
+            <a href="#!" class="product-types__item-in">
+              <figcaption class="product-types__item-text">
+                <h4 class="product-types__item-title"><span>ПЕЧАТЬ НА ОДЕЖДЕ</span></h4>
+              </figcaption>
+            </a>
+          </figure>
+        </div>
+        <div class="product-types__row product-types__row_lg">
+          <figure class="product-types__item product-types__item_lg product-types__item_border-orange"><img src="img/content/cups-types-8.jpg" class="product-types__item-img" alt="" role="presentation" />
+            <a href="#!" class="product-types__item-in">
+              <figcaption class="product-types__item-text">
+                <h4 class="product-types__item-title"><span>БАГЕТНАЯ МАСТЕРСКАЯ</span></h4>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="product-types__item product-types__item_lg product-types__item_border-green"><img src="img/content/cups-types-9.jpg" class="product-types__item-img" alt="" role="presentation" /><span class="product-types__item-label product-types__item-label_8">Букеты из шаров</span>
+            <a href="#!" class="product-types__item-in">
+              <figcaption class="product-types__item-text">
+                <h4 class="product-types__item-title"><span>ШАРЫ  С ГЕЛИЕМ ПО АКЦИИ!</span></h4>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="product-types__item product-types__item_lg product-types__item_border-purple"><img src="img/content/cups-types-10.jpg" class="product-types__item-img" alt="" role="presentation" />
+            <a href="#!" class="product-types__item-in">
+              <figcaption class="product-types__item-text">
+                <h4 class="product-types__item-title"><span>ИЗГОТОВЛЕНИЕ ФОТОКНИГ</span></h4>
+              </figcaption>
+            </a>
+          </figure>
+        </div>
+      </div>
+      <div class="overview">
+        <div class="overview__text">
+          <div class="overview__title"><i>ВСЕ ТОВАРЫ МОЖНО УПАКОВАТЬ В ПОДАРОЧНУЮ УПАКОВКУ!</i></div>
+          <p class="overview__descr"><i>Оптом и в розницу. Новая услуга - сворачивание вышитых полотенец в виде зайчиков!</i></p>
+        </div>
+        <div class="overview__in">
+          <div class="overview__col">
+            <div class="overview__item"><img src="img/content/overview-1.jpg" class="overview__item-img" alt="" role="presentation" /><a href="img/content/package-5_lg.jpg" data-fancybox="present-pack" class="overview__zoom"><svg class="icon-loupe present-pack__zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a>
+              <div
+                class="overview__item-label">Большой выбор<br/>нарядных лент</div>
+          </div>
+        </div>
+        <div class="overview__col">
+          <div class="overview__item"><img src="img/content/overview-2.jpg" class="overview__item-img" alt="" role="presentation" /><a href="img/content/package-3_lg.jpg" data-fancybox="present-pack" class="overview__zoom"><svg class="icon-loupe present-pack__zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a></div>
+        </div>
+        <div class="overview__col">
+          <div class="overview__item"><img src="img/content/overview-3.jpg" class="overview__item-img" alt="" role="presentation" /><a href="img/content/package-5_lg.jpg" data-fancybox="present-pack" class="overview__zoom"><svg class="icon-loupe present-pack__zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a></div>
+          <div
+            class="overview__item"><img src="img/content/overview-4.jpg" class="overview__item-img" alt="" role="presentation" /><a href="img/content/package-5_lg.jpg" data-fancybox="present-pack" class="overview__zoom"><svg class="icon-loupe present-pack__zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a></div>
+      </div>
+      <div class="overview__col">
+        <div class="overview__item"><img src="img/content/overview-5.jpg" class="overview__item-img" alt="" role="presentation" /><a href="img/content/package-5_lg.jpg" data-fancybox="present-pack" class="overview__zoom"><svg class="icon-loupe present-pack__zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a></div>
+        <div
+          class="overview__item"><img src="img/content/overview-6.jpg" class="overview__item-img" alt="" role="presentation" /><a href="img/content/package-5_lg.jpg" data-fancybox="present-pack" class="overview__zoom"><svg class="icon-loupe present-pack__zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a></div>
+      </div><a href="#!" class="overview__action"><span>Подарочная упаковка</span></a></div>
+      </div>
+      <div class="overview">
+        <div class="overview__text">
+          <div class="overview__title"><i>НОВИНКА! ПОРТРЕТЫ ПО ФОТО НА ХОЛСТЕ, ОТЛИЧНЫЙ ПОДАРОК И СУВЕНИР!</i></div>
+          <p class="overview__descr"><i>Изготовление портретов в современных компьютерных стилях рисования. Можно заказывать портреты «от руки». Мы производим профессиональную натяжку картин в нашей багетной мастерской.</i></p>
+        </div>
+        <div class="overview__in">
+          <div class="overview__pic">
+            <div style="background-image: url(img/content/overview-7.jpg)" class="overview__pic-img"></div>
+          </div>
+          <div class="overview__pic">
+            <div style="background-image: url(img/content/overview-8.jpg)" class="overview__pic-img"></div>
+          </div>
+          <div class="overview__pic">
+            <div style="background-image: url(img/content/overview-9.jpg)" class="overview__pic-img"></div>
+          </div>
+          <div class="overview__label">
+            <div>Портреты</div>
+            <div>на</div>
+            <div>заказ!</div>
+          </div>
+        </div>
+      </div>
+      <div class="overview">
+        <div class="overview__text">
+          <div class="overview__title"><i>В НАШИХ ОФИСАХ РАСПОЛОЖЕНА ВЫСТАВКА ДВАДЦАТИ ПЯТИ КАРТИН ИЗГОТОВЛЕННЫХ В НАШЕЙ БАГЕТНОЙ МАСТЕРСКОЙ.</i></div>
+          <p class="overview__descr"><i>Напечатанные и нарисованные картины оформлены в разных стилях, вы сможете увидеть как выглядит пластиковый и деревянный багет на изделиях, узнаете что такое «Паспарту» и «Двойное паспарту», посмотрите на новинки технологий багетного оформления - антибликовые матированные стёкла. И много ешё интересного ...</i></p>
+        </div>
+        <div class="overview__in">
+          <div class="overview__pic overview__pic_md">
+            <div style="background-image: url(img/content/overview-10.jpg)" class="overview__pic-img"></div>
+          </div>
+          <div class="overview__pic overview__pic_md">
+            <div style="background-image: url(img/content/overview-11.jpg)" class="overview__pic-img"></div>
+          </div>
+          <div class="overview__pic overview__pic_md">
+            <div style="background-image: url(img/content/overview-12.jpg)" class="overview__pic-img"></div>
+          </div>
+          <div class="overview__label overview__label_type-2">
+            <div>Выставка</div>
+            <div>багетной</div>
+            <div>мастерской</div>
+          </div>
+        </div>
+        <div class="overview__title overview__title_last"><i>ЖДЁМ ВАШИХ ЗАКАЗОВ!</i></div>
+      </div>
+      </section>
+      </div>
+      </div>
+      </div>
+    </main>
+    <div class="benefits benefits_default">
+      <div class="benefits__container container">
+        <div class="benefits__item">
+          <div class="benefits__item-pic benefits__item-pic_pic-1"></div>
+          <div class="benefits__item-text">Экономьте и заказывайте у<br>прямого производителя!</div>
+        </div>
+        <div class="benefits__item">
+          <div class="benefits__item-pic benefits__item-pic_pic-2"></div>
+          <div class="benefits__item-text">Если вас что-то не устроит, вы можете вернуть штучный товар.</div>
+        </div>
+        <div class="benefits__item">
+          <div class="benefits__item-pic benefits__item-pic_pic-3"></div>
+          <div class="benefits__item-text">Доверьтесь профессионалам,<br>у нас большой опыт работы!</div>
+        </div>
+      </div>
+    </div>
+    <!--/ begin footer-->
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__col">
+          <div class="logo logo_footer">
+            <a href="#!" class="logo__link"><img src="img/logo.svg" alt="Техно-принт" class="logo__img" title="" /></a>
+          </div>
+          <div class="socials socials_footer"><a href="#!" class="socials__item socials__item_vk"><svg class="icon-vk icon"><use xlink:href="img/sprite.svg#icon-vk"></use></svg></a><a href="#!" class="socials__item socials__item_fb"><svg class="icon-fb icon"><use xlink:href="img/sprite.svg#icon-fb"></use></svg></a>
+            <a
+              href="#!" class="socials__item socials__item_tw"><svg class="icon-tw icon"><use xlink:href="img/sprite.svg#icon-tw"></use></svg></a><a href="#!" class="socials__item socials__item_od"><svg class="icon-od icon"><use xlink:href="img/sprite.svg#icon-od"></use></svg></a>
+              <a href="#!" class="socials__item socials__item_gp"><svg class="icon-gp icon"><use xlink:href="img/sprite.svg#icon-gp"></use></svg></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <div class="nav nav_footer">
+            <ul class="nav__list">
+              <li class="nav__item"><a href="#!" class="nav__link">Главная</a></li>
+              <li class="nav__item"><a href="#!" class="nav__link">Услуги фирмы</a></li>
+              <li class="nav__item"><a href="#!" class="nav__link">О нас</a></li>
+              <li class="nav__item"><a href="#!" class="nav__link">Доставка</a></li>
+              <li class="nav__item"><a href="#!" class="nav__link">Оплата</a></li>
+              <li class="nav__item"><a href="#!" class="nav__link">Новости</a></li>
+              <li class="nav__item"><a href="#!" class="nav__link">Лучшие дизайны</a></li>
+              <li class="nav__item"><a href="#!" class="nav__link">Оптовые цены</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__col"><address class="footer__address"><div class="footer__address-col"><div class="footer__address-str"><svg class="icon-geo icon"><use xlink:href="img/sprite.svg#icon-geo"></use></svg><span>г. Самара, ул. Первомайская, 25</span></div><div class="footer__address-descr">(офис по сувенирной продукции)</div><a href="tel:88462671022" class="footer__address-tel">Тел.: 8(846) 267-10-22</a><a href="tel:89613808095" class="footer__address-tel">Сот.: 8-961-380-80-95</a></div><div class="footer__address-col"><div class="footer__address-str"><svg class="icon-geo icon"><use xlink:href="img/sprite.svg#icon-geo"></use></svg><span>г. Самара, ул. Чапаевская, 232</span></div><div class="footer__address-descr">(полиграфия, печать, чертежи)</div><a href="tel:88463327740" class="footer__address-tel">Тел.: 8(846) 332-77-40</a><a href="tel:89277507375" class="footer__address-tel">Сот.: 8-927-750-73-75</a></div></address>
+          <div
+            class="footer__copy">
+            <div class="footer__copy-text">&copy; 2017. Права защищены.</div><a href="#!" class="footer__copy-link">Мобильная версия</a></div>
+      </div>
+      </div>
+    </footer>
+    <!--end footer-->
+    </div>
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+
+</html>
