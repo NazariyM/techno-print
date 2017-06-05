@@ -13,6 +13,9 @@ PageList:
 - file: order-page.html
   ready: 100%
 
+- file: pechat-na-kruzhkah-naneseniye-na-kruzhkhi-i_posudu.html
+  ready: 100%
+
 - file: contacts-page.html
   ready: 100%
 
@@ -38,4 +41,13 @@ PageList:
   ready: 100%
 
 - file: souvenirs-page.html
+  ready: 100%
+
+- file: photos-page.html
+  ready: 100%
+
+- file: presents-page.html
+  ready: 100%
+
+- file: best-page.html
   ready: 100%

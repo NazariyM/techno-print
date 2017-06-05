@@ -26,21 +26,18 @@ h1, h2, h3, h4, h5, h6
 .title-sm
 	+f("psb",20)
 
-.title-md
-	font-family: Arial, sans-serif
-	font-size: 20px
-	+md
-		font-size: 17px
-	+sm
-		font-size: 15px
-	+xs
-		font-size: 16px
-		
-.title-lg
-	+f('psr',27)
-	color: #00306B
-	text-transform: uppercase
-	
+//.title-arial
+	//font-family: Arial, sans-serif
+	//font-size: 20px
+	//font-weight: 700
+	//text-transform: uppercase
+	//+md
+	//	font-size: 17px
+	//+sm
+	//	font-size: 15px
+	//+xs
+	//	font-size: 16px
+
 .title-md
 	padding: 0 30px
 	+f('psr', 24)
@@ -49,6 +46,11 @@ h1, h2, h3, h4, h5, h6
 	text-transform: uppercase
 	&__color
 		color: #E63833
+		
+.title-lg
+	+f('psr',27)
+	color: #00306B
+	text-transform: uppercase
 	
 // basic transition
 =trs

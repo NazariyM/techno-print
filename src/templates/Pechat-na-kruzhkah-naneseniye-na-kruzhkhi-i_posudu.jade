@@ -1,0 +1,638 @@
+---
+title: Техно-принт
+---
+extends layouts/_layout
+
+block content
+	+b.MAIN.page._default
+		+e.container.container
+			+e.bar
+				+b.breadcrumbs
+					+e.A.link(href='#!')
+						+icon('icon-house', 'breadcrumbs__icon')
+						= ' '
+						+e.SPAN Главная
+					+e.A.link.is-active(href='#!')
+						+e.SPAN Печать на кружках и посуде
+
+				+e.bar-title._has-icon._big-icon
+					+e.SPAN Кружки, бокалы, чашки
+					+icon('icon-cups', 'page__bar-title-icon')
+
+			+e.in
+				include components/_rubric-side
+				+e.main
+					+b.SECTION.cups
+						+b.title-md КРУЖКИ ЛЮБОЙ ТЕМАТИКИ! ПЕЧАТЬ ПРИ ВАС ЗА 15 МИНУТ, ОПТОВОЕ И ШТУЧНОЕ ПРОИЗВОДСТВО. ТАКЖЕ МЫ СОБРАЛИ ЛУЧШИЕ ДИЗАЙНЫ КРУЖЕК - САМЫЕ ВОСТРЕБОВАННЫЕ И СОВРЕМЕННЫЕ.
+						+b.P.sect-descr Хорошо что Вы вышли на эту страничку!  Мы с большим удовольствием проинформируем Вас по всем видам кружек и их упаковке, разным методам изготовления, 3Д визуализации перед печатью.  В части производства сувениров на посуде у нас большие наработки и опыт.  Сейчас технологии производства заготовок для печати на посуде вышли на высокий уровень, наше предприятие полностью удовлетворит даже самый изысканный спрос на подобные виды услуг, рассмотрите предложения!
+						
+						+b.product-types._cups
+							+e.row
+								+e.FIGURE.item._border-blue
+									+e.item-img.IMG(src='img/content/cups-1.jpg')
+									+e.SPAN.item-label._1 Кружки "Цветные"
+									+e.SPAN.item-label._2 "Пивные"
+									+e.A(href='#!').item-in
+										+e.FIGCAPTION.item-text
+											+e.H4.item-title
+												+e.SPAN ВОЗМОЖНЫЕ ЗАГОТОВКИ
+											+e.item-descr Всегда в наличии более сорока видов заготовок кружек, бокалов, тарелочек.
+								+e.FIGURE.item._border-red
+									+e.item-img.IMG(src='img/content/cups-2.jpg')
+									+e.SPAN.item-label._3 Просмотрите предварительное 3Д вашей кружки!
+									+e.A(href='#!').item-in
+										+e.FIGCAPTION.item-text
+											+e.H4.item-title
+												+e.SPAN 3D ВИЗУАЛИЗАЦИЯ
+											+e.item-descr Удобный просмотр предварительного макета печати
+												+e.BR
+												| на кружки
+								+e.FIGURE.item._border-yellow
+									+e.item-img.IMG(src='img/content/cups-3.jpg')
+									+e.A(href='#!').item-in
+										+e.FIGCAPTION.item-text
+											+e.H4.item-title
+												+e.SPAN КАТАЛОГ МАКЕТОВ
+											+e.item-descr Собраны лучшие
+												+e.BR
+												| наши наработки, фирменный дизайн. Коллекция постоянно пополняется!
+								+e.FIGURE.item._border-green
+									+e.item-img.IMG(src='img/content/cups-4.jpg')
+									+e.A(href='#!').item-in
+										+e.FIGCAPTION.item-text
+											+e.H4.item-title
+												+e.SPAN ОБРАЗЦЫ РАБОТ
+											+e.item-descr Предлагаем фотографирование некрупных товаров для интернет-магазинов.
+
+						+b.P.sect-descr
+							+e.STRONG Отправьте нам макет вашей будущей кружки и получите уже готовую через 20 минут!
+							= ' '
+							| Размеры для макета указаны ниже (наилучшая область запекания 205х90 мм), не обязательно следовать точности, подходит любая фотография. Простое размещение фото на кружки и несложные надписи у нас окажется бесплатным! Можно заказать индивидуальный интересный дизайн, коллажи, поздравительные тематики и нашу новую рубрику услуг - портреты по фото. Это работа художника иллюстратора-портретиста. Предварительно посмотреть как будет выглядеть кружка можно с помощью 3Д редактора, загрузив в него макет.
+
+						+b.look._cups
+							+e.row
+								+e.item
+									+e.img.IMG(src='img/content/look-cup.jpg')
+									+e.A.zoom(href='img/content/look-cup_lg.jpg' data-fancybox='look-img')
+										+icon('icon-loupe','look__zoom-icon')
+									+e.SPAN.label 3D Кружки предоставим!
+								+e.item._border
+									+e.img.IMG(src='img/content/look-scheme.jpg')
+									+e.A(href='img/content/look-scheme_lg.jpg' data-fancybox='look-img')
+
+						+b.send._cups
+							+e.text
+								+e.P
+									+e.STRONG Онлайн ящик для макетов:
+									= ' '
+									+e.A.text-mail(href='mailto:Tp-smr@yandex.ru') Tp-smr@yandex.ru
+									= ' '
+									+e.STRONG Наш дизайнер - Анастасия.
+								+e.P
+									+e.I Отправьте макеты Онлайн и приходите за уже готовыми изделиями!
+								+e.P
+									+e.I Тел:
+										= ' '
+										+e.A(href='tel:89613808095') 8-961-380-80-95
+										= ' '
+										| (Viber, WatsApp) и
+										= ' '
+										+e.A(href='tel:88462671022') 8 (846) 267-10-22
+							+e.actions
+								+e.A.actions-btn._top(href='#!')
+									+e.SPAN Отправить свой макет
+								+e.A.actions-btn._bottom(href='#!')
+									+e.SPAN Заказать дизайн
+
+						+b.benefits-list._default
+							+e.title Какие преимущества вы сможете получить заказав сувениры у нас?
+							+e.UL
+								+e.LI
+									+e.STRONG - Высокую скорость изготовления:
+									= ' '
+									| 10-15 минут, единичные заказы мы выполним при Вас!
+								+e.LI
+									+e.STRONG - Самый полный каталог заготовок в наличии
+									= ' '
+									| - более 40 видов сувенирных кружек. Вам не придётся ждать предзаказа по поставке тех или иных вариантов из возможных.
+								+e.LI
+									+e.STRONG - Макеты на кружки для Вас сделают дизайнеры
+									= ' '
+									| с многолетним опытом работы в области сувенирной продукции. Заказав макет у нас - Вы бесплатно получите предварительное 3D вида кружек, включая цветовые варианты ручек, увидите внутренние цветные части кружек, сможете оценить дизайн и общий вид до подтверждения отправки на печать! (Пока единственно предоставляемая услуга на территории Самарской области, делайте запросы на почту присылая заготовки макетов).
+								+e.LI
+									+e.STRONG - Вы можете выбрать лучшие наши работы по дизайн-макетам из удобного каталога
+									= ' '
+									| на этом сайте,  он наполняется исключительно востребованным и современным контентом, любой макет можно доработать «под Вас».
+								+e.LI
+									+e.STRONG - У нас действительно детально проработанное ценообразование!
+									= ' '
+									| Цены на оптовое производство кружек разработаны с максимально лояльными алгоритмами. В розничных вариантах предусмотрены скидки и на штучные заказы.
+								+e.LI
+									+e.STRONG - Еще наше нововведение в области производства кружек - это дизайн их упаковки.
+									= ' '
+									| Есть оригинальные коробочки упаковки, привезённые из других регионов. Проведена разработка бюджетных вариантов упаковок для оптовых и корпоративных заказов. Пока у нас сохраняется единственное место (в Самарской области) где можно рассмотреть
+									= ' '
+									+e.MARK услуги оригинальной проработанной упаковки
+									= ' '
+									| и печать кружек одновременно.
+								+e.LI
+									+e.STRONG - Качество фотопечати
+									= ' '
+									| гарантируется нашей высокой ответственностью и серьёзным подходом к делу.  Если будете заказывать у нас, то получите действительно фотографические изображения с максимальными совпадениями по цветам, без каких либо неожиданностей!
+
+						+e.promo
+							+e.promo-img
+								+e.IMG(src='img/content/promo.jpg')
+							+e.P Мы разработали полный комплекс по приёму, обработке и выполнению заказов печати на кружках. От дизайна, с 3Д визуализацией, производительных печей для изготовления, до оригинальной упаковки. Оцените наш сервис и подход к поставленным задачам, ждём ваших заказов!
+
+						+b.price-table._cups
+							+e.H3.title
+								+e.SPAN Прайс на печать кружек, опт и розница:
+							+e.TABLE.table
+								+e.THEAD.head
+									+e.TR
+										+e.TD(colspan='7')
+											+e.MARK АКЦИЯ НА ПЕЧАТЬ КРУЖЕК!
+											= ' '
+											| ОПТОВАЯ ЦЕНА НАЧИНАЕТСЯ ПРИ ЗАКАЗЕ ОТ ДВУХ ШТУК!
+									+e.TR
+										+e.TD Цена / Количество
+										+e.TD 1шт.
+										+e.TD 2-3 шт.
+										+e.TD 4-8 шт.
+										+e.TD 9-20 шт.
+										+e.TD 21-60 шт.
+										+e.TD 61-180 шт.
+								+e.TBODY.body
+									+e.TR
+										+e.TD
+											+e.MARK.label
+												+e.STRONG Печать на класических
+													+e.BR
+													| белых кружках
+											+e.view
+												+e.view-item
+													+e.view-img.IMG(src='img/content/white-cups.jpg')
+													+e.A.zoom(href='img/content/white-cup-1.jpg' data-fancybox='white-cups')
+														+icon('icon-loupe','price-table__zoom-icon')
+													+e.A(href='img/content/white-cup-2.jpg' data-fancybox='white-cups')
+													+e.A(href='img/content/white-cup-3.jpg' data-fancybox='white-cups')
+										+e.TD
+											+e.SPAN.text 360 руб.
+											+e.SPAN.text (320 руб. с коробочкой упаковки, класс «А»)
+										+e.TD
+											+e.SPAN.text 280 руб.
+											+e.SPAN.text._highlight Выгодная
+												+e.BR
+												| цена!
+											+e.SPAN.text (320 руб. с коробочкой упаковки, класс «А»)
+										+e.TD
+											+e.SPAN.text 280 руб.
+											+e.SPAN.text (290 руб. с коробочкой упаковки, класс «А») ленточек!
+										+e.TD
+											+e.SPAN.text 187 руб.
+											+e.SPAN.text (220 руб. с коробочкой упаковки, класс «А») ленточек!
+										+e.TD
+											+e.SPAN.text 165 руб.
+											+e.SPAN.text (185 руб. с коробочкой упаковки, класс «А») ленточек!
+										+e.TD
+											+e.SPAN.text 140 руб.
+											+e.SPAN.text (158 руб. с коробочкой упаковки, класс «А») ленточек!
+
+									+e.TR
+										+e.TD
+											+e.MARK.label._color
+												+e.STRONG Цветные кружки с печатью
+												= ' '
+												| Много вариантов, тридцать
+												+e.BR
+												| разновидностей!
+											+e.view
+												+e.view-item
+													+e.view-img.IMG(src='img/content/color-cups.jpg')
+													+e.A.zoom._top(href='img/content/color-cups_lg.jpg' data-fancybox='color-cups')
+														+icon('icon-loupe','price-table__zoom-icon')
+											+e.A.link(href='#!') Цветные заготовки подробнее
+										+e.TD
+											+e.SPAN.text 380 руб.
+											+e.SPAN.text (с упаковкой, класс «А»)
+										+e.TD
+											+e.SPAN.text 330 руб.
+											+e.SPAN.text (с упаковкой, класс «А»)
+										+e.TD
+											+e.SPAN.text 280 руб.
+											+e.SPAN.text (290 руб. с упаковкой, класс «А»)
+										+e.TD
+											+e.SPAN.text 225 руб.
+											+e.SPAN.text (245 руб. с упаковкой, класс «А»)
+										+e.TD
+											+e.SPAN.text 175 руб.
+											+e.SPAN.text (195 руб. с упаковкой, класс «А»)
+										+e.TD
+											+e.SPAN.text 175 руб.
+											+e.SPAN.text (190 руб. с упаковкой, класс «А»)
+
+									+e.TR
+										+e.TD
+											+e.MARK.label
+												+e.STRONG Печать на кружках «Хамелеон»
+												= ' '
+												| Изображение появляется при
+												+e.BR
+												| нагревании чашки
+											+e.view
+												+e.view-item
+													+e.img.IMG(src='img/content/chameleon-cups.jpg')
+													+e.A.zoom(href='img/content/chameleon-cups_lg.jpg' data-fancybox='chameleon-cups')
+														+icon('icon-loupe','price-table__zoom-icon')
+											+e.A.link(href='#!') Кружки хамелеоны подробнее
+										+e.TD
+											+e.SPAN.text 450 руб.
+											+e.SPAN.text (кружка идёт с коробочкой упаковки)
+										+e.TD
+											+e.SPAN.text 370 руб.
+											+e.SPAN.text (кружка идёт с коробочкой упаковки)
+										+e.TD
+											+e.SPAN.text 360 руб.
+											+e.SPAN.text (кружка идёт с коробочкой упаковки)
+										+e.TD
+											+e.SPAN.text 340 руб.
+											+e.SPAN.text (кружка идёт с коробочкой упаковки)
+										+e.TD
+										+e.TD
+
+									+e.TR
+										+e.TD
+											+e.MARK.label._color
+												+e.STRONG Золотые и серебряные кружки
+											+e.view
+												+e.view-item._half
+													+e.view-img.IMG(src='img/content/gold-silver-cups-1.jpg')
+													+e.A.zoom._bottom(href='img/content/gold-silver-cups-1_lg.jpg' data-fancybox='gold-silver-cups')
+														+icon('icon-loupe','price-table__zoom-icon')
+												+e.view-item._half
+													+e.view-img.IMG(src='img/content/gold-silver-cups-2.jpg')
+													+e.A.zoom(href='img/content/gold-silver-cups-2_lg.jpg' data-fancybox='gold-silver-cups')
+														+icon('icon-loupe','price-table__zoom-icon')
+											+e.A.link(href='#!') Кружки хамелеоны подробнее
+										+e.TD
+											+e.SPAN.text 485 руб.
+										+e.TD
+											+e.SPAN.text 430 руб.
+										+e.TD
+										+e.TD
+										+e.TD
+										+e.TD
+
+									+e.TR
+										+e.TD(colspan='7')
+											+e.MARK.label._width
+												+e.STRONG В наличии  разнообразные  интересные кружки.
+												= ' '
+												| Выбор из десятков разновидностей, в каталоге.
+											+e.view
+												+e.view-item._interest
+													+e.view-img._width.IMG(src='img/content/transparent-cups.jpg')
+													+e.A.zoom._top(href='img/content/transparent-cups_lg.jpg' data-fancybox='interesting-cups')
+														+icon('icon-loupe','price-table__zoom-icon')
+													+e.view-text Прозрачные кружки. Матовые и глянцевые
+												+e.view-item._interest
+													+e.view-img._width.IMG(src='img/content/shining-cups.jpg')
+													+e.A.zoom._top(href='img/content/shining-cups_lg.jpg' data-fancybox='interesting-cups')
+														+icon('icon-loupe','price-table__zoom-icon')
+													+e.view-text._color Светящиеся в темноте
+												+e.view-item._interest
+													+e.view-img._width.IMG(src='img/content/beer-cups.jpg')
+													+e.A.zoom._top(href='img/content/beer-cups_lg.jpg' data-fancybox='interesting-cups')
+														+icon('icon-loupe','price-table__zoom-icon')
+													+e.view-text Пивные
+												+e.view-item._interest
+													+e.view-img._width.IMG(src='img/content/sets-cups.jpg')
+													+e.A.zoom._top(href='img/content/sets-cups_lg.jpg' data-fancybox='interesting-cups')
+														+icon('icon-loupe','price-table__zoom-icon')
+													+e.view-text Наборы
+												+e.view-item._interest
+													+e.view-img._width.IMG(src='img/content/spoon-cups.jpg')
+													+e.A.zoom._top(href='img/content/spoon-cups_lg.jpg' data-fancybox='interesting-cups')
+														+icon('icon-loupe','price-table__zoom-icon')
+													+e.view-text Кружки с ложечкой
+												+e.view-item._interest
+													+e.view-img._width.IMG(src='img/content/custom-grip-cups.jpg')
+													+e.A.zoom._top(href='img/content/custom-grip-cups_lg.jpg' data-fancybox='interesting-cups')
+														+icon('icon-loupe','price-table__zoom-icon')
+													+e.view-text С оригинальной ручкой
+											+e.A.link(href='#!') Выбор вариантов заготовок кружек для печати (каталог)
+
+
+						+e.package
+							+e.package-col
+								+e.package-title По желанию, кружки можно красиво упаковать!
+								+e.P.package-descr Праздничная или скромная, но красивая упаковка со вкусом.
+								+e.P.package-descr Предложим выбор нарядных лент. Белая коробочка упаковки уже идет с некоторыми видами кружек в комплекте.
+								+e.A.package-link-decor.link-decor(href='#!')
+									+e.SPAN Выбрать дизайн упаковки
+							+e.package-col
+								+e.package-row
+									+e.package-item
+										+e.package-img.IMG(src='img/content/package-1.jpg')
+										+e.A.package-zoom(href='img/content/package-1_lg.jpg' data-fancybox='cups-package')
+											+icon('icon-loupe','cups__package-zoom-icon')
+									+e.package-item
+										+e.package-img.IMG(src='img/content/package-2.jpg')
+										+e.A.package-zoom(href='img/content/package-2_lg.jpg' data-fancybox='cups-package')
+											+icon('icon-loupe','cups__package-zoom-icon')
+										+e.package-label._right «Почтовая» упаковка
+								+e.package-row
+									+e.package-item
+										+e.package-img.IMG(src='img/content/package-3.jpg')
+										+e.A.package-zoom(href='img/content/package-3_lg.jpg' data-fancybox='cups-package')
+											+icon('icon-loupe','cups__package-zoom-icon')
+									+e.package-item
+										+e.package-img.IMG(src='img/content/package-4.jpg')
+										+e.A.package-zoom(href='img/content/package-4_lg.jpg' data-fancybox='cups-package')
+											+icon('icon-loupe','cups__package-zoom-icon')
+										+e.package-label._font Промежуточная упаковка - калька
+									+e.package-item
+										+e.package-img.IMG(src='img/content/package-5.jpg')
+										+e.A.package-zoom(href='img/content/package-5_lg.jpg' data-fancybox='cups-package')
+											+icon('icon-loupe','cups__package-zoom-icon')
+										+e.package-label._left Представляем выбор нарядных лент
+
+						+b.price-table._package
+							+e.TABLE.table
+								+e.THEAD.head
+									+e.TR
+										+e.TD(colspan='7') ЦЕНЫ НА УПАКОВКУ КРУЖЕК ОПТОВЫЙ И РОЗНИЧНЫЙ ПРАЙС
+									+e.TR
+										+e.TD Цена / Количество
+										+e.TD 1шт.
+										+e.TD 2-3 шт.
+										+e.TD 4-8 шт.
+										+e.TD 9-20 шт.
+										+e.TD 21-60 шт.
+										+e.TD 61-200 шт.
+								+e.TBODY.body
+									+e.TR
+										+e.TD
+											+e.MARK.label
+												+e.STRONG Упаковка в обёрточную бумагу
+													+e.BR
+													| + ленточка или шнурок.
+											+e.view
+												+e.view-item
+													+e.view-img.IMG(src='img/content/paper-package-cups.jpg')
+													+e.A.zoom._color(href='img/content/white-cup-1.jpg' data-fancybox='paper-package-cups')
+														+icon('icon-loupe','price-table__zoom-icon')
+										+e.TD
+											+e.SPAN.text 70 руб.
+										+e.TD
+											+e.SPAN.text 55 руб.
+										+e.TD
+											+e.SPAN.text 50 руб.
+										+e.TD
+											+e.SPAN.text 48 руб.
+										+e.TD
+											+e.SPAN.text 45 руб.
+										+e.TD
+											+e.SPAN.text 43 руб.
+
+									+e.TR
+										+e.TD
+											+e.MARK.label._color
+												+e.STRONG Подарочные упаковки,
+												= ' '
+												| есть еще различные варианты...
+											+e.view
+												+e.view-item
+													+e.view-img.IMG(src='img/content/love-package-cups.jpg')
+													+e.A.zoom._color(href='img/content/love-package-cups_lg.jpg' data-fancybox='love-package-cups')
+														+icon('icon-loupe','price-table__zoom-icon')
+											+e.A.link(href='#!') Упаковка кружек (показать варианты)
+										+e.TD
+											+e.SPAN.text 60 руб.
+										+e.TD
+											+e.SPAN.text 50 руб.
+										+e.TD
+											+e.SPAN.text 45 руб.
+										+e.TD
+										+e.TD
+										+e.TD
+
+						+e.text
+							+e.text-title.title-md РАССМОТРИТЕ НАШЕ НОВОЕ ИНТЕРЕСНОЕ ПРЕДЛОЖЕНИЕ ПО СУВЕНИРНЫМ КРУЖКАМ!
+							+b.P.sect-descr
+								+e.STRONG Изготовление портретов на кружку по фотографии.
+								= ' '
+								| Наши художники-портретисты профессионально нарисуют ваш портрет, который можно будет разместить его не только на кружке.  В качестве стиля портрета  предложим самые современные компьютерные направления искусства. Выбрать направление стиля можно из каталога образцов работ... Возможен портрет карандашом с последующей современной обработкой на компьютере.  Стоимость разработки портрета 2880 руб. Сама кружка по завершении работы будет напечатана в подарок!
+
+						+b.teaser
+							+e.slider.js-teaser-slider
+								+e.slider-item
+									+e.slider-item-in
+										+e.slider-img(style='background-image: url(img/content/teaser-1.jpg)')
+										+e.A.slider-zoom(href='img/content/teaser-1_lg.jpg' data-fancybox='teaser-slider')
+											+icon('icon-loupe','teaser__slider-zoom-icon')
+										+e.slider-label._right Обычное фото
+											+e.BR
+											| на кружку
+								+e.slider-item
+									+e.slider-item-in
+										+e.slider-img(style='background-image: url(img/content/teaser-2.jpg)')
+										+e.A.slider-zoom(href='img/content/teaser-2_lg.jpg' data-fancybox='teaser-slider')
+											+icon('icon-loupe','teaser__slider-zoom-icon')
+										+e.slider-label Портрет по фото.
+											+e.BR
+											| Стиль «Фэнтезийная акварель»
+								+e.slider-item
+									+e.slider-item-in
+										+e.slider-img(style='background-image: url(img/content/teaser-3.jpg)')
+										+e.A.slider-zoom(href='img/content/teaser-3_lg.jpg' data-fancybox='teaser-slider')
+											+icon('icon-loupe','teaser__slider-zoom-icon')
+										+e.slider-label Стиль портрета
+											+e.BR
+											| «Двойная экспозиция»
+								+e.slider-item
+									+e.slider-item-in
+										+e.slider-img(style='background-image: url(img/content/teaser-4.jpg)')
+										+e.A.slider-zoom(href='img/content/teaser-4_lg.jpg' data-fancybox='teaser-slider')
+											+icon('icon-loupe','teaser__slider-zoom-icon')
+										+e.slider-label Обычное фото
+											+e.BR
+											| на кружке
+								+e.slider-item
+									+e.slider-item-in
+										+e.slider-img(style='background-image: url(img/content/teaser-5.jpg)')
+										+e.A.slider-zoom(href='img/content/teaser-5_lg.jpg' data-fancybox='teaser-slider')
+											+icon('icon-loupe','teaser__slider-zoom-icon')
+										+e.slider-label Портрет по фото в стиле
+											+e.BR
+											| «Молодёжный Поп-Арт»
+								+e.slider-item
+									+e.slider-item-in
+										+e.slider-img(style='background-image: url(img/content/teaser-6.jpg)')
+										+e.A.slider-zoom(href='img/content/teaser-6_lg.jpg' data-fancybox='teaser-slider')
+											+icon('icon-loupe','teaser__slider-zoom-icon')
+										+e.slider-label Стиль портрета «Поп-Арт»
+
+						+b.our-address._cups
+							+e.title Мы ждем ваших заказов и находимся по адресу:
+							+e.in
+								+e.col
+									+e.text
+										+e.P
+											+e.STRONG г. Самара, улица Первомайская, 25. С 9-00 до 18-00, без перерыва. Онлайн ящик для макетов:
+											= ' '
+											+e.A(href='mailto:tp-smr@yandex.ru') Tp-smr@yandex.ru
+										+e.P
+											+e.I Тел:
+												= ' '
+												+e.A(href='tel:89613808095') 8-961-380-80-95
+												= ' '
+												| (Viber, WatsApp) и
+												= ' '
+												+e.A(href='tel:88462671022') 8 (846) 267-10-22,
+												= ' '
+												| наш дизайнер - Анастасия.
+									+e.IMG.img(src='img/content/our-address.jpg')
+										
+								+e.col
+									+e.block
+									+e.P Доставим продукцию по городу и в регионы России.
+
+						+b.product-types
+							+e.text
+								+e.title Придя к нам, вы увидите много всего интересного!
+								+e.P.descr
+									+e.I Рассмотрите предложения по сувенирам на будущее, увидите образцы продукций, дизайны упаковки. Узнаете место где всё производится по ценам оптового предприятия. Где в срочном порядке можно заказывать продукцию для праздников и подарков близким.
+							+e.row._lg
+								+e.FIGURE.item._lg._border-yellow
+									+e.item-img.IMG(src='img/content/cups-types-5.jpg')
+									+e.A(href='#!').item-in
+										+e.FIGCAPTION.item-text
+											+e.H4.item-title
+												+e.SPAN МАШИННАЯ ВЫШИВКА
+								+e.FIGURE.item._lg._border-blue
+									+e.item-img.IMG(src='img/content/cups-types-6.jpg')
+									+e.SPAN.item-label._4 Любые логотипы
+										+e.BR
+										| и рисунки на
+										+e.BR
+										| закатных значках!
+									+e.SPAN.item-label._5 Брелки для ключей
+									+e.SPAN.item-label._6 Заколки. Новинка
+									+e.SPAN.item-label._7 Ручки с лого
+									+e.A(href='#!').item-in
+										+e.FIGCAPTION.item-text
+											+e.H4.item-title
+												+e.SPAN НАЧКИ И РУЧНЫЕ СУВЕНИРЫ
+								+e.FIGURE.item._lg._border-red
+									+e.item-img.IMG(src='img/content/cups-types-7.jpg')
+									+e.A(href='#!').item-in
+										+e.FIGCAPTION.item-text
+											+e.H4.item-title
+												+e.SPAN ПЕЧАТЬ НА ОДЕЖДЕ
+							+e.row._lg
+								+e.FIGURE.item._lg._border-orange
+									+e.item-img.IMG(src='img/content/cups-types-8.jpg')
+									+e.A(href='#!').item-in
+										+e.FIGCAPTION.item-text
+											+e.H4.item-title
+												+e.SPAN БАГЕТНАЯ МАСТЕРСКАЯ
+								+e.FIGURE.item._lg._border-green
+									+e.item-img.IMG(src='img/content/cups-types-9.jpg')
+									+e.SPAN.item-label._8 Букеты из шаров
+									+e.A(href='#!').item-in
+										+e.FIGCAPTION.item-text
+											+e.H4.item-title
+												+e.SPAN ШАРЫ  С ГЕЛИЕМ ПО АКЦИИ!
+								+e.FIGURE.item._lg._border-purple
+									+e.item-img.IMG(src='img/content/cups-types-10.jpg')
+									+e.A(href='#!').item-in
+										+e.FIGCAPTION.item-text
+											+e.H4.item-title
+												+e.SPAN ИЗГОТОВЛЕНИЕ ФОТОКНИГ
+
+						+b.overview
+							+e.text
+								+e.title
+									+e.I ВСЕ ТОВАРЫ МОЖНО УПАКОВАТЬ В ПОДАРОЧНУЮ УПАКОВКУ!
+								+e.P.descr
+									+e.I Оптом и в розницу. Новая услуга - сворачивание вышитых полотенец в виде зайчиков!
+							+e.in
+								+e.col
+									+e.item
+										+e.item-img.IMG(src='img/content/overview-1.jpg')
+										+e.A.zoom(href='img/content/package-5_lg.jpg' data-fancybox='present-pack')
+											+icon('icon-loupe','present-pack__zoom-icon')
+										+e.item-label Большой выбор
+											+e.BR
+											| нарядных лент
+								+e.col
+									+e.item
+										+e.item-img.IMG(src='img/content/overview-2.jpg')
+										+e.A.zoom(href='img/content/package-3_lg.jpg' data-fancybox='present-pack')
+											+icon('icon-loupe','present-pack__zoom-icon')
+								+e.col
+									+e.item
+										+e.item-img.IMG(src='img/content/overview-3.jpg')
+										+e.A.zoom(href='img/content/package-5_lg.jpg' data-fancybox='present-pack')
+											+icon('icon-loupe','present-pack__zoom-icon')
+									+e.item
+										+e.item-img.IMG(src='img/content/overview-4.jpg')
+										+e.A.zoom(href='img/content/package-5_lg.jpg' data-fancybox='present-pack')
+											+icon('icon-loupe','present-pack__zoom-icon')
+								+e.col
+									+e.item
+										+e.item-img.IMG(src='img/content/overview-5.jpg')
+										+e.A.zoom(href='img/content/package-5_lg.jpg' data-fancybox='present-pack')
+											+icon('icon-loupe','present-pack__zoom-icon')
+									+e.item
+										+e.item-img.IMG(src='img/content/overview-6.jpg')
+										+e.A.zoom(href='img/content/package-5_lg.jpg' data-fancybox='present-pack')
+											+icon('icon-loupe','present-pack__zoom-icon')
+
+								+e.A.action(href='#!')
+									+e.SPAN Подарочная упаковка
+
+						+b.overview
+							+e.text
+								+e.title
+									+e.I НОВИНКА! ПОРТРЕТЫ ПО ФОТО НА ХОЛСТЕ, ОТЛИЧНЫЙ ПОДАРОК И СУВЕНИР!
+								+e.P.descr
+									+e.I Изготовление портретов в современных компьютерных стилях рисования. Можно заказывать портреты «от руки». Мы производим профессиональную натяжку картин в нашей багетной мастерской.
+							+e.in
+								+e.pic
+									+e.pic-img(style='background-image: url(img/content/overview-7.jpg)')
+								+e.pic
+									+e.pic-img(style='background-image: url(img/content/overview-8.jpg)')
+								+e.pic
+									+e.pic-img(style='background-image: url(img/content/overview-9.jpg)')
+								+e.label
+									+e.DIV Портреты
+									+e.DIV на
+									+e.DIV заказ!
+
+						+b.overview
+							+e.text
+								+e.title
+									+e.I В НАШИХ ОФИСАХ РАСПОЛОЖЕНА ВЫСТАВКА ДВАДЦАТИ ПЯТИ КАРТИН ИЗГОТОВЛЕННЫХ В НАШЕЙ БАГЕТНОЙ МАСТЕРСКОЙ.
+								+e.P.descr
+									+e.I Напечатанные и нарисованные картины оформлены в разных стилях, вы сможете увидеть как выглядит пластиковый и деревянный багет на изделиях, узнаете что такое «Паспарту» и «Двойное паспарту», посмотрите на новинки технологий багетного оформления - антибликовые матированные стёкла. И много ешё интересного ...
+							+e.in
+								+e.pic._md
+									+e.pic-img(style='background-image: url(img/content/overview-10.jpg)')
+								+e.pic._md
+									+e.pic-img(style='background-image: url(img/content/overview-11.jpg)')
+								+e.pic._md
+									+e.pic-img(style='background-image: url(img/content/overview-12.jpg)')
+								+e.label._type-2
+									+e.DIV Выставка
+									+e.DIV багетной
+									+e.DIV мастерской
+
+							+e.title._last
+								+e.I ЖДЁМ ВАШИХ ЗАКАЗОВ!
+
+
+	- var benefitsClass = '_default'
+			include components/_benefits

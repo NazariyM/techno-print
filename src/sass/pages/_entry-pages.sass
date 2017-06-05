@@ -222,3 +222,93 @@
 			+coverdiv
 			+cover
 			z-index: 1
+			
+/* photos
+	----------------------------------- */
+.photos
+	&__title
+		padding: 0
+
+/* cups
+	----------------------------------- */
+.cups
+	&__promo
+		margin: 50px 0
+		&-img
+			max-width: 870px
+			margin: 0 auto 35px
+	&__package
+		max-width: 1040px
+		margin: 35px auto
+		font-size: 0
+		&-col
+			display: inline-block
+			vertical-align: middle
+			font-size: 19px
+			text-align: center
+			&:nth-child(1)
+				width: 58%
+			&:nth-child(2)
+				width: 42%
+				padding-left: 3.5%
+		&-title
+			margin-bottom: 20px
+			text-align: center
+			font-weight: 700
+		&-descr
+			text-align: left
+			&:first-of-type
+				text-indent: 30px
+			&:last-of-type
+				margin-bottom: 20px
+		&-row
+			&:not(:last-child)
+				margin-bottom: 5px
+			+clr
+		&-item
+			position: relative
+			display: inline-block
+			vertical-align: middle
+			&:hover .cups__package-zoom
+				visibility: visible
+				opacity: 1
+		&-zoom
+			position: absolute
+			top: 6px
+			left: 6px
+			width: 35px
+			height: 35px
+			visibility: hidden
+			opacity: 0
+			line-height: 42px
+			background: rgba(115, 115, 115, 0.6)
+			&-icon
+				font-size: 22px
+				fill: #fff
+		&-label
+			position: absolute
+			padding: 4px 0
+			width: 100%
+			bottom: 0
+			color: #fff
+			background: rgba(#000, .2)
+			+f('tcm', 13)
+			&_font
+				font-size: 11px
+			&_left
+				padding: 4px 8px
+				max-width: 160px
+				text-align: left
+			&_right
+				max-width: 100px
+				right: 0
+		&-link-decor
+			color: #003399
+			span
+				background-image: linear-gradient(to right, #003399 33%, rgba(255, 255, 255, 0) 0%), linear-gradient(to left, #003399 16%, rgba(255, 255, 255, 0) 0%)
+	
+	&__text
+		margin: 30px 0
+		&-title
+			text-align: center
+			

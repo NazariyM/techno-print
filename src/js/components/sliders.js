@@ -15,6 +15,7 @@ $(document).ready(() => {
 
   const productLook = $('.js-look-view');
   const productThumbs = $('.js-look-thumbs');
+  const teaserSlider = $('.js-teaser-slider');
 
   productLook.slick({
     slidesToShow: 1,
@@ -34,6 +35,16 @@ $(document).ready(() => {
     centerMode: false,
     focusOnSelect: true,
     variableWidth: true
+  });
+
+  teaserSlider.slick({
+    dots: false,
+    infinite: false,
+    speed: 400,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    prevArrow: '<button type="button" class="teaser__slider-btn teaser__slider-btn_prev"><svg class="teaser__slider-icon icon-arr-sld-l"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr-sld-l"></use></svg></button>',
+    nextArrow: '<button type="button" class="teaser__slider-btn teaser__slider-btn_next"><svg class="teaser__slider-icon icon-arr-sld-r"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr-sld-r"></use></svg></button>'
   });
 
 });
