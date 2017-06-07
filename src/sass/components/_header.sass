@@ -82,11 +82,13 @@
 			&:nth-child(3)
 				//align-self: flex-start
 				width: 46.2%
+				+sm
+					width: 45.8%
 				//+md
 					margin-top: 3px
 				+xs
-					order: 4
-					width: 80%
+					//order: 4
+					//width: 80%
 					display: none
 			&:nth-child(4)
 				width: 100px
@@ -113,7 +115,7 @@
 			margin-bottom: 10px
 			font-size: 15px
 		+sm
-			margin-bottom: 5px
+			margin-bottom: 3px
 			font-size: 14px
 		&-link
 			position: relative
@@ -303,6 +305,7 @@
 			line-height: 13px
 			height: 31px
 		+sm
+			height: 26px
 			font-size: 13px
 	&__btn
 		position: absolute
@@ -317,6 +320,10 @@
 		+md
 			width: 33px
 			height: 31px
+		+sm
+			width: 30px
+			height: 26px
+			top: 2px
 		&::after
 			display: block
 			margin: 0 auto
@@ -342,18 +349,17 @@
 		height: 38px
 		line-height: 33px
 		color: #fff
-		border: 2px solid #fff
+		border: 2px solid rgba(#fff, .5)
 		font-size: 18px
 		+trs
 		+md
 			line-height: 25px
 			height: 30px
 			font-size: 15px
-			+f('psb')
 		+sm
+			line-height: 21px
+			height: 26px
 			font-size: 13px
-		+xs
-			border: 2px solid rgba(255, 255, 255, .5)
 		&:nth-child(2n)
 			margin-left: 5px
 		&:nth-child(2) ~ &
@@ -364,7 +370,7 @@
 	&_header
 		margin-top: 18px
 		+sm
-			margin-top: 10px
+			margin-top: 7px
 		
 // cart
 .cart
