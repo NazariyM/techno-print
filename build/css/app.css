@@ -8821,6 +8821,9 @@ body::after {
   .extra__text{
     width: 40%;
   }
+  .extra__item-product{
+    font-size: 14px;
+  }
   .extra__link{
     font-size: 14px;
   }
@@ -9098,9 +9101,6 @@ body::after {
     margin-bottom: 10px;
     font-size: 14px;
   }
-  .extra__item-product{
-    font-size: 14px;
-  }
   .extra__pic{
     width: 62%;
   }
@@ -9220,7 +9220,7 @@ body::after {
     border: 2px solid rgba(255, 255, 255, 0.5);
   }
   .cart::after{
-    width: 139px;
+    width: 127px;
   }
   .menu{
     padding: 0 5px;
