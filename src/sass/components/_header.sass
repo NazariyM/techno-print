@@ -14,9 +14,10 @@
 			max-width: 1270px
 			padding: 15px 15px 25px
 		+sm
-			flex-wrap: wrap
+			max-width: 960px
 			padding: 10px 15px 20px
 		+xs
+			flex-wrap: wrap
 			justify-content: center
 		&::after
 			position: absolute
@@ -41,6 +42,8 @@
 			+clr
 			+md
 				max-width: 1270px
+			+sm
+				max-width: 950px
 	&__mid
 		position: relative
 		background-color: #09A1D9
@@ -52,10 +55,10 @@
 				width: 245px
 				margin-top: 25px
 				+md
-					width: 200px
+					width: 190px
 					margin-top: 15px
 				+sm
-					width: 145px
+					width: 140px
 				+xs
 					order: 1
 					width: 165px
@@ -65,21 +68,21 @@
 				position: relative
 				width: percentage(350 / 1620)
 				z-index: 3
-				+r(1835)
+				+lg
 					width: 24%
 				+md
-					width: 25%
+					width: 22.6%
 				+sm
-					width: 30%
+					width: 28%
 				+xs
 					order: 2
 					width: 60%
 					margin-right: auto
 					
 			&:nth-child(3)
-				align-self: flex-start
-				width: percentage(820 / 1785)
-				+md
+				//align-self: flex-start
+				width: 46.2%
+				//+md
 					margin-top: 3px
 				+xs
 					order: 4
@@ -109,7 +112,8 @@
 		+md
 			margin-bottom: 10px
 			font-size: 15px
-		+xs
+		+sm
+			margin-bottom: 5px
 			font-size: 14px
 		&-link
 			position: relative
@@ -123,6 +127,8 @@
 			+md
 				margin-right: 4px
 				font-size: 18px
+			+sm
+				font-size: 14px
 		span
 			display: inline-block
 			vertical-align: middle
@@ -166,11 +172,12 @@
 		color: #333
 		font-size: 20px
 		+md
-			+f('psb', 15)
+			font-size: 16px
 			color: #666666
+		+sm
+			font-size: 14px
 		+xs
 			padding: 0
-			+f('psr', 14)
 		&:hover
 			color: #053B76
 			
@@ -206,8 +213,11 @@
 		height: 190%
 		left: -83px
 		top: 20px
+		+md
+			top: 16px
 		+sm
-		    top: 15px
+			top: 10px
+			left: -43px
 	&::before
 		transform: skew(-25deg) rotate(-4deg)
 		width: 95%
@@ -215,11 +225,13 @@
 		left: -42px
 		top: 36px
 		+md
-			height: 315%
-			left: -64px
+			height: 330px
+			top: 22px
+			left: -67px
 		+sm
 			top: 18px
-			left: -53px
+			left: -65px
+		
 	&__link
 		display: block
 		&::after
@@ -287,11 +299,11 @@
 			background: #D6D6D6
 		+md
 			padding: 0 39px 0 7px
-			font-size: 15px
+			font-size: 14px
 			line-height: 13px
 			height: 31px
 		+sm
-			font-size: 14px
+			font-size: 13px
 	&__btn
 		position: absolute
 		top: 0
@@ -311,6 +323,10 @@
 			content: ''
 			+st('search')
 			transform: scale(1.1)
+			height: 20px
+			background-size: 278px 270px
+			+sm
+				transform: scale(.8)
 		&:active
 			background-color: #D6D6D6
 			
@@ -334,17 +350,20 @@
 			height: 30px
 			font-size: 15px
 			+f('psb')
+		+sm
+			font-size: 13px
 		+xs
 			border: 2px solid rgba(255, 255, 255, .5)
-			font-size: 14px
 		&:nth-child(2n)
 			margin-left: 5px
+		&:nth-child(2) ~ &
+			margin-bottom: 0
 		&:hover
 			background-color: rgba(#385794, .3)
 			border-color: #348EBF
 	&_header
-		margin-top: 15px
-		+xs
+		margin-top: 18px
+		+sm
 			margin-top: 10px
 		
 // cart
@@ -364,21 +383,21 @@
 	&::after
 		position: absolute
 		transform: skew(25deg) rotate(-11deg)
-		width: 179%
+		width: 183%
 		height: 185%
-		left: 8px
+		left: 6px
 		top: 16px
 		z-index: 1
 		background-color: #09A1D9
 		content: ''
 		+md
 			height: 200px
-			width: 138px
-			left: 9px
+			width: 134px
+			left: 13px
 			top: 11px
 		+sm
-			left: 20px
-			width: 129px
+			left: 33px
+			width: 116px
 			height: 240px
 		+xs
 			width: 139px
@@ -390,25 +409,30 @@
 		background-color: #E6E6E6
 		+vertical
 		+md
-			height: 60px
+			height: 56px
+		+sm
+			height: 45px
 		&::after
 			display: inline-block
 			vertical-align: middle
 			content: ''
-			margin: 0 auto
-			+sr('cart')
+			+ico('cart')
+			width: 58px
+			height: 51px
 			+md
-				transform: scale(.8)
+				width: 40px
+				height: 35px
 			+sm
-				transform: scale(.7)
+				width: 35px
+				height: 30px
 		&:hover
 			background-color: #E9F2FB
 		&:active
 			background-color: #49ade2
 		&:hover::after
-			+sr('cart-hvr')
+			+ico('cart-hvr')
 		&:active::after
-			+sr('cart-act')
+			+ico('cart-act')
 		&:active + .cart__label,
 		&:hover + .cart__label
 			background-color: #C0E6FC
@@ -423,27 +447,27 @@
 		background-color: #fff
 		color: #00306B
 		+f('oss')
+		+md
+			padding: 1px 0
 	&__text
 		font-size: 17px
 		color: #000
 		+md
-			font-size: 14px
-		+sm
 			font-size: 13px
+		+sm
+			font-size: 12px
 	&__total
 		font-family: Arial, sans-serif
 		font-size: 16px
-		+sm
-			font-size: 15px
+		+md
+			font-size: 13px
 	&__val
 		display: inline-block
 		margin-left: 3px
 		font-size: 12px
 		fill: #00306B
 		+md
-			font-size: 12px
-		+sm
-			font-size: 11px
+			font-size: 10px
 	
 // menu
 .menu
@@ -456,7 +480,7 @@
 		margin: -30px auto 0
 		max-width: 1064px
 	+sm
-		max-width: none
+		max-width: 860px
 		margin: -30px auto 0
 	+xs
 		padding: 0 5px
@@ -506,6 +530,8 @@
 		+md
 			font-size: 15px
 			padding: 10px 5px
+		+sm
+			font-size: 14px
 		+xs
 			font-size: 13px
 		&:hover
@@ -546,10 +572,10 @@
 			+xs
 				margin-left: 8px
 		+md
-			+f('psb', 15)
+			font-size: 15px
 			color: #666666
-		+xs
-			+f('psr', 14)
+		+sm
+			font-size: 14px
 		&:hover
 			color: #053B76
 		&:last-child
@@ -566,7 +592,7 @@
 		+md
 			font-size: 19px
 		+sm
-			font-size: 17px
+			font-size: 16px
 		+xs
 			display: none
 	span
