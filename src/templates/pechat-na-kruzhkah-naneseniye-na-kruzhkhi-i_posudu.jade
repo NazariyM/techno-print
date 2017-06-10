@@ -71,14 +71,17 @@ block content
 
 						+b.look._cups
 							+e.row
-								+e.item
-									+e.img.IMG(src='img/content/look-cup.jpg')
-									+e.A.zoom(href='img/content/look-cup_lg.jpg' data-fancybox='look-img')
-										+icon('icon-loupe','look__zoom-icon')
-									+e.SPAN.label 3D Кружки предоставим!
-								+e.item._border
-									+e.img.IMG(src='img/content/look-scheme.jpg')
-									+e.A(href='img/content/look-scheme_lg.jpg' data-fancybox='look-img')
+								+b.zoom.look__item
+									+e.A.element(href='img/content/look-cup_lg.jpg' data-fancybox='look-img')
+										+e.BUTTON.btn(type='button')
+											+icon('icon-loupe','zoom__btn-icon')
+										+e.img.IMG(src='img/content/look-cup.jpg')
+									+b.SPAN.look__label 3D Кружки предоставим!
+								+b.zoom.look__item._border
+									+e.A.element(href='img/content/look-scheme_lg.jpg' data-fancybox='look-img')
+										+e.BUTTON.btn(type='button')
+											+icon('icon-loupe','zoom__btn-icon')
+										+e.img.IMG(src='img/content/look-scheme.jpg')
 
 						+b.send._cups
 							+e.text
@@ -132,7 +135,7 @@ block content
 									= ' '
 									| Есть оригинальные коробочки упаковки, привезённые из других регионов. Проведена разработка бюджетных вариантов упаковок для оптовых и корпоративных заказов. Пока у нас сохраняется единственное место (в Самарской области) где можно рассмотреть
 									= ' '
-									+e.MARK услуги оригинальной проработанной упаковки
+									+e.A(href='#!').link услуги оригинальной проработанной упаковки
 									= ' '
 									| и печать кружек одновременно.
 								+e.LI
@@ -170,13 +173,22 @@ block content
 												+e.STRONG Печать на класических
 													+e.BR
 													| белых кружках
-											+e.view
-												+e.view-item
-													+e.view-img.IMG(src='img/content/white-cups.jpg')
-													+e.A.zoom(href='img/content/white-cup-1.jpg' data-fancybox='white-cups')
-														+icon('icon-loupe','price-table__zoom-icon')
-													+e.A(href='img/content/white-cup-2.jpg' data-fancybox='white-cups')
-													+e.A(href='img/content/white-cup-3.jpg' data-fancybox='white-cups')
+											+e.view._spaces
+												+b.zoom.price-table__view-item
+													+e.A.element(href='img/content/white-cup-1_lg.jpg' data-fancybox='white-cups')
+														+e.BUTTON.btn._sm(type='button')
+															+icon('icon-loupe','zoom__btn-icon')
+														+e.img.IMG(src='img/content/white-cup-1.jpg')
+												+b.zoom.price-table__view-item
+													+e.A.element(href='img/content/white-cup-2_lg.jpg' data-fancybox='white-cups')
+														+e.BUTTON.btn._sm(type='button')
+															+icon('icon-loupe','zoom__btn-icon')
+														+e.img.IMG(src='img/content/white-cup-2.jpg')
+												+b.zoom.price-table__view-item
+													+e.A.element(href='img/content/white-cup-3_lg.jpg' data-fancybox='white-cups')
+														+e.BUTTON.btn._sm(type='button')
+															+icon('icon-loupe','zoom__btn-icon')
+														+e.img.IMG(src='img/content/white-cup-3.jpg')
 										+e.TD
 											+e.SPAN.text 360 руб.
 											+e.SPAN.text (320 руб. с коробочкой упаковки, класс «А»)
@@ -203,15 +215,17 @@ block content
 										+e.TD
 											+e.MARK.label._color
 												+e.STRONG Цветные кружки с печатью
-												= ' '
+												+e.BR
 												| Много вариантов, тридцать
 												+e.BR
 												| разновидностей!
 											+e.view
-												+e.view-item
-													+e.view-img.IMG(src='img/content/color-cups.jpg')
-													+e.A.zoom._top(href='img/content/color-cups_lg.jpg' data-fancybox='color-cups')
-														+icon('icon-loupe','price-table__zoom-icon')
+												+b.zoom.price-table__view-item
+													+e.A.element(href='img/content/color-cups_lg.jpg' data-fancybox='color-cups')
+														+e.BUTTON.btn._sm._top(type='button')
+															+icon('icon-loupe','zoom__btn-icon')
+														+e.img.IMG(src='img/content/color-cups.jpg')
+
 											+e.A.link(href='#!') Цветные заготовки подробнее
 										+e.TD
 											+e.SPAN.text 380 руб.
@@ -240,11 +254,33 @@ block content
 												| Изображение появляется при
 												+e.BR
 												| нагревании чашки
-											+e.view
-												+e.view-item
-													+e.img.IMG(src='img/content/chameleon-cups.jpg')
-													+e.A.zoom(href='img/content/chameleon-cups_lg.jpg' data-fancybox='chameleon-cups')
-														+icon('icon-loupe','price-table__zoom-icon')
+											+e.view._spaces-sm
+												+b.zoom.price-table__view-item
+													+e.A.element(href='img/content/chameleon-cup-1_lg.jpg' data-fancybox='chameleon-cups')
+														+e.BUTTON.btn._sm(type='button')
+															+icon('icon-loupe','zoom__btn-icon')
+														+e.img.IMG(src='img/content/chameleon-cup-1.jpg')
+												+b.zoom.price-table__view-item
+													+e.A.element(href='img/content/chameleon-cup-2_lg.jpg' data-fancybox='chameleon-cups')
+														+e.BUTTON.btn._sm(type='button')
+															+icon('icon-loupe','zoom__btn-icon')
+														+e.img.IMG(src='img/content/chameleon-cup-2.jpg')
+												+b.zoom.price-table__view-item
+													+e.A.element(href='img/content/chameleon-cup-3_lg.jpg' data-fancybox='chameleon-cups')
+														+e.BUTTON.btn._sm(type='button')
+															+icon('icon-loupe','zoom__btn-icon')
+														+e.img.IMG(src='img/content/chameleon-cup-3.jpg')
+												+b.zoom.price-table__view-item
+													+e.A.element(href='img/content/chameleon-cup-4_lg.jpg' data-fancybox='chameleon-cups')
+														+e.BUTTON.btn._sm(type='button')
+															+icon('icon-loupe','zoom__btn-icon')
+														+e.img.IMG(src='img/content/chameleon-cup-4.jpg')
+												+b.zoom.price-table__view-item
+													+e.A.element(href='img/content/chameleon-cup-5_lg.jpg' data-fancybox='chameleon-cups')
+														+e.BUTTON.btn._sm(type='button')
+															+icon('icon-loupe','zoom__btn-icon')
+														+e.img.IMG(src='img/content/chameleon-cup-5.jpg')
+
 											+e.A.link(href='#!') Кружки хамелеоны подробнее
 										+e.TD
 											+e.SPAN.text 450 руб.
@@ -266,15 +302,17 @@ block content
 											+e.MARK.label._color
 												+e.STRONG Золотые и серебряные кружки
 											+e.view
-												+e.view-item._half
-													+e.view-img.IMG(src='img/content/gold-silver-cups-1.jpg')
-													+e.A.zoom._bottom(href='img/content/gold-silver-cups-1_lg.jpg' data-fancybox='gold-silver-cups')
-														+icon('icon-loupe','price-table__zoom-icon')
-												+e.view-item._half
-													+e.view-img.IMG(src='img/content/gold-silver-cups-2.jpg')
-													+e.A.zoom(href='img/content/gold-silver-cups-2_lg.jpg' data-fancybox='gold-silver-cups')
-														+icon('icon-loupe','price-table__zoom-icon')
-											+e.A.link(href='#!') Кружки хамелеоны подробнее
+												+b.zoom.price-table__view-item._half
+													+e.A.element(href='img/content/gold-silver-cups-1_lg.jpg' data-fancybox='gold-silver-cups')
+														+e.BUTTON.btn._sm._color._top(type='button')
+															+icon('icon-loupe','zoom__btn-icon')
+														+e.img.IMG(src='img/content/gold-silver-cups-1.jpg')
+												+b.zoom.price-table__view-item._half
+													+e.A.element(href='img/content/gold-silver-cups-2_lg.jpg' data-fancybox='gold-silver-cups')
+														+e.BUTTON.btn._sm._color._top(type='button')
+															+icon('icon-loupe','zoom__btn-icon')
+														+e.img.IMG(src='img/content/gold-silver-cups-2.jpg')
+
 										+e.TD
 											+e.SPAN.text 485 руб.
 										+e.TD
@@ -290,39 +328,50 @@ block content
 												+e.STRONG В наличии  разнообразные  интересные кружки.
 												= ' '
 												| Выбор из десятков разновидностей, в каталоге.
-											+e.view
-												+e.view-item._interest
-													+e.view-img._width.IMG(src='img/content/transparent-cups.jpg')
-													+e.A.zoom._top(href='img/content/transparent-cups_lg.jpg' data-fancybox='interesting-cups')
-														+icon('icon-loupe','price-table__zoom-icon')
-													+e.view-text Прозрачные кружки. Матовые и глянцевые
-												+e.view-item._interest
-													+e.view-img._width.IMG(src='img/content/shining-cups.jpg')
-													+e.A.zoom._top(href='img/content/shining-cups_lg.jpg' data-fancybox='interesting-cups')
-														+icon('icon-loupe','price-table__zoom-icon')
-													+e.view-text._color Светящиеся в темноте
-												+e.view-item._interest
-													+e.view-img._width.IMG(src='img/content/beer-cups.jpg')
-													+e.A.zoom._top(href='img/content/beer-cups_lg.jpg' data-fancybox='interesting-cups')
-														+icon('icon-loupe','price-table__zoom-icon')
-													+e.view-text Пивные
-												+e.view-item._interest
-													+e.view-img._width.IMG(src='img/content/sets-cups.jpg')
-													+e.A.zoom._top(href='img/content/sets-cups_lg.jpg' data-fancybox='interesting-cups')
-														+icon('icon-loupe','price-table__zoom-icon')
-													+e.view-text Наборы
-												+e.view-item._interest
-													+e.view-img._width.IMG(src='img/content/spoon-cups.jpg')
-													+e.A.zoom._top(href='img/content/spoon-cups_lg.jpg' data-fancybox='interesting-cups')
-														+icon('icon-loupe','price-table__zoom-icon')
-													+e.view-text Кружки с ложечкой
-												+e.view-item._interest
-													+e.view-img._width.IMG(src='img/content/custom-grip-cups.jpg')
-													+e.A.zoom._top(href='img/content/custom-grip-cups_lg.jpg' data-fancybox='interesting-cups')
-														+icon('icon-loupe','price-table__zoom-icon')
-													+e.view-text С оригинальной ручкой
-											+e.A.link(href='#!') Выбор вариантов заготовок кружек для печати (каталог)
+											+e.view._spaces
+												+b.zoom.price-table__view-item
+													+e.A.element(href='img/content/transparent-cups_lg.jpg' data-fancybox='interesting-cups')
+														+e.BUTTON.btn._sm._color._top(type='button')
+															+icon('icon-loupe','zoom__btn-icon')
+														+e.img.IMG(src='img/content/transparent-cups.jpg')
+														+b.price-table__view-text Прозрачные кружки. Матовые и глянцевые
 
+												+b.zoom.price-table__view-item
+													+e.A.element(href='img/content/shining-cups_lg.jpg' data-fancybox='interesting-cups')
+														+e.BUTTON.btn._sm._top(type='button')
+															+icon('icon-loupe','zoom__btn-icon')
+														+e.img.IMG(src='img/content/shining-cups.jpg')
+														+b.price-table__view-text._color Светящиеся в темноте
+
+												+b.zoom.price-table__view-item
+													+e.A.element(href='img/content/beer-cups_lg.jpg' data-fancybox='interesting-cups')
+														+e.BUTTON.btn._sm._color._top(type='button')
+															+icon('icon-loupe','zoom__btn-icon')
+														+e.img.IMG(src='img/content/beer-cups.jpg')
+														+b.price-table__view-text Пивные
+
+												+b.zoom.price-table__view-item
+													+e.A.element(href='img/content/sets-cups_lg.jpg' data-fancybox='interesting-cups')
+														+e.BUTTON.btn._sm._top(type='button')
+															+icon('icon-loupe','zoom__btn-icon')
+														+e.img.IMG(src='img/content/sets-cups.jpg')
+														+b.price-table__view-text Наборы
+
+												+b.zoom.price-table__view-item
+													+e.A.element(href='img/content/spoon-cups_lg.jpg' data-fancybox='interesting-cups')
+														+e.BUTTON.btn._sm._top(type='button')
+															+icon('icon-loupe','zoom__btn-icon')
+														+e.img.IMG(src='img/content/spoon-cups.jpg')
+														+b.price-table__view-text Кружки с ложечкой
+
+												+b.zoom.price-table__view-item
+													+e.A.element(href='img/content/custom-grip-cups_lg.jpg' data-fancybox='interesting-cups')
+														+e.BUTTON.btn._sm._top(type='button')
+															+icon('icon-loupe','zoom__btn-icon')
+														+e.img.IMG(src='img/content/custom-grip-cups.jpg')
+														+b.price-table__view-text С оригинальной ручкой
+
+											+e.A.link(href='#!') Выбор вариантов заготовок кружек для печати (каталог)
 
 						+e.package
 							+e.package-col
@@ -333,34 +382,40 @@ block content
 									+e.SPAN Выбрать дизайн упаковки
 							+e.package-col
 								+e.package-row
-									+e.package-item
-										+e.package-img.IMG(src='img/content/package-1.jpg')
-										+e.A.package-zoom(href='img/content/package-1_lg.jpg' data-fancybox='cups-package')
-											+icon('icon-loupe','cups__package-zoom-icon')
-									+e.package-item
-										+e.package-img.IMG(src='img/content/package-2.jpg')
-										+e.A.package-zoom(href='img/content/package-2_lg.jpg' data-fancybox='cups-package')
-											+icon('icon-loupe','cups__package-zoom-icon')
-										+e.package-label._right «Почтовая» упаковка
-								+e.package-row
-									+e.package-item
-										+e.package-img.IMG(src='img/content/package-3.jpg')
-										+e.A.package-zoom(href='img/content/package-3_lg.jpg' data-fancybox='cups-package')
-											+icon('icon-loupe','cups__package-zoom-icon')
-									+e.package-item
-										+e.package-img.IMG(src='img/content/package-4.jpg')
-										+e.A.package-zoom(href='img/content/package-4_lg.jpg' data-fancybox='cups-package')
-											+icon('icon-loupe','cups__package-zoom-icon')
-										+e.package-label._font Промежуточная упаковка - калька
-									+e.package-item
-										+e.package-img.IMG(src='img/content/package-5.jpg')
-										+e.A.package-zoom(href='img/content/package-5_lg.jpg' data-fancybox='cups-package')
-											+icon('icon-loupe','cups__package-zoom-icon')
-										+e.package-label._left Представляем выбор нарядных лент
+									+b.zoom.cups__package-item
+										+e.A.element(href='img/content/package-1_lg.jpg' data-fancybox='cups-package')
+											+e.BUTTON.btn._sm._top._color(type='button')
+												+icon('icon-loupe','zoom__btn-icon')
+											+e.img.IMG(src='img/content/package-1.jpg')
+									+b.zoom.cups__package-item
+										+e.A.element(href='img/content/package-2_lg.jpg' data-fancybox='cups-package')
+											+e.BUTTON.btn._sm._top._color(type='button')
+												+icon('icon-loupe','zoom__btn-icon')
+											+e.img.IMG(src='img/content/package-2.jpg')
+											+b.cups__package-label._right «Почтовая» упаковка
 
-						+b.price-table._package
+								+e.package-row
+									+b.zoom.cups__package-item
+										+e.A.element(href='img/content/package-3_lg.jpg' data-fancybox='cups-package')
+											+e.BUTTON.btn._sm._top._color(type='button')
+												+icon('icon-loupe','zoom__btn-icon')
+											+e.img.IMG(src='img/content/package-3.jpg')
+									+b.zoom.cups__package-item
+										+e.A.element(href='img/content/package-4_lg.jpg' data-fancybox='cups-package')
+											+e.BUTTON.btn._sm._top(type='button')
+												+icon('icon-loupe','zoom__btn-icon')
+											+e.img.IMG(src='img/content/package-4.jpg')
+											+b.cups__package-label._font Промежуточная упаковка - калька
+									+b.zoom.cups__package-item
+										+e.A.element(href='img/content/package-5_lg.jpg' data-fancybox='cups-package')
+											+e.BUTTON.btn._sm._top._color(type='button')
+												+icon('icon-loupe','zoom__btn-icon')
+											+e.img.IMG(src='img/content/package-5.jpg')
+											+b.cups__package-label._left Представляем выбор нарядных лент
+
+						+b.price-table
 							+e.TABLE.table
-								+e.THEAD.head
+								+e.THEAD.head._color
 									+e.TR
 										+e.TD(colspan='7') ЦЕНЫ НА УПАКОВКУ КРУЖЕК ОПТОВЫЙ И РОЗНИЧНЫЙ ПРАЙС
 									+e.TR
@@ -379,6 +434,12 @@ block content
 													+e.BR
 													| + ленточка или шнурок.
 											+e.view
+												+b.zoom.price-table__view-item
+													+e.A.element(href='img/content/paper-package-1_lg.jpg' data-fancybox='paper-package')
+														+e.BUTTON.btn._sm._top._color(type='button')
+															+icon('icon-loupe','zoom__btn-icon')
+														+e.img.IMG(src='img/content/paper-package-1.jpg')
+
 												+e.view-item
 													+e.view-img.IMG(src='img/content/paper-package-cups.jpg')
 													+e.A.zoom._color(href='img/content/white-cup-1.jpg' data-fancybox='paper-package-cups')
@@ -427,52 +488,135 @@ block content
 
 						+b.teaser
 							+e.slider.js-teaser-slider
-								+e.slider-item
-									+e.slider-item-in
-										+e.slider-img(style='background-image: url(img/content/teaser-1.jpg)')
-										+e.A.slider-zoom(href='img/content/teaser-1_lg.jpg' data-fancybox='teaser-slider')
-											+icon('icon-loupe','teaser__slider-zoom-icon')
-										+e.slider-label._right Обычное фото
-											+e.BR
-											| на кружку
-								+e.slider-item
-									+e.slider-item-in
-										+e.slider-img(style='background-image: url(img/content/teaser-2.jpg)')
-										+e.A.slider-zoom(href='img/content/teaser-2_lg.jpg' data-fancybox='teaser-slider')
-											+icon('icon-loupe','teaser__slider-zoom-icon')
-										+e.slider-label Портрет по фото.
-											+e.BR
-											| Стиль «Фэнтезийная акварель»
-								+e.slider-item
-									+e.slider-item-in
-										+e.slider-img(style='background-image: url(img/content/teaser-3.jpg)')
-										+e.A.slider-zoom(href='img/content/teaser-3_lg.jpg' data-fancybox='teaser-slider')
-											+icon('icon-loupe','teaser__slider-zoom-icon')
+								+e.slider-item.zoom
+									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-1_lg.jpg' data-fancybox='teaser-slider')
+										+e.DIV.slider-img(style='background-image: url(img/content/teaser-1.jpg)')
+									+e.slider-label._right Обычное фото
+										+e.BR
+										| на кружку
+
+								+e.slider-item.zoom
+									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-2_lg.jpg' data-fancybox='teaser-slider')
+										+e.DIV.slider-img(style='background-image: url(img/content/teaser-2.jpg)')
+									+e.slider-label Портрет по фото.
+										+e.BR
+										| Стиль «Фэнтезийная акварель»
+
+								+e.slider-item.zoom
+									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-3_lg.jpg' data-fancybox='teaser-slider')
+										+e.DIV.slider-img(style='background-image: url(img/content/teaser-3.jpg)')
 										+e.slider-label Стиль портрета
 											+e.BR
 											| «Двойная экспозиция»
-								+e.slider-item
-									+e.slider-item-in
-										+e.slider-img(style='background-image: url(img/content/teaser-4.jpg)')
-										+e.A.slider-zoom(href='img/content/teaser-4_lg.jpg' data-fancybox='teaser-slider')
-											+icon('icon-loupe','teaser__slider-zoom-icon')
+
+								+e.slider-item.zoom
+									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-4_lg.jpg' data-fancybox='teaser-slider')
+										+e.DIV.slider-img(style='background-image: url(img/content/teaser-4.jpg)')
 										+e.slider-label Обычное фото
 											+e.BR
 											| на кружке
-								+e.slider-item
-									+e.slider-item-in
-										+e.slider-img(style='background-image: url(img/content/teaser-5.jpg)')
-										+e.A.slider-zoom(href='img/content/teaser-5_lg.jpg' data-fancybox='teaser-slider')
-											+icon('icon-loupe','teaser__slider-zoom-icon')
+
+								+e.slider-item.zoom
+									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-5_lg.jpg' data-fancybox='teaser-slider')
+										+e.DIV.slider-img(style='background-image: url(img/content/teaser-5.jpg)')
 										+e.slider-label Портрет по фото в стиле
 											+e.BR
 											| «Молодёжный Поп-Арт»
-								+e.slider-item
-									+e.slider-item-in
-										+e.slider-img(style='background-image: url(img/content/teaser-6.jpg)')
-										+e.A.slider-zoom(href='img/content/teaser-6_lg.jpg' data-fancybox='teaser-slider')
-											+icon('icon-loupe','teaser__slider-zoom-icon')
+
+								+e.slider-item.zoom
+									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-6_lg.jpg' data-fancybox='teaser-slider')
+										+e.DIV.slider-img(style='background-image: url(img/content/teaser-6.jpg)')
 										+e.slider-label Стиль портрета «Поп-Арт»
+
+								+e.slider-item.zoom
+									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-7_lg.jpg' data-fancybox='teaser-slider')
+										+e.DIV.slider-img(style='background-image: url(img/content/teaser-7.jpg)')
+										+e.slider-label Стиль портрета «Поп-Арт»
+
+								+e.slider-item.zoom
+									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-8_lg.jpg' data-fancybox='teaser-slider')
+										+e.DIV.slider-img(style='background-image: url(img/content/teaser-8.jpg)')
+										+e.slider-label Стиль портрета «Поп-Арт»
+
+								+e.slider-item.zoom
+									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-9_lg.jpg' data-fancybox='teaser-slider')
+										+e.DIV.slider-img(style='background-image: url(img/content/teaser-9.jpg)')
+										+e.slider-label Стиль портрета
+											+e.BR
+											| «ТИПОГРАФИКА»
+
+								+e.slider-item.zoom
+									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-10_lg.jpg' data-fancybox='teaser-slider')
+										+e.DIV.slider-img(style='background-image: url(img/content/teaser-10.jpg)')
+										+e.slider-label Стиль портрета «Вектор-Арт»
+
+								+e.slider-item.zoom
+									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-11_lg.jpg' data-fancybox='teaser-slider')
+										+e.DIV.slider-img(style='background-image: url(img/content/teaser-11.jpg)')
+										+e.slider-label Стиль портрета «КОМИКС,
+											+e.BR
+											| ВЕКТОР-АРТ»
+
+								+e.slider-item.zoom
+									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-12_lg.jpg' data-fancybox='teaser-slider')
+										+e.DIV.slider-img(style='background-image: url(img/content/teaser-12.jpg)')
+										+e.slider-label Стиль портрета
+											+e.BR
+											| «ПОЛИГОНАЛЬНЫ Й»
+
+								+e.slider-item.zoom
+									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-13_lg.jpg' data-fancybox='teaser-slider')
+										+e.DIV.slider-img(style='background-image: url(img/content/teaser-13.jpg)')
+										+e.slider-label Стиль портрета
+											+e.BR
+											| «ПОЛИГОНАЛЬНЫ Й»
+
+								+e.slider-item.zoom
+									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-14_lg.jpg' data-fancybox='teaser-slider')
+										+e.DIV.slider-img(style='background-image: url(img/content/teaser-14.jpg)')
+										+e.slider-label Портрет по фото
+											+e.BR
+											| на кружке «ВЕКТОР-АРТ»
+
+								+e.slider-item.zoom
+									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-15_lg.jpg' data-fancybox='teaser-slider')
+										+e.DIV.slider-img(style='background-image: url(img/content/teaser-15.jpg)')
+										+e.slider-label Портрет по фото
+											+e.BR
+											| на кружке «КАРАНДАШОМ»
+
+								+e.slider-item.zoom
+										+e.A.slider-item-pic.zoom__element(href='img/content/teaser-16_lg.jpg' data-fancybox='teaser-slider')
+											+e.DIV.slider-img(style='background-image: url(img/content/teaser-16.jpg)')
+											+e.slider-label Портрет в стиле «ВЕКТОР-АРТ
+												+e.BR
+												| плюс ПОП-АРТ»
+
+								+e.slider-item.zoom
+									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-17_lg.jpg' data-fancybox='teaser-slider')
+										+e.DIV.slider-img(style='background-image: url(img/content/teaser-17.jpg)')
+										+e.slider-label Портрет по фото на кружке «АКВАРЕЛЬ-АРТ»
+
+								+e.slider-item.zoom
+									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-18_lg.jpg' data-fancybox='teaser-slider')
+										+e.DIV.slider-img(style='background-image: url(img/content/teaser-18.jpg)')
+										+e.slider-label Обычное фото
+											+e.BR
+											| на кружке
+
+								+e.slider-item.zoom
+									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-19_lg.jpg' data-fancybox='teaser-slider')
+										+e.DIV.slider-img(style='background-image: url(img/content/teaser-19.jpg)')
+										+e.slider-label Портрет в стиле «РЕТРО»
+
+								+e.slider-item.zoom
+									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-20_lg.jpg' data-fancybox='teaser-slider')
+										+e.DIV.slider-img(style='background-image: url(img/content/teaser-20.jpg)')
+										+e.slider-label Портрет по фото
+											+e.BR
+											| на кружке «ВЕКТОР-АРТ»
+											+e.BR
+											| Молодёжный стиль.
 
 						+b.our-address._cups
 							+e.title Мы ждем ваших заказов и находимся по адресу:

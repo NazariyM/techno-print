@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6
 
 .title-md
 	padding: 0 30px
-	+f('psr', 24)
+	+f('psr', 21)
 	line-height: 1.25
 	color: #00306B
 	text-transform: uppercase
@@ -154,49 +154,50 @@ h1, h2, h3, h4, h5, h6
 	overflow: hidden
 	&::after
 		position: absolute
-		top: -5px
-		right: -7px
-		+sr('cart_add')
-		transform: scale(.85)
+		top: -1px
+		right: -1px
+		width: 64px
+		height: 63px
+		+ico('cart_add-lg')
 		content: ''
 	&:hover
 		background: #01B6F8
 		border-bottom-color: #FFBE77
 	&:hover::after
-		+sr('cart_add-hvr')
+		+ico('cart_add-lg-hvr')
 	&:active
 		background: #23568A
 		border-bottom-color: #E63E2D
 	&:active::after
-		+sr('cart_add-act')
+		+ico('cart_add-lg-act')
 
-.wish-btn
-	position: relative
-	min-width: 230px
-	height: 37px
-	line-height: 37px
-	padding: 0 40px 0 10px
-	text-align: center
-	font-size: 19px
-	color: #fff
-	background: #EEF5FC
-	border-bottom: 1px solid #E1EFF6
-	&::after
-		content: ''
-		position: absolute
-		top: 0
-		right: 0
-		+st('heart')
-	&:hover
-		background: #61CDFF
-		border-bottom-color: #FFC486
-	&:active
-		background: #1E4D80
-		border-bottom-color: #FF0000
-	&:hover::after
-		+st('heart-hvr')
-	&:active::after
-		+st('heart-act')
+//.wish-btn
+//	position: relative
+//	min-width: 230px
+//	height: 37px
+//	line-height: 37px
+//	padding: 0 40px 0 10px
+//	text-align: center
+//	font-size: 19px
+//	color: #fff
+//	background: #EEF5FC
+//	border-bottom: 1px solid #E1EFF6
+//	&::after
+//		content: ''
+//		position: absolute
+//		top: 0
+//		right: 0
+//		//+st('heart')
+//	&:hover
+//		background: #61CDFF
+//		border-bottom-color: #FFC486
+//	&:active
+//		background: #1E4D80
+//		border-bottom-color: #FF0000
+//	&:hover::after
+//		//+st('heart-hvr')
+//	&:active::after
+//		//+st('heart-act')
 
 .order-btn
 	position: relative

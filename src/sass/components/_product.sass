@@ -547,8 +547,8 @@
 			top: 0
 			right: 0
 			content: ''
-			width: 38px
-			height: 36px
+			width: 37px
+			height: 35px
 			+ico('cart_add')
 			+md
 				width: 30px
@@ -993,13 +993,15 @@
 			content: ''
 			display: block
 			position: absolute
+			width: 56px
+			height: 55px
 			right: 0
 			top: 0
-			+sr('edit')
+			+ico('edit')
 		&:hover::after
-			+sr('edit-hvr')
+			+ico('edit-hvr')
 		&:active::after
-			+sr('edit-act')
+			+ico('edit-act')
 	&__calc-btn:hover &__calc-icon
 		fill: #2ABAFC
 	&__calc-btn:active &__calc-icon
@@ -1013,17 +1015,32 @@
 	&__wish-btn
 		margin-bottom: 20px
 	&__wish-add-btn
+		position: relative
+		width: 58px
+		height: 55px
 		padding: 1px 0
 		margin-right: 7px
 		background: #EEF5FC
+		border-bottom: 1px solid #e1eff6
+		overflow: hidden
+		&:hover
+			border-bottom-color: #ffc486
+			background: #61cdff
+		&:active
+			border-bottom-color: #ff0000
+			background: #1e4d80
 		&::after
 			content: ''
-			display: block
-			+sr('heart')
+			position: absolute
+			top: -1px
+			left: 1px
+			width: 55px
+			height: 55px
+			+ico('fav')
 		&:hover::after
-			+sr('heart-hvr')
+			+ico('fav-hvr')
 		&:active::after
-			+sr('heart-act')
+			+ico('fav-act')
 			
 	&__filter
 		font-size: 0
