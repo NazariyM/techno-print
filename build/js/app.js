@@ -3584,6 +3584,7 @@ $(document).ready(function () {
     nextArrow: '<button type="button" class="teaser__slider-btn teaser__slider-btn_next"><svg class="teaser__slider-icon icon-arr-sld-r"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr-sld-r"></use></svg></button>'
   });
 });
+/* eslint-disable no-undef */
 $(function () {
   // object fit images
   objectFitImages();
@@ -3741,6 +3742,19 @@ $(function () {
       });
     });
   })();
+
+  // function initListView() {
+  //   const $filter = $('.js-product-filter');
+  //   const $filterViewBtn = $filter.find('.js-filter-view-btn');
+  //   const $filterViewContainer = $filter.siblings('.js-filter-container');
+  //   const $filterViewItem = $filterViewContainer.find('.product__item');
+  //   $filterViewBtn.on('click', function(ev) {
+  //     ev.preventDefault();
+  //     $(this).toggleClass('is-active');
+  //     $filterViewItem.toggleClass('list');
+  //   });
+  // }
+  // initListView();
 
   // // rating
   //   (function() {

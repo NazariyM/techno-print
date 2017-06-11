@@ -126,38 +126,44 @@
 		.decor__line
 			width: 80%
 			bottom: 0
+			+md
+				width: 81%
 		.decor__line::after
 			right: -26px
 			border-width: 18px 18px 0 0
 		.decor__line::before
 			right: -8px
 			border-width: 0 0 18px 13px
-		
 
 /* breadcrumbs
 	----------------------------------- */
 .breadcrumbs
-	font-size: 0
-	&__link
+	&__list
+		font-size: 0
+	&__item
 		display: inline-block
 		vertical-align: middle
+		&:last-child a::after
+			display: none
+		&.is-active
+			pointer-events: none
+	&__link
 		font-size: 20px
-		span
-			display: inline-block
-			vertical-align: middle
+		+md
+			font-size: 18px
 		&::after
 			display: inline-block
 			vertical-align: middle
 			margin: 0 3px
 			content: '/'
-		&:last-child::after
-			display: none
+			pointer-events: none
 		&:hover
 			color: $hover
-		&.is-active
-			pointer-events: none
-	&__link:hover::after
-		color: #000
+		&:hover::after
+			color: #000
+	span
+		display: inline-block
+		vertical-align: middle
 	&__icon
 		display: inline-block
 		vertical-align: middle
@@ -167,8 +173,9 @@
 /* page
 	----------------------------------- */
 .page
-	&_default
-		//padding: 35px 0 0
+	&__container
+		+md
+			max-width: 1200px
 	&__bar
 		position: relative
 		display: flex
@@ -177,6 +184,8 @@
 		padding-left: 15px
 		min-height: 46px
 		background: #EBECEC
+		+md
+			min-height: 38px
 		&::after
 			content: ''
 			position: absolute
@@ -196,7 +205,7 @@
 			text-align: center
 			color: #333333
 			+md
-			
+				font-size: 18px
 			&_has-icon
 				position: relative
 				padding: 8px 75px 8px 30px
@@ -238,18 +247,21 @@
 			.icon-cups
 				right: 15px
 				font-size: 28px
-				
 	&__in
 		display: flex
 		justify-content: space-between
 		margin: 30px 0 0
 	&__side
-		width: 18.5%
+		width: 19%
+		+md
+			width: 22.2%
 	&__main
 		display: flex
 		flex-direction: column
 		width: 80%
-	
+		+md
+			width: 77%
+
 /* pagination
 	----------------------------------- */
 .pagination
@@ -331,9 +343,11 @@
 		font-size: 19px
 		background: #F7FAFF
 		text-align: center
-		+trs
+		transition: background .15s ease
 		&:hover
 			background: #E5F0FC
+		&:active
+			background: darken(#E5F0FC, 5)
 			
 	&_default
 		margin-top: auto
@@ -347,6 +361,8 @@
 	&__text
 		margin-bottom: 3px
 		color: #1C487A
+		+md
+			font-size: 15px
 	&__in
 		display: flex
 		flex-direction: row-reverse
@@ -373,6 +389,8 @@
 		cursor: pointer
 	&__star
 		font-size: 23px
+		+md
+			font-size: 19px
 		
 /* check
 	----------------------------------- */
@@ -522,6 +540,7 @@
 		padding: 10px
 		+tr(opacity .3s)
 		opacity: 0
+		z-index: 1
 		&:hover &-icon
 			fill: darken(#B9BDC7, 10)
 		&:active &-icon
@@ -541,4 +560,11 @@
 			bottom: auto
 		&_color &-icon
 			fill: #5b5f69
-			
+		&_sld
+			padding: 5px
+			top: 10px
+			right: 10px
+			bottom: auto
+			left: auto
+		&_sld &-icon
+			fill: #fff

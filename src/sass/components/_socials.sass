@@ -43,14 +43,24 @@
 			fill: #fff
 		.icon-vk
 			font-size: 13px
+			+md
+				font-size: 10px
 		.icon-fb
 			font-size: 18px
+			+md
+				font-size: 14px
 		.icon-tw
 			font-size: 16px
+			+md
+				font-size: 13px
 		.icon-od
 			font-size: 20px
+			+md
+				font-size: 17px
 		.icon-gp
 			font-size: 16px
+			+md
+				font-size: 12px
 	
 	&_footer
 		display: inline-block
@@ -103,3 +113,8 @@
 	
 	&_product-card
 		margin-bottom: 5px
+	&_product-card &__item
+		+md
+			width: 28px
+			height: 28px
+			margin-left: 2px

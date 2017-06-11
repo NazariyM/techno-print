@@ -4,18 +4,12 @@ title: Техно-принт
 extends layouts/_layout
 
 block content
-	+b.MAIN.page._default
+	+b.MAIN.page
 		+e.container.container
 			+e.bar
-				+b.breadcrumbs
-					+e.A.link(href='#!')
-						+icon('icon-house', 'breadcrumbs__icon')
-						= ' '
-						+e.SPAN Главная
-					+e.A.link(href='#!')
-						+e.SPAN Машинная вышивка
-					+e.A.link.is-active(href='#!')
-						+e.SPAN Вышивка имени на полотенце
+				-
+					var breadCrumbsList = [{text: 'Машинная вышивка'}, {text: 'Вышивка имени на полотенце', active: 'is-active'}];
+				include components/_breadcrumbs
 
 				+e.bar-title
 					+e.SPAN Артикул: 22
@@ -88,11 +82,10 @@ block content
 												- var socialsClass = '_product-card'
 												include components/_socials
 
-										+e.props-col
-											+e.hashtags
-												+e.A.hashtags-link(href='#!') #полотенце в подарок
-												+e.A.hashtags-link(href='#!') #вышивки на полотенце
-												+e.A.hashtags-link(href='#!') #сувениры с вышивкой
+										+e.props-col.hashtags
+											+e.A.hashtags-link(href='#!') #полотенце в подарок
+											+e.A.hashtags-link(href='#!') #вышивки на полотенце
+											+e.A.hashtags-link(href='#!') #сувениры с вышивкой
 
 								+e.card-col.product__descr
 									+e.descr-title ВЫШИВКА ИМЕНИ НА ПОЛОТЕНЦЕ,
@@ -141,7 +134,7 @@ block content
 									+e.BUTTON.btn-cart.btn-cart(type='submit') ДОБАВИТЬ В КОРЗИНУ
 
 
-						+e.sect._has-filter
+						+e.sect._has-filter.js-product-filter
 							+e.sect-title
 								+icon('icon-lovers', 'product__sect-icon')
 								+e.SPAN Похожие и сопутствующие товары.
@@ -166,10 +159,10 @@ block content
 									+icon('icon-filter-squares', 'product__filter-icon')
 									= ' '
 									+e.SPAN 60
-								+e.BUTTON.filter-btn(type='button')
+								+e.BUTTON.filter-btn.js-filter-view-btn(type='button')
 									+icon('icon-filter-list', 'product__filter-icon')
 
-						+e.examples._default
+						+e.examples._default.js-filter-container
 							+e.item
 								+e.item-pic-wrap.js-product-item-pic
 									+e.A(href='#!').item-pic.decor

@@ -30,13 +30,13 @@
                 <li class="nav__item"><a href="#!" class="nav__link">Контакты</a></li>
               </ul>
             </nav>
-            <div class="login login_header"><button type="button" class="login__btn js-login-btn"><svg class="icon-user login__icon"><use xlink:href="img/sprite.svg#icon-user"></use></svg><span>Войти</span></button><a href="#!" class="login__btn"><svg class="icon-pencil login__icon"><use xlink:href="img/sprite.svg#icon-pencil"></use></svg><span>Регистрация</span></a>
+            <div class="login login_header"><button type="button" class="login__btn js-login-btn"><svg class="icon-user login__icon"><use xlink:href="img/sprite.svg#icon-user"></use></svg><span class="login__text">Войти</span></button><a href="#!" class="login__btn"><svg class="icon-pencil login__icon"><use xlink:href="img/sprite.svg#icon-pencil"></use></svg><span class="login__text">Регистрация</span></a>
               <div
                 class="login__popup"><svg class="icon-user login__popup-icon"><use xlink:href="img/sprite.svg#icon-user"></use></svg>
                 <div class="login__popup-text">Вход:</div>
                 <form action="#!">
                   <div class="login__popup-field"><input type="name" placeholder="Имя / Организация" class="login__popup-input" /></div>
-                  <div class="login__popup-field"><input type="password" placeholder="Пароль" class="login__popup-input" /></div><button type="submit" class="login__popup-btn">Войти</button></form>
+                  <div class="login__popup-field"><input type="password" placeholder="Пароль" class="login__popup-input" /></div><button type="submit" class="login__popup-btn"><span class="login__popup-btn-text">Войти</span></button></form>
             </div>
           </div>
         </div>
@@ -57,13 +57,13 @@
       </div>
       <div class="header__mid-col">
         <div class="home-slider home-slider_default js-home-slider">
-          <div class="home-slider__item"><img src="img/content/sld-1.jpg" alt="" role="presentation" /><a href="#!" class="home-slider__label">Машинная вы шивка</a></div>
-          <div class="home-slider__item"><img src="img/content/sld-2.jpg" alt="" role="presentation" /><a href="#!" class="home-slider__label">Значки и сувениры</a></div>
-          <div class="home-slider__item"><img src="img/content/sld-3.jpg" alt="" role="presentation" /><a href="#!" class="home-slider__label">Печать на одежде</a></div>
-          <div class="home-slider__item"><img src="img/content/sld-2.jpg" alt="" role="presentation" /><a href="#!" class="home-slider__label">Печать на одежде</a></div>
-          <div class="home-slider__item"><img src="img/content/sld-3.jpg" alt="" role="presentation" /><a href="#!" class="home-slider__label">Печать на одежде</a></div>
-          <div class="home-slider__item"><img src="img/content/sld-2.jpg" alt="" role="presentation" /><a href="#!" class="home-slider__label">Печать на одежде</a></div>
-          <div class="home-slider__item"><img src="img/content/sld-1.jpg" alt="" role="presentation" /><a href="#!" class="home-slider__label">Печать на одежде</a></div>
+          <div class="home-slider__item"><img src="img/content/home-sld-1.jpg" alt="" role="presentation" /><a href="#!" class="home-slider__label">Машинная вы шивка</a></div>
+          <div class="home-slider__item"><img src="img/content/home-sld-2.jpg" alt="" role="presentation" /><a href="#!" class="home-slider__label">Значки и брелоки</a></div>
+          <div class="home-slider__item"><img src="img/content/home-sld-3.jpg" alt="" role="presentation" /><a href="#!" class="home-slider__label">Печать на кружках</a></div>
+          <div class="home-slider__item"><img src="img/content/home-sld-4.jpg" alt="" role="presentation" /><a href="#!" class="home-slider__label">Печать на одежде</a></div>
+          <div class="home-slider__item"><img src="img/content/home-sld-5.jpg" alt="" role="presentation" /><a href="#!" class="home-slider__label">Фотомагниты</a></div>
+          <div class="home-slider__item"><img src="img/content/home-sld-6.jpg" alt="" role="presentation" /><a href="#!" class="home-slider__label">Современны е фотокниги</a></div>
+          <div class="home-slider__item"><img src="img/content/home-sld-7.jpg" alt="" role="presentation" /><a href="#!" class="home-slider__label">Печать на холсте, натяжка</a></div>
         </div>
       </div>
       <div class="header__mid-col">
@@ -92,11 +92,16 @@
     </div>
     </header>
     <!-- end header-->
-    <main class="page page_default" role="main">
+    <main class="page" role="main">
       <div class="page__container container">
         <div class="page__bar">
-          <div class="breadcrumbs"><a href="#!" class="breadcrumbs__link"><svg class="icon-house breadcrumbs__icon"><use xlink:href="img/sprite.svg#icon-house"></use></svg> <span>Главная</span></a><a href="#!" class="breadcrumbs__link"><span>Машинная вышивка</span></a><a href="#!"
-              class="breadcrumbs__link is-active"><span>Вышивка имени на полотенце</span></a></div>
+          <div class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item"><a href="#!" class="breadcrumbs__link"><svg class="icon-house breadcrumbs__icon"><use xlink:href="img/sprite.svg#icon-house"></use></svg><span>Главная</span></a></li>
+              <li class="breadcrumbs__item"><a href="#!" class="breadcrumbs__link"><span>Машинная вышивка</span></a></li>
+              <li class="breadcrumbs__item is-active"><a href="#!" class="breadcrumbs__link"><span>Вышивка имени на полотенце</span></a></li>
+            </ul>
+          </div>
           <div class="page__bar-title"><span>Артикул: 22</span></div>
         </div>
         <div class="page__in">
@@ -464,9 +469,7 @@
                                 class="socials__item socials__item_gp"><svg class="icon-gp icon"><use xlink:href="img/sprite.svg#icon-gp"></use></svg></a></div>
                       </div>
                     </div>
-                    <div class="product__props-col">
-                      <div class="product__hashtags"><a href="#!" class="product__hashtags-link">#полотенце в подарок</a><a href="#!" class="product__hashtags-link">#вышивки на полотенце</a><a href="#!" class="product__hashtags-link">#сувениры с вышивкой</a></div>
-                    </div>
+                    <div class="product__props-col hashtags"><a href="#!" class="product__hashtags-link">#полотенце в подарок</a><a href="#!" class="product__hashtags-link">#вышивки на полотенце</a><a href="#!" class="product__hashtags-link">#сувениры с вышивкой</a></div>
                   </div>
                 </div>
                 <div class="product__card-col product__descr">
@@ -495,15 +498,15 @@
                     </div><a href="#!" class="product__link-sale link-sale"><span>Цены на опт.</span></a></div><button type="submit" class="product__btn-cart btn-cart">ДОБАВИТЬ В КОРЗИНУ</button></div>
             </div>
             </form>
-            <div class="product__sect product__sect_has-filter">
+            <div class="product__sect product__sect_has-filter js-product-filter">
               <div class="product__sect-title"><svg class="icon-lovers product__sect-icon"><use xlink:href="img/sprite.svg#icon-lovers"></use></svg><span>Похожие и сопутствующие товары.</span></div>
               <div class="product__filter"><button type="button" class="product__filter-btn"><svg class="icon-filter-down product__filter-icon"><use xlink:href="img/sprite.svg#icon-filter-down"></use></svg> <span>Цена</span></button><button type="button" class="product__filter-btn"><svg class="icon-filter-up product__filter-icon"><use xlink:href="img/sprite.svg#icon-filter-up"></use></svg> <span>Цена</span></button>
                 <button
                   type="button" class="product__filter-btn is-active"><span>Лучшие</span> <svg class="icon-filter-best product__filter-icon"><use xlink:href="img/sprite.svg#icon-filter-best"></use></svg></button><button type="button" class="product__filter-btn"><svg class="icon-filter-squares product__filter-icon"><use xlink:href="img/sprite.svg#icon-filter-squares"></use></svg> <span>20</span></button>
                   <button
-                    type="button" class="product__filter-btn"><svg class="icon-filter-squares product__filter-icon"><use xlink:href="img/sprite.svg#icon-filter-squares"></use></svg> <span>60</span></button><button type="button" class="product__filter-btn"><svg class="icon-filter-list product__filter-icon"><use xlink:href="img/sprite.svg#icon-filter-list"></use></svg></button></div>
+                    type="button" class="product__filter-btn"><svg class="icon-filter-squares product__filter-icon"><use xlink:href="img/sprite.svg#icon-filter-squares"></use></svg> <span>60</span></button><button type="button" class="product__filter-btn js-filter-view-btn"><svg class="icon-filter-list product__filter-icon"><use xlink:href="img/sprite.svg#icon-filter-list"></use></svg></button></div>
             </div>
-            <div class="product__examples product__examples_default">
+            <div class="product__examples product__examples_default js-filter-container">
               <div class="product__item">
                 <div class="product__item-pic-wrap js-product-item-pic">
                   <a href="#!" class="product__item-pic decor"><img src="img/content/prod-11.jpg" class="product__item-img" alt="" role="presentation" />

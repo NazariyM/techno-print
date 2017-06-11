@@ -600,22 +600,37 @@
 			font-size: 16px
 		+xs
 			display: none
-	span
+	&__text
 		display: inline-block
 		vertical-align: middle
 	&__popup
 		display: none
-		min-width: 440px
+		min-width: 420px
 		position: absolute
 		top: -12px
-		left: -349px
+		left: -332px
 		z-index: 5
-		padding: 95px 45px 60px
+		padding: 75px 40px 35px
 		background: #DEDEDE
+		&::after
+			content: ''
+			position: absolute
+			bottom: -4px
+			left: 50%
+			transform: translateX(-50%)
+			z-index: 1
+			height: 4px
+			width: 90%
+			background: #cfcfcf
 		+md
 			left: -225px
 			min-width: 300px
-			padding: 30px 20px 20px
+			padding: 50px 20px 20px
+		+sm
+			left: -235px
+			padding: 20px
+		+xs
+			left: -260px
 		&-text
 			padding-left: 55px
 			margin-bottom: 20px
@@ -624,6 +639,8 @@
 			text-decoration: underline
 			text-decoration-color: #A0AABA
 			+md
+				padding-left: 43px
+				margin-bottom: 14px
 				font-size: 18px
 		&-field
 			position: relative
@@ -633,20 +650,16 @@
 				top: 0
 				left: 0
 				z-index: 2
+				width: 53px
+				height: 40px
 				content: ''
 				+md
-					top: -6px
-					transform: scale(.7)
+					width: 43px
+					height: 32px
 			&:nth-child(1)::before
-				+sr('user_black')
-				left: -4px
-				+md
-					left: -11px
+				+ico('user-log')
 			&:nth-child(2)::before
-				+sr('dots_black')
-				left: -3px
-				+md
-					left: -10px
+				+ico('dots-log')
 			& + &
 				margin-top: 15px
 		&-input
@@ -658,12 +671,15 @@
 			background: #ffffff
 			+f('ver', 17)
 			+md
-				line-height: 30px
-				height: 30px
+				padding: 0 5px 0 50px
+				line-height: 32px
+				height: 32px
+				font-size: 14px
+			+sm
 				font-size: 13px
 		&-btn
 			display: block
-			margin: 50px auto 0
+			margin: 35px auto 0
 			min-width: 276px
 			padding: 0 15px
 			height: 52px
@@ -671,11 +687,9 @@
 			+f('oss', 22)
 			color: #ffffff
 			text-transform: uppercase
-			border: 1px solid #99AFCF
-			text-decoration: underline
-			text-decoration-color: #A0AABA
+			border: 2px solid #99AFCF
 			background: #B9C0C9
-			+trs
+			transition: .15s ease
 			+md
 				min-width: 206px
 				margin: 20px auto 0
@@ -683,16 +697,28 @@
 				line-height: 36px
 				font-size: 15px
 				text-decoration: none
+			&-text
+				border-bottom: 2px solid #a0aaba
 			&:hover
-				background: darken(#B9C0C9, 15)
+				background: #fcfdff
+				border-color: #5494f5
+				color: #2C4C99
+			&:hover &-text
+				border-bottom-color: #eff4f9
+			&:active &-text
+				border-bottom-color: #999999
+			&:active
+				background: #b9c0c9
+				border-color: #b8b8b8
 		&-icon
 			position: absolute
-			top: 30px
+			top: 20px
 			left: 48px
 			z-index: 2
 			fill: #053B76
 			font-size: 41px
 			+md
+				left: 32px
 				font-size: 22px
 		
 	&_header

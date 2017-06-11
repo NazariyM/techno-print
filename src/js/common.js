@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 $(() => {
   // object fit images
   objectFitImages();
@@ -155,6 +156,19 @@ $(() => {
       });
     });
   }());
+
+  // function initListView() {
+  //   const $filter = $('.js-product-filter');
+  //   const $filterViewBtn = $filter.find('.js-filter-view-btn');
+  //   const $filterViewContainer = $filter.siblings('.js-filter-container');
+  //   const $filterViewItem = $filterViewContainer.find('.product__item');
+  //   $filterViewBtn.on('click', function(ev) {
+  //     ev.preventDefault();
+  //     $(this).toggleClass('is-active');
+  //     $filterViewItem.toggleClass('list');
+  //   });
+  // }
+  // initListView();
 
 // // rating
 //   (function() {

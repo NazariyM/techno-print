@@ -404,6 +404,9 @@
 			display: block
 		&-item
 			padding: 0 2px
+			&:nth-child(4n) .zoom__btn_sld
+				right: auto
+				left: 10px
 		&-item:hover &-zoom
 			opacity: 1
 			visibility: visible
@@ -506,16 +509,16 @@
 	&__text
 		font-family: Arial, sans-serif
 		font-size: 20px
-	&__title
-		margin-bottom: 25px
-		text-transform: uppercase
-		font-weight: 700
-		text-align: center
 		&_last
 			max-width: 1015px
 			margin: 40px auto 0
 			padding: 20px 0 0
 			border-top: 1px solid #cecece
+	&__title
+		margin-bottom: 25px
+		text-transform: uppercase
+		font-weight: 700
+		text-align: center
 	&__descr
 		margin-bottom: 25px
 		text-align: center

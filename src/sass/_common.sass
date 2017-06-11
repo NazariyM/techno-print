@@ -152,6 +152,9 @@ h1, h2, h3, h4, h5, h6
 	background: #2AB1E2
 	border-bottom: 2px solid #E3E3E3
 	overflow: hidden
+	+md
+		padding: 15px 80px 15px 30px
+		font-size: 17px
 	&::after
 		position: absolute
 		top: -1px
@@ -160,6 +163,9 @@ h1, h2, h3, h4, h5, h6
 		height: 63px
 		+ico('cart_add-lg')
 		content: ''
+		+md
+			width: 54px
+			height: 54px
 	&:hover
 		background: #01B6F8
 		border-bottom-color: #FFBE77
