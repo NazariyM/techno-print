@@ -46,9 +46,9 @@ block content
 
 										+e.form-group
 											+e.form-field._pass
-												+e.INPUT.input(type='text' name='' placeholder='Пароль для регистрации')
+												+e.INPUT.input(type='password' name='' placeholder='Пароль для регистрации' required)
 											+e.form-field._pass
-												+e.INPUT.input(type='text' name='' placeholder='Повторите пароль')
+												+e.INPUT.input(type='password' name='' placeholder='Повторите пароль' required)
 											+e.form-field._text
 												+b.check.order__check
 													+e.INPUT(type='checkbox' name='' id='no-reg')
@@ -105,7 +105,7 @@ block content
 														.decor__line
 
 								+e.row
-									+e.BUTTON.order__submit-btn.submit-btn(type='submit')
+									+b.BUTTON.confirm-btn(type='submit')
 										+e.SPAN Подтвердить
 
 				-

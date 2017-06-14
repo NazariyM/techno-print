@@ -1,3 +1,280 @@
+/* order
+	----------------------------------- */
+.order
+	padding: 25px 25px 35px
+	+md
+		padding: 15px 20px 25px
+	+sm
+		padding: 15px 15px 20px
+	&__in
+		max-width: 1300px
+		margin: 0 auto
+		+clr
+	&__col
+		float: left
+		padding: 0
+		&:nth-child(1)
+			width: 32%
+		&:nth-child(2)
+			width: 68%
+			padding-left: 7%
+	&__row
+		clear: both
+		padding-top: 50px
+		text-align: center
+		+md
+			padding-top: 30px
+	&__title
+		margin-bottom: 35px
+		+f('ver', 22)
+		text-align: center
+		+md
+			margin-bottom: 20px
+			font-size: 19px
+		+sm
+			margin-bottom: 15px
+			font-size: 17px
+	&__form-group
+		&-label
+			font-size: 22px
+			color: #999999
+			+md
+				font-size: 19px
+			& + &
+				margin-top: 10px
+		& + &
+			margin-top: 25px
+			+md
+				margin-top: 20px
+			+sm
+				margin-top: 15px
+	&__form-field
+		position: relative
+		padding-left: 50px
+		border: 2px solid #99AFCF
+		overflow: hidden
+		&::before
+			pointer-events: none
+			position: absolute
+			top: -3px
+			left: -1px
+			width: 54px
+			height: 45px
+			content: ''
+			+md
+				width: 50px
+				height: 39px
+		&_name::before
+			+ico('user-log')
+		&_email::before
+			+ico('email-log')
+		&_pass::before
+			+ico('dots-log')
+		&_tel::before
+			+ico('phone-log')
+		&_text
+			padding: 0 15px
+			text-align: center
+			border: none
+		&_required
+			position: relative
+			&::after
+				position: absolute
+				right: 2px
+				top: -2px
+				content: '*'
+				color: #E63833
+				+f('ver', 22)
+				+sm
+					top: 0
+					right: 4px
+					font-size: 17px
+		&_address
+			padding: 0
+			textarea
+				display: block
+				width: 100%
+				min-height: 120px
+				padding: 10px 15px
+				resize: none
+				border: none
+				+f('ver', 19)
+				+md
+					font-size: 17px
+				+md
+					font-size: 15px
+		& + &
+			margin-top: 15px
+	
+	&__form-ask
+		margin: 20px 0
+		text-align: center
+		font-size: 19px
+		+md
+			font-size: 17px
+		+sm
+			margin: 15px 0
+			font-size: 15px
+		&-in
+			margin-top: 15px
+			font-size: 0
+			.order__check
+				margin: 0 15px
+	&__input
+		width: 100%
+		line-height: 40px
+		height: 40px
+		padding: 0 20px 0 15px
+		+f('ver', 19)
+		color: #000
+		+placeholder-color(#999999)
+		+md
+			height: 34px
+			padding: 0 20px 0 10px
+			line-height: 34px
+			font-size: 16px
+		+sm
+			font-size: 14px
+	
+	&__check
+		display: inline-block
+	&__comment
+		margin-top: -5px
+		&-in
+			padding: 20px
+			background: #E0E0E0
+			+sm
+				padding: 15px
+		&-descr
+			margin-bottom: 10px
+			+sm
+				font-size: 16px
+		&-message-wrap
+			position: relative
+			padding-left: 53px
+			border: 2px solid #99AFCF
+			background: #F7F7F7
+			overflow: hidden
+			&::before
+				content: ''
+				position: absolute
+				top: -1px
+				left: 0
+				width: 52px
+				height: 40px
+				+ico('dots-log')
+		&-message
+			display: block
+			width: 100%
+			padding: 6px 10px 30px
+			resize: none
+			min-height: 170px
+			border: none
+			+f('psr', 19)
+			transition: min-height 0.3s
+			+sm
+				font-size: 17px
+			&.extended
+				min-height: 220px
+		&-extend
+			position: absolute
+			left: calc(50% - 33px)
+			bottom: 3px
+			width: 66px
+			height: 27px
+			padding-top: 5px
+			background: #F7F7F7
+			&:hover
+				background: #E0E0E0
+			&:hover &-icon
+				fill: #56708A
+			&:active &-icon
+				fill: #103559
+			&-icon
+				fill: #C4C4C4
+				font-size: 17px
+			&.is-active &-icon
+				transform: scaleY(-1)
+	&__file
+		margin-top: 25px
+		font-size: 0
+		&-row
+			display: inline-block
+			vertical-align: top
+			width: calc(100% - 120px)
+			margin-left: 20px
+		&-item
+			display: inline-block
+			vertical-align: middle
+			width: 100px
+			height: 90px
+			+vertical
+			& + &
+				margin-left: 20px
+			img
+				display: inline-block
+				vertical-align: middle
+				width: 100%
+				height: 100%
+				object-fit: contain
+			.decor__line:before
+				right: 0
+				border-width: 0 0 16px 15px
+			.decor__line:after
+				right: -17px
+				border-width: 16px 17px 0 0
+				background-color: #E0E0E0
+		&-btn-close
+			position: absolute
+			right: -15px
+			top: -15px
+			width: 24px
+			height: 24px
+			border-radius: 50%
+			background: #E63833
+			border: 2px solid #fff
+			+tr(background .2s)
+			&:hover
+				background: #3e5b8a
+		&-icon-close
+			fill: #fff
+			+vcenter
+			font-size: 10px
+	
+	&__file-add
+		display: inline-block
+		vertical-align: middle
+		&-btn
+			position: relative
+			display: block
+			width: 100px
+			height: 90px
+			padding: 5px 0 0
+			color: #fff
+			text-transform: uppercase
+			text-align: center
+			background: #B9C0C9
+			cursor: pointer
+			+f('ver', 13)
+			&::after
+				position: absolute
+				left: calc(50% - 18px)
+				width: 36px
+				height: 34px
+				bottom: 10px
+				+ico('file')
+				content: ''
+			&:hover
+				background: darken(#B9C0C9, 10)
+			&:hover::after
+				+ico('file-hvr')
+			&:active::after
+				+ico('file-act')
+		input[type='file']
+			display: none
+			
+/* basket
+	----------------------------------- */
 .basket
 	&__orders
 		border: 9px solid #DFDFDF
@@ -41,9 +318,11 @@
 			padding: 0 15px
 			font-size: 22px
 			text-align: center
+			+md
+				font-size: 19px
 			&-count
 				display: inline-block
-				+f('oss', 22)
+				+f('oss')
 			
 	&__summ
 		padding: 30px 30px 40px
