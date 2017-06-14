@@ -1,9 +1,9 @@
 var gulp        = require('gulp');
 var config      = require('../config');
-var htmlhint    = require('gulp-htmlhint');
+// var htmlhint    = require('gulp-htmlhint');
 var gitStaged   = require("gulp-git-staged");
 // var sassLint    = require('gulp-sass-lint');
-var prettier    = require('gulp-prettier');
+// var prettier    = require('gulp-prettier');
 var git         = require('gulp-git');
 
 
@@ -38,8 +38,8 @@ gulp.task('lint:sass', function() {
 
 gulp.task('lint', [
     
-    'prettier',
+    // 'prettier',
     
     // 'lint:sass',
-    'lint:html'
+    // 'lint:html'
 ]);

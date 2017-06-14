@@ -16,7 +16,10 @@ body
 	max-width: 1560px
 	margin: 0 auto
 	padding: 0 15px
+	+md
+		max-width: 1200px
 	+sm
+		max-width: 980px
 		padding: 0 10px
 
 // titles
@@ -189,33 +192,35 @@ h1, h2, h3, h4, h5, h6
 	&:active::after
 		+ico('cart_add-lg-act')
 
-//.wish-btn
-//	position: relative
-//	min-width: 230px
-//	height: 37px
-//	line-height: 37px
-//	padding: 0 40px 0 10px
-//	text-align: center
-//	font-size: 19px
-//	color: #fff
-//	background: #EEF5FC
-//	border-bottom: 1px solid #E1EFF6
-//	&::after
-//		content: ''
-//		position: absolute
-//		top: 0
-//		right: 0
-//		//+st('heart')
-//	&:hover
-//		background: #61CDFF
-//		border-bottom-color: #FFC486
-//	&:active
-//		background: #1E4D80
-//		border-bottom-color: #FF0000
-//	&:hover::after
-//		//+st('heart-hvr')
-//	&:active::after
-//		//+st('heart-act')
+.wish-btn
+	position: relative
+	min-width: 230px
+	height: 37px
+	line-height: 37px
+	padding: 0 40px 0 10px
+	text-align: center
+	font-size: 19px
+	color: #fff
+	background: #EEF5FC
+	border-bottom: 1px solid #E1EFF6
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		width: 37px
+		height: 37px
+		+ico('fav')
+	&:hover
+		background: #61CDFF
+		border-bottom-color: #FFC486
+	&:active
+		background: #1E4D80
+		border-bottom-color: #FF0000
+	&:hover::after
+		+ico('fav-hvr')
+	&:active::after
+		+ico('fav-act')
 
 .order-btn
 	position: relative
@@ -233,8 +238,10 @@ h1, h2, h3, h4, h5, h6
 		content: ''
 		position: absolute
 		top: 0
-		right: -1px
-		+sr('like')
+		right: 0
+		width: 73px
+		height: 73px
+		+ico('like')
 	&:hover
 		background: #06B2F0
 		border-bottom-color: #FFBE77
@@ -242,9 +249,9 @@ h1, h2, h3, h4, h5, h6
 		background: #23568B
 		border-bottom-color: #FF0000
 	&:hover::after
-		+sr('like-hvr')
+		+ico('like-hvr')
 	&:active::after
-		+sr('like-act')
+		+ico('like-act')
 
 .submit-btn
 	position: relative
