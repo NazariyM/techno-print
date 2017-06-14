@@ -10109,8 +10109,14 @@ body::after {
   .order{
     padding: 15px 15px 20px;
   }
+  .order__row{
+    padding-top: 20px;
+  }
   .order__title{
     margin-bottom: 15px;
+    font-size: 16px;
+  }
+  .order__form-group-label{
     font-size: 17px;
   }
   .order__form-group + .order__form-group{
@@ -10132,7 +10138,7 @@ body::after {
     padding: 15px;
   }
   .order__comment-descr{
-    font-size: 16px;
+    font-size: 15px;
   }
   .order__comment-message{
     font-size: 17px;
@@ -10145,6 +10151,9 @@ body::after {
   }
   .basket__orders-label:nth-child(4){
     width: 23%;
+  }
+  .basket__orders-status{
+    font-size: 17px;
   }
   .basket__summ{
     padding: 15px;
