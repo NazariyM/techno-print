@@ -1,5 +1,4 @@
 .basket
-	&__container
 	&__orders
 		border: 9px solid #DFDFDF
 		border-top-width: 5px
@@ -14,14 +13,30 @@
 			padding: 0 15px
 			font-size: 19px
 			text-align: center
+			+md
+				font-size: 17px
+			+sm
+				font-size: 15px
 			&:nth-child(1)
 				width: 18%
+				+md
+					width: 17%
 			&:nth-child(2)
 				width: 15%
+				+md
+					width: 17%
 			&:nth-child(3)
 				width: 45%
+				+md
+					width: 43%
+				+sm
+					width: 42%
 			&:nth-child(4)
 				width: 18%
+				+md
+					width: 21%
+				+sm
+					width: 23%
 		&-status
 			padding: 0 15px
 			font-size: 22px
@@ -34,6 +49,12 @@
 		padding: 30px 30px 40px
 		font-size: 23px
 		text-align: center
+		+md
+			padding: 20px 20px 30px
+			font-size: 20px
+		+sm
+			padding: 15px
+			font-size: 17px
 		&-text
 			color: #00306B
 			text-transform: uppercase
@@ -42,9 +63,13 @@
 		&-price
 			margin: 0 15px
 			+f('psb')
+			+md
+				margin: 0 8px
 			.icon-ruble
 				fill: #00306B
 				font-size: 17px
+				+md
+					font-size: 14px
 				
 		&-words, &-delivery
 			text-transform: none
@@ -53,6 +78,10 @@
 			
 	&__promo
 		margin: 20px 0 30px
+		+md
+			margin: 5px 0 25px
+		+sm
+			margin: 5px 0 15px
 		&-text
 			color: #B3B3B3
 		&-input-wrap
@@ -65,3 +94,9 @@
 				line-height: 45px
 				padding: 0 10px
 				+f('ver', 22)
+				+md
+					height: 34px
+					line-height: 34px
+					font-size: 19px
+				+sm
+					font-size: 16px

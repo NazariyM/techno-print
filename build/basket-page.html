@@ -94,35 +94,70 @@
     <!-- end header-->
     <main role="main">
       <div class="basket">
-        <div class="basket__container container">
+        <div class="container">
           <div class="product">
             <div class="product__sect product__sect_basket">
-              <div class="breadcrumbs"><a href="#!" class="breadcrumbs__link"><svg class="icon-house breadcrumbs__icon"><use xlink:href="img/sprite.svg#icon-house"></use></svg> <span>Главная</span></a><a href="#!" class="breadcrumbs__link is-active"><span>Корзина товаров</span></a></div>
-              <div
-                class="product__sect-links">
+              <div class="breadcrumbs">
+                <ul class="breadcrumbs__list">
+                  <li class="breadcrumbs__item"><a href="#!" class="breadcrumbs__link"><svg class="icon-house breadcrumbs__icon"><use xlink:href="img/sprite.svg#icon-house"></use></svg><span>Главная</span></a></li>
+                  <li class="breadcrumbs__item is-active"><a href="#!" class="breadcrumbs__link"><span>Корзина товаров</span></a></li>
+                </ul>
+              </div>
+              <div class="product__sect-links">
                 <div class="product__sect-link"><a href="#!">ТОВАРОВ  В КОРЗИНЕ<span class="product__sect-count">4</span></a></div>
                 <div class="product__sect-link"><a href="#!">МОИ ОФОРМЛЕННЫЕ ЗАКАЗЫ<span class="product__sect-count">0</span></a></div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="basket__orders">
-          <div class="basket__orders-row">
-            <div class="basket__orders-label">Товар / Услуга</div>
-            <div class="basket__orders-label">Цена</div>
-            <div class="basket__orders-label">Комментарий для оператора</div>
-            <div class="basket__orders-label">Количество / Всего за товар</div>
-          </div>
-          <form action="#!">
-            <div class="product basket__product">
+          <div class="basket__orders">
+            <div class="basket__orders-row">
+              <div class="basket__orders-label">Товар / Услуга</div>
+              <div class="basket__orders-label">Цена</div>
+              <div class="basket__orders-label">Комментарий для оператора</div>
+              <div class="basket__orders-label">Количество / Всего за товар</div>
+            </div>
+            <form action="#!">
+              <div class="product basket__product">
+                <div class="product__item product__item_basket">
+                  <div class="product__item-col">
+                    <div class="product__item-pic-wrap js-product-item-pic">
+                      <a href="#!" class="product__item-pic decor"><img src="img/content/prod-3.jpg" class="product__item-img" alt="" role="presentation" />
+                        <div class="decor__line"></div>
+                      </a><a href="img/content/prod-3_lg.jpg" data-fancybox="product-1" class="product__zoom"><svg class="icon-loupe product__zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a></div>
+                    <div class="product__item-info">
+                      <div class="product__item-title">Полотенце -зайчик! </div>
+                      <div class="product__item-descr">Услуга - сворачивание полотенец в виде зайчиков, для подарка</div>
+                      <div class="product__item-art">Артикул <span>22</span></div>
+                      <div class="product__item-price">Цена за товар:
+                        <div class="product__item-price-count"><span>150 <svg class="icon-ruble product__val-icon"><use xlink:href="img/sprite.svg#icon-ruble"></use></svg></span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product__comment product__item-col">
+                    <div class="product__comment-message-wrap"><textarea class="product__comment-message"></textarea><button type="button" class="product__comment-extend js-message-extend"><svg class="icon-arr-double product__comment-extend-icon"><use xlink:href="img/sprite.svg#icon-arr-double"></use></svg></button></div>
+                    <div
+                      class="product__comment-row">
+                      <div class="product__file-add"><input type="file" id="file-add-input" /><label for="file-add-input" class="product__file-add-btn">Добавить файл</label></div><button type="button" class="product__comment-btn"><span>Сохранить</span></button></div>
+                </div>
+                <div class="product__item-col"><button type="button" class="product__close-btn"><svg class="icon-close product__close-btn-icon"><use xlink:href="img/sprite.svg#icon-close"></use></svg></button>
+                  <div class="product__amount">
+                    <div class="product__amount-text">Количество:</div>
+                    <div class="product__amount-count"><input type="number" min="1" max="999" value="1" name="" class="product__amount-input js-product-amount" /></div>
+                  </div><button type="button" class="product__wish-btn wish-btn"><span>В избранное</span></button>
+                  <div class="product__item-price">Всего за товар:
+                    <div class="product__item-price-count"><span>150 <svg class="icon-ruble product__val-icon"><use xlink:href="img/sprite.svg#icon-ruble"></use></svg></span></div>
+                  </div>
+                </div>
+              </div>
               <div class="product__item product__item_basket">
                 <div class="product__item-col">
                   <div class="product__item-pic-wrap js-product-item-pic">
-                    <a href="#!" class="product__item-pic decor"><img src="img/content/prod-3.jpg" class="product__item-img" alt="" role="presentation" />
+                    <a href="#!" class="product__item-pic decor"><img src="img/content/prod-1.jpg" class="product__item-img" alt="" role="presentation" />
                       <div class="decor__line"></div>
-                    </a><a href="img/content/prod-3_lg.jpg" data-fancybox="product-1" class="product__zoom"><svg class="icon-loupe product__zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a></div>
+                    </a><a href="img/content/prod-1_lg.jpg" data-fancybox="product-1" class="product__zoom"><svg class="icon-loupe product__zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a></div>
                   <div class="product__item-info">
-                    <div class="product__item-title">Полотенце -зайчик! </div>
-                    <div class="product__item-descr">Услуга - сворачивание полотенец в виде зайчиков, для подарка</div>
+                    <div class="product__item-title">Любая вышивка на шевронной ткани, 7 цветов. </div>
+                    <div class="product__item-descr">Размер: 120х180мм</div>
                     <div class="product__item-art">Артикул <span>22</span></div>
                     <div class="product__item-price">Цена за товар:
                       <div class="product__item-price-count"><span>150 <svg class="icon-ruble product__val-icon"><use xlink:href="img/sprite.svg#icon-ruble"></use></svg></span></div>
@@ -144,44 +179,44 @@
                   <div class="product__item-price-count"><span>150 <svg class="icon-ruble product__val-icon"><use xlink:href="img/sprite.svg#icon-ruble"></use></svg></span></div>
                 </div>
               </div>
-            </div>
-            <div class="product__item product__item_basket">
-              <div class="product__item-col">
-                <div class="product__item-pic-wrap js-product-item-pic">
-                  <a href="#!" class="product__item-pic decor"><img src="img/content/prod-1.jpg" class="product__item-img" alt="" role="presentation" />
-                    <div class="decor__line"></div>
-                  </a><a href="img/content/prod-1_lg.jpg" data-fancybox="product-1" class="product__zoom"><svg class="icon-loupe product__zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a></div>
-                <div class="product__item-info">
-                  <div class="product__item-title">Любая вышивка на шевронной ткани, 7 цветов. </div>
-                  <div class="product__item-descr">Размер: 120х180мм</div>
-                  <div class="product__item-art">Артикул <span>22</span></div>
-                  <div class="product__item-price">Цена за товар:
-                    <div class="product__item-price-count"><span>150 <svg class="icon-ruble product__val-icon"><use xlink:href="img/sprite.svg#icon-ruble"></use></svg></span></div>
-                  </div>
+          </div>
+          <div class="product__item product__item_basket">
+            <div class="product__item-col">
+              <div class="product__item-pic-wrap js-product-item-pic">
+                <a href="#!" class="product__item-pic decor"><img src="img/content/prod-2.jpg" class="product__item-img" alt="" role="presentation" />
+                  <div class="decor__line"></div>
+                </a><a href="img/content/prod-2_lg.jpg" data-fancybox="product-1" class="product__zoom"><svg class="icon-loupe product__zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a></div>
+              <div class="product__item-info">
+                <div class="product__item-title">Полотенце -зайчик! </div>
+                <div class="product__item-descr">Услуга - сворачивание полотенец в виде зайчиков, для подарка</div>
+                <div class="product__item-art">Артикул <span>22</span></div>
+                <div class="product__item-price">Цена за товар:
+                  <div class="product__item-price-count"><span>150 <svg class="icon-ruble product__val-icon"><use xlink:href="img/sprite.svg#icon-ruble"></use></svg></span></div>
                 </div>
               </div>
-              <div class="product__comment product__item-col">
-                <div class="product__comment-message-wrap"><textarea class="product__comment-message"></textarea><button type="button" class="product__comment-extend js-message-extend"><svg class="icon-arr-double product__comment-extend-icon"><use xlink:href="img/sprite.svg#icon-arr-double"></use></svg></button></div>
-                <div
-                  class="product__comment-row">
-                  <div class="product__file-add"><input type="file" id="file-add-input" /><label for="file-add-input" class="product__file-add-btn">Добавить файл</label></div><button type="button" class="product__comment-btn"><span>Сохранить</span></button></div>
             </div>
-            <div class="product__item-col"><button type="button" class="product__close-btn"><svg class="icon-close product__close-btn-icon"><use xlink:href="img/sprite.svg#icon-close"></use></svg></button>
-              <div class="product__amount">
-                <div class="product__amount-text">Количество:</div>
-                <div class="product__amount-count"><input type="number" min="1" max="999" value="1" name="" class="product__amount-input js-product-amount" /></div>
-              </div><button type="button" class="product__wish-btn wish-btn"><span>В избранное</span></button>
-              <div class="product__item-price">Всего за товар:
-                <div class="product__item-price-count"><span>150 <svg class="icon-ruble product__val-icon"><use xlink:href="img/sprite.svg#icon-ruble"></use></svg></span></div>
-              </div>
+            <div class="product__comment product__item-col">
+              <div class="product__comment-message-wrap"><textarea class="product__comment-message"></textarea><button type="button" class="product__comment-extend js-message-extend"><svg class="icon-arr-double product__comment-extend-icon"><use xlink:href="img/sprite.svg#icon-arr-double"></use></svg></button></div>
+              <div
+                class="product__comment-row">
+                <div class="product__file-add"><input type="file" id="file-add-input" /><label for="file-add-input" class="product__file-add-btn">Добавить файл</label></div><button type="button" class="product__comment-btn"><span>Сохранить</span></button></div>
+          </div>
+          <div class="product__item-col"><button type="button" class="product__close-btn"><svg class="icon-close product__close-btn-icon"><use xlink:href="img/sprite.svg#icon-close"></use></svg></button>
+            <div class="product__amount">
+              <div class="product__amount-text">Количество:</div>
+              <div class="product__amount-count"><input type="number" min="1" max="999" value="1" name="" class="product__amount-input js-product-amount" /></div>
+            </div><button type="button" class="product__wish-btn wish-btn"><span>В избранное</span></button>
+            <div class="product__item-price">Всего за товар:
+              <div class="product__item-price-count"><span>150 <svg class="icon-ruble product__val-icon"><use xlink:href="img/sprite.svg#icon-ruble"></use></svg></span></div>
             </div>
+          </div>
         </div>
         <div class="product__item product__item_basket">
           <div class="product__item-col">
             <div class="product__item-pic-wrap js-product-item-pic">
-              <a href="#!" class="product__item-pic decor"><img src="img/content/prod-2.jpg" class="product__item-img" alt="" role="presentation" />
+              <a href="#!" class="product__item-pic decor"><img src="img/content/prod-3.jpg" class="product__item-img" alt="" role="presentation" />
                 <div class="decor__line"></div>
-              </a><a href="img/content/prod-2_lg.jpg" data-fancybox="product-1" class="product__zoom"><svg class="icon-loupe product__zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a></div>
+              </a><a href="img/content/prod-3_lg.jpg" data-fancybox="product-1" class="product__zoom"><svg class="icon-loupe product__zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a></div>
             <div class="product__item-info">
               <div class="product__item-title">Полотенце -зайчик! </div>
               <div class="product__item-descr">Услуга - сворачивание полотенец в виде зайчиков, для подарка</div>
@@ -206,37 +241,6 @@
             <div class="product__item-price-count"><span>150 <svg class="icon-ruble product__val-icon"><use xlink:href="img/sprite.svg#icon-ruble"></use></svg></span></div>
           </div>
         </div>
-      </div>
-      <div class="product__item product__item_basket">
-        <div class="product__item-col">
-          <div class="product__item-pic-wrap js-product-item-pic">
-            <a href="#!" class="product__item-pic decor"><img src="img/content/prod-3.jpg" class="product__item-img" alt="" role="presentation" />
-              <div class="decor__line"></div>
-            </a><a href="img/content/prod-3_lg.jpg" data-fancybox="product-1" class="product__zoom"><svg class="icon-loupe product__zoom-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></a></div>
-          <div class="product__item-info">
-            <div class="product__item-title">Полотенце -зайчик! </div>
-            <div class="product__item-descr">Услуга - сворачивание полотенец в виде зайчиков, для подарка</div>
-            <div class="product__item-art">Артикул <span>22</span></div>
-            <div class="product__item-price">Цена за товар:
-              <div class="product__item-price-count"><span>150 <svg class="icon-ruble product__val-icon"><use xlink:href="img/sprite.svg#icon-ruble"></use></svg></span></div>
-            </div>
-          </div>
-        </div>
-        <div class="product__comment product__item-col">
-          <div class="product__comment-message-wrap"><textarea class="product__comment-message"></textarea><button type="button" class="product__comment-extend js-message-extend"><svg class="icon-arr-double product__comment-extend-icon"><use xlink:href="img/sprite.svg#icon-arr-double"></use></svg></button></div>
-          <div
-            class="product__comment-row">
-            <div class="product__file-add"><input type="file" id="file-add-input" /><label for="file-add-input" class="product__file-add-btn">Добавить файл</label></div><button type="button" class="product__comment-btn"><span>Сохранить</span></button></div>
-      </div>
-      <div class="product__item-col"><button type="button" class="product__close-btn"><svg class="icon-close product__close-btn-icon"><use xlink:href="img/sprite.svg#icon-close"></use></svg></button>
-        <div class="product__amount">
-          <div class="product__amount-text">Количество:</div>
-          <div class="product__amount-count"><input type="number" min="1" max="999" value="1" name="" class="product__amount-input js-product-amount" /></div>
-        </div><button type="button" class="product__wish-btn wish-btn"><span>В избранное</span></button>
-        <div class="product__item-price">Всего за товар:
-          <div class="product__item-price-count"><span>150 <svg class="icon-ruble product__val-icon"><use xlink:href="img/sprite.svg#icon-ruble"></use></svg></span></div>
-        </div>
-      </div>
       </div>
       </div>
       <div class="basket__summ">

@@ -6,16 +6,12 @@ extends layouts/_layout
 block content
 	+b.MAIN
 		+b.basket
-			+e.container.container
+			.container
 				+b.product
 					+e.sect._basket
-						+b.breadcrumbs
-							+e.A.link(href='#!')
-								+icon('icon-house', 'breadcrumbs__icon')
-								= ' '
-								+e.SPAN Главная
-							+e.A.link.is-active(href='#!')
-								+e.SPAN Корзина товаров
+						-
+							var breadCrumbsList = [{text: 'Корзина товаров', active: 'is-active'}];
+						include components/_breadcrumbs
 						+e.sect-links
 							+e.sect-link
 								+e.A(href="#!") ТОВАРОВ  В КОРЗИНЕ

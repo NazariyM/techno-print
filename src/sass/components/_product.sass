@@ -68,6 +68,8 @@
 			background: #EBECEC
 			.product__sect-link
 				background: #F8F9F8
+				+sm
+					font-size: 12px
 			.product__sect-count
 				background: #DFE6EB
 				
@@ -435,15 +437,27 @@
 				width: 93%
 		&_basket
 			padding: 15px 15px 15px 22px
-			flex-basis: auto
-			min-height: 0
+			flex-basis: auto!important
+			min-height: 0!important
 			border-bottom: 5px solid #DFDFDF
 			+clr
+			+md
+				padding: 10px
 			.product__item-pic-wrap
 				float: left
 				width: 40%
 			.product__item-pic
 				height: 230px
+				+md
+					height: 190px
+				+sm
+					height: 150px
+				.decor__line
+					width: 82.5%
+					+md
+						width: 90%
+					+sm
+						width: 86%
 			.product__item-info
 				display: flex
 				flex-direction: column
@@ -454,10 +468,24 @@
 				padding: 0 20px
 				font-size: 18px
 				line-height: 1.2
+				+md
+					margin: 7px 0 0
+					padding: 0 15px
+					min-height: 185px
+				+sm
+					min-height: 145px
 			.product__item-title
 				margin-bottom: 10px
+				+md
+					font-size: 15px
+				+sm
+					font-size: 13px
 			.product__item-descr
 				margin-bottom: 25px
+				+md
+					font-size: 15px
+				+sm
+					font-size: 13px
 			.product__zoom
 				width: 45px
 				height: 45px
@@ -465,39 +493,67 @@
 					font-size: 27px
 			.product__amount
 				clear: both
-				margin: 50px auto 15px
+				margin: 50px 0 15px
 				padding: 0 10px
 				max-width: 340px
+				+md
+					padding: 0 0px 0 10px
 				&-text
 					font-size: 23px
-			.decor__line
-				width: 82.5%
-			
+					+md
+						font-size: 19px
+					+sm
+						font-size: 16px
+				&-count
+					+md
+						padding: 8px 15px
+					+sm
+						padding: 5px 10px
+		
 		&-col
 			float: left
 			+clr
 			&:nth-child(1)
 				width: 37%
 				font-size: 0
+				+sm
+					margin-top: 28px
 			&:nth-child(2)
 				width: 37%
 			&:nth-child(3)
 				width: 26%
+				padding-left: 20px
 				text-align: center
+				+md
+					padding-left: 10px
 		&-price
 			margin-top: auto
 			padding-right: 40px
 			color: #001E57
 			+f('psr', 22)
+			+md
+				padding-right: 25px
+				font-size: 19px
+			+sm
+				padding-right: 15px
+				font-size: 16px
 			&-count
 				float: right
 				+f('psb')
 			.product__val-icon
 				font-size: 17px
 				fill: #001E57
+				+md
+					font-size: 14px
+				+sm
+					font-size: 11px
 		&-art
 			font-size: 16px
 			color: #333333
+			+md
+				font-size: 15px
+			+sm
+				font-size: 13px
 		&-pic-wrap
 			position: relative
 			transition: transform .3s
@@ -803,6 +859,8 @@
 	&__comment
 		padding: 15px
 		background: #E0E0E0
+		+sm
+			padding: 10px
 		&-message-wrap
 			position: relative
 			padding-left: 39px
@@ -812,10 +870,11 @@
 			&::before
 				content: ''
 				position: absolute
-				top: -7px
-				left: -10px
-				+sr('dots_black')
-				transform: scale(.75)
+				top: -1px
+				left: -1px
+				width: 40px
+				height: 30px
+				+ico('dots-log')
 		&-message
 			display: block
 			width: 100%
@@ -825,6 +884,8 @@
 			border: none
 			+f('psr', 18)
 			transition: min-height 0.3s
+			+sm
+				font-size: 16px
 			&.extended
 				min-height: 160px
 		&-extend
@@ -835,6 +896,8 @@
 			height: 20px
 			padding-top: 3px
 			background: #F7F7F7
+			+sm
+				right: 10px
 			&:hover
 				background: #E0E0E0
 			&:hover &-icon
@@ -856,6 +919,12 @@
 			background: #B9C0C9
 			border: 1px solid #99AFCF
 			+f('oss', 15, 15)
+			+sm
+				min-width: 180px
+				margin-top: 35px
+				font-size: 13px
+				height: 34px
+				line-height: 30px
 			&:hover
 				background: darken(#B9C0C9, 8)
 			&:active
@@ -867,7 +936,9 @@
 		&-row
 			margin-top: 15px
 			+clr
-			
+			+sm
+				margin-top: 10px
+	
 	&__file-add
 		float: left
 		&-btn
@@ -885,16 +956,17 @@
 			&::after
 				position: absolute
 				left: calc(50% - 18px)
-				bottom: 3px
-				+st('file')
-				transform: scale(.8)
+				bottom: 6px
+				width: 30px
+				height: 28px
+				+ico('file')
 				content: ''
 			&:hover
 				background: darken(#B9C0C9, 10)
 			&:hover::after
-				+st('file-hvr')
+				+ico('file-hvr')
 			&:active::after
-				+st('file-act')
+				+ico('file-act')
 		input[type='file']
 			display: none
 	&__close-btn
@@ -906,6 +978,10 @@
 		border: 3px solid #DFDFDF
 		background: #FFBE77
 		transition: .15s
+		+sm
+			width: 26px
+			height: 26px
+			line-height: 18px
 		&:hover
 			background: #E63E2D
 		&:active
@@ -915,6 +991,8 @@
 			fill: #fff
 			font-size: 14px
 			transition: .15s
+			+md
+				font-size: 10px
 	&__close-btn:active &__close-btn-icon
 		fill: #8C1212
 		
@@ -996,6 +1074,8 @@
 		+md
 			width: 43px
 			font-size: 16px
+		+sm
+			font-size: 15px
 	&__price
 		min-width: 152px
 		padding: 15px 10px
