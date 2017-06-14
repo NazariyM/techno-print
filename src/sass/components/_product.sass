@@ -47,13 +47,22 @@
 			margin-bottom: 30px
 			padding: 4px 0 4px 15px
 		&_watched
-			margin-bottom: 0
+			margin-bottom: 0!important
 			padding: 0 15px 0 15px
 			background: #BBCADF
+			+md
+				padding: 0 5px 1px 10px
+			+sm
+				padding: 0 0 0 5px
 			&::after
 				display: none
+			.product__sect-title
+				+md
+					font-size: 13px
 			.product__sect-icon
 				margin-right: 15px
+				+md
+					margin-right: 10px
 		&_basket
 			margin-bottom: 0
 			background: #EBECEC
@@ -111,6 +120,8 @@
 					font-size: 23px
 			&.icon-lovers
 				font-size: 26px
+				+sm
+					font-size: 20px
 			&.icon-watched
 				font-size: 24px
 				fill: #7C8B99
@@ -122,14 +133,24 @@
 				position: relative
 				padding: 0 30px 0 45px
 				background: #BBCADF url(../img/bg/sect-bg.svg) no-repeat 0 0/cover
+				+md
+					padding: 0 4px 0 30px
 				.product__sect-link
 					padding: 5px 0
 					background: none
 					font-size: 16px
+					+md
+						height: 32px
+						font-size: 11px
+						line-height: 22px
 					&::after,&::before
 						display: none
 				.product__sect-link + .product__sect-link
 					margin-left: 15px
+					+md
+						margin-left: 5px
+					+sm
+						margin: 0 10px
 				.product__sect-count
 					margin-left: 10px
 					min-width: 25px
@@ -138,6 +159,8 @@
 					padding: 1px 5px
 					background: #BBCADF
 					color: #fff
+					+md
+						margin-left: 4px
 		&-link
 			position: relative
 			display: inline-block
@@ -232,13 +255,26 @@
 		width: 100%
 		flex-basis: 100%
 		flex-wrap: wrap
-		.product__item
-			flex-basis: 23.5%
-			width: 23.5%
-			min-height: 425px
-			margin-bottom: 30px
-		.product__item-pic
-			height: 265px
+	&__examples_default	&__item
+		flex-basis: 23.5%
+		width: 23.5%
+		min-height: 425px
+		margin-bottom: 30px
+		+md
+			min-height: 330px
+		+sm
+			margin-bottom: 15px
+	&__examples_default &__item-pic
+		height: 265px
+		+md
+			height: 190px
+	&__examples_default &__item-pic
+		.decor__line
+			+sm
+				width: 90%
+	&__examples_default &__cart-add
+		+sm
+			min-width: 78px
 	&__examples_watched
 		width: 100%
 		flex-basis: 100%
@@ -249,8 +285,19 @@
 			padding: 10px
 			border: 10px solid #DFDFDF
 			border-right: none
+			+md
+				min-height: 305px
+				padding: 5px
+				border-width: 5px
+			+sm
+				min-height: 285px
+				border-width: 2px
 			&:last-child
 				border-right: 10px solid #DFDFDF
+				+md
+					border-width: 5px
+				+sm
+					border-width: 2px
 			img
 				width: 100%
 		.product__item-info
@@ -264,8 +311,12 @@
 			color: #4D4D4D
 		.product__price-current
 			font-size: 17px
+			+md
+				font-size: 15px
 		.product__val-icon
 			font-size: 13px!important
+			+md
+				font-size: 12px!important
 		.product__buy-opt
 			font-size: 17px
 		.product__item-buy
@@ -275,14 +326,21 @@
 		.product__cart-add
 			min-width: 108px
 			height: 30px
-		.product__cart-add::after
-			transform: scale(.78)
-			right: -4px
-			top: -5px
+			+md
+				min-width: 90px
+				height: 28px
 		.product__item-pic
 			height: 210px
+			+md
+				height: 160px
+			+sm
+				height: 140px
 		.decor__line
 			width: 84%
+			+md
+				width: 89% !important
+			+sm
+				width: 86% !important
 			&::before
 				right: -12px
 				border-width: 0 0 17px 13px
@@ -292,8 +350,14 @@
 		.product__zoom
 			width: 45px
 			height: 45px
+			+sm
+				width: 32px
+				height: 32px
 		.product__zoom-icon
 			font-size: 29px
+			+sm
+				font-size: 22px
+			
 			
 	&__zoom
 		opacity: 0
@@ -453,21 +517,6 @@
 				height: 214px
 			+sm
 				height: 160px
-			&_thumb
-				height: 118px!important
-				width: 118px
-				cursor: pointer
-				&:not(:last-child)
-					margin-right: 12px
-				+md
-					height: 100px
-					width: 84px
-				img
-					width: 100%
-					height: 100%
-					object-fit: contain
-					font-family: 'object-fit: contain;'
-					
 		&-img
 			width: 100%
 			height: 100%
@@ -864,6 +913,10 @@
 		margin-bottom: 40px
 		display: block
 		+clr
+		+md
+			margin-bottom: 25px
+		+sm
+			margin-bottom: 15px
 		&-col
 			float: left
 			&:nth-child(1)
@@ -881,13 +934,16 @@
 		background-color: #F4F8FD
 		+md
 			font-size: 19px
+		+sm
+			margin-bottom: 10px
+			padding: 4px 10px
+			font-size: 16px
 	&__descr-item
 		padding: 0 20px 0 15px
 		margin-bottom: 20px
 		+md
 			margin-bottom: 10px
 			padding: 0 10px
-			font-size: 16px
 		&:last-child
 			margin-bottom: 0
 	&__buy-in
@@ -906,6 +962,8 @@
 		color: #00306B
 		+md
 			font-size: 19px
+		+sm
+			font-size: 17px
 	&__amount-count
 		display: inline-block
 		vertical-align: middle
@@ -913,6 +971,9 @@
 		padding: 8px 15px 8px 30px
 		border-radius: 30px 0 0 30px
 		background-color: #EEF5FC
+		+sm
+			padding: 8px 6px
+			margin-left: 0
 	&__amount-input
 		margin-right: 15px
 		padding-right: 5px
@@ -939,6 +1000,10 @@
 			min-width: 120px
 			padding: 10px
 			font-size: 24px
+		+sm
+			min-width: 100px
+			padding: 8px
+			font-size: 21px
 		.icon-ruble
 			display: inline-block
 			margin-left: 5px
@@ -958,44 +1023,92 @@
 		margin: 30px auto 0
 		display: block
 		+md
-			margin: 25px auto 0
+			margin: 20px auto 0
+		+sm
+			margin: 12px auto 0
 	&__look
-		margin-top: 15px
+		margin: 15px 0 35px
+		+md
+			margin: 10px 0 25px
+		+sm
+			margin: 10px 0 15px
 	&__look-view
 		display: none
 		&.slick-initialized
 			display: block
+	&__look-pic
+		height: 424px
+		+md
+			height: 315px
+		+sm
+			height: 255px
 	&__look-pic img
 		width: 100%
+		height: 100%
 		object-fit: contain
+		font-family: 'object-fit: contain;'
 	&__look-thumbs
 		display: none
-		margin: 25px 0 35px
+		margin: 25px 0 0
 		+md
-			margin: 20px 0 25px
+			margin: 20px 0 0
+		+sm
+			margin: 15px 0 0
+		&-pic
+			width: 118px
+			height: 118px
+			cursor: pointer
+			.decor__line
+				width: 72% !important
+				+sm
+					width: 66% !important
+			+md
+				width: 86px
+				height: 86px
+			+sm
+				width: 73px
+				height: 73px
+			&:not(:last-child)
+				margin-right: 12px
+				+md
+					margin-right: 9px
+				+sm
+					margin-right: 5px
+			img
+				width: 100%
+				height: 100%
+				object-fit: contain
+				font-family: 'object-fit: contain;'
 		&.slick-initialized
 			display: block
 	&__props
 		+clr
+	&__props-row
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+		+sm
+			padding: 0 30px
+		& + &
+			margin-top: 8px
 	&__props-col
 		float: left
 		&:nth-child(1)
 			width: 64%
 			+md
 				width: 65%
+			+sm
+				margin-bottom: 8px
+				width: 100%
 		&:nth-child(2)
 			width: 36%
 			padding-left: 1%
 			+md
 				width: 35%
 				padding-left: .6%
-				
-	&__props-row
-		display: flex
-		justify-content: space-between
-		align-items: flex-end
-		& + &
-			margin-top: 8px
+			+sm
+				width: 100%
+				padding-left: 0
 	&__hashtags-link
 		display: block
 		padding: 0 10px
@@ -1004,6 +1117,10 @@
 		+md
 			padding: 0 5px
 			font-size: 14px
+		+sm
+			max-width: 230px
+			margin: 0 auto
+			text-align: center
 		&:hover
 			background: darken(#F5F5F5, 5)
 	&__hashtags-link + &__hashtags-link
@@ -1096,18 +1213,32 @@
 			+ico('fav-act')
 			
 	&__filter
+		width: 53.2%
+		flex-basis: 53.2%
+		margin-left: 1%
+		min-width: 470px
 		font-size: 0
+		white-space: nowrap
+		+sm
+			min-width: 414px
+			flex-basis: 57%
+			width: 57%
 	&__filter-btn
 		display: inline-block
 		vertical-align: middle
-		margin-right: 5px
+		width: percentage(102 / 643)
+		margin-right: percentage(5 / 643)
 		height: 34px
-		width: 102px
 		border: 1px solid #CAD4DE
 		background: none
 		+f('oss', 18,18)
 		color: #B3BEC9
 		+trs
+		+md
+			height: 25px
+			font-size: 13px
+		+sm
+			font-size: 12px
 		span
 			display: inline-block
 			vertical-align: middle
@@ -1121,6 +1252,8 @@
 		fill: #B3BEC9
 		font-size: 21px
 		+trs
+		+md
+			font-size: 15px
 	&__filter-btn.is-active
 		color: #5F7899
 	&__filter-btn.is-active .product__filter-icon
@@ -1128,10 +1261,14 @@
 		
 	.icon-filter-squares
 		font-size: 10px
+		+md
+			font-size: 9px
 	.icon-filter-list
 		font-size: 16px
 		vertical-align: bottom
-		
+		+md
+			font-size: 13px
+	
 	&_home
 		padding-top: 40px
 		+lg
