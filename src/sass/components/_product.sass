@@ -282,15 +282,15 @@
 			min-height: 386px
 			flex-basis: 20%
 			width: 20%
-			padding: 10px
+			padding: 10px 10px 45px
 			border: 10px solid #DFDFDF
 			border-right: none
 			+md
-				min-height: 305px
-				padding: 5px
+				min-height: 300px
+				padding: 5px 5px 35px
 				border-width: 5px
 			+sm
-				min-height: 285px
+				min-height: 275px
 				border-width: 2px
 			&:last-child
 				border-right: 10px solid #DFDFDF
@@ -312,23 +312,33 @@
 		.product__price-current
 			font-size: 17px
 			+md
-				font-size: 15px
+				font-size: 14px
 		.product__val-icon
 			font-size: 13px!important
 			+md
-				font-size: 12px!important
+				font-size: 11px!important
 		.product__buy-opt
 			font-size: 17px
 		.product__item-buy
 			bottom: 12px
 			left: 12px
 			right: 12px
+			+md
+				left: 6px
+				right: 6px
+				bottom: 6px
 		.product__cart-add
 			min-width: 108px
 			height: 30px
 			+md
 				min-width: 90px
-				height: 28px
+				height: 26px
+			&::after
+				width: 30px
+				height: 29px
+				+md
+					width: 26px
+					height: 25px
 		.product__item-pic
 			height: 210px
 			+md
@@ -548,9 +558,8 @@
 			display: flex
 			align-items: center
 	&__buy-opt
-		font-size: 19px
 		line-height: 12px
-		+f("psb")
+		+f("psb", 21)
 		color: #FCBD7E
 		+lg
 			font-size: 18px
@@ -588,7 +597,7 @@
 			height: 28px
 			min-width: 102px
 		.product__val-icon
-			font-size: 14px
+			font-size: 15px
 			fill:	 #E63833
 			+md
 				font-size: 12px
@@ -613,7 +622,7 @@
 		display: inline-block
 		vertical-align: middle
 		color: #E63833
-		+f("psb",19)
+		+f("psb", 21)
 		line-height: 15px
 		+lg
 			font-size: 19px

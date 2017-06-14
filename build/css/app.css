@@ -2043,7 +2043,7 @@ body::after {
   -ms-flex-preferred-size: 20%;
   flex-basis: 20%;
   width: 20%;
-  padding: 10px;
+  padding: 10px 10px 45px;
   border: 10px solid #DFDFDF;
   border-right: none;
 }
@@ -2094,6 +2094,11 @@ body::after {
 .product__examples_watched .product__cart-add {
   min-width: 108px;
   height: 30px;
+}
+
+.product__examples_watched .product__cart-add::after {
+  width: 30px;
+  height: 29px;
 }
 
 .product__examples_watched .product__item-pic {
@@ -2380,9 +2385,9 @@ body::after {
 }
 
 .product__buy-opt {
-  font-size: 19px;
   line-height: 12px;
   font-family: "PT Sans", Arial, sans-serif;
+  font-size: 21px;
   font-weight: 700;
   color: #FCBD7E;
 }
@@ -2419,7 +2424,7 @@ body::after {
 }
 
 .product__cart-add .product__val-icon {
-  font-size: 14px;
+  font-size: 15px;
   fill: #E63833;
 }
 
@@ -2455,7 +2460,7 @@ body::after {
   vertical-align: middle;
   color: #E63833;
   font-family: "PT Sans", Arial, sans-serif;
-  font-size: 19px;
+  font-size: 21px;
   font-weight: 700;
   line-height: 15px;
 }
@@ -8408,22 +8413,31 @@ body::after {
     height: 190px;
   }
   .product__examples_watched .product__item{
-    min-height: 305px;
-    padding: 5px;
+    min-height: 300px;
+    padding: 5px 5px 35px;
     border-width: 5px;
   }
   .product__examples_watched .product__item:last-child{
     border-width: 5px;
   }
   .product__examples_watched .product__price-current{
-    font-size: 15px;
+    font-size: 14px;
   }
   .product__examples_watched .product__val-icon{
-    font-size: 12px !important;
+    font-size: 11px !important;
+  }
+  .product__examples_watched .product__item-buy{
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
   }
   .product__examples_watched .product__cart-add{
     min-width: 90px;
-    height: 28px;
+    height: 26px;
+  }
+  .product__examples_watched .product__cart-add::after{
+    width: 26px;
+    height: 25px;
   }
   .product__examples_watched .product__item-pic{
     height: 160px;
@@ -9297,7 +9311,7 @@ body::after {
     min-width: 78px;
   }
   .product__examples_watched .product__item{
-    min-height: 285px;
+    min-height: 275px;
     border-width: 2px;
   }
   .product__examples_watched .product__item:last-child{
@@ -9646,7 +9660,6 @@ body::after {
   .search__btn{
     width: 30px;
     height: 26px;
-    top: 2px;
   }
   .search__btn::after{
     -ms-transform: scale(0.8);
@@ -9776,6 +9789,9 @@ body::after {
   }
   .pagination_product{
     margin: 10px 0 15px;
+  }
+  .pagination_watched{
+    margin: 8px 0;
   }
   .category-menu__link{
     font-size: 14px;
