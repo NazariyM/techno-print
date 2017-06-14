@@ -7,13 +7,9 @@ block content
 	+b.MAIN.page._default
 		+e.container.container
 			+e.bar
-				+b.breadcrumbs
-					+e.A.link(href='#!')
-						+icon('icon-house', 'breadcrumbs__icon')
-						= ' '
-						+e.SPAN Главная
-					+e.A.link.is-active(href='#!')
-						+e.SPAN Печать на кружках и посуде
+				-
+					var breadCrumbsList = [{text: 'Печать на кружках и посуде', active: 'is-active'}];
+				include components/_breadcrumbs
 
 				+e.bar-title._has-icon._big-icon
 					+e.SPAN Кружки, бокалы, чашки
@@ -49,6 +45,7 @@ block content
 												| на кружки
 								+e.FIGURE.item._border-yellow
 									+e.item-img.IMG(src='img/content/cups-types-3.jpg')
+									+e.SPAN.item-label._9 Фото
 									+e.A(href='#!').item-in
 										+e.FIGCAPTION.item-text
 											+e.H4.item-title
@@ -173,7 +170,7 @@ block content
 												+e.STRONG Печать на класических
 													+e.BR
 													| белых кружках
-											+e.view._spaces
+											+e.view._spaces._white-c
 												+b.zoom.price-table__view-item
 													+e.A.element(href='img/content/white-cup-1_lg.jpg' data-fancybox='white-cups')
 														+e.BUTTON.btn._sm(type='button')
@@ -254,7 +251,7 @@ block content
 												| Изображение появляется при
 												+e.BR
 												| нагревании чашки
-											+e.view._spaces-sm
+											+e.view._spaces-sm._chameleon-c
 												+b.zoom.price-table__view-item
 													+e.A.element(href='img/content/chameleon-cup-1_lg.jpg' data-fancybox='chameleon-cups')
 														+e.BUTTON.btn._sm(type='button')
@@ -328,7 +325,7 @@ block content
 												+e.STRONG В наличии  разнообразные  интересные кружки.
 												= ' '
 												| Выбор из десятков разновидностей, в каталоге.
-											+e.view._spaces
+											+e.view._spaces._interesting-c
 												+b.zoom.price-table__view-item
 													+e.A.element(href='img/content/transparent-cups_lg.jpg' data-fancybox='interesting-cups')
 														+e.BUTTON.btn._sm._color._top(type='button')
@@ -381,7 +378,7 @@ block content
 								+e.A.package-link-decor.link-decor(href='#!')
 									+e.SPAN Выбрать дизайн упаковки
 							+e.package-col
-								+e.package-row
+								+e.package-row._first
 									+b.zoom.cups__package-item
 										+e.A.element(href='img/content/package-1_lg.jpg' data-fancybox='cups-package')
 											+e.BUTTON.btn._sm._top._color(type='button')
@@ -394,7 +391,7 @@ block content
 											+e.img.IMG(src='img/content/package-2.jpg')
 											+b.cups__package-label._right «Почтовая» упаковка
 
-								+e.package-row
+								+e.package-row._second
 									+b.zoom.cups__package-item
 										+e.A.element(href='img/content/package-3_lg.jpg' data-fancybox='cups-package')
 											+e.BUTTON.btn._sm._top._color(type='button')
@@ -433,17 +430,39 @@ block content
 												+e.STRONG Упаковка в обёрточную бумагу
 													+e.BR
 													| + ленточка или шнурок.
-											+e.view
+											+e.view._spaces-lg._paper-packs
 												+b.zoom.price-table__view-item
-													+e.A.element(href='img/content/paper-package-1_lg.jpg' data-fancybox='paper-package')
-														+e.BUTTON.btn._sm._top._color(type='button')
+													+e.A.element(href='img/content/love-pack_1-lg.jpg' data-fancybox='love-pack')
+														+e.BUTTON.btn._sm._color._top(type='button')
 															+icon('icon-loupe','zoom__btn-icon')
 														+e.img.IMG(src='img/content/paper-package-1.jpg')
+												+b.zoom.price-table__view-item
+													+e.A.element(href='img/content/love-pack_1-lg.jpg' data-fancybox='love-pack')
+														+e.BUTTON.btn._sm._color._top(type='button')
+															+icon('icon-loupe','zoom__btn-icon')
+														+e.img.IMG(src='img/content/paper-package-1.jpg')
+												+b.zoom.price-table__view-item
+													+e.A.element(href='img/content/love-pack_1-lg.jpg' data-fancyb                                        ox='love-pack')
+														+e.img.IMG(src='img/content/paper-package-1.jpg')
+														+e.BUTTON.btn._sm._color._top(type='button')
+															+icon('icon-loupe','zoom__btn-icon')
+											+e.view._spaces-lg._paper-packs
+												+b.zoom.price-table__view-item
+													+e.A.element(href='img/content/love-pack_1-lg.jpg' data-fancybox='love-pack')
+														+e.img.IMG(src='img/content/paper-package-4.jpg')
+														+e.BUTTON.btn._sm._color._top(type='button')
+															+icon('icon-loupe','zoom__btn-icon')
+												+b.zoom.price-table__view-item
+													+e.A.element(href='img/content/love-pack_1-lg.jpg' data-fancybox='love-pack')
+														+e.img.IMG(src='img/content/paper-package-4.jpg')
+														+e.BUTTON.btn._sm._color._top(type='button')
+															+icon('icon-loupe','zoom__btn-icon')
+												+b.zoom.price-table__view-item
+													+e.A.element(href='img/content/love-pack_1-lg.jpg' data-fancybox='love-pack')
+														+e.img.IMG(src='img/content/paper-package-4.jpg')
+														+e.BUTTON.btn._sm._color._top(type='button')
+															+icon('icon-loupe','zoom__btn-icon')
 
-												+e.view-item
-													+e.view-img.IMG(src='img/content/paper-package-cups.jpg')
-													+e.A.zoom._color(href='img/content/white-cup-1.jpg' data-fancybox='paper-package-cups')
-														+icon('icon-loupe','price-table__zoom-icon')
 										+e.TD
 											+e.SPAN.text 70 руб.
 										+e.TD
@@ -463,11 +482,22 @@ block content
 												+e.STRONG Подарочные упаковки,
 												= ' '
 												| есть еще различные варианты...
-											+e.view
-												+e.view-item
-													+e.view-img.IMG(src='img/content/love-package-cups.jpg')
-													+e.A.zoom._color(href='img/content/love-package-cups_lg.jpg' data-fancybox='love-package-cups')
-														+icon('icon-loupe','price-table__zoom-icon')
+											+e.view._spaces-sm._love-pakcs
+												+b.zoom.price-table__view-item
+													+e.A.element(href='img/content/love-pack_1-lg.jpg' data-fancybox='love-pack')
+														+e.BUTTON.btn._sm._color(type='button')
+															+icon('icon-loupe','zoom__btn-icon')
+														+e.img.IMG(src='img/content/love-pack_1.jpg')
+												+b.zoom.price-table__view-item
+													+e.A.element(href='img/content/love-pack_2-lg.jpg' data-fancybox='love-pack')
+														+e.BUTTON.btn._sm._color(type='button')
+															+icon('icon-loupe','zoom__btn-icon')
+														+e.img.IMG(src='img/content/love-pack_2.jpg')
+												+b.zoom.price-table__view-item
+													+e.A.element(href='img/content/love-pack_3-lg.jpg' data-fancybox='love-pack')
+														+e.BUTTON.btn._sm._color(type='button')
+															+icon('icon-loupe','zoom__btn-icon')
+														+e.img.IMG(src='img/content/love-pack_3.jpg')
 											+e.A.link(href='#!') Упаковка кружек (показать варианты)
 										+e.TD
 											+e.SPAN.text 60 руб.
@@ -491,7 +521,7 @@ block content
 								+e.slider-item.zoom
 									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-1_lg.jpg' data-fancybox='teaser-slider')
 										+e.DIV.slider-img(style='background-image: url(img/content/teaser-1.jpg)')
-										+b.BUTTON.zoom__btn._sld(type='button')
+										+b.BUTTON.zoom__btn._top-r(type='button')
 												+icon('icon-loupe','zoom__btn-icon')
 									+e.slider-label._right Обычное фото
 										+e.BR
@@ -500,7 +530,7 @@ block content
 								+e.slider-item.zoom
 									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-2_lg.jpg' data-fancybox='teaser-slider')
 										+e.DIV.slider-img(style='background-image: url(img/content/teaser-2.jpg)')
-										+b.BUTTON.zoom__btn._sld(type='button')
+										+b.BUTTON.zoom__btn._top-r(type='button')
 												+icon('icon-loupe','zoom__btn-icon')
 									+e.slider-label Портрет по фото.
 										+e.BR
@@ -509,7 +539,7 @@ block content
 								+e.slider-item.zoom
 									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-3_lg.jpg' data-fancybox='teaser-slider')
 										+e.DIV.slider-img(style='background-image: url(img/content/teaser-3.jpg)')
-										+b.BUTTON.zoom__btn._sld(type='button')
+										+b.BUTTON.zoom__btn._top-r(type='button')
 												+icon('icon-loupe','zoom__btn-icon')
 										+e.slider-label Стиль портрета
 											+e.BR
@@ -518,7 +548,7 @@ block content
 								+e.slider-item.zoom
 									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-4_lg.jpg' data-fancybox='teaser-slider')
 										+e.DIV.slider-img(style='background-image: url(img/content/teaser-4.jpg)')
-										+b.BUTTON.zoom__btn._sld(type='button')
+										+b.BUTTON.zoom__btn._top-r(type='button')
 												+icon('icon-loupe','zoom__btn-icon')
 										+e.slider-label Обычное фото
 											+e.BR
@@ -527,7 +557,7 @@ block content
 								+e.slider-item.zoom
 									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-5_lg.jpg' data-fancybox='teaser-slider')
 										+e.DIV.slider-img(style='background-image: url(img/content/teaser-5.jpg)')
-										+b.BUTTON.zoom__btn._sld(type='button')
+										+b.BUTTON.zoom__btn._top-r(type='button')
 												+icon('icon-loupe','zoom__btn-icon')
 										+e.slider-label Портрет по фото в стиле
 											+e.BR
@@ -536,28 +566,28 @@ block content
 								+e.slider-item.zoom
 									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-6_lg.jpg' data-fancybox='teaser-slider')
 										+e.DIV.slider-img(style='background-image: url(img/content/teaser-6.jpg)')
-										+b.BUTTON.zoom__btn._sld(type='button')
+										+b.BUTTON.zoom__btn._top-r(type='button')
 												+icon('icon-loupe','zoom__btn-icon')
 										+e.slider-label Стиль портрета «Поп-Арт»
 
 								+e.slider-item.zoom
 									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-7_lg.jpg' data-fancybox='teaser-slider')
 										+e.DIV.slider-img(style='background-image: url(img/content/teaser-7.jpg)')
-										+b.BUTTON.zoom__btn._sld(type='button')
+										+b.BUTTON.zoom__btn._top-r(type='button')
 												+icon('icon-loupe','zoom__btn-icon')
 										+e.slider-label Стиль портрета «Поп-Арт»
 
 								+e.slider-item.zoom
 									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-8_lg.jpg' data-fancybox='teaser-slider')
 										+e.DIV.slider-img(style='background-image: url(img/content/teaser-8.jpg)')
-										+b.BUTTON.zoom__btn._sld(type='button')
+										+b.BUTTON.zoom__btn._top-r(type='button')
 												+icon('icon-loupe','zoom__btn-icon')
 										+e.slider-label Стиль портрета «Поп-Арт»
 
 								+e.slider-item.zoom
 									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-9_lg.jpg' data-fancybox='teaser-slider')
 										+e.DIV.slider-img(style='background-image: url(img/content/teaser-9.jpg)')
-										+b.BUTTON.zoom__btn._sld(type='button')
+										+b.BUTTON.zoom__btn._top-r(type='button')
 												+icon('icon-loupe','zoom__btn-icon')
 										+e.slider-label Стиль портрета
 											+e.BR
@@ -566,14 +596,14 @@ block content
 								+e.slider-item.zoom
 									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-10_lg.jpg' data-fancybox='teaser-slider')
 										+e.DIV.slider-img(style='background-image: url(img/content/teaser-10.jpg)')
-										+b.BUTTON.zoom__btn._sld(type='button')
+										+b.BUTTON.zoom__btn._top-r(type='button')
 												+icon('icon-loupe','zoom__btn-icon')
 										+e.slider-label Стиль портрета «Вектор-Арт»
 
 								+e.slider-item.zoom
 									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-11_lg.jpg' data-fancybox='teaser-slider')
 										+e.DIV.slider-img(style='background-image: url(img/content/teaser-11.jpg)')
-										+b.BUTTON.zoom__btn._sld(type='button')
+										+b.BUTTON.zoom__btn._top-r(type='button')
 												+icon('icon-loupe','zoom__btn-icon')
 										+e.slider-label Стиль портрета «КОМИКС,
 											+e.BR
@@ -582,7 +612,7 @@ block content
 								+e.slider-item.zoom
 									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-12_lg.jpg' data-fancybox='teaser-slider')
 										+e.DIV.slider-img(style='background-image: url(img/content/teaser-12.jpg)')
-										+b.BUTTON.zoom__btn._sld(type='button')
+										+b.BUTTON.zoom__btn._top-r(type='button')
 												+icon('icon-loupe','zoom__btn-icon')
 										+e.slider-label Стиль портрета
 											+e.BR
@@ -591,7 +621,7 @@ block content
 								+e.slider-item.zoom
 									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-13_lg.jpg' data-fancybox='teaser-slider')
 										+e.DIV.slider-img(style='background-image: url(img/content/teaser-13.jpg)')
-										+b.BUTTON.zoom__btn._sld(type='button')
+										+b.BUTTON.zoom__btn._top-r(type='button')
 												+icon('icon-loupe','zoom__btn-icon')
 										+e.slider-label Стиль портрета
 											+e.BR
@@ -600,7 +630,7 @@ block content
 								+e.slider-item.zoom
 									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-14_lg.jpg' data-fancybox='teaser-slider')
 										+e.DIV.slider-img(style='background-image: url(img/content/teaser-14.jpg)')
-										+b.BUTTON.zoom__btn._sld(type='button')
+										+b.BUTTON.zoom__btn._top-r(type='button')
 												+icon('icon-loupe','zoom__btn-icon')
 										+e.slider-label Портрет по фото
 											+e.BR
@@ -609,7 +639,7 @@ block content
 								+e.slider-item.zoom
 									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-15_lg.jpg' data-fancybox='teaser-slider')
 										+e.DIV.slider-img(style='background-image: url(img/content/teaser-15.jpg)')
-										+b.BUTTON.zoom__btn._sld(type='button')
+										+b.BUTTON.zoom__btn._top-r(type='button')
 												+icon('icon-loupe','zoom__btn-icon')
 										+e.slider-label Портрет по фото
 											+e.BR
@@ -618,7 +648,7 @@ block content
 								+e.slider-item.zoom
 										+e.A.slider-item-pic.zoom__element(href='img/content/teaser-16_lg.jpg' data-fancybox='teaser-slider')
 											+e.DIV.slider-img(style='background-image: url(img/content/teaser-16.jpg)')
-											+b.BUTTON.zoom__btn._sld(type='button')
+											+b.BUTTON.zoom__btn._top-r(type='button')
 												+icon('icon-loupe','zoom__btn-icon')
 											+e.slider-label Портрет в стиле «ВЕКТОР-АРТ
 												+e.BR
@@ -627,7 +657,7 @@ block content
 								+e.slider-item.zoom
 									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-17_lg.jpg' data-fancybox='teaser-slider')
 										+e.DIV.slider-img(style='background-image: url(img/content/teaser-17.jpg)')
-										+b.BUTTON.zoom__btn._sld(type='button')
+										+b.BUTTON.zoom__btn._top-r(type='button')
 												+icon('icon-loupe','zoom__btn-icon')
 										+e.slider-label Портрет по фото
 											+e.BR
@@ -636,7 +666,7 @@ block content
 								+e.slider-item.zoom
 									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-18_lg.jpg' data-fancybox='teaser-slider')
 										+e.DIV.slider-img(style='background-image: url(img/content/teaser-18.jpg)')
-										+b.BUTTON.zoom__btn._sld(type='button')
+										+b.BUTTON.zoom__btn._top-r(type='button')
 												+icon('icon-loupe','zoom__btn-icon')
 										+e.slider-label Обычное фото
 											+e.BR
@@ -645,14 +675,14 @@ block content
 								+e.slider-item.zoom
 									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-19_lg.jpg' data-fancybox='teaser-slider')
 										+e.DIV.slider-img(style='background-image: url(img/content/teaser-19.jpg)')
-										+b.BUTTON.zoom__btn._sld(type='button')
+										+b.BUTTON.zoom__btn._top-r(type='button')
 												+icon('icon-loupe','zoom__btn-icon')
 										+e.slider-label Портрет в стиле «РЕТРО»
 
 								+e.slider-item.zoom
 									+e.A.slider-item-pic.zoom__element(href='img/content/teaser-20_lg.jpg' data-fancybox='teaser-slider')
 										+e.DIV.slider-img(style='background-image: url(img/content/teaser-20.jpg)')
-										+b.BUTTON.zoom__btn._sld(type='button')
+										+b.BUTTON.zoom__btn._top-r(type='button')
 												+icon('icon-loupe','zoom__btn-icon')
 										+e.slider-label Портрет по фото
 											+e.BR
@@ -685,7 +715,7 @@ block content
 									+e.block
 									+e.P Доставим продукцию по городу и в регионы России.
 
-						+b.product-types
+						+b.product-types._cups-2
 							+e.text
 								+e.title Придя к нам, вы увидите много всего интересного!
 								+e.P.descr
@@ -693,6 +723,8 @@ block content
 							+e.row._lg
 								+e.FIGURE.item._lg._border-yellow
 									+e.item-img.IMG(src='img/content/cups-types-5.jpg')
+									+e.SPAN.item-label._10 На полотенцах
+									+e.SPAN.item-label._11 Шевроны
 									+e.A(href='#!').item-in
 										+e.FIGCAPTION.item-text
 											+e.H4.item-title
@@ -746,36 +778,42 @@ block content
 									+e.I Оптом и в розницу. Новая услуга - сворачивание вышитых полотенец в виде зайчиков!
 							+e.in
 								+e.col
-									+e.item
-										+e.item-img.IMG(src='img/content/overview-1.jpg')
-										+e.A.zoom(href='img/content/package-5_lg.jpg' data-fancybox='present-pack')
-											+icon('icon-loupe','overview__zoom-icon')
-										+e.item-label Большой выбор
-											+e.BR
-											| нарядных лент
+									+b.zoom.overview__item
+										+e.element.A(href='img/content/package-5_lg.jpg' data-fancybox='present-pack')
+											+e.img.IMG(src='img/content/overview-1.jpg')
+											+e.BUTTON(type='button').btn._top-rc
+												+icon('icon-loupe','zoom__btn-icon')
+											+b.overview__item-label Большой выбор
+												+e.BR
+												| нарядных лент
 								+e.col
-									+e.item
-										+e.item-img.IMG(src='img/content/overview-2.jpg')
-										+e.A.zoom(href='img/content/package-3_lg.jpg' data-fancybox='present-pack')
-											+icon('icon-loupe','overview__zoom-icon')
+									+b.zoom.overview__item
+										+e.element.A(href='img/content/package-3_lg.jpg' data-fancybox='present-pack')
+											+e.img.IMG(src='img/content/overview-2.jpg')
+											+e.BUTTON(type='button').btn._top-rc
+												+icon('icon-loupe','zoom__btn-icon')
 								+e.col
-									+e.item
-										+e.item-img.IMG(src='img/content/overview-3.jpg')
-										+e.A.zoom(href='img/content/package-5_lg.jpg' data-fancybox='present-pack')
-											+icon('icon-loupe','overview__zoom-icon')
-									+e.item
-										+e.item-img.IMG(src='img/content/overview-4.jpg')
-										+e.A.zoom(href='img/content/package-5_lg.jpg' data-fancybox='present-pack')
-											+icon('icon-loupe','overview__zoom-icon')
+									+b.zoom.overview__item
+										+e.element.A(href='img/content/package-2_lg.jpg' data-fancybox='present-pack')
+											+e.img.IMG(src='img/content/overview-3.jpg')
+											+e.BUTTON(type='button').btn._top-rc
+												+icon('icon-loupe','zoom__btn-icon')
+									+b.zoom.overview__item
+										+e.element.A(href='img/content/package-5_lg.jpg' data-fancybox='present-pack')
+											+e.img.IMG(src='img/content/overview-4.jpg')
+											+e.BUTTON(type='button').btn._top-rc
+												+icon('icon-loupe','zoom__btn-icon')
 								+e.col
-									+e.item
-										+e.item-img.IMG(src='img/content/overview-5.jpg')
-										+e.A.zoom(href='img/content/package-5_lg.jpg' data-fancybox='present-pack')
-											+icon('icon-loupe','overview__zoom-icon')
-									+e.item
-										+e.item-img.IMG(src='img/content/overview-6.jpg')
-										+e.A.zoom(href='img/content/package-5_lg.jpg' data-fancybox='present-pack')
-											+icon('icon-loupe','overview__zoom-icon')
+									+b.zoom.overview__item
+										+e.element.A(href='img/content/package-5_lg.jpg' data-fancybox='present-pack')
+											+e.img.IMG(src='img/content/overview-5.jpg')
+											+e.BUTTON(type='button').btn._top-rc
+												+icon('icon-loupe','zoom__btn-icon')
+									+b.zoom.overview__item
+										+e.element.A(href='img/content/package-5_lg.jpg' data-fancybox='present-pack')
+											+e.img.IMG(src='img/content/overview-6.jpg')
+											+e.BUTTON(type='button').btn._top-rc
+												+icon('icon-loupe','zoom__btn-icon')
 
 								+e.A.action(href='#!')
 									+e.SPAN Подарочная упаковка

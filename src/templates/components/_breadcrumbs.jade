@@ -6,9 +6,9 @@ if breadCrumbs ? breadCrumbs : breadCrumbs = []
 			+e.A.link(href='#!')
 				+icon('icon-house', 'breadcrumbs__icon')
 				+e.SPAN Главная
-		mixin breadcrumbsItem(item)
+		mixin breadCrumbsItem(item)
 			+e.LI.item(class= item.active)
 				+e.A.link(href='#!')
 					+e.SPAN= item.text
 		each item in breadCrumbsList
-			+breadcrumbsItem(item)
+			+breadCrumbsItem(item)

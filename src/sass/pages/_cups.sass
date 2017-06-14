@@ -3,9 +3,15 @@
 .cups
 	&__promo
 		margin: 50px 0
+		+md
+			margin: 30px 0
 		&-img
-			max-width: 870px
+			width: percentage(870 / 1224)
 			margin: 0 auto 35px
+			+md
+				margin: 0 auto 25px
+			img
+				width: 100%
 	&__package
 		max-width: 1040px
 		margin: 35px auto
@@ -15,11 +21,17 @@
 			vertical-align: middle
 			font-size: 19px
 			text-align: center
+			+md
+				font-size: 17px
+			+sm
+				font-size: 15px
 			&:nth-child(1)
 				width: 58%
 			&:nth-child(2)
 				width: 42%
 				padding-left: 3.5%
+				+sm
+					padding-left: 1%
 		&-title
 			margin-bottom: 20px
 			text-align: center
@@ -28,12 +40,24 @@
 			text-align: left
 			&:first-of-type
 				text-indent: 30px
+				+sm
+					text-indent: 10px
 			&:last-of-type
 				margin-bottom: 20px
+			
 		&-row
 			&:not(:last-child)
 				margin-bottom: 5px
 			+clr
+		&-row_first &-item:nth-child(1)
+			width: percentage(172 / 400)
+		&-row_first &-item:nth-child(2)
+			width: percentage(208 / 400)
+		&-row_second &-item:nth-child(1),
+		&-row_second &-item:nth-child(2)
+			width: percentage(91 / 400)
+		&-row_second &-item:nth-child(3)
+			width: percentage(205 / 400)
 		&-item
 			position: relative
 			display: inline-block
@@ -63,8 +87,12 @@
 			color: #fff
 			background: rgba(#000, .2)
 			+f('tcm', 13)
+			+sm
+				font-size: 11px
 			&_font
 				font-size: 10px
+				+sm
+					font-size: 8px
 			&_left
 				padding: 4px 8px
 				max-width: 160px
@@ -82,7 +110,8 @@
 		margin: 30px 0
 		&-title
 			text-align: center
-
+			+sm
+				padding: 0 10px
 
 /* product-types
 	----------------------------------- */
@@ -99,8 +128,14 @@
 	&__row
 		margin: 0 -8px
 		font-size: 0
-		&_lg
+		+md
+			margin: 0 -4px
+		&_lg:not(:last-child)
 			margin: 0 -15px 40px
+			+md
+				margin: 0 -8px 30px
+			+sm
+				margin: 0 -8px 15px
 	&__item
 		position: relative
 		display: inline-block
@@ -111,6 +146,12 @@
 		overflow: hidden
 		border-bottom: 2px solid
 		cursor: pointer
+		+md
+			height: 350px
+			margin: 0 4px
+			width: calc(25% - 8px)
+		+sm
+			height: 280px
 		&:hover &-in
 			transform: translateY(-56%)
 			background: rgba(#000, .4)
@@ -122,42 +163,106 @@
 			background: rgba(#000, .5)
 		&-img
 			width: 100%
+			+md
+				height: 100%
 		&-label
 			position: absolute
 			padding: 5px
 			+f('tcm', 16, 16)
 			color: #9D9E9E
 			background: rgba(#fff, .5)
+			+md
+				font-size: 13px
+			+sm
+				font-size: 11px
 			&_1
 				max-width: 100px
 				top: 218px
 				right: 0
+				+md
+					top: 168px
 			&_2
 				left: 0
 				bottom: 149px
+				+md
+					bottom: 117px
 			&_3
 				max-width: 160px
 				left: 0
 				bottom: 137px
+				+md
+					bottom: 109px
+				+sm
+					bottom: 88px
 			&_4
 				top: 32.4%
 				right: 1px
+				+md
+					top: 31.4%
+				+sm
+					top: 27.9%
 			&_5
 				top: 57.3%
 				left: 1px
+				+md
+					top: 55.9%
+				+sm
+					top: 54.2%
 			&_6
 				top: 57.3%
 				right: 1px
+				+md
+					top: 55.8%
+				+sm
+					top: 54%
 			&_7
 				top: 77.1%
 				right: 1px
+				+md
+					top: 75.7%
+				+sm
+					top: 74%
 			&_8
 				top: 55.2%
 				right: 1px
+				+md
+					top: 54.1%
+				+sm
+					top: 52.4%
+			&_9
+				top: 194px
+				left: 16px
+				background: #fff
+				border: 1px solid #7e71b1
+				height: 40px
+				line-height: 28px
+				+md
+					top: 178px
+					left: 6px
+					height: 38px
+					line-height: 26px
+				+sm
+					top: 142px
+					left: 0px
+					height: 30px
+					line-height: 19px
+			&_10
+				top: 53.4%
+				left: 0
+				+md
+					top: 52%
+			&_11
+				top: 37.2%
+				right: 0
 		&_lg
 			width: calc(33.33333% - 30px)
 			margin: 0 15px
 			height: 656px
+			+md
+				height: 530px
+				width: calc(33.33333% - 15px)
+			+sm
+				height: 360px
 			&:hover .product-types__item-in
 				transform: translateY(-46%)
 			.product-types__item-in
@@ -165,9 +270,19 @@
 			.product-types__item-text
 				margin-top: 267px
 				background: rgba(0, 0, 0, 0.6)
+				+md
+					margin-top: 230px
+				+sm
+					margin-top: 138px
 			.product-types__item-title
 				padding: 34px 10px
 				font-size: 22px
+				+md
+					padding: 20px 5px
+					font-size: 17px
+				+sm
+					padding: 22px 0
+					font-size: 15px
 			.product-types__item-title span
 				border-bottom: none
 			.product-types__item-label
@@ -180,6 +295,7 @@
 			height: 100%
 			+gpu
 			transition: background .4s ease, transform .4s ease
+			will-change: transform
 		&-text
 			margin-top: 140px
 			transition: background .4s ease
@@ -187,15 +303,27 @@
 			+f('oss', 18, 18)
 			color: #fff
 			text-align: center
+			+md
+				margin-top: 110px
+				font-size: 14px
+			+sm
+				margin-top: 80px
 		&-title
 			padding: 17px 10px
 			text-transform: uppercase
 			font-weight: 600
+			+sm
+				padding: 17px 2px
+				font-size: 13px
 			span
 				border-bottom: 1px solid transparent
 		&-descr
 			padding: 0 27px
 			line-height: 1.4
+			+md
+				font-size: 13px
+			+sm
+				padding: 0 10px
 		&_border-blue
 			border-bottom-color: #1C8AFF
 		&_border-red
@@ -211,7 +339,13 @@
 	&_cups
 		max-width: 1140px
 		margin: 0 auto 50px
-		
+		+md
+			margin: 0 auto 25px
+	&_cups-2
+		margin-bottom: 60px
+		+md
+			margin-bottom: 30px
+
 /* look
 	----------------------------------- */
 .look
@@ -220,6 +354,10 @@
 	&__item
 		display: inline-block
 		vertical-align: middle
+		&:nth-child(1)
+			width: percentage(279 / 960)
+		&:nth-child(2)
+			width: percentage(594 / 960)
 		&_border
 			border: 2px solid #696969
 			.zoom__btn
@@ -241,6 +379,8 @@
 		max-width: 1000px
 		margin: 40px auto
 		padding: 0 20px
+		+md
+			margin: 25px auto
 
 /* send
 	----------------------------------- */
@@ -268,6 +408,8 @@
 				vertical-align: middle
 				font-size: 18px
 				text-transform: uppercase
+				+md
+					font-size: 16px
 			&_top
 				background: #FDD17D
 				&:hover
@@ -288,7 +430,6 @@
 		max-width: 1050px
 		margin: 0 auto
 
-
 /* price-table
 	----------------------------------- */
 .price-table
@@ -299,6 +440,9 @@
 		font-size: 19px
 		font-weight: 700
 		text-align: center
+		+sm
+			margin-bottom: 13px
+			font-size: 16px
 		&::after
 			+vcenter
 			width: 94%
@@ -316,6 +460,10 @@
 		font-size: 19px
 		font-family: Arial, sans-serif
 		line-height: 1.2
+		+md
+			font-size: 15px
+		+sm
+			font-size: 14px
 		td
 			vertical-align: middle
 			width: 11%
@@ -328,6 +476,10 @@
 		tr:nth-child(1)
 			+f('psr', 20)
 			background: #73d5ff
+			+md
+				font-size: 18px
+			+sm
+				font-size: 16px
 		tr:nth-child(2)
 			background: #9cfcca
 		td
@@ -341,6 +493,10 @@
 			background: #ed0000
 			color: #fff
 			+f('psb', 21)
+			+md
+				font-size: 18px
+			+sm
+				font-size: 15px
 		&_color tr:first-child
 			color: #ffffff
 	&__text
@@ -363,6 +519,8 @@
 		margin: 20px 0 10px
 		font-family: Arial, sans-serif
 		color: #003399
+		+sm
+			margin: 8px 0 3px
 		&:hover
 			text-decoration: underline
 			text-decoration-color: currentColor
@@ -373,10 +531,36 @@
 			vertical-align: middle
 			&_half
 				width: 50%
+				
+		&_white-c &-item
+			width: percentage(90 / 342)
+			&:nth-child(2)
+				width: percentage(144 / 342)
+		&_chameleon-c &-item
+			width: percentage(65 / 342)
+		&_interesting-c &-item
+			margin: 0 0.16% !important
+			&:nth-child(1)
+				width: percentage(149/ 1210)
+			&:nth-child(2)
+				width: percentage(137/ 1210)
+			&:nth-child(3), &:nth-child(4)
+				width: percentage(259/ 1210)
+			&:nth-child(5)
+				width: percentage(151/ 1210)
+			&:nth-child(6)
+				width: percentage(171/ 1210)
+		&_paper-packs &-item
+			width: 31%
+		&_love-pakcs &-item
+			width: percentage(102 / 342)
 		&_spaces &-item
-			margin: 0 2px
+			margin: 0 percentage(2 / 342)
 		&_spaces-sm &-item
-			margin: 0 1px
+			margin: 0 percentage(1 / 342)
+		&_spaces-lg &-item
+			padding: 0 12px
+			margin: 0
 		&-img
 			margin: 0 auto
 			width: 100%
@@ -391,6 +575,10 @@
 			color: #666666
 			background: rgba(#fff, .7)
 			text-align: left
+			+md
+				font-size: 12px
+			+sm
+				font-size: 9px
 			&_color
 				color: #66FFCC
 				background: rgba(#fff, .3)
@@ -437,6 +625,8 @@
 			z-index: 2
 			width: 55px
 			height: 100%
+			+md
+				width: 40px
 			&_prev
 				left: 2px
 			&_next
@@ -447,6 +637,8 @@
 		&-icon
 			fill: #fff
 			font-size: 45px
+			+md
+				font-size: 34px
 		&-label
 			position: absolute
 			bottom: 0
@@ -456,6 +648,11 @@
 			color: #4D4D4D
 			+f('tcm', 14)
 			line-height: 1.2
+			+md
+				font-size: 12px
+			+sm
+				padding: 5px
+				font-size: 11px
 			&_right
 				right: 0
 				text-align: right
@@ -487,9 +684,13 @@
 		float: left
 		width: 50%
 		&:nth-child(1)
-			padding-right: 30px
+			padding-right: 10px
+			+sm
+				padding-right: 0
 			p
 				text-indent: 10px
+			img
+				width: 100%
 		&:nth-child(2)
 			padding-left: 20px
 			p
@@ -498,37 +699,55 @@
 		height: 405px
 		margin-bottom: 20px
 		background: #4cb894
+		+md
+			height: 345px
 	&_cups
 		margin: 50px 0
+		+md
+			margin: 30px 0
+		+sm
+			margin: 30px 0 20px
+		
 
 /* overview
 	----------------------------------- */
 .overview
 	& + &
 		margin-top: 40px
+		+sm
+			margin-top: 20px
 	&__text
 		font-family: Arial, sans-serif
 		font-size: 20px
+		+md
+			font-size: 17px
 		&_last
 			max-width: 1015px
 			margin: 40px auto 0
 			padding: 20px 0 0
 			border-top: 1px solid #cecece
+			+sm
+				margin: 30px auto 0
 	&__title
 		margin-bottom: 25px
 		text-transform: uppercase
 		font-weight: 700
 		text-align: center
+		+md
+			margin-bottom: 15px
+		+sm
+			margin-bottom: 8px
 	&__descr
 		margin-bottom: 25px
 		text-align: center
+		+sm
+			margin-bottom: 15px
 	&__in
 		position: relative
 		display: flex
 	&__col
 		margin: 0 2px
 	&__item
-		position: relative
 		& + &
 			margin-top: 4px
 		&-img
@@ -541,6 +760,8 @@
 			background: #a3a4a5
 			color: #fff
 			+f('tcm', 15)
+			+md
+				font-size: 12px
 	&__zoom
 		position: absolute
 		top: 10px
@@ -563,6 +784,10 @@
 		text-transform: uppercase
 		border-bottom: 2px solid #ff8000
 		transition: .15s ease
+		+md
+			font-size: 19px
+		+sm
+			font-size: 15px
 		&:hover
 			background: #b4e4fc
 			border-bottom-color: #fffead
@@ -597,6 +822,12 @@
 		+f('tcm', 29, 29)
 		color: #8E2E1E
 		text-transform: uppercase
+		+md
+			font-size: 22px
+			right: 9%
+		+sm
+			font-size: 20px
+			right: 3%
 		div
 			display: inline-block
 			padding: 0 35px 0 5px
@@ -610,6 +841,12 @@
 			bottom: 7%
 			right: 23%
 			color: #0000D1
+			+md
+				right: 18%
+				font-size: 21px
+			+sm
+				font-size: 18px
+				right: 15%
 			div
 				padding: 2px 25px 2px 5px
 				background: #99f1ff

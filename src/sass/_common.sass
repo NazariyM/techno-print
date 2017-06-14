@@ -3,6 +3,10 @@ body
 	+f("psr", 18, 26)
 	color: $black
 	-webkit-font-smoothing: subpixel-antialiased
+	+md
+		font-size: 16px
+	+sm
+		font-size: 14px
 	
 // layout
 .out
@@ -34,7 +38,9 @@ h1, h2, h3, h4, h5, h6
 	text-transform: uppercase
 	&__color
 		color: #E63833
-		
+	+md
+		font-size: 18px
+
 .title-lg
 	+f('psr',27)
 	color: #00306B

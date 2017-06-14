@@ -142,6 +142,9 @@
 		color: #333
 		+md
 			font-size: 16px
+		+sm
+			margin: 8px -2px 8px -2px
+			font-size: 14px
 		&_margin
 			margin-top: 20px
 	&__mini.is-active &__mini-icon
@@ -154,6 +157,8 @@
 		padding: 2px 28px 2px 12px
 		background: #F5F5F5
 		cursor: pointer
+		+sm
+			padding: 2px 20px 2px 12px
 		&:hover
 			background: #F5F7FF
 		&:active
@@ -170,6 +175,8 @@
 		padding: 0 0 0 25px
 		margin: 4px 0
 		line-height: 1.05
+		+sm
+			padding: 0 0 0 17px
 	&__mini-item.is-active &__mini-icon-sm
 		display: block
 		&_margin
@@ -188,6 +195,10 @@
 		right: 10px
 		font-size: 9px
 		fill: #C2C2C2
+		+sm
+			top: 9px
+			right: 5px
+			font-size: 7px
 	&__mini-icon-sm
 		display: none
 		position: absolute
@@ -196,12 +207,16 @@
 		font-size: 7px
 		fill: #00306B
 		+rotate(-90)
+		+sm
+			left: 2px
 	&__hit
 		position: absolute
 		top: -3px
 		right: -40px
 		color: #4CB02E
 		+f('psb', 18, 18)
+		+sm
+			font-size: 13px
 		&_color
 			color: #4E9CE5
 	&_home
@@ -224,6 +239,9 @@
 			top: calc(50% - 6px)
 			font-size: 9px
 			+rotate(-90)
+			+sm
+				font-size: 8px
+				top: calc(50% - 4px)
 		.rubric__list-item.is-active .rubric__sub-list
 			display: block
 		.rubric__list-item:hover .rubric__sub-list
@@ -234,6 +252,9 @@
 			padding: 16px 30px 16px 25px
 			+md
 				font-size: 16px
+			+sm
+				padding: 16px 24px 16px 25px
+				font-size: 14px
 			&:hover
 				background: #F5F5F5
 		.rubric__list-link_color
@@ -246,13 +267,21 @@
 			border: 7px solid #F4F8FD
 			border-top: none
 			background: #fff
+			+md
+				padding: 13px 3px 13px 18px
+			+sm
+				padding: 8px 10px 8px 10px
 		.rubric__sub-item
 			line-height: 1.1
 			margin: 0 0 5px
 		.rubric__sub-item_best
 			margin: 15px 0 20px
+			+sm
+				margin: 8px 0 14px
 		.rubric__sub-item_examples
 			margin: 20px 0 0
+			+sm
+				margin: 10px 0 0
 		.rubric__sub-item_examples + .rubric__sub-item_examples
 			margin-top: 5px
 		.rubric__sub-item_margin
@@ -278,3 +307,6 @@
 			font-size: 11px
 			top: calc(50% - 7px)
 			right: 10px
+			+sm
+				right: 9px
+				font-size: 8px

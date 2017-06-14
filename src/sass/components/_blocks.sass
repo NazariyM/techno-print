@@ -151,6 +151,8 @@
 		font-size: 20px
 		+md
 			font-size: 18px
+		+sm
+			font-size: 16px
 		&::after
 			display: inline-block
 			vertical-align: middle
@@ -176,6 +178,9 @@
 	&__container
 		+md
 			max-width: 1200px
+		+sm
+			max-width: 980px
+			padding: 0 10px
 	&__bar
 		position: relative
 		display: flex
@@ -206,11 +211,15 @@
 			color: #333333
 			+md
 				font-size: 18px
+			+sm
+				font-size: 16px
 			&_has-icon
 				position: relative
 				padding: 8px 75px 8px 30px
 			&_big-icon
 				padding: 8px 85px 8px 30px
+				+sm
+					padding: 8px 66px 8px 30px
 			&-icon
 				position: absolute
 				top: 50%
@@ -247,6 +256,8 @@
 			.icon-cups
 				right: 15px
 				font-size: 28px
+				+sm
+					font-size: 22px
 	&__in
 		display: flex
 		justify-content: space-between
@@ -260,7 +271,7 @@
 		flex-direction: column
 		width: 80%
 		+md
-			width: 77%
+			width: 76.7%
 
 /* pagination
 	----------------------------------- */
@@ -504,6 +515,8 @@
 			text-indent: 30px
 		li:not(:last-child)
 			margin-bottom: 20px
+			+md
+				margin-bottom: 15px
 	&__link
 		color: #274F7F
 		background: transparent
@@ -511,17 +524,21 @@
 		text-decoration-color: #274F7F
 	&_default
 		margin: 30px 0 0
-			
+
 /* section defaults
 	----------------------------------- */
 .sect
 	padding-bottom: 40px
 	
 .sect-title
-
+	+sm
+		padding: 0 4px
+		font-size: 16px
 .sect-descr
 	margin: 20px 0
 	text-indent: 30px
+	+md
+		margin: 15px 0
 
 /* zoom
 	----------------------------------- */
@@ -548,6 +565,8 @@
 		&-icon
 			font-size: 36px
 			fill: #B9BDC7
+			+sm
+				font-size: 25px
 		&_sm
 			padding: 0
 			left: 6px
@@ -555,16 +574,29 @@
 		&_sm &-icon
 			font-size: 28px
 			fill: #fff
+			+sm
+				font-size: 22px
 		&_top
 			top: 8px
 			bottom: auto
 		&_color &-icon
 			fill: #5b5f69
-		&_sld
+		&_top-r
 			padding: 5px
 			top: 10px
 			right: 10px
 			bottom: auto
 			left: auto
-		&_sld &-icon
+			+sm
+				top: 5px
+				right: 5px
+		&_top-r &-icon
 			fill: #fff
+		&_top-rc
+			padding: 5px
+			top: 10px
+			right: 10px
+			bottom: auto
+			left: auto
+		&_top-rr &-icon
+			fill: #B3B3B3
