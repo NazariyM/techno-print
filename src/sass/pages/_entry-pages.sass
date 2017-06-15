@@ -186,8 +186,12 @@
 		padding: 20px 0 5px
 		background: #FAFEFF
 		+clr
+		+sm
+			padding: 10px 0 5px
 	&__col
 		padding: 0 4%
+		+sm
+			padding: 0 3%
 		&:nth-child(1)
 			float: left
 			width: 48%
@@ -197,14 +201,31 @@
 	&__title
 		margin-bottom: 20px
 		color: #000
+		+md
+			margin-bottom: 15px
+		+sm
+			margin-bottom: 8px
 	&__descr
 		font-size: 19px
 		color: #1A2F4A
+		+md
+			font-size: 18px
+		+sm
+			font-size: 16px
 	&__list
 		+f('oss', 21)
+		+md
+			font-size: 18px
+		+sm
+			padding-top: 20px
+			font-size: 16px
 		li
 			position: relative
 			padding-left: 40px
+			+md
+				padding-left: 35px
+			+sm
+				padding-left: 30px
 			&:not(:last-child)
 				margin-bottom: 5px
 		&-icon
@@ -214,14 +235,21 @@
 			z-index: 1
 			fill: #AEC94D
 			font-size: 32px
+			+md
+				font-size: 29px
+			+sm
+				font-size: 26px
 	&__bg
 		position: relative
 		min-height: 520px
 		background: #FAFEFF
+		+md
+			min-height: 400px
+		+sm
+			min-height: 360px
 		&-img
 			+coverdiv
 			+cover
-			z-index: 1
 			
 /* photos
 	----------------------------------- */

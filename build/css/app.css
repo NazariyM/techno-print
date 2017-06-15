@@ -8188,7 +8188,6 @@ body::after {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-  z-index: 1;
 }
 
 /* photos
@@ -9491,6 +9490,24 @@ body::after {
     right: 18%;
     font-size: 21px;
   }
+  .payment__title{
+    margin-bottom: 15px;
+  }
+  .payment__descr{
+    font-size: 18px;
+  }
+  .payment__list{
+    font-size: 18px;
+  }
+  .payment__list li{
+    padding-left: 35px;
+  }
+  .payment__list-icon{
+    font-size: 29px;
+  }
+  .payment__bg{
+    min-height: 400px;
+  }
 }
 @media only screen and (max-width: 1279px){
   body{
@@ -10400,6 +10417,31 @@ body::after {
   .overview__label_type-2{
     font-size: 18px;
     right: 15%;
+  }
+  .payment__in{
+    padding: 10px 0 5px;
+  }
+  .payment__col{
+    padding: 0 3%;
+  }
+  .payment__title{
+    margin-bottom: 8px;
+  }
+  .payment__descr{
+    font-size: 16px;
+  }
+  .payment__list{
+    padding-top: 20px;
+    font-size: 16px;
+  }
+  .payment__list li{
+    padding-left: 30px;
+  }
+  .payment__list-icon{
+    font-size: 26px;
+  }
+  .payment__bg{
+    min-height: 360px;
   }
 }
 @media only screen and (max-width: 1024px){
