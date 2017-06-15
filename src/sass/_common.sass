@@ -341,6 +341,10 @@ h1, h2, h3, h4, h5, h6
 .more-content-open
 	font-size: 18px
 	color: #004D87
+	+md
+		font-size: 16px
+	+sm
+		font-size: 14px
 	span
 		display: inline-block
 		vertical-align: middle
@@ -350,6 +354,10 @@ h1, h2, h3, h4, h5, h6
 		margin-left: 4px
 		font-size: 8px
 		fill: #004D87
+		+md
+			font-size: 6px
+		+sm
+			font-size: 5px
 .more-content-close
 	display: none
 	padding-top: 9px
@@ -359,7 +367,9 @@ h1, h2, h3, h4, h5, h6
 		font-size: 16px
 		fill: #C2C2C2
 		+rotate(180)
-	
+		+md
+			font-size: 12px
+		
 // basic transition
 =trs
 	transition: .2s cubic-bezier(0.55, 0.09, 0.68, 0.53)

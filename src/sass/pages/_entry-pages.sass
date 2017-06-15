@@ -68,13 +68,16 @@
 		+clr
 		& + &
 			margin-top: 30px
+			+md
+				margin-top: 20px
 		&-pic
 			float: left
 			width: 51%
 			padding-right: 2%
 			margin-bottom: -5px
+			+sm
+				padding-right: 1%
 		&-img-wrap
-			height: 340px
 			img
 				width: 100%
 				height: 100%
@@ -82,6 +85,10 @@
 			padding: 7px 2px
 			+f('oss', 16)
 			color: #BCBFC2
+			+md
+				font-size: 14px
+			+sm
+				font-size: 13px
 			span + span
 				margin-left: 5px
 		&-title
@@ -91,12 +98,20 @@
 			margin-bottom: 15px
 			+f('oss', 20)
 			background: #F4F8FD
+			+md
+				margin-bottom: 10px
+				font-size: 17px
+			+sm
+				padding: 2px 10px
+				font-size: 14px
 		&-descr
 			position: relative
 			float: left
 			padding: 0 0 30px
 			width: 49%
 			min-height: 265px
+			+sm
+				min-height: auto
 			&.is-open
 				float: none
 				width: auto
@@ -116,6 +131,10 @@
 			z-index: 1
 			font-size: 18px
 			color: #004D87
+			+md
+				font-size: 16px
+			+sm
+				font-size: 14px
 			span
 				display: inline-block
 				vertical-align: middle
@@ -128,6 +147,10 @@
 			vertical-align: middle
 			font-size: 10px
 			fill: #004D87
+			+md
+				font-size: 8px
+			+sm
+				font-size: 6px
 			
 /* machine
 	----------------------------------- */
@@ -135,6 +158,14 @@
 	&__in
 		padding: 20px 0
 		+clr
+		+sm
+			padding: 10px 0
+	&__title
+		+md
+			padding: 0 14px
+		+sm
+			padding: 0 10px
+			font-size: 16px
 	&__text
 		p
 			text-indent: 30px
@@ -144,30 +175,50 @@
 		float: right
 		width: percentage(490 / 1224)
 		margin-left: 20px
+		img
+			width: 100%
 	&__content
 		position: relative
 		clear: both
 		padding: 30px 0
+		+md
+			padding: 20px 0
+		+sm
+			padding: 12px 0
 		&::after
 			content: ''
 			display: block
 			height: 114px
 			width: 100%
 			background: url(../img/bg/scissors-decor.svg) no-repeat 50% 50%/cover
+			+md
+				height: 84px
+			+sm
+				height: 69px
 		&.is-open
 			margin-bottom: 20px
 		&-in
 			display: none
 			max-width: 860px
 			margin: 0 auto 30px
+			+sm
+				margin: 0 auto 20px
 		&-title
 			text-indent: 50px
 		&-list
 			margin-top: 30px
+			+md
+				margin-top: 20px
+			+sm
+				margin-top: 13px
 			li
 				text-indent: 20px
 			li:not(:last-child)
 				margin-bottom: 20px
+				+md
+					margin-bottom: 15px
+				+sm
+					margin-bottom: 10px
 	&__more-content-open
 		display: inline
 		vertical-align: top
