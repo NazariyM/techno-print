@@ -1208,7 +1208,7 @@ li.fancybox-thumbs-loading {
 }
 
 body {
-  min-width: 1024px;
+  min-width: 768px;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 18px;
   line-height: 1.44444;
@@ -8323,6 +8323,9 @@ body::after {
   .title-md{
     font-size: 18px;
   }
+  .title-lg{
+    font-size: 23px;
+  }
   .btn{
     min-width: 238px;
     padding: 11px 41px 11px 5px;
@@ -9194,6 +9197,9 @@ body::after {
   .pagination_watched{
     margin: 15px 0;
   }
+  .category-menu__title{
+    margin-bottom: 25px;
+  }
   .category-menu__link{
     font-size: 15px;
   }
@@ -9220,6 +9226,42 @@ body::after {
   }
   .sect-descr{
     margin: 15px 0;
+  }
+  .contacts__in{
+    padding-bottom: 35px;
+  }
+  .contacts__info + .contacts__info{
+    padding-top: 35px;
+  }
+  .contacts__info-data{
+    width: 45%;
+  }
+  .contacts__info-title{
+    margin-bottom: 30px;
+    font-size: 23px;
+  }
+  .contacts__info-item{
+    margin-top: 15px;
+    font-size: 18px;
+  }
+  .contacts__info-text + .contacts__info-text{
+    margin-top: 25px;
+  }
+  .contacts__socials{
+    padding: 25px 0;
+  }
+  .contacts__socials-links{
+    font-size: 20px;
+  }
+  .contacts__descr{
+    font-size: 17px;
+  }
+  .contacts__descr-title{
+    margin-bottom: 20px;
+  }
+  .contacts_default{
+    padding-left: 20px;
+    padding-bottom: 30px;
   }
   .order{
     padding: 15px 20px 25px;
@@ -9436,6 +9478,9 @@ body::after {
   .container{
     max-width: 980px;
     padding: 0 10px;
+  }
+  .title-lg{
+    font-size: 20px;
   }
   .btn{
     min-width: 210px;
@@ -10105,6 +10150,38 @@ body::after {
   .zoom__btn_top-r{
     top: 5px;
     right: 5px;
+  }
+  .contacts__in{
+    padding-bottom: 20px;
+  }
+  .contacts__info + .contacts__info{
+    padding-top: 20px;
+  }
+  .contacts__info-title{
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  .contacts__info-map iframe{
+    height: 350px;
+  }
+  .contacts__info-item{
+    font-size: 16px;
+  }
+  .contacts__info-text + .contacts__info-text{
+    margin-top: 15px;
+  }
+  .contacts__socials{
+    padding: 15px 0;
+  }
+  .contacts__socials-links{
+    font-size: 17px;
+  }
+  .contacts__descr{
+    padding: 20px 0;
+    font-size: 16px;
+  }
+  .contacts_default{
+    padding-left: 10px;
   }
   .order{
     padding: 15px 15px 20px;

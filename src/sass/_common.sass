@@ -1,5 +1,5 @@
 body
-	min-width: 1024px
+	min-width: 768px
 	+f("psr", 18, 26)
 	color: $black
 	-webkit-font-smoothing: subpixel-antialiased
@@ -48,7 +48,11 @@ h1, h2, h3, h4, h5, h6
 	+f('psr',27)
 	color: #00306B
 	text-transform: uppercase
-	
+	+md
+		font-size: 23px
+	+sm
+		font-size: 20px
+
 /* buttons
 	----------------------------------- */
 .btn
