@@ -7798,10 +7798,11 @@ body::after {
 /* pictures
 	----------------------------------- */
 .pictures {
-  padding: 0 0 30px;
+  padding-bottom: 30px;
 }
 
 .pictures__title {
+  padding: 0 100px;
   text-align: center;
 }
 
@@ -9178,6 +9179,9 @@ body::after {
   .page__bar-title{
     font-size: 18px;
   }
+  .page__bar-title .icon-pictures{
+    font-size: 22px;
+  }
   .page__side{
     width: 22.2%;
   }
@@ -9229,8 +9233,17 @@ body::after {
   .check label{
     font-size: 17px;
   }
+  .benefits-list__title{
+    font-size: 18px;
+  }
+  .benefits-list ul{
+    margin-top: 10px;
+  }
   .benefits-list ul li:not(:last-child){
     margin-bottom: 15px;
+  }
+  .benefits-list_default{
+    margin: 20px 0 0;
   }
   .sect-descr{
     margin: 15px 0;
@@ -9498,6 +9511,16 @@ body::after {
   .overview__label_type-2{
     right: 18%;
     font-size: 21px;
+  }
+  .pictures__title{
+    padding: 0 30px;
+  }
+  .pictures__pics-item:not(:first-child){
+    margin-left: 0.2%;
+  }
+  .pictures__pics-label{
+    padding: 5px 10px;
+    font-size: 17px;
   }
   .news__post + .news__post{
     margin-top: 20px;
@@ -10182,8 +10205,14 @@ body::after {
   .page__bar-title{
     font-size: 16px;
   }
+  .page__bar-title_has-icon{
+    padding: 8px 65px 8px 30px;
+  }
   .page__bar-title_big-icon{
     padding: 8px 66px 8px 30px;
+  }
+  .page__bar-title .icon-pictures{
+    font-size: 20px;
   }
   .page__bar-title .icon-cups{
     font-size: 22px;
@@ -10220,6 +10249,12 @@ body::after {
   }
   .check label{
     font-size: 15px;
+  }
+  .benefits-list__title{
+    font-size: 15px;
+  }
+  .benefits-list_default{
+    margin: 15px 0 0;
   }
   .sect-title{
     padding: 0 4px;
@@ -10463,6 +10498,12 @@ body::after {
   .overview__label_type-2{
     font-size: 18px;
     right: 15%;
+  }
+  .pictures{
+    padding-bottom: 20px;
+  }
+  .pictures__pics-label{
+    font-size: 14px;
   }
   .news__post-pic{
     padding-right: 1%;

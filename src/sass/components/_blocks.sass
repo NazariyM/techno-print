@@ -214,6 +214,8 @@
 			&_has-icon
 				position: relative
 				padding: 8px 75px 8px 30px
+				+sm
+					padding: 8px 65px 8px 30px
 			&_big-icon
 				padding: 8px 85px 8px 30px
 				+sm
@@ -230,6 +232,10 @@
 			.icon-pictures
 				top: 48%
 				font-size: 26px
+				+md
+					font-size: 22px
+				+sm
+					font-size: 20px
 			.icon-souvenirs_page
 				font-size: 25px
 			.icon-souvenirs
@@ -553,11 +559,17 @@
 		font-size: 20px
 		text-align: center
 		font-weight: 700
+		+md
+			font-size: 18px
+		+sm
+			font-size: 15px
 	&__descr
 		margin-top: 35px
 		text-indent: 30px
 	ul
 		margin-top: 20px
+		+md
+			margin-top: 10px
 		li
 			text-indent: 30px
 		li:not(:last-child)
@@ -571,6 +583,10 @@
 		text-decoration-color: #274F7F
 	&_default
 		margin: 30px 0 0
+		+md
+			margin: 20px 0 0
+		+sm
+			margin: 15px 0 0
 
 /* section defaults
 	----------------------------------- */
