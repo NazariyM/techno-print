@@ -7,19 +7,13 @@ block content
 	+b.MAIN.page._default
 		+e.container.container
 			+e.bar
-				+b.breadcrumbs
-					+e.A.link(href='#!')
-						+icon('icon-house', 'breadcrumbs__icon')
-						= ' '
-						+e.SPAN Главная
-					+e.A.link(href='#!')
-						+e.SPAN Услуги фирмы
-					+e.A.link.is-active(href='#!')
-						+e.SPAN Лучшие предложения
+				-
+					var breadCrumbsList = [{text: 'Услуги фирмы'}, {text: 'Лучшие предложения', active: 'is-active'}];
+				include components/_breadcrumbs
 
 				+e.bar-title._has-icon
 					+e.SPAN Популярные и интересные товары
-					+icon('icon-souvenirs', 'page__bar-title-icon')
+					+icon('icon-best-choice', 'page__bar-title-icon')
 
 			+e.in
 				include components/_rubric-side

@@ -7,13 +7,9 @@ block content
 	+b.MAIN.page._default
 		+e.container.container
 			+e.bar
-				+b.breadcrumbs
-					+e.A.link(href='#!')
-						+icon('icon-house', 'breadcrumbs__icon')
-						= ' '
-						+e.SPAN Главная
-					+e.A.link.is-active(href='#!')
-						+e.SPAN Воздушные шары с гелием
+				-
+					var breadCrumbsList = [{text: 'Воздушные шары с гелием', active: 'is-active'}];
+				include components/_breadcrumbs
 
 				+e.bar-title._has-icon
 					+e.SPAN Гелиевые шарики с доставкой

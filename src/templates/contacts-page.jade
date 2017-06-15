@@ -6,14 +6,10 @@ extends layouts/_layout
 block content
 	+b.MAIN.page._default
 		+e.container.container
-			+e.bar.bordered
-				+b.breadcrumbs
-					+e.A.link(href='#!')
-						+icon('icon-house', 'breadcrumbs__icon')
-						= ' '
-						+e.SPAN Главная
-					+e.A.link.is-active(href='#!')
-						+e.SPAN Контакты
+			+e.bar
+				-
+					var breadCrumbsList = [{text: 'Контакты', active: 'is-active'}];
+				include components/_breadcrumbs
 
 				+e.bar-title
 					+e.SPAN Доверьтесь профессионалам, они всё сделают!

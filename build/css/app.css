@@ -138,6 +138,12 @@ html {
   fill: initial;
 }
 
+.icon-best-choice {
+  width: 1.42em;
+  height: 1em;
+  fill: initial;
+}
+
 .icon-books {
   width: 0.77em;
   height: 1em;
@@ -3314,7 +3320,7 @@ body::after {
   background-image: url("../img/sprite.png");
   width: 51px;
   height: 53px;
-  background-position: -724px -360px;
+  background-position: -246px -128px;
 }
 
 .extra__item .icon-polygraph {
@@ -3741,7 +3747,7 @@ body::after {
   width: 78.66667px;
   height: 76px;
   background-position: 0px 0px;
-  background-size: 277.33333px 260px;
+  background-size: 121.33333px 118.66667px;
 }
 
 .benefits {
@@ -3785,21 +3791,21 @@ body::after {
   background-image: url("../img/sprite.png");
   width: 118px;
   height: 118px;
-  background-position: 0px -560px;
+  background-position: -246px 0px;
 }
 
 .benefits__item-pic_pic-2::after {
   background-image: url("../img/sprite.png");
   width: 118px;
   height: 118px;
-  background-position: -570px -407px;
+  background-position: 0px -238px;
 }
 
 .benefits__item-pic_pic-3::after {
   background-image: url("../img/sprite.png");
   width: 118px;
   height: 118px;
-  background-position: -570px -279px;
+  background-position: -128px -238px;
 }
 
 .benefits__item-text {
@@ -4627,8 +4633,8 @@ body::after {
   background-image: url("../img/sprite.png");
   width: 18px;
   height: 16.66667px;
-  background-position: -241.33333px -141px;
-  background-size: 277.33333px 260px;
+  background-position: -102.33333px -42.66667px;
+  background-size: 121.33333px 118.66667px;
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
@@ -5343,7 +5349,7 @@ body::after {
 .breadcrumbs__link::after {
   display: inline-block;
   vertical-align: middle;
-  margin: 0 3px;
+  margin: 0 4px;
   content: '/';
   pointer-events: none;
 }
@@ -5364,7 +5370,7 @@ body::after {
 .breadcrumbs__icon {
   display: inline-block;
   vertical-align: middle;
-  margin-right: 5px;
+  margin-right: 8px;
   fill: #D0CFCF;
 }
 
@@ -5423,6 +5429,10 @@ body::after {
   fill: #C7CBCF;
 }
 
+.page__bar-title .icon-best-choice {
+  font-size: 26px;
+}
+
 .page__bar-title .icon-machine {
   top: 47%;
   font-size: 27px;
@@ -5476,7 +5486,7 @@ body::after {
   display: flex;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin: 30px 0 0;
+  margin-top: 30px;
 }
 
 .page__side {
@@ -8191,11 +8201,6 @@ body::after {
   background-position: 50% 50%;
 }
 
-/* photos
-	----------------------------------- */
-.photos__title {
-  padding: 0;
-}
 @media only screen and (max-width: 1835px){
   .btn{
     min-width: 280px;
@@ -8306,6 +8311,7 @@ body::after {
     font-size: 19px;
   }
 }
+
 @media only screen and (max-width: 1599px){
   .stepper .stepper-arrow{
     width: 22px;
@@ -9179,8 +9185,32 @@ body::after {
   .page__bar-title{
     font-size: 18px;
   }
+  .page__bar-title_has-icon{
+    padding: 8px 70px 8px 30px;
+  }
+  .page__bar-title .icon-best-choice{
+    font-size: 23px;
+  }
+  .page__bar-title .icon-machine{
+    font-size: 23px;
+  }
   .page__bar-title .icon-pictures{
     font-size: 22px;
+  }
+  .page__bar-title .icon-souvenirs_page{
+    font-size: 21px;
+  }
+  .page__bar-title .icon-books_page{
+    font-size: 21px;
+  }
+  .page__bar-title .icon-presents{
+    font-size: 24px;
+  }
+  .page__bar-title .icon-balloons_sm{
+    font-size: 24px;
+  }
+  .page__in{
+    margin-top: 25px;
   }
   .page__side{
     width: 22.2%;
@@ -9233,8 +9263,19 @@ body::after {
   .check label{
     font-size: 17px;
   }
+  .label-block__title{
+    padding: 6px;
+    font-size: 15px;
+  }
+  .label-block__item-label{
+    padding: 7px;
+    font-size: 13px;
+  }
   .benefits-list__title{
     font-size: 18px;
+  }
+  .benefits-list__descr{
+    margin-top: 25px;
   }
   .benefits-list ul{
     margin-top: 10px;
@@ -9244,6 +9285,9 @@ body::after {
   }
   .benefits-list_default{
     margin: 20px 0 0;
+  }
+  .sect{
+    padding-bottom: 30px;
   }
   .sect-descr{
     margin: 15px 0;
@@ -9522,6 +9566,9 @@ body::after {
     padding: 5px 10px;
     font-size: 17px;
   }
+  .clothes{
+    padding: 0 0 15px;
+  }
   .news__post + .news__post{
     margin-top: 20px;
   }
@@ -9572,6 +9619,7 @@ body::after {
     min-height: 400px;
   }
 }
+
 @media only screen and (max-width: 1279px){
   body{
     font-size: 14px;
@@ -9579,6 +9627,9 @@ body::after {
   .container{
     max-width: 980px;
     padding: 0 10px;
+  }
+  .title-md{
+    padding: 0 8px;
   }
   .title-lg{
     font-size: 20px;
@@ -10206,19 +10257,38 @@ body::after {
     font-size: 16px;
   }
   .page__bar-title_has-icon{
-    padding: 8px 65px 8px 30px;
+    padding: 8px 55px 8px 30px;
   }
   .page__bar-title_big-icon{
     padding: 8px 66px 8px 30px;
   }
+  .page__bar-title .icon-best-choice{
+    font-size: 20px;
+  }
+  .page__bar-title .icon-machine{
+    font-size: 20px;
+  }
   .page__bar-title .icon-pictures{
+    font-size: 20px;
+  }
+  .page__bar-title .icon-souvenirs_page{
+    font-size: 18px;
+  }
+  .page__bar-title .icon-books_page{
+    font-size: 17px;
+  }
+  .page__bar-title .icon-presents{
+    font-size: 20px;
+    right: 10px;
+  }
+  .page__bar-title .icon-balloons_sm{
     font-size: 20px;
   }
   .page__bar-title .icon-cups{
     font-size: 22px;
   }
   .page__in{
-    margin: 20px 0 0;
+    margin-top: 20px;
   }
   .pagination__list-item_prev .pagination__list-link{
     line-height: 29px;
@@ -10250,15 +10320,35 @@ body::after {
   .check label{
     font-size: 15px;
   }
+  .label-block__title{
+    padding: 5px;
+    font-size: 13px;
+  }
+  .label-block__in{
+    padding: 2px;
+  }
+  .label-block__item-label{
+    padding: 5px;
+    font-size: 11px;
+  }
   .benefits-list__title{
     font-size: 15px;
+  }
+  .benefits-list__descr{
+    margin-top: 15px;
   }
   .benefits-list_default{
     margin: 15px 0 0;
   }
+  .sect{
+    padding-bottom: 20px;
+  }
   .sect-title{
     padding: 0 4px;
     font-size: 16px;
+  }
+  .sect-descr{
+    margin: 10px 0;
   }
   .zoom__btn-icon{
     font-size: 25px;
@@ -10505,6 +10595,9 @@ body::after {
   .pictures__pics-label{
     font-size: 14px;
   }
+  .clothes__in{
+    padding: 10px 0 0;
+  }
   .news__post-pic{
     padding-right: 1%;
   }
@@ -10572,6 +10665,7 @@ body::after {
     min-height: 360px;
   }
 }
+
 @media only screen and (max-width: 1024px){
   .product__zoom{
     opacity: 1;
@@ -10580,6 +10674,7 @@ body::after {
     background: rgba(230, 238, 255, 0.95);
   }
 }
+
 @media only screen and (max-width: 1023px){
   .product__sect-link{
     margin: 1px;

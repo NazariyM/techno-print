@@ -160,7 +160,7 @@
 		&::after
 			display: inline-block
 			vertical-align: middle
-			margin: 0 3px
+			margin: 0 4px
 			content: '/'
 			pointer-events: none
 		&:hover
@@ -173,7 +173,7 @@
 	&__icon
 		display: inline-block
 		vertical-align: middle
-		margin-right: 5px
+		margin-right: 8px
 		fill: #D0CFCF
 		
 /* page
@@ -214,8 +214,10 @@
 			&_has-icon
 				position: relative
 				padding: 8px 75px 8px 30px
+				+md
+					padding: 8px 70px 8px 30px
 				+sm
-					padding: 8px 65px 8px 30px
+					padding: 8px 55px 8px 30px
 			&_big-icon
 				padding: 8px 85px 8px 30px
 				+sm
@@ -226,9 +228,19 @@
 				transform: translateY(-50%)
 				right: 10px
 				fill: #C7CBCF
+			.icon-best-choice
+				font-size: 26px
+				+md
+					font-size: 23px
+				+sm
+					font-size: 20px
 			.icon-machine
 				top: 47%
 				font-size: 27px
+				+md
+					font-size: 23px
+				+sm
+					font-size: 20px
 			.icon-pictures
 				top: 48%
 				font-size: 26px
@@ -238,21 +250,38 @@
 					font-size: 20px
 			.icon-souvenirs_page
 				font-size: 25px
+				+md
+					font-size: 21px
+				+sm
+					font-size: 18px
 			.icon-souvenirs
 				right: 16px
 				font-size: 25px
 			.icon-books_page
 				right: 15px
 				font-size: 25px
+				+md
+					font-size: 21px
+				+sm
+					font-size: 17px
 			.icon-presents
 				font-size: 28px
 				right: 14px
+				+md
+					font-size: 24px
+				+sm
+					font-size: 20px
+					right: 10px
 			.icon-balloons_sm
 				right: 20px
 				fill: #F3F3F3
 				stroke: #000
 				font-size: 30px
 				stroke-width: 1px
+				+md
+					font-size: 24px
+				+sm
+					font-size: 20px
 			.icon-best-offers
 				stroke: #C7CBCF
 				fill: #C7CBCF
@@ -265,9 +294,11 @@
 	&__in
 		display: flex
 		justify-content: space-between
-		margin: 30px 0 0
+		margin-top: 30px
+		+md
+			margin-top: 25px
 		+sm
-			margin: 20px 0 0
+			margin-top: 20px
 	&__side
 		width: 19%
 		+md
@@ -503,10 +534,18 @@
 		color: #004D8C
 		background: rgba(#DEF1FF, .6)
 		text-transform: uppercase
+		+md
+			padding: 6px
+			font-size: 15px
+		+sm
+			padding: 5px
+			font-size: 13px
 	&__in
 		padding: 4px
 		border: 2px solid #47C1F0
 		+clr
+		+sm
+			padding: 2px
 	&__item
 		position: relative
 		float: left
@@ -541,6 +580,12 @@
 			+f('oss', 16, 16)
 			color: #fff
 			background: rgba(#000, .45)
+			+md
+				padding: 7px
+				font-size: 13px
+			+sm
+				padding: 5px
+				font-size: 11px
 			&_top
 				top: 0
 				bottom: auto
@@ -566,6 +611,10 @@
 	&__descr
 		margin-top: 35px
 		text-indent: 30px
+		+md
+			margin-top: 25px
+		+sm
+			margin-top: 15px
 	ul
 		margin-top: 20px
 		+md
@@ -592,7 +641,10 @@
 	----------------------------------- */
 .sect
 	padding-bottom: 40px
-	
+	+md
+		padding-bottom: 30px
+	+sm
+		padding-bottom: 20px
 .sect-title
 	+sm
 		padding: 0 4px
@@ -602,6 +654,8 @@
 	text-indent: 30px
 	+md
 		margin: 15px 0
+	+sm
+		margin: 10px 0
 
 /* zoom
 	----------------------------------- */
