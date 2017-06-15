@@ -9263,6 +9263,27 @@ body::after {
     padding-left: 20px;
     padding-bottom: 30px;
   }
+  .delivery{
+    margin-bottom: 10px;
+  }
+  .delivery__country{
+    margin-bottom: 20px;
+  }
+  .delivery__country-in{
+    margin: 20px 0 0;
+  }
+  .delivery__country-text{
+    font-size: 22px;
+  }
+  .delivery__country-pic img{
+    width: 100%;
+  }
+  .delivery__city{
+    min-height: 415px;
+  }
+  .delivery__city-text{
+    margin: 25px 0 0 40px;
+  }
   .order{
     padding: 15px 20px 25px;
   }
@@ -10182,6 +10203,15 @@ body::after {
   }
   .contacts_default{
     padding-left: 10px;
+  }
+  .delivery__title{
+    padding-top: 5px;
+  }
+  .delivery__city{
+    min-height: 330px;
+  }
+  .delivery__city-text p + p{
+    margin-top: 6px;
   }
   .order{
     padding: 15px 15px 20px;

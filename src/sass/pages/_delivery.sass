@@ -1,15 +1,23 @@
 .delivery
 	margin-bottom: 60px
+	+md
+		margin-bottom: 10px
 	&__title
 		position: relative
 		padding-top: 15px
 		text-align: center
 		z-index: 2
+		+sm
+			padding-top: 5px
 	&__country
 		margin-bottom: 35px
+		+md
+			margin-bottom: 20px
 		&-in
 			position: relative
 			margin: 30px 0 0
+			+md
+				margin: 20px 0 0
 		&-text
 			position: absolute
 			top: 0
@@ -18,14 +26,21 @@
 			+f('asd', 25)
 			color: #1C487A
 			line-height: 1
+			+md
+				font-size: 22px
 		&-pic
 			padding-top: 40px
 			img
 				margin: 0 auto
-				
+				+md
+					width: 100%
 	&__city
 		position: relative
 		min-height: 538px
+		+md
+			min-height: 415px
+		+sm
+			min-height: 330px
 		&-bg
 			+coverdiv
 			+cover
@@ -36,5 +51,9 @@
 			max-width: 520px
 			margin: 35px 0 0 60px
 			z-index: 2
+			+md
+				margin: 25px 0 0 40px
 			p + p
 				margin-top: 10px
+				+sm
+					margin-top: 6px
