@@ -2,8 +2,6 @@
 	&__container
 		margin: 0 auto 40px
 		max-width: 1560px
-		+lg
-			margin: 0 auto 35px
 		+md
 			max-width: 1200px
 		+sm
@@ -78,8 +76,6 @@
 			align-items: center
 			color: #000
 			+f("oss",18,22)
-			+lg
-				font-size: 17px
 			+md
 				font-size: 14px
 				max-width: 620px
@@ -176,8 +172,6 @@
 			background-color: #FCFCFC
 			border-radius: 50px 0 0 50px
 			text-transform: uppercase
-			+lg
-				font-size: 16px
 			+md
 				height: 30px
 				line-height: 30px
@@ -245,8 +239,6 @@
 		align-items: flex-start
 		justify-content: space-between
 		width: (900/1530 * 100%)
-		+lg
-			flex-basis: 60%
 		+md
 			flex-basis: 59%
 		+sm
@@ -277,6 +269,50 @@
 	&__examples_default &__cart-add
 		+sm
 			min-width: 78px
+	&__examples_list	&__item
+		display: flex
+		align-items: center
+		flex-basis: 100%
+		width: 100%
+		min-height: 0!important
+		margin: 0
+		padding: 3px 0
+		border-bottom: 1px solid #d5d8db
+		+clr
+	&__examples_list	&__item-pic
+		width: 112px!important
+		height: 112px!important
+	&__examples_list	&__item-pic .decor__line
+		+md
+			width: 86%
+		+sm
+			width: 85%
+	&__examples_list	&__item-title,
+	&__examples_list	&__item-descr
+		display: inline-block
+		vertical-align: middle
+	&__examples_list	&__item-buy
+		position: static
+		margin-left: auto
+	&__examples_list	&__cart-add
+		margin-left: 100px
+		+md
+			margin-left: 50px
+	&__examples_list	&__item-info
+		flex-basis: 650px
+		margin: 0 25px
+		+md
+			flex-basis: 450px
+		+sm
+			flex-basis: 350px
+			margin: 0 15px
+	&__examples_list	&__zoom
+		bottom: 5px
+		left: 5px
+		width: 36px
+		height: 36px
+	&__examples_list	&__zoom-icon
+		font-size: 25px
 	&__examples_watched
 		width: 100%
 		flex-basis: 100%
@@ -370,7 +406,6 @@
 			+sm
 				font-size: 22px
 			
-			
 	&__zoom
 		opacity: 0
 		transform: scale(.5)
@@ -384,6 +419,7 @@
 		text-align: center
 		background: rgba(#E6EEFF, .8)
 		transition: transform .45s .2s, opacity .45s .2s, background 0s
+		will-change: transform, opacity, background
 		+vertical
 		+md
 			width: 40px
@@ -415,14 +451,11 @@
 		+sm
 			font-size: 20px
 	
-	// item here ============>
 	&__item
 		position: relative
 		padding-bottom: 36px
 		min-height: 435px
 		flex-basis: (280/900 * 100%)
-		+lg
-			min-height: 400px
 		+md
 			min-height: 341px
 			flex-basis: 31%
@@ -431,8 +464,6 @@
 			flex-basis: 32.5%
 			min-height: 300px
 		.decor__line
-			+lg
-				width: 87%
 			+xs
 				width: 93%
 		&_basket
@@ -577,8 +608,6 @@
 			display: flex
 			align-items: center
 			justify-content: center
-			+lg
-				height: 240px
 			+md
 				height: 214px
 			+sm
@@ -617,8 +646,6 @@
 		line-height: 12px
 		+f("psb", 21)
 		color: #FCBD7E
-		+lg
-			font-size: 18px
 		+md
 			font-size: 15px
 		+sm
@@ -626,8 +653,6 @@
 		.product__val-icon
 			font-size: 16px
 			fill: #FCBD7E
-			+lg
-				font-size: 14px
 			+md
 				font-size: 12px
 			+sm
@@ -680,8 +705,6 @@
 		color: #E63833
 		+f("psb", 21)
 		line-height: 15px
-		+lg
-			font-size: 19px
 		+md
 			font-size: 15px
 		+sm
@@ -735,8 +758,6 @@
 			text-indent: 26px
 			line-height: 1.3
 			font-size: 19px
-			+lg
-				margin: 15px 0
 			+md
 				font-size: 16px
 			+sm
@@ -804,8 +825,6 @@
 			line-height: 1
 			color: #003D82
 			font-size: 20px
-			+lg
-				font-size: 18px
 			+md
 				font-size: 16px
 			+sm
@@ -1148,7 +1167,9 @@
 			height: 118px
 			cursor: pointer
 			.decor__line
-				width: 72% !important
+				width: 78% !important
+				+md
+					width: 71% !important
 				+sm
 					width: 66% !important
 			+md
@@ -1360,7 +1381,7 @@
 	
 	&_home
 		padding-top: 40px
-		+lg
+		+md
 			padding-top: 30px
 		+sm
 			padding-top: 5px

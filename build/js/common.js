@@ -159,18 +159,21 @@ $(function () {
     });
   })();
 
-  // function initListView() {
-  //   const $filter = $('.js-product-filter');
-  //   const $filterViewBtn = $filter.find('.js-filter-view-btn');
-  //   const $filterViewContainer = $filter.siblings('.js-filter-container');
-  //   const $filterViewItem = $filterViewContainer.find('.product__item');
-  //   $filterViewBtn.on('click', function(ev) {
-  //     ev.preventDefault();
-  //     $(this).toggleClass('is-active');
-  //     $filterViewItem.toggleClass('list');
-  //   });
-  // }
-  // initListView();
+  function initListView() {
+    var $filter = $('.js-product-filter');
+    $filter.each(function () {
+      var $this = $(this);
+      var $filterViewBtn = $this.find('.js-filter-view-btn');
+      var $filterViewContainer = $this.next('.js-filter-container');
+      $filterViewBtn.on('click', function (ev) {
+        ev.preventDefault();
+        $(this).toggleClass('is-active');
+        $filterViewContainer.toggleClass('product__examples_list');
+        $filterViewContainer.find('.product__item-pic').toggleClass('decor_xs');
+      });
+    });
+  }
+  initListView();
 
   // // rating
   //   (function() {
