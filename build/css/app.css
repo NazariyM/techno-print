@@ -5950,6 +5950,8 @@ body::after {
 }
 
 .send__add-text {
+  opacity: 0;
+  visibility: hidden;
   display: inline-block;
   vertical-align: top;
   margin-left: 20px;
@@ -5960,6 +5962,12 @@ body::after {
   font-size: 18px;
   color: #040404;
   white-space: normal;
+  transition: .4s;
+}
+
+.send__add-text.is-visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 .send__files {

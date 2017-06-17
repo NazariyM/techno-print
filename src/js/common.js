@@ -217,28 +217,26 @@ $(() => {
 
   // image upload with preview
   function previewImages() {
-    const $preview = $('.send__files');
-    const $cancelImg = $('.js-send-cancel');
+    const $send = $('.js-send');
+    const $sendPreview = $send.find('.send__files');
 
     if (this.files) $.each(this.files, readAndPreview);
 
     function readAndPreview(i, file) {
       const reader = new FileReader();
       $(reader).on('load', function() {
-        $preview.append($(`${'<div class="send__item decor decor_sm">' + '<img src="'}${this.result}"/>` + '<button class="send__item-cancel js-send-cancel" type="button">' + '<svg class="icon-close send__item-cancel-icon">' + '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-close">' + '</svg>' + '</button>' + '<div class="decor__line"></div>' + '</div>'));
+        $sendPreview.append($(`${'<div class="send__item decor decor_sm">' + '<img src="'}${this.result}"/>` + '<button class="send__item-cancel js-send-cancel" type="button">' + '<svg class="icon-close send__item-cancel-icon">' + '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-close">' + '</svg>' + '</button>' + '<div class="decor__line"></div>' + '</div>'));
       });
 
       reader.readAsDataURL(file);
     }
 
-    $preview.on('click', '.send__item', function() {
+    $sendPreview.on('click', '.send__item', function() {
       $(this).remove();
+
+      console.log($('.js-upload-input').val());
     });
   }
   const $uploadInput = $('.js-upload-input');
   $uploadInput.on('change', previewImages);
-
-  $uploadInput.on('change', function () {
-    console.log($(this).val());
-  });
 });

@@ -763,6 +763,8 @@
 		&-input
 			display: none
 		&-text
+			opacity: 0
+			visibility: hidden
 			display: inline-block
 			vertical-align: top
 			margin-left: 20px
@@ -772,6 +774,10 @@
 			+f("ver",18)
 			color: #040404
 			white-space: normal
+			transition: .4s
+			&.is-visible
+				opacity: 1
+				visibility: visible
 			+md
 				font-size: 15px
 			+sm
