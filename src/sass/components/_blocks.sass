@@ -717,3 +717,142 @@
 			left: auto
 		&_top-rr &-icon
 			fill: #B3B3B3
+			
+// send
+
+.send
+	&__add
+		display: inline-block
+		vertical-align: top
+		margin-right: 15px
+		white-space: nowrap
+		&-btn
+			display: inline-block
+			vertical-align: middle
+			padding: 5px 5px 0
+			max-width: 128px
+			min-height: 114px
+			color: #fff
+			background-color: #80C9E8
+			white-space: normal
+			+f("ver",16)
+			text-transform: uppercase
+			text-align: center
+			cursor: pointer
+			border-bottom: 1px solid #A8B3BF
+			&::after
+				content: ''
+				display: block
+				width: 56px
+				height: 52px
+				margin: 3px auto 0
+				+ico('file')
+				+md
+					width: 44px
+					height: 42px
+			&:hover::after
+				+ico('file-hvr')
+			&:active::after
+				+ico('file-act')
+			&:hover
+				background: #5EAFDA
+				border-bottom-color: #FFFF00
+			&:active
+				background: #2A578A
+				border-bottom-color: #E63E2D
+		&-input
+			display: none
+		&-text
+			display: inline-block
+			vertical-align: top
+			margin-left: 20px
+			margin-top: -3px
+			max-width: 160px
+			padding-left: 3px
+			+f("ver",18)
+			color: #040404
+			white-space: normal
+			+md
+				font-size: 15px
+			+sm
+				font-size: 14px
+	&__files
+		display: inline-block
+		vertical-align: bottom
+		font-size: 0
+		white-space: normal
+		width: percentage(280 / 600)
+		+xs
+			width: 59%
+	&__item
+		position: relative
+		display: inline-block
+		vertical-align: middle
+		height: 116px
+		width: 130px
+		margin-right: 20px
+		+vertical
+		+md
+			width: 110px
+			height: 98px
+			margin-right: 15px
+		&:last-child
+			margin-right: 0
+		&:nth-child(2n)
+			margin-right: 0
+			+xs
+				margin-right: 20px
+		&:nth-child(2) ~ &
+			margin-top: 20px
+			+xs
+				margin-top: 0
+		&:nth-child(3) ~ &
+			+xs
+				margin-top: 20px
+		img
+			display: inline-block
+			vertical-align: middle
+			width: 100%
+			height: 100%
+			object-fit: contain
+		.decor__line
+			+md
+				width: 82%
+		.decor__line::before
+			+md
+				border-width: 0 0 16px 15px
+				right: -5px
+		.decor__line::after
+			+md
+				border-width: 15px 15px 0 0
+				
+		&-cancel
+			position: absolute
+			right: -15px
+			top: -15px
+			width: 30px
+			height: 30px
+			border-radius: 50%
+			background: #E63833
+			border: 3px solid #fff
+			+tr(background .2s)
+			+md
+				width: 24px
+				height: 24px
+				border-width: 2px
+			&:hover
+				background: #3e5b8a
+			&-icon
+				fill: #fff
+				+vcenter
+				font-size: 12px
+				+md
+					font-size: 10px
+			
+			
+	&_request
+		display: inline-block
+		vertical-align: top
+		font-size: 0
+		white-space: nowrap
+		width: 60.36217%

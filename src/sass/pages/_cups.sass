@@ -385,9 +385,9 @@
 		+md
 			margin: 25px auto
 
-/* send
+/* send-now
 	----------------------------------- */
-.send
+.send-now
 	display: flex
 	&__text
 		width: 73.3%
@@ -406,6 +406,7 @@
 			border-bottom: 2px solid #fbff00
 			+vertical
 			transition: .15s ease
+			cursor: pointer
 			span
 				display: inline-block
 				vertical-align: middle
@@ -429,6 +430,8 @@
 				&:active
 					background: #C39767
 					border-bottom-color: #584466
+			input[type='file']
+				display: none
 	&_cups
 		max-width: 1050px
 		margin: 0 auto

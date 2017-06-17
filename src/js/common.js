@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 $(() => {
   // object fit images
   objectFitImages();
@@ -95,10 +94,7 @@ $(() => {
       }
     });
 
-    $('.rubric__mini-list').on('click', (e) => {
-      e.stopPropagation();
-    });
-    $('.rubric__sub-list').on('click', (e) => {
+    $('.rubric__mini-list, .rubric__sub-list').on('click', (e) => {
       e.stopPropagation();
     });
   }());
@@ -159,7 +155,7 @@ $(() => {
 
   function initListView() {
     const $filter = $('.js-product-filter');
-    $filter.each(function () {
+    $filter.each(function() {
       const $this = $(this);
       const $filterViewBtn = $this.find('.js-filter-view-btn');
       const $filterViewContainer = $this.next('.js-filter-container');
@@ -171,22 +167,74 @@ $(() => {
       });
     });
   }
+
   initListView();
 
-// // rating
-//   (function() {
-//     const $ratingInput = $('.js-rating').find('.rating__input');
-//
-//     $ratingInput.on('click', function() {
-//       if ($(this).prop('checked', true)) {
-//         $(this).prop('checked', true);
-//       } else {
-//         $(this).prop('checked', false);
-//       }
-//     });
-//     $ratingInput.on('click', function() {
-//       $(this).prop('checked', false);
-//     });
-//
-//   })();
+  // SLIDERS
+  const $homeSlider = $('.js-home-slider');
+  const $productLook = $('.js-look-view');
+  const $productThumbs = $('.js-look-thumbs');
+  const $teaserSlider = $('.js-teaser-slider');
+
+  $homeSlider.slick({
+    dots: true,
+    infinite: false,
+    speed: 400,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: '<button type="button" class="home-slider__btn home-slider__btn_prev"><svg class="home-slider__icon icon-arr-sld-l"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr-sld-l"></use></svg></button>',
+    nextArrow: '<button type="button" class="home-slider__btn home-slider__btn_next"><svg class="home-slider__icon icon-arr-sld-r"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr-sld-r"></use></svg></button>'
+  });
+
+  $productLook.slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    draggable: false,
+    asNavFor: '.js-look-thumbs'
+  });
+
+  $productThumbs.slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    asNavFor: '.js-look-view',
+    dots: false,
+    arrows: false,
+    centerMode: false,
+    focusOnSelect: true,
+    variableWidth: true
+  });
+  $teaserSlider.slick({
+    dots: false,
+    infinite: false,
+    speed: 400,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    prevArrow: '<button type="button" class="teaser__slider-btn teaser__slider-btn_prev"><svg class="teaser__slider-icon icon-arr-sld-l"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr-sld-l"></use></svg></button>',
+    nextArrow: '<button type="button" class="teaser__slider-btn teaser__slider-btn_next"><svg class="teaser__slider-icon icon-arr-sld-r"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr-sld-r"></use></svg></button>'
+  });
+
+  // image upload with preview
+  function previewImages() {
+    const $preview = $('.send__files');
+    const $cancelImg = $('.js-send-cancel');
+
+    if (this.files) $.each(this.files, readAndPreview);
+
+    function readAndPreview(i, file) {
+      const reader = new FileReader();
+      $(reader).on('load', function() {
+        $preview.append($(`${'<div class="send__item decor decor_sm">' + '<img src="'}${this.result}"/>` + '<button class="send__item-cancel js-send-cancel" type="button">' + '<svg class="icon-close send__item-cancel-icon">' + '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-close">' + '</svg>' + '</button>' + '<div class="decor__line"></div>' + '</div>'));
+      });
+
+      reader.readAsDataURL(file);
+    }
+
+    // $preview.on('click', '.send__item', function() {
+    //   $(this).remove();
+    // });
+  }
+  const $uploadInput = $('.js-upload-input');
+  $uploadInput.on('change', previewImages);
 });

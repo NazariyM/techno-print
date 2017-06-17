@@ -80,7 +80,7 @@ block content
 											+icon('icon-loupe','zoom__btn-icon')
 										+e.img.IMG(src='img/content/look-scheme.jpg')
 
-						+b.send._cups
+						+b.send-now._cups
 							+e.text
 								+e.P
 									+e.STRONG Онлайн ящик для макетов:
@@ -99,7 +99,8 @@ block content
 										= ' '
 										+e.A(href='tel:88462671022') 8 (846) 267-10-22
 							+e.actions
-								+e.A.actions-btn._top(href='#!')
+								+e.LABEL.actions-btn._top(href='#!' type='button' for='send-now')
+									+e.INPUT(id='send-now' type='file' name='')
 									+e.SPAN Отправить свой макет
 								+e.A.actions-btn._bottom(href='#!')
 									+e.SPAN Заказать дизайн
