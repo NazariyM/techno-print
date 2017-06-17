@@ -233,10 +233,14 @@ $(function () {
       reader.readAsDataURL(file);
     }
 
-    // $preview.on('click', '.send__item', function() {
-    //   $(this).remove();
-    // });
+    $preview.on('click', '.send__item', function () {
+      $(this).remove();
+    });
   }
   var $uploadInput = $('.js-upload-input');
   $uploadInput.on('change', previewImages);
+
+  $uploadInput.on('change', function () {
+    console.log($(this).val());
+  });
 });

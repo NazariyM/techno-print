@@ -5971,6 +5971,7 @@ body::after {
 }
 
 .send__item {
+  pointer-events: none;
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -6010,6 +6011,7 @@ body::after {
 }
 
 .send__item-cancel {
+  pointer-events: all;
   position: absolute;
   right: -15px;
   top: -15px;
