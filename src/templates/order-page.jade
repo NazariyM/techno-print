@@ -88,21 +88,25 @@ block content
 												+e.TEXTAREA.comment-message
 												+e.BUTTON.comment-extend.js-message-extend(type='button')
 													+icon('icon-arr-double', 'order__comment-extend-icon')
-											+e.file
-												+e.file-add
-													+e.INPUT(type='file' id='file-add-input')
-													+e.LABEL.file-add-btn(for='file-add-input') Добавить файл
-												+e.file-row
-													+e.file-item.decor._sm
-														+e.IMG(src="img/content/file-1.jpg")
-														+e.BUTTON(type='button').file-btn-close
-															+icon('icon-close','order__file-icon-close')
-														.decor__line
-													+e.file-item.decor._sm
-														+e.IMG(src="img/content/file-2.jpg")
-														+e.BUTTON(type="button").file-btn-close
-															+icon('icon-close','order__file-icon-close')
-														.decor__line
+											+b.send._order
+												+e.add
+													+e.LABEL.add-btn(for='upload-1') Добавить файл
+														+e.INPUT.add-input(id='upload-1' type='file' accept='image/*' name='' multiple)
+												+e.files
+													+e.item.decor._sm
+														+e.IMG(src='img/content/file-1.jpg')
+														+e.BUTTON.item-cancel(type='button')
+															+icon('icon-close', 'send__item-cancel-icon')
+														+b.decor__line
+													+e.item.decor._sm
+														+e.IMG(src='img/content/file-2.jpg')
+														+e.BUTTON.item-cancel(type='button')
+															+icon('icon-close', 'send__item-cancel-icon')
+														+b.decor__line
+
+													+e.message(style='display: none')
+														+icon('icon-mark', 'send__message-icon')
+														+e.message-text Письмо отправлено!
 
 								+e.row
 									+b.BUTTON.confirm-btn(type='submit')

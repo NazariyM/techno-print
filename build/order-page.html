@@ -154,16 +154,19 @@
                       <div class="order__comment-in">
                         <div class="order__comment-message-wrap"><textarea class="order__comment-message"></textarea><button type="button" class="order__comment-extend js-message-extend"><svg class="icon-arr-double order__comment-extend-icon"><use xlink:href="img/sprite.svg#icon-arr-double"></use></svg></button></div>
                         <div
-                          class="order__file">
-                          <div class="order__file-add"><input type="file" id="file-add-input" /><label for="file-add-input" class="order__file-add-btn">Добавить файл</label></div>
-                          <div class="order__file-row">
-                            <div class="order__file-item decor decor_sm"><img src="img/content/file-1.jpg" alt="" role="presentation" /><button type="button" class="order__file-btn-close"><svg class="icon-close order__file-icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg></button>
+                          class="send send_order">
+                          <div class="send__add"><label for="upload-1" class="send__add-btn">Добавить файл<input id="upload-1" type="file" accept="image/*" name="" multiple="multiple" class="send__add-input"/></label></div>
+                          <div class="send__files">
+                            <div class="send__item decor decor_sm"><img src="img/content/file-1.jpg" alt="" role="presentation" /><button type="button" class="send__item-cancel"><svg class="icon-close send__item-cancel-icon"><use xlink:href="img/sprite.svg#icon-close"></use></svg></button>
                               <div
                                 class="decor__line"></div>
                           </div>
-                          <div class="order__file-item decor decor_sm"><img src="img/content/file-2.jpg" alt="" role="presentation" /><button type="button" class="order__file-btn-close"><svg class="icon-close order__file-icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg></button>
+                          <div class="send__item decor decor_sm"><img src="img/content/file-2.jpg" alt="" role="presentation" /><button type="button" class="send__item-cancel"><svg class="icon-close send__item-cancel-icon"><use xlink:href="img/sprite.svg#icon-close"></use></svg></button>
                             <div
                               class="decor__line"></div>
+                      </div>
+                      <div style="display: none" class="send__message"><svg class="icon-mark send__message-icon"><use xlink:href="img/sprite.svg#icon-mark"></use></svg>
+                        <div class="send__message-text">Письмо отправлено!</div>
                       </div>
                     </div>
                   </div>

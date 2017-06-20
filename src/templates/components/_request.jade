@@ -17,13 +17,27 @@
 					+e.TEXTAREA(placeholder="Комментарий").message
 					+e.BUTTON(type="button").message-extend.js-message-extend
 						+icon('icon-arr-double', 'request__message-icon')
-				+e.send
-					+b.send._request.js-send
+				+e.send-row
+					+b.send.request__send-col
 						+e.add
 							+e.LABEL.add-btn(for='upload-1') Добавить файл
-								+e.INPUT.add-input.js-upload-input(id='upload-1' type='file' accept='image/*' name='' multiple)
+								+e.INPUT.add-input(id='upload-1' type='file' accept='image/*' name='' multiple)
 							+e.add-text Прикрепленные файлы:
 						+e.files
+							+e.item.decor._sm
+								+e.IMG(src='img/content/file-1.jpg')
+								+e.BUTTON.item-cancel(type='button')
+									+icon('icon-close', 'send__item-cancel-icon')
+								+b.decor__line
+							+e.item.decor._sm
+								+e.IMG(src='img/content/file-2.jpg')
+								+e.BUTTON.item-cancel(type='button')
+									+icon('icon-close', 'send__item-cancel-icon')
+								+b.decor__line
+
+						+e.message(style='display: none')
+							+icon('icon-mark', 'send__message-icon')
+							+e.message-text Письмо отправлено!
 
 					+e.send-col
 						+b.BUTTON(type='submit').send-btn.request__send-btn Отправить

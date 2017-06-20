@@ -3753,29 +3753,34 @@ $(function () {
   });
 
   // image upload with preview
-  function previewImages() {
-    var $send = $('.js-send');
-    var $sendPreview = $send.find('.send__files');
-
-    if (this.files) $.each(this.files, readAndPreview);
-
-    function readAndPreview(i, file) {
-      var reader = new FileReader();
-      $(reader).on('load', function () {
-        $sendPreview.append($("" + ('<div class="send__item decor decor_sm">' + '<img src="') + this.result + "\"/>" + '<button class="send__item-cancel js-send-cancel" type="button">' + '<svg class="icon-close send__item-cancel-icon">' + '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-close">' + '</svg>' + '</button>' + '<div class="decor__line"></div>' + '</div>'));
-      });
-
-      reader.readAsDataURL(file);
-    }
-
-    $sendPreview.on('click', '.send__item', function () {
-      $(this).remove();
-
-      console.log($('.js-upload-input').val());
-    });
-  }
-  var $uploadInput = $('.js-upload-input');
-  $uploadInput.on('change', previewImages);
+  // function previewImages() {
+  //   const $send = $('.js-send');
+  //   const $sendPreview = $send.find('.send__files');
+  //   const $sendText = $send.find('.send__add-text');
+  //
+  //   if (this.files) $.each(this.files, readAndPreview);
+  //   $sendText.addClass('is-visible');
+  //   function readAndPreview(i, file) {
+  //     const reader = new FileReader();
+  //     $(reader).on('load', function() {
+  //       $sendPreview.append($(`${'<div class="send__item decor decor_sm">' + '<img src="'}${this.result}"/>` + '<button class="send__item-cancel js-send-cancel" type="button">' + '<svg class="icon-close send__item-cancel-icon">' + '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-close">' + '</svg>' + '</button>' + '<div class="decor__line"></div>' + '</div>'));
+  //     });
+  //
+  //     reader.readAsDataURL(file);
+  //   }
+  //
+  //   $sendPreview.on('click', '.send__item', function() {
+  //     $(this).remove();
+  //     if ($sendPreview.is(':empty')) {
+  //       $sendText.removeClass('is-visible');
+  //     }
+  //   });
+  // }
+  // const $uploadInput = $('.js-upload-input');
+  // $uploadInput.on('change', previewImages);
+  // $('body').on('click', function () {
+  //   console.log($uploadInput.val());
+  // });
 });
 // $(() => {
 // });
