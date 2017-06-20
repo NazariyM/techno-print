@@ -22,7 +22,7 @@
 						+e.add
 							+e.LABEL.add-btn(for='upload-1') Добавить файл
 								+e.INPUT.add-input(id='upload-1' type='file' accept='image/*' name='' multiple)
-							+e.add-text Прикрепленные файлы:
+							+e.add-text(style='display: none') Прикрепленные файлы:
 						+e.files
 							+e.item.decor._sm
 								+e.IMG(src='img/content/file-1.jpg')
