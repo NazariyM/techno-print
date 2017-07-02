@@ -3782,5 +3782,3 @@ $(function () {
   //   console.log($uploadInput.val());
   // });
 });
-// $(() => {
-// });

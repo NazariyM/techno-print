@@ -492,7 +492,7 @@
 			padding: 10px 5px
 			border-color: #fff
 		tr:nth-child(2) td
-			border-bottom-color: #d7d7d7
+			box-shadow: 0px 3px 0px #d7d7d7
 		mark
 			margin: 0 10px
 			padding: 0 20px
@@ -511,8 +511,9 @@
 		&_highlight
 			color: #ed0000
 	&__label
+		max-width: 310px
+		margin: 0 auto 10px
 		display: block
-		margin-bottom: 10px
 		padding: 5px
 		background: #ebf8ff
 		&_color
@@ -520,6 +521,10 @@
 		&_width
 			max-width: 920px
 			margin: 0 auto 10px
+		&_sm
+			max-width: 274px
+		&_full
+			max-width: 333px
 	&__link
 		display: inline-block
 		margin: 20px 0 10px
@@ -532,6 +537,8 @@
 			text-decoration-color: currentColor
 	&__view
 		font-size: 0
+		&_padding
+			padding: 0 5px
 		&-item
 			display: inline-block
 			vertical-align: middle
@@ -556,8 +563,12 @@
 				width: percentage(151/ 1210)
 			&:nth-child(6)
 				width: percentage(171/ 1210)
-		&_paper-packs &-item
-			width: 31%
+		&_paper-packs
+			padding: 12px 0
+			.zoom__btn
+				left: auto
+				right: -10px
+				top: 5px
 		&_love-pakcs &-item
 			width: percentage(102 / 342)
 		&_spaces &-item

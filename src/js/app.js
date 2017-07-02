@@ -5,5 +5,3 @@
 //= include lib/stepper.min.js
 //= include lib/fancybox.min.js
 //= include common.js
-// $(() => {
-// });

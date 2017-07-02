@@ -7304,7 +7304,7 @@ body::after {
 }
 
 .price-table__head tr:nth-child(2) td {
-  border-bottom-color: #d7d7d7;
+  box-shadow: 0px 3px 0px #d7d7d7;
 }
 
 .price-table__head mark {
@@ -7331,8 +7331,9 @@ body::after {
 }
 
 .price-table__label {
+  max-width: 310px;
+  margin: 0 auto 10px;
   display: block;
-  margin-bottom: 10px;
   padding: 5px;
   background: #ebf8ff;
 }
@@ -7344,6 +7345,14 @@ body::after {
 .price-table__label_width {
   max-width: 920px;
   margin: 0 auto 10px;
+}
+
+.price-table__label_sm {
+  max-width: 274px;
+}
+
+.price-table__label_full {
+  max-width: 333px;
 }
 
 .price-table__link {
@@ -7361,6 +7370,10 @@ body::after {
 
 .price-table__view {
   font-size: 0;
+}
+
+.price-table__view_padding {
+  padding: 0 5px;
 }
 
 .price-table__view-item {
@@ -7408,8 +7421,14 @@ body::after {
   width: 14.13223%;
 }
 
-.price-table__view_paper-packs .price-table__view-item {
-  width: 31%;
+.price-table__view_paper-packs {
+  padding: 12px 0;
+}
+
+.price-table__view_paper-packs .zoom__btn {
+  left: auto;
+  right: -10px;
+  top: 5px;
 }
 
 .price-table__view_love-pakcs .price-table__view-item {
