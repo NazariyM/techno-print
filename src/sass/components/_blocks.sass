@@ -636,7 +636,33 @@
 			margin: 20px 0 0
 		+sm
 			margin: 15px 0 0
-
+	&_centered &__title
+		padding-left: 120px
+		+f('oss')
+		font-size: 18px
+		text-align: left
+		+md
+			padding-left: 80px
+			font-size: 16px
+		+sm
+			padding-left: 40px
+	&_centered ul
+		padding-left: 95px
+		+md
+			padding-left: 50px
+		+sm
+			padding-left: 15px
+	&_centered ul li:not(:last-child)
+		margin-bottom: 3px!important
+	&_centered &__descr
+		text-indent: 0
+	&_centered &__descr:nth-of-type(2)
+		padding-left: 125px
+		+md
+			padding-left: 90px
+		+sm
+			padding-left: 60px
+		
 /* section defaults
 	----------------------------------- */
 .sect

@@ -48,10 +48,10 @@ block content
 							+e.P.descr Мы готовы к сотрудничеству и реализации поставленных вами задач, ждём ваших заказов!
 
 					+b.product
-						+e.sect._has-filter._color
+						+e.sect._color._has-filter.js-product-filter
 							+e.sect-title
-								//+icon('icon-shirts', 'product__sect-icon')
-								//+e.SPAN Печать на одежде / Образцы наших работ
+								//+icon('icon-lovers', 'product__sect-icon')
+								//+e.SPAN Похожие и сопутствующие товары.
 							+e.filter
 								+e.BUTTON.filter-btn(type='button')
 									+icon('icon-filter-down', 'product__filter-icon')
@@ -73,10 +73,10 @@ block content
 									+icon('icon-filter-squares', 'product__filter-icon')
 									= ' '
 									+e.SPAN 60
-								+e.BUTTON.filter-btn(type='button')
+								+e.BUTTON.filter-btn.js-filter-view-btn(type='button')
 									+icon('icon-filter-list', 'product__filter-icon')
 
-						+e.examples._default
+						+e.examples._default.js-filter-container
 							+e.item
 								+e.item-pic-wrap.js-product-item-pic
 									+e.A(href='#!').item-pic.decor
@@ -290,7 +290,6 @@ block content
 									+e.BUTTON(type="button").cart-add
 										+e.SPAN.price-current 400&nbsp;
 											+icon('icon-ruble','product__val-icon')
-
 
 						+b.pagination._product
 							+e.UL.list

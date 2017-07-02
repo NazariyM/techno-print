@@ -1,142 +1,52 @@
 ---
-title: Техно-принт
+title: Изготовление сувенирных значков, брелков и магнитов. Эксклюзивные значки с готовым дизайном, подарочные фотомагниты, оригинальные зеркальца, «Техно-Принт»
+content: Значки, брелки и различные интересные сувениры. Эксклюзивные изделия с возможностью оптового заказа, доставкой по России. Ручки, скрепки, бейджи с логотипами, зеркальца в виде сердечек и многое другое!
 ---
 extends layouts/_layout
 
 block content
-	+b.MAIN.page
+	+b.MAIN.page._default
 		+e.container.container
 			+e.bar
 				-
-					var breadCrumbsList = [{text: 'Машинная вышивка'}, {text: 'Вышивка имени на полотенце', active: 'is-active'}];
+					var breadCrumbsList = [{text: 'Значки и брелки', active: 'is-active'}];
 				include components/_breadcrumbs
 
-				+e.bar-title
-					+e.SPAN Артикул: 22
+				+e.bar-title._has-icon._big-icon
+					+e.SPAN Заказные значки и сувениры
+					+icon('icon-souvenirs', 'page__bar-title-icon')
 
 			+e.in
 				include components/_rubric-side
 				+e.main
+					+b.SECTION.souvenirs.sect
+						+b.title-md ИЗГОТОВЛЕНИЕ РУЧНЫХ СУВЕНИРОВ, ЗАЧКОВ, БРЕЛКОВ.  ОГРОМНЫЙ ВЫБОР РАЗЛИЧНЫХ ЗАГОТОВОК, ОПТ И РОЗНИЦА. ДОСТАВКА В РЕГИОНЫ.
+						+b.P.sect-descr Изготовим значки любого из восьми стандартных размеров. Мы собрали большую коллекцию заготовок и сувениров от производителей, то что представлено у нас - новинки мирового производства в области «значков» по закатной технологии. У нас вы встретите оригинальные товары не представленные другими поставщиками похожих услуг. Все товары имеют актуальный градационный прайс на оптовые заказы. (в разделе цены на опт)
+
+						+b.benefits-list._centered
+							+e.title Кроме «классических значков» вашему вниманию рады представить:
+							+e.UL
+								+e.LI - Брелки
+								+e.LI - Бейджи
+								+e.LI - Скрепки с изображением (логотипами)
+								+e.LI - Магнитные значки (без иголочек, держатся не прокалывая одежду)
+								+e.LI - Магнитные значки на холодильник
+								+e.LI - Сувенирные зеркальца разных размеров с вашими изображениями
+								+e.LI - Брелки в виде зеркалец
+								+e.LI - Ручки с логотипами (25 мм окружность закатная)
+								+e.LI - Открывашки
+								+e.LI - Заколки промоутеров
+								+e.LI - Гостиничные и гардеробные ключные держатели (различных вариаций)
+
+							+e.P.descr Основные позиции заготовок всегда в наличии! При необходимости предоставим профессиональный дизайн. Наши дизайнеры имеют большой опыт в макетировании для сувенирной продукции. Значки и магниты  можно использовать в виде аксессуаров для себя или по работе, раздать знакомым - заказчикам, использовать как недорогой ни к чему не обязывающий стильный сувенир-презент! Это совершенно новое и можное направление, воспользуйтесь нашими услугами. Работаем со всеми регионами!
+							+e.P.descr Ждём ваших заказов!
+
+
 					+b.product
-						+e.FORM(action='#!')
-							+e.card
-								+e.card-col
-									+e.look
-										+e.look-view.js-look-view
-											+e.look-pic
-												+e.IMG(src='img/content/look-img-1.jpg')
-											+e.look-pic
-												+e.IMG(src='img/content/look-img-2.jpg')
-											+e.look-pic
-												+e.IMG(src='img/content/look-img-1.jpg')
-											+e.look-pic
-												+e.IMG(src='img/content/look-img-2.jpg')
-											+e.look-pic
-												+e.IMG(src='img/content/look-img-1.jpg')
-										+e.look-thumbs.js-look-thumbs
-											+e.look-thumbs-pic.decor._xs
-												+e.IMG(src='img/content/look-1.jpg')
-												+b.decor__line
-											+e.look-thumbs-pic.decor._xs
-												+e.IMG(src='img/content/look-2.jpg')
-												+b.decor__line
-											+e.look-thumbs-pic.decor._xs
-												+e.IMG(src='img/content/look-3.jpg')
-												+b.decor__line
-											+e.look-thumbs-pic.decor._xs
-												+e.IMG(src='img/content/look-4.jpg')
-												+b.decor__line
-											+e.look-thumbs-pic.decor._xs
-												+e.IMG(src='img/content/look-5.jpg')
-												+b.decor__line
-									+e.props
-										+e.props-col
-											+e.props-row
-												+e.BUTTON(type='button').wish-add-btn
-												+e.BUTTON(type='button').calc-btn
-													+icon('icon-arr-def', 'product__calc-icon')
-													+e.SPAN Рассчитать свой - заказной дизайн
-											+e.props-row
-												+b.rating
-													+e.text Оцените данный товар:
-													+e.in
-														+e.INPUT.input(id='product-rating-6' value='6' type='radio' name='product-rating')
-														+e.LABEL.icon(for='product-rating-6')
-															+icon('icon-star', 'rating__star')
-														+e.INPUT.input(id='product-rating-5' value='5' type='radio' name='product-rating')
-														+e.LABEL.icon(for='product-rating-5')
-															+icon('icon-star', 'rating__star')
-														+e.INPUT.input(id='product-rating-4' value='4' type='radio' name='product-rating')
-														+e.LABEL.icon(for='product-rating-4')
-															+icon('icon-star', 'rating__star')
-														+e.INPUT.input(id='product-rating-3' value='3' type='radio' name='product-rating')
-														+e.LABEL.icon(for='product-rating-3')
-															+icon('icon-star', 'rating__star')
-														+e.INPUT.input(id='product-rating-2' value='2' type='radio' name='product-rating')
-														+e.LABEL.icon(for='product-rating-2')
-															+icon('icon-star', 'rating__star')
-														+e.INPUT.input(id='product-rating-1' value='1' type='radio' name='product-rating')
-														+e.LABEL.icon(for='product-rating-1')
-															+icon('icon-star', 'rating__star')
-
-												- var socialsClass = '_product-card'
-												include components/_socials
-
-										+e.props-col.hashtags
-											+e.A.hashtags-link(href='#!') #полотенце в подарок
-											+e.A.hashtags-link(href='#!') #вышивки на полотенце
-											+e.A.hashtags-link(href='#!') #сувениры с вышивкой
-
-								+e.card-col.product__descr
-									+e.descr-title ВЫШИВКА ИМЕНИ НА ПОЛОТЕНЦЕ,
-										br
-										| БУДЕТ НУЖНОЕ ВАМ ИМЯ И ШРИФТЫ
-									+e.descr-item
-										+e.P
-											+e.STRONG Подарочные полотенца
-											=	' '
-											| - это наша новинка! Приятный, душевный сувенир. Вам стоит обозначить лишь имя будущего владельца. Шрифты подберём какие нужно, макет на утверждение отправим по почте или куда скажете.
-									+e.descr-item
-										+e.P
-											+e.STRONG Дизайн:
-											=  ' '
-											| дизайн  шрифтов предлагается из наработанных нами  ранее, если необходимо что-то эксклюзивное, то можно будет и разработать, за дополнительную оплату.
-									+e.descr-item
-										+e.P
-											+e.STRONG Размер надписи:
-											=  ' '
-											| 200 мм или около того (с мужскую ладонь).
-										+e.P
-											+e.STRONG Макет:
-											=  ' '
-											| макет вышлем вам на утверждение по электронной  почте.
-										+e.P
-											+e.STRONG Срок исполнения:
-											=  ' '
-											| от 30 минут.
-									+e.descr-item
-										+e.P
-											+e.STRONG Стоимость:
-											=  ' '
-											| не учитывает саму заготовку полотенца.  Вы приносите своё или добавляете в корзину дополнительно «чистое» полотенце.
-
-									+e.buy
-										+e.buy-in
-											+e.amount
-												+e.amount-text Количество:
-												+e.amount-count
-													+e.INPUT.amount-input.js-product-amount(type='number' min='1' max='999' value='1' name='' required)
-											+e.price
-												+e.SPAN 350
-												+icon('icon-ruble')
-										+e.A.link-sale(href='#!').link-sale
-											+e.SPAN Цены на опт.
-									+e.BUTTON.btn-cart.btn-cart(type='submit') ДОБАВИТЬ В КОРЗИНУ
-						// begin filter
-						+e.sect._has-filter.js-product-filter
+						+e.sect._color._has-filter.js-product-filter
 							+e.sect-title
-								+icon('icon-lovers', 'product__sect-icon')
-								+e.SPAN Похожие и сопутствующие товары.
+								+icon('icon-souvenirs', 'product__sect-icon')
+								+e.SPAN Значки и брелки / Образцы наших работ
 							+e.filter
 								+e.BUTTON.filter-btn(type='button')
 									+icon('icon-filter-down', 'product__filter-icon')
@@ -376,8 +286,6 @@ block content
 										+e.SPAN.price-current 400&nbsp;
 											+icon('icon-ruble','product__val-icon')
 
-
-						// end filter
 						+b.pagination._product
 							+e.UL.list
 								+e.list-item._prev
@@ -400,118 +308,11 @@ block content
 								+e.list-item._next
 									+e.list-link(href='#!') Следующая
 
-						+e.watched
-							+e.sect._watched
-								+e.sect-title
-									+icon('icon-watched', 'product__sect-icon')
-									+e.SPAN Просмотренные ранее и рекомендуемые:
-								+e.sect-links._watched
-									+e.sect-link
-										+e.A(href="#!") ВЫШИВКА НА ХАЛАТАХ
-											+e.SPAN.sect-count 9
-									+e.sect-link
-										+e.A(href="#!") ПЕЧАТЬ НА ХОЛСТЕ
-											+e.SPAN.sect-count 16
-									+e.sect-link
-										+e.A(href="#!") КОРПОРАТИВНЫЕ СУВЕНИРЫ
-											+e.SPAN.sect-count 11
-							+e.examples._watched
-								+e.item
-									+e.item-pic-wrap.js-product-item-pic
-										+e.A(href='#!').item-pic.decor
-											+e.IMG.item-img(src="img/content/prod-11.jpg")
-											.decor__line
-										+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
-											+icon('icon-loupe','product__zoom-icon')
-									+e.item-info
-										+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
-											= ' '
-										+e.item-descr Размер: 120х180мм
-									+e.item-buy
-										+e.BUTTON(type="button").cart-add
-											+e.SPAN.price-current 400&nbsp;
-												+icon('icon-ruble','product__val-icon')
-								+e.item
-									+e.item-pic-wrap.js-product-item-pic
-										+e.A(href='#!').item-pic.decor
-											+e.IMG.item-img(src="img/content/prod-12.jpg")
-											.decor__line
-										+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
-											+icon('icon-loupe','product__zoom-icon')
-									+e.item-info
-										+e.item-title Любая вышивка на  полотенце, под  «Золото».
-										+e.item-descr Размер: 250х100 мм
-									+e.item-buy
-										+e.BUTTON(type="button").cart-add
-											+e.SPAN.price-current 400&nbsp;
-												+icon('icon-ruble','product__val-icon')
-								+e.item
-									+e.item-pic-wrap.js-product-item-pic
-										+e.A(href='#!').item-pic.decor
-											+e.IMG.item-img(src="img/content/prod-10.jpg")
-											.decor__line
-										+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
-											+icon('icon-loupe','product__zoom-icon')
-									+e.item-info
-										+e.item-title Полотенце -зайчик!
-											= ' '
-										+e.item-descr Услуга - сворачивание полотенец в виде  зайчиков, для подарка.
-									+e.item-buy
-										+e.BUTTON(type="button").cart-add
-											+e.SPAN.price-current 150&nbsp;
-												+icon('icon-ruble','product__val-icon')
-								+e.item
-									+e.item-pic-wrap.js-product-item-pic
-										+e.A(href='#!').item-pic.decor
-											+e.IMG.item-img(src="img/content/prod-11.jpg")
-											.decor__line
-										+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
-											+icon('icon-loupe','product__zoom-icon')
-									+e.item-info
-										+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
-											= ' '
-										+e.item-descr Размер: 120х180мм
-									+e.item-buy
-										+e.BUTTON(type="button").cart-add
-											+e.SPAN.price-current 400&nbsp;
-												+icon('icon-ruble','product__val-icon')
-								+e.item
-									+e.item-pic-wrap.js-product-item-pic
-										+e.A(href='#!').item-pic.decor
-											+e.IMG.item-img(src="img/content/prod-11.jpg")
-											.decor__line
-										+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
-											+icon('icon-loupe','product__zoom-icon')
-									+e.item-info
-										+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
-											= ' '
-										+e.item-descr Размер: 120х180мм
-									+e.item-buy
-										+e.BUTTON(type="button").cart-add
-											+e.SPAN.price-current 400&nbsp;
-												+icon('icon-ruble','product__val-icon')
-
-							+b.pagination._watched
-								+e.UL.list
-									+e.list-item.is-active
-										+e.list-link(href='#!') 1
-									+e.list-item
-										+e.list-link(href='#!') 2
-									+e.list-item
-										+e.list-link(href='#!') 3
-									+e.list-item._dots
-										+e.list-link(href='#!') ...
-									+e.list-item._next
-										+e.list-link(href='#!') Дальше
-									+e.list-item._next
-										+e.list-link(href='#!') Все
-
 					-
 						var catMenu = {
+						title: 'ЖДЁМ ВАШИХ ЗАКАЗОВ!',
 						classMod: '_default'};
 					include components/_category-menu
 
-
 		- var benefitsClass = '_default'
-			include components/_benefits
-			
+		include components/_benefits
