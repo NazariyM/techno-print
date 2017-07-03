@@ -18,9 +18,6 @@
 		+sm
 			max-width: 960px
 			padding: 10px 15px 20px
-		+xs
-			flex-wrap: wrap
-			justify-content: center
 		&::after
 			position: absolute
 			top: 0
@@ -61,11 +58,6 @@
 					margin-top: 15px
 				+sm
 					width: 140px
-				+xs
-					order: 1
-					width: 165px
-					margin-right: auto
-					margin-top: 28px
 			&:nth-child(2)
 				position: relative
 				width: percentage(350 / 1620)
@@ -76,22 +68,11 @@
 					width: 22.6%
 				+sm
 					width: 28%
-				+xs
-					order: 2
-					width: 60%
-					margin-right: auto
 					
 			&:nth-child(3)
-				//align-self: flex-start
 				width: 46.2%
 				+sm
 					width: 45.8%
-				//+md
-					margin-top: 3px
-				+xs
-					//order: 4
-					//width: 80%
-					display: none
 			&:nth-child(4)
 				width: 100px
 				margin-top: 10px
@@ -102,10 +83,6 @@
 				+sm
 					width: 64px
 					margin-left: 0
-				+xs
-					width: 75px
-					margin-top: 24px
-					order: 3
 	
 	&__address
 		margin-bottom: 15px
@@ -155,13 +132,8 @@
 		display: inline-block
 		vertical-align: middle
 		margin-right: 23px
-		&:nth-child(4)
-			+xs
-				display: none
 		+sm
 			margin-right: 3px
-		+xs
-			margin-right: 10px
 		&:last-child
 			margin-right: 0
 	&__item.is-active &__link
@@ -180,8 +152,6 @@
 			color: #666666
 		+sm
 			font-size: 14px
-		+xs
-			padding: 0
 		&:hover
 			color: #053B76
 			
@@ -404,8 +374,6 @@
 			left: 33px
 			width: 116px
 			height: 240px
-		+xs
-			width: 127px
 			
 	&__in
 		position: relative
@@ -488,8 +456,6 @@
 	+sm
 		max-width: 860px
 		margin: -30px auto 0
-	+xs
-		padding: 0 5px
 	&__list
 		position: relative
 		font-size: 0
@@ -505,8 +471,6 @@
 			content: ''
 			+sm
 				bottom: 2px
-			+xs
-				height: 27px
 	&__item
 		position: relative
 		z-index: 2
@@ -538,8 +502,6 @@
 			padding: 10px 5px
 		+sm
 			font-size: 14px
-		+xs
-			font-size: 13px
 		&:hover
 			background-color: #F2FBFF
 			border-bottom-color: #F8B772
@@ -557,8 +519,6 @@
 		+md
 			right: 20px
 			font-size: 12px
-		+xs
-			font-size: 10px
 
 /* login
 	----------------------------------- */
@@ -575,8 +535,6 @@
 		+trs
 		& + &
 			margin-left: 15px
-			+xs
-				margin-left: 8px
 		+md
 			font-size: 15px
 			color: #666666
@@ -599,8 +557,6 @@
 			font-size: 19px
 		+sm
 			font-size: 16px
-		+xs
-			display: none
 	&__text
 		display: inline-block
 		vertical-align: middle
@@ -630,8 +586,6 @@
 		+sm
 			left: -235px
 			padding: 20px
-		+xs
-			left: -260px
 		&-text
 			padding-left: 55px
 			margin-bottom: 20px
