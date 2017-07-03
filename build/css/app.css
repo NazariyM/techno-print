@@ -10663,7 +10663,7 @@ body::after {
     font-size: 14px;
   }
   .news__post-descr{
-    min-height: auto;
+    min-height: 0;
   }
   .news__post-more-btn{
     font-size: 14px;
