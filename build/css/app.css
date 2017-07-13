@@ -9559,13 +9559,16 @@ body::after {
     font-size: 16px;
   }
   .price-table__table{
-    font-size: 15px;
+    font-size: 14px;
   }
   .price-table__head tr:nth-child(1){
     font-size: 18px;
   }
   .price-table__head mark{
     font-size: 18px;
+  }
+  .price-table__label_md{
+    padding: 6px;
   }
   .price-table__view-text{
     font-size: 12px;
@@ -10603,9 +10606,6 @@ body::after {
   .price-table__title{
     margin-bottom: 13px;
     font-size: 16px;
-  }
-  .price-table__table{
-    font-size: 14px;
   }
   .price-table__head tr:nth-child(1){
     font-size: 16px;
