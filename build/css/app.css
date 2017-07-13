@@ -7362,20 +7362,37 @@ body::after {
 }
 
 .price-table__label_color {
+  padding: 4px 25px;
   background: #fff9c4;
 }
 
-.price-table__label_width {
-  max-width: 920px;
-  margin: 0 auto 10px;
+.price-table__label_color-xs {
+  padding: 7px 8px;
+  background: #fff9c4;
+}
+
+.price-table__label_color-md {
+  padding: 5px 20px;
+  max-width: 307px;
+  background: #fff9c4;
 }
 
 .price-table__label_sm {
-  max-width: 274px;
+  padding: 5px 29px;
+}
+
+.price-table__label_md {
+  padding: 6px 10px;
+  max-width: 315px;
 }
 
 .price-table__label_full {
   max-width: 333px;
+  padding: 6px 15px;
+}
+
+.price-table__label_width {
+  padding: 11px 24px;
 }
 
 .price-table__link {
