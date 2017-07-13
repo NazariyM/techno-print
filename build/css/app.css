@@ -7362,7 +7362,7 @@ body::after {
 }
 
 .price-table__label_color {
-  padding: 4px 25px;
+  padding: 4px 20px;
   background: #fff9c4;
 }
 
@@ -7375,10 +7375,6 @@ body::after {
   padding: 5px 20px;
   max-width: 307px;
   background: #fff9c4;
-}
-
-.price-table__label_sm {
-  padding: 5px 29px;
 }
 
 .price-table__label_md {
